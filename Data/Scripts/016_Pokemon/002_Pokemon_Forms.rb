@@ -693,6 +693,26 @@ MultipleForms.register(:METAGROSS,{
   }
 })
 
+MultipleForms.register(:SPIRITOMB,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [129]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:LUCARIO,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [111]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 2
+    end
+    next 0
+  }
+})
+
 MultipleForms.register(:VULPIX,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [44,68]   # Map IDs for Origin Forme

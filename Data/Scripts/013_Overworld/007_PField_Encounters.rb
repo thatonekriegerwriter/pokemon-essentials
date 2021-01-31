@@ -335,6 +335,8 @@ class PokemonEncounters
     if !NEWEST_BATTLE_MECHANICS
       if $PokemonMap.blackFluteUsed
         encount = encount/2
+	  elsif $game_variables[255]==1
+      encount/=3
       elsif $PokemonMap.whiteFluteUsed
         encount = encount*1.5
       end

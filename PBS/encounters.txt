@@ -631,6 +631,15 @@ Water
     MAGIKARP,25,35
     MAGIKARP,25,35
 #-------------------------------
+042 # Southern Ocean
+25,10,10
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
 044 # Temperate-Snowy Zone
 25,10,10
 Land
@@ -1442,3 +1451,421 @@ Cave
     GLALIE,3
     SNORUNT,3,5
     SMOOCHUM,10
+#-------------------------------
+101 # S.S Glittering Wreck
+25,10,10
+Cave
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    STARYU,34
+    MUDKIP,5
+    GYRARDOS,5
+    HORSEA,30,33
+    KINGLER,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    TOTODILE,5,15
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+102 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+103 # Red and Blue's Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+114 # Southern Ocean U
+25,10,10
+Cave
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    STARYU,34
+    MUDKIP,5
+    GYRARDOS,5
+    HORSEA,30,33
+    KINGLER,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    TOTODILE,5,15
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+115 # Your Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+116 # William's Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+117 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+118 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+119 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+120 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+121 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+122 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+123 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+124 # S.S. Glittering
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+125 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+126 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+127 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+128 # MAP128
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+129 # MAP129
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5

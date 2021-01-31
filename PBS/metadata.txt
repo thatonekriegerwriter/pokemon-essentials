@@ -202,6 +202,11 @@ Weather = Rain,100
 DarkMap = false
 ShowArea = true
 #-------------------------------
+[042]
+# Southern Ocean
+DiveMap = 114
+Outdoor = true
+#-------------------------------
 [043]
 # Route 1
 SnapEdges = true
@@ -222,6 +227,11 @@ ShowArea = true
 #-------------------------------
 [051]
 # Intro
+#-------------------------------
+[059]
+# Temperate Ocean
+DiveMap = 66
+Outdoor = true
 #-------------------------------
 [064]
 # Temperate Zone Top
@@ -294,3 +304,7 @@ Outdoor = true
 #-------------------------------
 [106]
 # Temperate Area
+#-------------------------------
+[136]
+# Swamp Zone
+Outdoor = true

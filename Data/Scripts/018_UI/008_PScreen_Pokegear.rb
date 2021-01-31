@@ -123,6 +123,7 @@ class PokemonPokegearScreen
     cmdMap     = -1
     cmdPhone   = -1
     cmdJukebox = -1
+    cmdPokeEtch = -1
     commands[cmdMap = commands.length]     = ["map",_INTL("Map")]
     if $PokemonGlobal.phoneNumbers && $PokemonGlobal.phoneNumbers.length>0
       commands[cmdPhone = commands.length] = ["phone",_INTL("Phone")]
@@ -144,6 +145,10 @@ class PokemonPokegearScreen
           scene = PokemonJukebox_Scene.new
           screen = PokemonJukeboxScreen.new(scene)
           screen.pbStartScreen
+        }
+      elsif cmdPokeEtch>=0 && cmd==PokeEtch
+        pbFadeOutIn {
+          pbPoketch
         }
       end
     end
