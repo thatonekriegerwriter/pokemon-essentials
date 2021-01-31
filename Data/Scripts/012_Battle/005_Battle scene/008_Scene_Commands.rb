@@ -175,6 +175,9 @@ class PokeBattle_Scene
           idxPartyRet = i
           break
         end
+      if @battle
+        idxPartyRet = @battle.permadeath_fixPartyIndex(idxPartyRet, idxParty)
+      end
         break if yield idxPartyRet, switchScreen
       elsif cmdSummary>=0 && command==cmdSummary   # Summary
         scene.pbSummary(idxParty,true)
@@ -267,6 +270,9 @@ class PokeBattle_Scene
             next if pos!=idxParty+partyStart
             idxPartyRet = i
             break
+          end
+          if @battle
+            idxPartyRet = @battle.permadeath_fixPartyIndex(idxPartyRet, idxParty)
           end
           next if idxPartyRet<0
           pkmn = party[idxPartyRet]

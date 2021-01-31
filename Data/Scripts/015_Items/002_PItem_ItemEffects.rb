@@ -22,6 +22,18 @@ ItemHandlers::UseFromBag.add(:HONEY,proc { |item|
   next 4
 })
 
+ItemHandlers::UseFromBag.add(:FOODBAG,proc{|item|
+  Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbPickAndEatBerry
+    next 1
+})
+
+ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
+  Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
+    $game_switches[240]==true
+    next 1
+})
+
 ItemHandlers::UseFromBag.add(:ESCAPEROPE,proc { |item|
   if $game_player.pbHasDependentEvents?
     pbMessage(_INTL("It can't be used when you have someone with you."))
@@ -114,7 +126,7 @@ ItemHandlers::UseInField.add(:MAXREPEL,proc { |item|
 
 Events.onStepTaken += proc {
   if $PokemonGlobal.repel>0
-    if !PBTerrain.isIce?($game_player.terrain_tag)   # Shouldn't count down if on ice
+    if !PBTerrain.isIce?($game_player.terrain_tag) && !PBTerrain.isWaterCurrent?($game_player.terrain_tag)   # Shouldn't count down if on ice
       $PokemonGlobal.repel -= 1
       if $PokemonGlobal.repel<=0
         if $PokemonBag.pbHasItem?(:REPEL) ||
@@ -368,17 +380,23 @@ ItemHandlers::UseOnPokemon.addIf(proc { |item| pbIsEvolutionStone?(item)},
       next true
     end
   }
+  
+
 )
 
-ItemHandlers::UseOnPokemon.add(:POTION,proc { |item,pkmn,scene|
+ItemHandlers::UseOnPokemon.add(:BERRYJUICE,proc { |item,pkmn,scene|
   next pbHPItem(pkmn,20,scene)
 })
 
-ItemHandlers::UseOnPokemon.copy(:POTION,:BERRYJUICE,:SWEETHEART)
+ItemHandlers::UseOnPokemon.add(:POTION,proc { |item,pkmn,scene|
+  next pbHPItem(pkmn,60,scene)
+})
+
+ItemHandlers::UseOnPokemon.copy(:POTION,:SWEETHEART)
 ItemHandlers::UseOnPokemon.copy(:POTION,:RAGECANDYBAR) if !NEWEST_BATTLE_MECHANICS
 
 ItemHandlers::UseOnPokemon.add(:SUPERPOTION,proc { |item,pkmn,scene|
-  next pbHPItem(pkmn,50,scene)
+  next pbHPItem(pkmn,100,scene)
 })
 
 ItemHandlers::UseOnPokemon.add(:HYPERPOTION,proc { |item,pkmn,scene|
@@ -777,7 +795,80 @@ ItemHandlers::UseOnPokemon.add(:SWIFTWING,proc { |item,pkmn,scene|
   pkmn.changeHappiness("wing")
   next true
 })
+#edit#
 
+ItemHandlers::UseOnPokemon.add(:GSCurry,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::HP,1,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbRefresh
+  scene.pbDisplay(_INTL("{1}'s HP increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:ATKCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::ATTACK,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Attack increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:DEFCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::DEFENSE,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Defense increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:SATKCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::SPATK,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Special Attack increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:SPDEFCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::SPDEF,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Special Defense increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:SPEEDCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::SPEED,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Speed increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:CRITCURRY,proc { |item,pkmn,scene|
+  if pbRaiseEffortValues(pkmn,PBStats::ATTACK,3,false)==0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  scene.pbDisplay(_INTL("{1}'s Attack increased.",pkmn.name))
+  pkmn.changeHappiness("wing")
+  next true
+})
+
+#edit end#
 ItemHandlers::UseOnPokemon.add(:RARECANDY,proc { |item,pkmn,scene|
   if pkmn.level>=PBExperience.maxLevel || pkmn.shadowPokemon?
     scene.pbDisplay(_INTL("It won't have any effect."))
@@ -955,7 +1046,6 @@ ItemHandlers::UseOnPokemon.add(:DNASPLICERS,proc { |item,pkmn,scene|
   end
   if pkmn.fainted?
     scene.pbDisplay(_INTL("This can't be used on the fainted Pokémon."))
-    next false
   end
   # Fusing
   if pkmn.fused==nil
@@ -964,17 +1054,13 @@ ItemHandlers::UseOnPokemon.add(:DNASPLICERS,proc { |item,pkmn,scene|
     poke2 = $Trainer.party[chosen]
     if pkmn==poke2
       scene.pbDisplay(_INTL("It cannot be fused with itself."))
-      next false
     elsif poke2.egg?
       scene.pbDisplay(_INTL("It cannot be fused with an Egg."))
-      next false
     elsif poke2.fainted?
       scene.pbDisplay(_INTL("It cannot be fused with that fainted Pokémon."))
-      next false
     elsif !poke2.isSpecies?(:RESHIRAM) &&
           !poke2.isSpecies?(:ZEKROM)
       scene.pbDisplay(_INTL("It cannot be fused with that Pokémon."))
-      next false
     end
     newForm = 0
     newForm = 1 if poke2.isSpecies?(:RESHIRAM)
@@ -1002,13 +1088,12 @@ ItemHandlers::UseOnPokemon.add(:DNASPLICERS,proc { |item,pkmn,scene|
 })
 
 ItemHandlers::UseOnPokemon.add(:NSOLARIZER,proc { |item,pkmn,scene|
-  if !pkmn.isSpecies?(:NECROZMA) || pkmn.form == 2
+  if !pkmn.isSpecies?(:NECROZMA) || pkmn.form==0
     scene.pbDisplay(_INTL("It had no effect."))
     next false
   end
   if pkmn.fainted?
     scene.pbDisplay(_INTL("This can't be used on the fainted Pokémon."))
-    next false
   end
   # Fusing
   if pkmn.fused==nil
@@ -1017,16 +1102,12 @@ ItemHandlers::UseOnPokemon.add(:NSOLARIZER,proc { |item,pkmn,scene|
     poke2 = $Trainer.party[chosen]
     if pkmn==poke2
       scene.pbDisplay(_INTL("It cannot be fused with itself."))
-      next false
     elsif poke2.egg?
       scene.pbDisplay(_INTL("It cannot be fused with an Egg."))
-      next false
     elsif poke2.fainted?
       scene.pbDisplay(_INTL("It cannot be fused with that fainted Pokémon."))
-      next false
     elsif !poke2.isSpecies?(:SOLGALEO)
       scene.pbDisplay(_INTL("It cannot be fused with that Pokémon."))
-      next false
     end
     pkmn.setForm(1) {
       pkmn.fused = poke2
@@ -1051,13 +1132,12 @@ ItemHandlers::UseOnPokemon.add(:NSOLARIZER,proc { |item,pkmn,scene|
 })
 
 ItemHandlers::UseOnPokemon.add(:NLUNARIZER,proc { |item,pkmn,scene|
-  if !pkmn.isSpecies?(:NECROZMA) || pkmn.form == 1
+  if !pkmn.isSpecies?(:NECROZMA) || pkmn.form==1
     scene.pbDisplay(_INTL("It had no effect."))
     next false
   end
   if pkmn.fainted?
     scene.pbDisplay(_INTL("This can't be used on the fainted Pokémon."))
-    next false
   end
   # Fusing
   if pkmn.fused==nil
@@ -1066,16 +1146,12 @@ ItemHandlers::UseOnPokemon.add(:NLUNARIZER,proc { |item,pkmn,scene|
     poke2 = $Trainer.party[chosen]
     if pkmn==poke2
       scene.pbDisplay(_INTL("It cannot be fused with itself."))
-      next false
     elsif poke2.egg?
       scene.pbDisplay(_INTL("It cannot be fused with an Egg."))
-      next false
     elsif poke2.fainted?
       scene.pbDisplay(_INTL("It cannot be fused with that fainted Pokémon."))
-      next false
     elsif !poke2.isSpecies?(:LUNALA)
       scene.pbDisplay(_INTL("It cannot be fused with that Pokémon."))
-      next false
     end
     pkmn.setForm(2) {
       pkmn.fused = poke2

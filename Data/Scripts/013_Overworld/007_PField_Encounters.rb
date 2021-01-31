@@ -12,6 +12,7 @@ module EncounterTypes
   LandDay      = 10
   LandNight    = 11
   BugContest   = 12
+  BerryTree    = 13
   Names = [
      "Land",
      "Cave",
@@ -25,7 +26,8 @@ module EncounterTypes
      "LandMorning",
      "LandDay",
      "LandNight",
-     "BugContest"
+     "BugContest",
+     "BerryTree"
   ]
   EnctypeChances = [
      [20,20,10,10,10,10,5,5,4,4,1,1],
@@ -40,10 +42,11 @@ module EncounterTypes
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
+     [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1]
   ]
-  EnctypeDensities   = [25, 10, 10, 0, 0, 0, 0, 0, 0, 25, 25, 25, 25]
-  EnctypeCompileDens = [ 1,  2,  3, 0, 0, 0, 0, 0, 0,  1,  1,  1,  1]
+  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0]
+  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0]
 end
 
 

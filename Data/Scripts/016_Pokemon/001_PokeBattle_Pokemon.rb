@@ -629,8 +629,7 @@ class PokeBattle_Pokemon
   #=============================================================================
   def species=(value)
     hasNickname = nicknamed?
-    @species, new_form = pbGetSpeciesFromFSpecies(value)
-    @form = new_form if @species != value
+    @species    = value
     @name       = PBSpecies.getName(@species) unless hasNickname
     @level      = nil   # In case growth rate is different for the new species
     @forcedForm = nil
@@ -797,6 +796,8 @@ class PokeBattle_Pokemon
     if gain>0
       gain += 1 if @obtainMap==$game_map.map_id
       gain += 1 if self.ballused==pbGetBallType(:LUXURYBALL)
+      ###---Monk Ability
+      gain=(gain*2).floor if $game_variables[255]==4
       gain = (gain*1.5).floor if self.hasItem?(:SOOTHEBELL)
     end
     @happiness += gain

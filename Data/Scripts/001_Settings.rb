@@ -19,10 +19,10 @@
 #===============================================================================
 SCREEN_WIDTH       = 512
 SCREEN_HEIGHT      = 384
-SCREEN_ZOOM        = 1.0
+SCREEN_ZOOM        = 2.0
 BORDER_FULLY_SHOWS = false
-BORDER_WIDTH       = 78
-BORDER_HEIGHT      = 78
+BORDER_WIDTH       = 200
+BORDER_HEIGHT      = 0
 MAP_VIEW_MODE      = 1
 # To forbid the player from changing the screen size themselves, quote out or
 # delete the relevant bit of code in the PScreen_Options script section.
@@ -57,9 +57,9 @@ TIME_SHADING = true
 #      as in older Gens (false).
 #===============================================================================
 POISON_IN_FIELD         = true
-POISON_FAINT_IN_FIELD   = false
-FISHING_AUTO_HOOK       = false
-DIVING_SURFACE_ANYWHERE = false
+POISON_FAINT_IN_FIELD   = true
+FISHING_AUTO_HOOK       = true
+DIVING_SURFACE_ANYWHERE = true
 NEW_BERRY_PLANTS        = true
 INFINITE_TMS            = true
 
@@ -86,7 +86,7 @@ NO_SIGNPOSTS = []
 # * The maximum number of Game Corner coins the player can have.
 # * The maximum length, in characters, that the player's name can be.
 #===============================================================================
-INITIAL_MONEY        = 3000
+INITIAL_MONEY        = 999_999
 MAX_MONEY            = 999_999
 MAX_COINS            = 99_999
 MAX_PLAYER_NAME_SIZE = 10
@@ -120,15 +120,15 @@ NUM_BADGES_BOOST_DEFENSE = 5
 NUM_BADGES_BOOST_SPATK   = 7
 NUM_BADGES_BOOST_SPDEF   = 7
 NUM_BADGES_BOOST_SPEED   = 3
-FIELD_MOVES_COUNT_BADGES = true
+FIELD_MOVES_COUNT_BADGES = false
 BADGE_FOR_CUT            = 1
-BADGE_FOR_FLASH          = 2
-BADGE_FOR_ROCKSMASH      = 3
-BADGE_FOR_SURF           = 4
-BADGE_FOR_FLY            = 5
-BADGE_FOR_STRENGTH       = 6
-BADGE_FOR_DIVE           = 7
-BADGE_FOR_WATERFALL      = 8
+BADGE_FOR_FLASH          = 1
+BADGE_FOR_ROCKSMASH      = 1
+BADGE_FOR_SURF           = 1
+BADGE_FOR_FLY            = 1
+BADGE_FOR_STRENGTH       = 1
+BADGE_FOR_DIVE           = 1
+BADGE_FOR_WATERFALL      = 1
 
 #===============================================================================
 # * Whether a move's physical/special category depends on the move itself as in
@@ -153,7 +153,7 @@ MOVE_CATEGORY_PER_MOVE    = true
 NEWEST_BATTLE_MECHANICS   = true
 SCALED_EXP_FORMULA        = true
 SPLIT_EXP_BETWEEN_GAINERS = false
-ENABLE_CRITICAL_CAPTURES  = false
+ENABLE_CRITICAL_CAPTURES  = true
 GAIN_EXP_FOR_CAPTURE      = true
 MEGA_RINGS                = [:MEGARING, :MEGABRACELET, :MEGACUFF, :MEGACHARM]
 
@@ -199,7 +199,7 @@ REGION_MAP_EXTRAS = [
 # * The number of boxes in Pokémon storage.
 #===============================================================================
 def pbStorageCreator
-  return _INTL("Bill")
+  return _INTL("Someones")
 end
 NUM_STORAGE_BOXES = 30
 
@@ -233,7 +233,7 @@ def pbDexNames; return [
   [_INTL("Johto Pokédex"), 1],
   _INTL("National Pokédex")
 ]; end
-DEX_SHOWS_ALL_FORMS = false
+DEX_SHOWS_ALL_FORMS = true
 DEXES_WITH_OFFSETS  = []
 
 #===============================================================================

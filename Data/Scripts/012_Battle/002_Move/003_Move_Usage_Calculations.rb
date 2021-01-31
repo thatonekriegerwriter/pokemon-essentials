@@ -142,6 +142,10 @@ class PokeBattle_Move
     if @battle.field.effects[PBEffects::Gravity]>0
       modifiers[ACC_MULT] *= 5/3.0
     end
+        ###---Assassin Ability
+    if $game_variables[255]==3
+    modifiers[ACC_MULT] *=1.8
+    end
     if user.effects[PBEffects::MicleBerry]
       user.effects[PBEffects::MicleBerry] = false
       modifiers[ACC_MULT] *= 1.2
@@ -261,8 +265,8 @@ class PokeBattle_Move
        (@battle.pbCheckGlobalAbility(:FAIRYAURA) && isConst?(type,PBTypes,:FAIRY))
       if @battle.pbCheckGlobalAbility(:AURABREAK)
         multipliers[BASE_DMG_MULT] *= 2/3.0
-      else
-        multipliers[BASE_DMG_MULT] *= 4/3.0
+        else
+          multipliers[BASE_DMG_MULT] *= 4/3.0
       end
     end
     # Ability effects that alter damage
@@ -310,6 +314,9 @@ class PokeBattle_Move
     end
     if user.effects[PBEffects::HelpingHand] && !self.is_a?(PokeBattle_Confusion)
       multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[255]==1 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:NORMAL) || isConst?(type,PBTypes,:GRASS))
+      multipliers[BASE_DMG_MULT] *= 1.2
     end
     if user.effects[PBEffects::Charge]>0 && isConst?(type,PBTypes,:ELECTRIC)
       multipliers[BASE_DMG_MULT] *= 2

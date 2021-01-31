@@ -222,8 +222,10 @@ class PokemonDataBox < SpriteWrapper
     end
     pbDrawTextPositions(self.bitmap,textPos)
     # Draw Pokémon's level
+    if @battler.opposes?(1) || $game_switches[240]==true
     imagePos.push(["Graphics/Pictures/Battle/overlay_lv",@spriteBaseX+140,16])
     pbDrawNumber(@battler.level,self.bitmap,@spriteBaseX+162,16)
+    end
     # Draw shiny icon
     if @battler.shiny?
       shinyX = (@battler.opposes?(0)) ? 206 : -6   # Foe's/player's
@@ -326,7 +328,7 @@ class PokemonDataBox < SpriteWrapper
       if @expFlash==0
         pbSEStop
         @expFlash = Graphics.frame_rate/5
-        pbSEPlay("Pkmn exp full")
+        pbSEPlay("Exp full")
         self.flash(Color.new(64,200,248,192),@expFlash)
         for i in @sprites
           i[1].flash(Color.new(64,200,248,192),@expFlash) if !i[1].disposed?

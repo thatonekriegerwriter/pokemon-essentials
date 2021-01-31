@@ -37,6 +37,15 @@ class PokeBattle_Pokemon
     return pbGetFSpeciesFromForm(@species,formSimple)
   end
 
+  alias __mf_compatibleWithMove? compatibleWithMove?   # Deprecated
+  def compatibleWithMove?(move)
+    v = MultipleForms.call("getMoveCompatibility",self)
+    if v!=nil
+      return v.any? { |j| j==move }
+    end
+    return __mf_compatibleWithMove?(move)
+  end
+
   alias __mf_initialize initialize
   def initialize(*args)
     @form = (pbGetSpeciesFromFSpecies(args[0])[1] rescue 0)
@@ -61,7 +70,6 @@ class PokeBattle_RealBattlePeer
 
   # For switching out, including due to fainting, and for the end of battle
   def pbOnLeavingBattle(battle,pkmn,usedInBattle,endBattle=false)
-    return if !pkmn
     f = MultipleForms.call("getFormOnLeavingBattle",pkmn,battle,usedInBattle,endBattle)
     pkmn.form = f if f && pkmn.form!=f
     pkmn.hp = pkmn.totalhp if pkmn.hp>pkmn.totalhp
@@ -622,6 +630,106 @@ MultipleForms.register(:MINIOR,{
 MultipleForms.register(:MIMIKYU,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
     next 0 if pkmn.fainted? || endBattle
+  }
+})
+
+MultipleForms.register(:MAMOSWINE,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [68]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:STEELIX,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [14]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 2
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:MAGMORTAR,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [32]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:MAGIKARP,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [37]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:MILOTIC,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [37]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:METAGROSS,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [100]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 2
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:VULPIX,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [44,68]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:NINETAILS,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [44,68]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:SANDSHREW,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [44,68]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:SANDSLASH,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [44,68]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
   }
 })
 

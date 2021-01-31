@@ -19,7 +19,7 @@ class PokeBattle_Battler
   def pbRecoverHP(amt,anim=true,anyAnim=true)
     amt = amt.round
     amt = @totalhp-@hp if amt>@totalhp-@hp
-    amt = 1 if amt<1 && @hp<@totalhp
+    amt = 1 if amt<1 && @hp<@totalhp    
     oldHP = @hp
     self.hp += amt
     PBDebug.log("[HP change] #{pbThis} gained #{amt} HP (#{oldHP}=>#{@hp})") if amt>0
@@ -94,6 +94,8 @@ class PokeBattle_Battler
 
   def pbReducePP(move)
     return true if usingMultiTurnAttack?
+    ###---Warrior Ability
+    return true if $game_variables[255]==2 && rand(5)==1
     return true if move.pp<0         # Don't reduce PP for special calls of moves
     return true if move.totalpp<=0   # Infinite PP, can always be used
     return false if move.pp==0       # Ran out of PP, couldn't reduce

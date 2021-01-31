@@ -18,6 +18,78 @@ ItemHandlers::CanUseInBattle.add(:POKEDOLL,proc { |item,pokemon,battler,move,fir
   end
   next true
 })
+#===========EDIT===========#
+ItemHandlers::BattleUseOnBattler.add(:POISONDART,proc{|item,battler,scene|
+  opPonent=battler.pbOpposing1
+  itemname=PBItems.getName(item)
+  type=PBTypes::STEEL
+  if opPonent.status!=0 || opPonent.type1==type
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return false
+   else
+     opPonent.pbPoison(opPonent)
+     scene.pbDisplay(_INTL("Enemy {1} was poisoned by the {2}!",opPonent.name,itemname))
+     return true
+   end
+})
+
+ItemHandlers::BattleUseOnBattler.add(:SLEEPDART,proc{|item,battler,scene|
+  opPonent=battler.pbOpposing1
+  itemname=PBItems.getName(item)
+  ability1=PBAbilities::INSOMNIA
+  ability2=PBAbilities::VITALSPIRIT
+  if opPonent.status!=0 || opPonent.ability==ability1 || opPonent.ability==ability2
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return false
+   else
+     opPonent.pbSleep
+     scene.pbDisplay(_INTL("Enemy {1} was put to sleep by the {2}!",opPonent.name,itemname))
+     return true
+   end
+})
+
+ItemHandlers::BattleUseOnBattler.add(:PARALYZDART,proc{|item,battler,scene|
+  opPonent=battler.pbOpposing1
+  itemname=PBItems.getName(item)
+  type=PBTypes::GROUND
+  if opPonent.status!=0 || opPonent.type1==type || opPonent.type2==type
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return false
+   else
+     opPonent.pbParalyze(opPonent)
+     scene.pbDisplay(_INTL("Enemy {1} was paralyzed by the {2}!",opPonent.name,itemname))
+     return true
+   end
+})
+
+ItemHandlers::BattleUseOnBattler.add(:ICEDART,proc{|item,battler,scene|
+  opPonent=battler.pbOpposing1
+  itemname=PBItems.getName(item)
+  type=PBTypes::ICE
+  if opPonent.status!=0 || opPonent.type1==type
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return false
+   else
+     opPonent.pbFreeze
+     scene.pbDisplay(_INTL("Enemy {1} was frozen solid by the {2}!",opPonent.name,itemname))
+     return true
+   end
+})
+
+ItemHandlers::BattleUseOnBattler.add(:FIREDART,proc{|item,battler,scene|
+  opPonent=battler.pbOpposing1
+  itemname=PBItems.getName(item)
+  type=PBTypes::FIRE
+  if opPonent.status!=0 || opPonent.type1==type || opPonent.type2==type
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return false
+   else
+     opPonent.pbBurn(opPonent)
+     scene.pbDisplay(_INTL("Enemy {1} was burned by the {2}!",opPonent.name,itemname))
+     return true
+   end
+})
+#===========EDIT END===========#
 
 ItemHandlers::CanUseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY)
 
@@ -204,39 +276,39 @@ ItemHandlers::CanUseInBattle.add(:XATTACK,proc { |item,pokemon,battler,move,firs
   next pbBattleItemCanRaiseStat?(PBStats::ATTACK,battler,scene,showMessages)
 })
 
-ItemHandlers::CanUseInBattle.copy(:XATTACK,:XATTACK2,:XATTACK3,:XATTACK6)
+ItemHandlers::CanUseInBattle.copy(:XATTACK,:XATTACK2,:XATTACK3,:XATTACK6,:ATKCURRY)
 
 ItemHandlers::CanUseInBattle.add(:XDEFENSE,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   next pbBattleItemCanRaiseStat?(PBStats::DEFENSE,battler,scene,showMessages)
 })
 
 ItemHandlers::CanUseInBattle.copy(:XDEFENSE,
-   :XDEFENSE2,:XDEFENSE3,:XDEFENSE6,:XDEFEND,:XDEFEND2,:XDEFEND3,:XDEFEND6)
+   :XDEFENSE2,:XDEFENSE3,:XDEFENSE6,:XDEFEND,:XDEFEND2,:XDEFEND3,:XDEFEND6,:DEFCURRY)
 
 ItemHandlers::CanUseInBattle.add(:XSPATK,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   next pbBattleItemCanRaiseStat?(PBStats::SPATK,battler,scene,showMessages)
 })
 
 ItemHandlers::CanUseInBattle.copy(:XSPATK,
-   :XSPATK2,:XSPATK3,:XSPATK6,:XSPECIAL,:XSPECIAL2,:XSPECIAL3,:XSPECIAL6)
+   :XSPATK2,:XSPATK3,:XSPATK6,:XSPECIAL,:XSPECIAL2,:XSPECIAL3,:XSPECIAL6,:SATKCURRY)
 
 ItemHandlers::CanUseInBattle.add(:XSPDEF,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   next pbBattleItemCanRaiseStat?(PBStats::SPDEF,battler,scene,showMessages)
 })
 
-ItemHandlers::CanUseInBattle.copy(:XSPDEF,:XSPDEF2,:XSPDEF3,:XSPDEF6)
+ItemHandlers::CanUseInBattle.copy(:XSPDEF,:XSPDEF2,:XSPDEF3,:XSPDEF6,:SPDEFCURRY)
 
 ItemHandlers::CanUseInBattle.add(:XSPEED,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   next pbBattleItemCanRaiseStat?(PBStats::SPEED,battler,scene,showMessages)
 })
 
-ItemHandlers::CanUseInBattle.copy(:XSPEED,:XSPEED2,:XSPEED3,:XSPEED6)
+ItemHandlers::CanUseInBattle.copy(:XSPEED,:XSPEED2,:XSPEED3,:XSPEED6,:SPEEDCURRY)
 
 ItemHandlers::CanUseInBattle.add(:XACCURACY,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   next pbBattleItemCanRaiseStat?(PBStats::ACCURACY,battler,scene,showMessages)
 })
 
-ItemHandlers::CanUseInBattle.copy(:XACCURACY,:XACCURACY2,:XACCURACY3,:XACCURACY6)
+ItemHandlers::CanUseInBattle.copy(:XACCURACY,:XACCURACY2,:XACCURACY3,:XACCURACY6,:ACCCURRY)
 
 ItemHandlers::CanUseInBattle.add(:DIREHIT,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   if !battler || battler.effects[PBEffects::FocusEnergy]>=1
@@ -256,6 +328,14 @@ ItemHandlers::CanUseInBattle.add(:DIREHIT2,proc { |item,pokemon,battler,move,fir
 
 ItemHandlers::CanUseInBattle.add(:DIREHIT3,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   if !battler || battler.effects[PBEffects::FocusEnergy]>=3
+    scene.pbDisplay(_INTL("It won't have any effect.")) if showMessages
+    next false
+  end
+  next true
+})
+
+ItemHandlers::CanUseInBattle.add(:CRITCURRY,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
+  if !battler || battler.effects[PBEffects::FocusEnergy]>=1
     scene.pbDisplay(_INTL("It won't have any effect.")) if showMessages
     next false
   end
@@ -286,12 +366,18 @@ ItemHandlers::UseInBattle.add(:GUARDSPEC,proc { |item,battler,battle|
   battler.pokemon.changeHappiness("battleitem")
 })
 
+ItemHandlers::UseInBattle.add(:GSCURRY,proc { |item,battler,battle|
+  battler.pbOwnSide.effects[PBEffects::Mist] = 5
+  battle.pbDisplay(_INTL("{1} is immune to stat reduction!",battler.pbTeam))
+  battler.pokemon.changeHappiness("battleitem")
+})
+
 ItemHandlers::UseInBattle.add(:POKEDOLL,proc { |item,battler,battle|
   battle.decision = 3
   battle.pbDisplayPaused(_INTL("You got away safely!"))
 })
 
-ItemHandlers::UseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY)
+ItemHandlers::UseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY,:BAIT)
 
 ItemHandlers::UseInBattle.add(:POKEFLUTE,proc { |item,battler,battle|
   battle.eachBattler do |b|
