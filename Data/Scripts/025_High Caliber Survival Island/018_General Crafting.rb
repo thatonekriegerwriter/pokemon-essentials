@@ -82,6 +82,7 @@ RECIPESG=[
 [:BOWL,1,[:WOODENPLANKS,3],nil, true],
 [:FOODBAG,1,[:WOODENPLANKS,1],nil, true],
 [:BEDROLL,1,[:WOOL,5],[:WOODENPLANKS,3], true],
+[:STONE,1,[:HARDSTONE,1],nil, true],
 [:EXPALL,1,[:EXPSHARE,5],[:IRON2,10], true]
 ]
 
