@@ -315,33 +315,6 @@ class PokeBattle_Move
     if user.effects[PBEffects::HelpingHand] && !self.is_a?(PokeBattle_Confusion)
       multipliers[BASE_DMG_MULT] *= 1.5
     end
-    if $game_variables[255]==1 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:NORMAL) || isConst?(type,PBTypes,:GRASS))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-    if $game_variables[255]==2 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:FIGHTING) || isConst?(type,PBTypes,:BUG))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-    if $game_variables[255]==3 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:DARK) || isConst?(type,PBTypes,:GHOST))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-	    if $game_variables[255]==4 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:FIRE) || isConst?(type,PBTypes,:DRAGON))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-	    if $game_variables[255]==5 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:POISON) || isConst?(type,PBTypes,:ICE))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-	    if $game_variables[255]==6 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:FLYING))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-    if $game_variables[255]==7 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:FIRE) || isConst?(type,PBTypes,:DRAGON))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-    if $game_variables[255]==8 && @battle.pbOwnedByPlayer?(attacker.index) &&(isConst?(type,PBTypes,:STEEL) || isConst?(type,PBTypes,:ELECTRIC))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
-    if $game_variables[255]==9 && @battle.pbOwnedByPlayer?(attacker.index) && (isConst?(type,PBTypes,:PSYCHIC) || isConst?(type,PBTypes,:WATER))
-      multipliers[BASE_DMG_MULT] *= 1.5
-    end
     if user.effects[PBEffects::Charge]>0 && isConst?(type,PBTypes,:ELECTRIC)
       multipliers[BASE_DMG_MULT] *= 2
     end
