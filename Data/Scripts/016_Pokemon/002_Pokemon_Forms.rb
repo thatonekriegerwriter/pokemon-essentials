@@ -695,7 +695,7 @@ MultipleForms.register(:METAGROSS,{
 
 MultipleForms.register(:SPIRITOMB,{
   "getFormOnCreation" => proc { |pkmn|
-    maps = [129]   # Map IDs for Origin Forme
+    maps = [125]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end

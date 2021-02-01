@@ -2262,3 +2262,99 @@ Water
     DEWPIDER,5
     SKRELP,5
     FROAKIE,5
+#-------------------------------
+156 # Humid Zone
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+157 # Humid Area R
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+158 # Humid Area B
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+159 # Humid Area BR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+160 # Humid Area RR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+161 # Humid Area BRR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
