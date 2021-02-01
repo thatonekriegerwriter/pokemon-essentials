@@ -306,5 +306,9 @@ Outdoor = true
 # Temperate Area
 #-------------------------------
 [136]
-# Swamp Zone
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[137]
+# Humid Zone
 Outdoor = true

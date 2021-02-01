@@ -1367,7 +1367,11 @@ BattleHandlers::ExpGainModifierItem.add(:LUCKYEGG,
     next exp*3/2
   }
 )
-
+BattleHandlers::ExpGainModifierItem.add(:LUCKIEREGG,
+  proc { |item,battler,exp|
+    next exp*4/2
+  }
+)
 #===============================================================================
 # EVGainModifierItem handlers
 #===============================================================================

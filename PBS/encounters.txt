@@ -185,7 +185,7 @@ LandMorning
     PONYTA,3
     ODDISH,3
     TAILLOW,3
-    SUNKERN,2
+    VENONAT,2
     PHANPY,3
     FARFETCHD,3,5
     CYNDAQUIL,2
@@ -222,7 +222,7 @@ LandMorning
     HOPPIP,5
     SUNKERN,5
     ROSELIA,2
-    SUNKERN,2
+    VENONAT,2
     SENTRET,4
     PONYTA,3
     ODDISH,3
@@ -415,7 +415,7 @@ LandDay
     MAKUHITA,3
     NUMEL,3
     MAGMAR,2,10
-    PHANPY,3
+    TRANQUILL,3
     ABSOL,3,5
     CHARMANDER,2,5
 LandNight
@@ -616,6 +616,22 @@ Land
     SWADLOON,27
     GURDURR,30
     DRILBUR,29
+    STUNKY,30
+    SEVIPER,30
+    SWALOT,34
+    GABITE,29
+    QUILLADIN,30
+#-------------------------------
+036 # Deep Swamp
+25,10,10
+Land
+    PUMPKABOO,27
+    CROAGUNK,34
+    RUFFLET,34
+    MINCCINO,29
+    SWADLOON,27
+    GURDURR,30
+    VENOMOTH,29
     STUNKY,30
     SEVIPER,30
     SWALOT,34
@@ -1461,7 +1477,7 @@ Cave
     MAREANIE,34,35
     STARYU,34
     MUDKIP,5
-    GYRARDOS,5
+    GYARADOS,5
     HORSEA,30,33
     KINGLER,27,35
     CLOYSTER,26,36
@@ -1518,6 +1534,31 @@ Water
     DUSCLOPS,5
     YAMASK,5
 #-------------------------------
+110 # Deep Swamp
+25,10,10
+Cave
+    HOUNDOOM,5
+    WEAVILE,5
+    DRAPION,5
+    SKUNTANK,5
+    ABSOL,5
+    SHIFTRY,5
+    MIGHTYENA,5
+    LIEPARD,5
+    HONCHKROW,5
+    DEINO,5
+    TYRANITAR,5
+    UMBREON,5
+#-------------------------------
+111 # Humid Zone
+25,10,10
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
 114 # Southern Ocean U
 25,10,10
 Cave
@@ -1527,7 +1568,7 @@ Cave
     MAREANIE,34,35
     STARYU,34
     MUDKIP,5
-    GYRARDOS,5
+    GYARADOS,5
     HORSEA,30,33
     KINGLER,27,35
     CLOYSTER,26,36
@@ -1826,7 +1867,7 @@ Water
     DUSCLOPS,5
     YAMASK,5
 #-------------------------------
-128 # MAP128
+128 # Kitchen
 25,10,10
 Cave
     MISDREAVUS,5
@@ -1848,7 +1889,7 @@ Water
     DUSCLOPS,5
     YAMASK,5
 #-------------------------------
-129 # MAP129
+129 # Captain's Quarters
 25,10,10
 Cave
     MISDREAVUS,5
@@ -1869,3 +1910,355 @@ Water
     BANETTE,5
     DUSCLOPS,5
     YAMASK,5
+#-------------------------------
+130 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+131 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+132 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+133 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+134 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+135 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+136 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+137 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+138 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+139 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+140 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+141 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+142 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+143 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+144 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+145 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5

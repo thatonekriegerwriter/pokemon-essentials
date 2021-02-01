@@ -624,139 +624,159 @@
 65,East,0,59,West,28
 # Temperate Zone Bottom (65) - Temperate Zone (4)
 65,West,0,4,East,78
-# Swamp Zone (132) - Swamp Zone 1 (137)
+# Humid Zone (132) - Humid Zone (137)
 132,West,150,137,East,0
-# Swamp Zone (138) - Swamp Zone 1 (137)
+# Humid Zone (138) - Humid Zone (137)
 138,West,100,137,East,0
-# Swamp Zone (111) - Swamp Zone 1 (137)
+# Humid Zone (111) - Humid Zone (137)
 111,South,0,137,North,0
-# Swamp Zone 1 (135) - Swamp Zone 1 (137)
+# Humid Zone (156) - Humid Zone (137)
+156,West,0,137,East,0
+# Humid Zone (135) - Humid Zone (137)
 135,West,50,137,East,0
-# Swamp Zone R (141) - Swamp Zone 1 (137)
+# Humid Zone (141) - Humid Zone (137)
 141,South,0,137,North,150
-# Swamp Zone (136) - Swamp Zone 1 (137)
+# Humid Zone (136) - Humid Zone (137)
 136,South,0,137,North,100
-# Swamp Zone (132) - Swamp Zone (143)
+# Humid Zone (132) - Humid Zone (143)
 132,South,100,143,North,0
-# Swamp Zone (133) - Swamp Zone (143)
+# Humid Zone (133) - Humid Zone (143)
 133,East,50,143,West,0
-# Swamp Zone (111) - Swamp Zone (143)
+# Humid Zone (111) - Humid Zone (143)
 111,North,150,143,South,0
-# Swamp Zone (139) - Swamp Zone (143)
+# Humid Zone (139) - Humid Zone (143)
 139,East,0,143,West,0
-# Swamp Zone (134) - Swamp Zone (143)
+# Humid Zone (134) - Humid Zone (143)
 134,South,0,143,North,0
-# Swamp Zone B (140) - Swamp Zone (143)
+# Humid Zone (140) - Humid Zone (143)
 140,East,0,143,West,100
-# Swamp Zone 1 (135) - Swamp Zone (143)
+# Humid Zone (135) - Humid Zone (143)
 135,North,100,143,South,0
-# Swamp Zone R (141) - Swamp Zone (143)
+# Humid Zone (141) - Humid Zone (143)
 141,North,0,143,South,0
-# Swamp Zone (136) - Swamp Zone (143)
+# Humid Zone (136) - Humid Zone (143)
 136,North,50,143,South,0
-# Swamp Zone (131) - Swamp Zone (143)
+# Humid Zone (131) - Humid Zone (143)
 131,South,150,143,North,0
-# Swamp Zone (138) - Swamp Zone (132)
+# Humid Zone (138) - Humid Zone (132)
 138,North,0,132,South,0
-# Swamp Zone (133) - Swamp Zone (132)
+# Humid Zone (133) - Humid Zone (132)
 133,West,0,132,East,0
-# Swamp Zone (111) - Swamp Zone (132)
+# Humid Zone (111) - Humid Zone (132)
 111,East,0,132,West,100
-# Swamp Zone (139) - Swamp Zone (132)
+# Humid Zone (139) - Humid Zone (132)
 139,West,0,132,East,50
-# Swamp Zone B (140) - Swamp Zone (132)
+# Humid Zone (140) - Humid Zone (132)
 140,West,0,132,East,150
-# Swamp Zone (130) - Swamp Zone (132)
+# Humid Zone (130) - Humid Zone (132)
 130,North,50,132,South,0
-# Swamp Zone (136) - Swamp Zone (132)
+# Humid Zone (136) - Humid Zone (132)
 136,West,0,132,East,100
-# Swamp Zone (131) - Swamp Zone (132)
+# Humid Zone (131) - Humid Zone (132)
 131,East,0,132,West,0
-# Swamp Zone (133) - Swamp Zone (138)
+# Humid Zone (133) - Humid Zone (138)
 133,West,50,138,East,0
-# Swamp Zone (111) - Swamp Zone (138)
+# Humid Zone (111) - Humid Zone (138)
 111,North,50,138,South,0
-# Swamp Zone (139) - Swamp Zone (138)
+# Humid Zone (139) - Humid Zone (138)
 139,West,0,138,East,0
-# Swamp Zone (134) - Swamp Zone (138)
+# Humid Zone (134) - Humid Zone (138)
 134,South,0,138,North,100
-# Swamp Zone B (140) - Swamp Zone (138)
+# Humid Zone (140) - Humid Zone (138)
 140,West,0,138,East,100
-# Swamp Zone 1 (135) - Swamp Zone (138)
+# Humid Zone (135) - Humid Zone (138)
 135,North,0,138,South,0
-# Swamp Zone R (141) - Swamp Zone (138)
+# Humid Zone (141) - Humid Zone (138)
 141,North,0,138,South,100
-# Swamp Zone (130) - Swamp Zone (138)
+# Humid Zone (130) - Humid Zone (138)
 130,East,0,138,West,0
-# Swamp Zone (136) - Swamp Zone (138)
+# Humid Zone (136) - Humid Zone (138)
 136,West,0,138,East,50
-# Swamp Zone (131) - Swamp Zone (138)
+# Humid Zone (131) - Humid Zone (138)
 131,East,50,138,West,0
-# Swamp Zone (139) - Swamp Zone (133)
+# Humid Zone (139) - Humid Zone (133)
 139,North,0,133,South,0
-# Swamp Zone (134) - Swamp Zone (133)
+# Humid Zone (156) - Humid Zone (133)
+156,East,0,133,West,150
+# Humid Zone (134) - Humid Zone (133)
 134,West,0,133,East,0
-# Swamp Zone 1 (135) - Swamp Zone (133)
+# Humid Zone (135) - Humid Zone (133)
 135,East,0,133,West,100
-# Swamp Zone R (141) - Swamp Zone (133)
+# Humid Zone (141) - Humid Zone (133)
 141,West,0,133,East,100
-# Swamp Zone (130) - Swamp Zone (133)
+# Humid Zone (130) - Humid Zone (133)
 130,North,100,133,South,0
-# Swamp Zone BR (142) - Swamp Zone (133)
+# Humid Zone (142) - Humid Zone (133)
 142,West,0,133,East,150
-# Swamp Zone (139) - Swamp Zone (111)
+# Humid Zone (139) - Humid Zone (111)
 139,South,0,111,North,100
-# Swamp Zone B (140) - Swamp Zone (111)
+# Humid Zone (156) - Humid Zone (111)
+156,West,0,111,East,50
+# Humid Zone (140) - Humid Zone (111)
 140,North,0,111,South,100
-# Swamp Zone 1 (135) - Swamp Zone (111)
+# Humid Zone (135) - Humid Zone (111)
 135,West,0,111,East,0
-# Swamp Zone (130) - Swamp Zone (111)
+# Humid Zone (130) - Humid Zone (111)
 130,South,0,111,North,0
-# Swamp Zone BR (142) - Swamp Zone (111)
+# Humid Zone (142) - Humid Zone (111)
 142,North,0,111,South,150
-# Swamp Zone (134) - Swamp Zone (139)
+# Humid Zone (156) - Humid Zone (139)
+156,East,0,139,West,100
+# Humid Zone (134) - Humid Zone (139)
 134,West,50,139,East,0
-# Swamp Zone 1 (135) - Swamp Zone (139)
+# Humid Zone (135) - Humid Zone (139)
 135,North,50,139,South,0
-# Swamp Zone R (141) - Swamp Zone (139)
+# Humid Zone (141) - Humid Zone (139)
 141,West,0,139,East,50
-# Swamp Zone (136) - Swamp Zone (139)
+# Humid Zone (136) - Humid Zone (139)
 136,North,0,139,South,0
-# Swamp Zone (131) - Swamp Zone (139)
+# Humid Zone (131) - Humid Zone (139)
 131,South,100,139,North,0
-# Swamp Zone BR (142) - Swamp Zone (139)
+# Humid Zone (142) - Humid Zone (139)
 142,West,0,139,East,100
-# Swamp Zone B (140) - Swamp Zone (134)
+# Humid Zone (140) - Humid Zone (156)
+140,West,0,156,East,0
+# Humid Zone (135) - Humid Zone (156)
+135,South,0,156,North,0
+# Humid Zone (141) - Humid Zone (156)
+141,South,0,156,North,100
+# Humid Zone (130) - Humid Zone (156)
+130,East,100,156,West,0
+# Humid Zone (136) - Humid Zone (156)
+136,West,50,156,East,0
+# Humid Zone (131) - Humid Zone (156)
+131,East,150,156,West,0
+# Humid Zone (140) - Humid Zone (134)
 140,East,0,134,West,150
-# Swamp Zone (130) - Swamp Zone (134)
+# Humid Zone (130) - Humid Zone (134)
 130,North,150,134,South,0
-# Swamp Zone (136) - Swamp Zone (134)
+# Humid Zone (136) - Humid Zone (134)
 136,East,0,134,West,100
-# Swamp Zone 1 (135) - Swamp Zone B (140)
+# Humid Zone (135) - Humid Zone (140)
 135,East,50,140,West,0
-# Swamp Zone R (141) - Swamp Zone B (140)
+# Humid Zone (141) - Humid Zone (140)
 141,West,50,140,East,0
-# Swamp Zone (136) - Swamp Zone B (140)
+# Humid Zone (136) - Humid Zone (140)
 136,South,0,140,North,0
-# Swamp Zone BR (142) - Swamp Zone B (140)
+# Humid Zone (142) - Humid Zone (140)
 142,West,0,140,East,0
-# Swamp Zone (130) - Swamp Zone 1 (135)
+# Humid Zone (130) - Humid Zone (135)
 130,East,50,135,West,0
-# Swamp Zone (136) - Swamp Zone 1 (135)
+# Humid Zone (136) - Humid Zone (135)
 136,West,0,135,East,0
-# Swamp Zone (131) - Swamp Zone 1 (135)
+# Humid Zone (131) - Humid Zone (135)
 131,East,100,135,West,0
-# Swamp Zone BR (142) - Swamp Zone 1 (135)
+# Humid Zone (142) - Humid Zone (135)
 142,North,0,135,South,100
-# Swamp Zone (130) - Swamp Zone R (141)
+# Humid Zone (130) - Humid Zone (141)
 130,South,150,141,North,0
-# Swamp Zone (136) - Swamp Zone R (141)
+# Humid Zone (136) - Humid Zone (141)
 136,East,0,141,West,0
-# Swamp Zone BR (142) - Swamp Zone R (141)
+# Humid Zone (142) - Humid Zone (141)
 142,North,0,141,South,0
-# Swamp Zone (136) - Swamp Zone (130)
+# Humid Zone (136) - Humid Zone (130)
 136,North,0,130,South,100
-# Swamp Zone (131) - Swamp Zone (130)
+# Humid Zone (131) - Humid Zone (130)
 131,South,0,130,North,0
-# Swamp Zone BR (142) - Swamp Zone (136)
+# Humid Zone (142) - Humid Zone (136)
 142,West,0,136,East,50

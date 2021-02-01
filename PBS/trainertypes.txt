@@ -83,3 +83,5 @@
 80,POKEMONTRAINER_Hiro,Pokémon Trainer,60,,,,Male,,
 81,POKEMONTRAINER_Kris,Pokémon Trainer,60,,,,Female,,
 82,POKEMONTRAINER_Blue,Pokémon Trainer,60,,,,Male,,
+83,GARYOAK3,Battling Prodigy,100,BattleGary,,,Male,50,
+84,RED3,Battling Prodigy,100,BattleGary,,,Male,50,
