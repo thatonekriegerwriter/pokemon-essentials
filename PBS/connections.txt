@@ -848,3 +848,53 @@
 142,South,0,158,North,0
 # Humid Zone (142) - Humid Zone (136)
 142,West,0,136,East,50
+# MAP178 (178) - MAP176 (176)
+178,West,0,176,East,0
+# MAP179 (179) - MAP176 (176)
+179,South,0,176,North,0
+# MAP180 (180) - MAP176 (176)
+180,West,54,176,East,0
+# Wooded Area (169) - MAP176 (176)
+169,North,0,176,South,0
+# MAP178 (178) - MAP177 (177)
+178,West,0,177,East,100
+# MAP179 (179) - MAP177 (177)
+179,North,0,177,South,0
+# MAP180 (180) - MAP177 (177)
+180,West,0,177,East,46
+# MAP184 (184) - MAP178 (178)
+184,West,0,178,East,0
+# MAP179 (179) - MAP178 (178)
+179,East,50,178,West,0
+# Wooded Area (169) - MAP178 (178)
+169,North,50,178,South,0
+# MAP179 (179) - MAP184 (184)
+179,South,100,184,North,0
+# MAP180 (180) - MAP184 (184)
+180,East,54,184,West,0
+# Wooded Area (169) - MAP184 (184)
+169,North,100,184,South,0
+# MAP180 (180) - MAP179 (179)
+180,West,4,179,East,0
+# Wooded Area (169) - MAP180 (180)
+169,East,0,180,West,104
+# MAP174 (174) - MAP173 (173)
+174,South,0,173,North,0
+# MAP182 (182) - MAP187 (187)
+182,North,50,187,South,0
+# MAP188 (188) - MAP187 (187)
+188,South,0,187,North,0
+# MAP185 (185) - MAP187 (187)
+185,North,100,187,South,0
+# MAP186 (186) - MAP187 (187)
+186,East,0,187,West,0
+# MAP188 (188) - MAP182 (182)
+188,West,100,182,East,0
+# MAP185 (185) - MAP182 (182)
+185,East,0,182,West,0
+# MAP186 (186) - MAP182 (182)
+186,South,0,182,North,0
+# MAP186 (186) - MAP188 (188)
+186,North,50,188,South,0
+# MAP186 (186) - MAP185 (185)
+186,West,50,185,East,0

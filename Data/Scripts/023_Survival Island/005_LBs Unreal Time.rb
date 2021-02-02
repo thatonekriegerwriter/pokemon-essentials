@@ -55,7 +55,7 @@ NTS_TIMEPROPORTION=30
 
 # Choose switch number that when true the time won't pass (or -1 to cancel). 
 # Only works if NTN_TIMESTOPS=true.
-NTN_SWITCHSTOPS=-1
+NTN_SWITCHSTOPS=51
 
 # Choose variable(s) number(s) that can hold time passage (or -1 to cancel).
 # The time in this variable isn't affected by NTS_TIMEPROPORTION.

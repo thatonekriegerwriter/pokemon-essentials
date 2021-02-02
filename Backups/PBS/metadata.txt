@@ -1,0 +1,314 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[000]
+PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,base_surf.png,boy_run,base_dive.png,boy_fish_offset,boy_fish_offset
+PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
+PlayerC = POKEMONTRAINER_Kris,Avatar-Crystal.png,xxx,xxx,Avatar-Crystal2.png,xxx,crystalfishing1.png,xxx
+PlayerD = POKEMONTRAINER_Hiro,Avatar-Hiro.png,xxx,xxx,Avatar-Hiro2.png,xxx,xxx,xxx
+TrainerBattleBGM = 005-Boss01.mid
+BicycleBGM = Airship.mid
+Home = 10,12,11,2
+WildBattleBGM = custom_battle.mid
+#-------------------------------
+[001]
+# Temperate Ocean
+BattleBack = 
+SafariMap = false
+Outdoor = true
+HealingSpot = 11,9,8
+ShowArea = true
+#-------------------------------
+[002]
+# Cave
+Bicycle = true
+ShowArea = true
+#-------------------------------
+[003]
+# S.S. Glittering
+#-------------------------------
+[004]
+# Temperate Zone
+MapSize = 0,
+BattleBack = Forest
+Weather = Rain,80
+Bicycle = true
+Outdoor = true
+HealingSpot = 4,21,12
+ShowArea = true
+#-------------------------------
+[005]
+# Temperate Zone
+Weather = Rain,80
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[006]
+# Temperate Zone
+SnapEdges = true
+BattleBack = Forest
+Weather = Rain,80
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[007]
+# Temperate Zone
+BattleBack = Forest
+Weather = Rain,60
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[008]
+# Temperate Zone
+DiveMap = 9
+BattleBack = Forest
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[009]
+# Temperate Zone
+BattleBack = Forest
+Weather = Rain,0
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[010]
+# Temperate Base
+BattleBack = Forest
+Outdoor = false
+#-------------------------------
+[011]
+# Test Map
+Weather = Rain,0
+Outdoor = true
+BicycleAlways = false
+ShowArea = true
+#-------------------------------
+[012]
+# Stone Temple
+BattleBack = Ruins
+Outdoor = false
+ShowArea = true
+#-------------------------------
+[013]
+# Temperate Zone
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[014]
+# Stone Temple Cave
+BattleBack = Cave
+Outdoor = false
+ShowArea = true
+#-------------------------------
+[015]
+# Cave
+BattleBack = Cave
+#-------------------------------
+[016]
+# Mountain Zone
+BattleBack = Mountain
+Outdoor = true
+HealingSpot = 16,22,28
+ShowArea = true
+#-------------------------------
+[017]
+# Mountain Zone
+BattleBack = Mountain
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[018]
+# Red and Blue's Cabin
+#-------------------------------
+[019]
+# Mountain Zone
+BattleBack = Mountain
+SafariMap = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[020]
+# Mountain Base
+Outdoor = false
+BicycleAlways = false
+ShowArea = false
+#-------------------------------
+[021]
+# Office 2012
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[022]
+# Cave
+SnapEdges = false
+BattleBack = Cave
+Bicycle = true
+DarkMap = true
+ShowArea = true
+#-------------------------------
+[023]
+# Office 1997
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[024]
+# Mountain Zone
+BattleBack = mountain
+Bicycle = false
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[025]
+# Transition Room
+#-------------------------------
+[027]
+# Temperate Zone
+BattleBack = Forest
+#-------------------------------
+[028]
+# Mountain Zone
+BattleBack = Mountain
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[029]
+# Mountain Zone
+BattleBack = Mountain
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[030]
+# Mountain Zone
+BattleBack = Mountain
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[031]
+# Mountain Interior
+BattleBack = Cave
+#-------------------------------
+[033]
+# Swamp Zone
+BattleBack = Swamp
+Bicycle = true
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[036]
+# Deep Swamp
+BattleBack = Swamp
+Weather = Rain,100
+DarkMap = false
+ShowArea = true
+#-------------------------------
+[042]
+# Southern Ocean
+DiveMap = 114
+Outdoor = true
+#-------------------------------
+[043]
+# Route 1
+SnapEdges = true
+DarkMap = false
+Outdoor = false
+#-------------------------------
+[044]
+# Temperate-Snowy Zone
+BattleBack = Snow
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[045]
+# Temperate Zone
+BattleBack = Forest
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[051]
+# Intro
+#-------------------------------
+[059]
+# Temperate Ocean
+DiveMap = 66
+Outdoor = true
+#-------------------------------
+[064]
+# Temperate Zone Top
+BattleBack = Forest
+Weather = Rain,20
+Outdoor = true
+ShowArea = false
+#-------------------------------
+[065]
+# Temperate Zone Bottom
+BattleBack = Forest
+Weather = Rain,20
+Outdoor = true
+#-------------------------------
+[068]
+# Temperate-Snowy Zone
+Outdoor = true
+#-------------------------------
+[072]
+# Winter Zone
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[073]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[074]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[075]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[077]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[078]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[080]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[081]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[082]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[083]
+# Winter Zone
+Outdoor = true
+#-------------------------------
+[084]
+# Winter Zone 1
+Outdoor = true
+#-------------------------------
+[085]
+# Winter Zone 2
+Outdoor = true
+#-------------------------------
+[096]
+# MAP096
+#-------------------------------
+[106]
+# Temperate Area
+#-------------------------------
+[136]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[137]
+# Humid Zone
+Outdoor = true

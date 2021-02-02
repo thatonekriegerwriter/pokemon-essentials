@@ -1,0 +1,2360 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+001 # Temperate Ocean
+25,10,10
+Land
+    SPEAROW,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    TANGELA,7,13
+    SUNKERN,7,10
+    LOTAD,6,10
+    POOCHYENA,7,12
+    SQUIRTLE,5,24
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    POPPLIO,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+004 # Temperate Zone
+25,10,10
+LandMorning
+    HOPPIP,2,8
+    SUNKERN,5,10
+    ROSELIA,2,8
+    SUNKERN,2,7
+    SENTRET,4,8
+    GROWLITHE,3,8
+    ODDISH,3,9
+    TAILLOW,3,11
+    SUNKERN,2,10
+    PHANPY,3,18
+    FARFETCHD,3,7
+    CYNDAQUIL,2,22
+LandDay
+    NIDORANmA,5,7
+    NIDORANfE,5,7
+    PIDGEY,5,7
+    SANDSHREW,2,9
+    SENTRET,4,9
+    VULPIX,2,12
+    ODDISH,3,10
+    TAILLOW,3,12
+    SCYTHER,7,12
+    PHANPY,5,12
+    FARFETCHD,3,10
+    TORCHIC,2,12
+LandNight
+    MINUN,3,10
+    PLUSLE,3,10
+    EKANS,2,11
+    SANDSHREW,2,10
+    MAREEP,2,9
+    JIGGLYPUFF,2,10
+    ODDISH,3,12
+    POOCHYENA,11
+    DROWZEE,7,11
+    PHANPY,5,19
+    FARFETCHD,5,15
+    HYPNO,7,20
+#-------------------------------
+005 # Temperate Zone
+25,10,10
+Land
+    SPEAROW,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    TANGELA,7,13
+    SUNKERN,7,10
+    LOTAD,6,10
+    POOCHYENA,7,12
+    SQUIRTLE,5,24
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    POPPLIO,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+006 # Temperate Zone
+25,10,10
+Land
+    TAILLOW,3,10
+    RATTATA,5,10
+    PIDGEY,5,10
+    ZIGZAGOON,2
+    SENTRET,4,10
+    HOPPIP,3,10
+    ODDISH,3,10
+    TANGELA,3
+    SUNKERN,2,10
+    LOTAD,3
+    MARILL,3,50
+    SQUIRTLE,2
+#-------------------------------
+007 # Temperate Zone
+25,10,10
+Land
+    TAILLOW,3,10
+    RATTATA,5,10
+    PIDGEY,5,10
+    ZIGZAGOON,2
+    SENTRET,4,10
+    HOPPIP,3,10
+    ODDISH,3,10
+    TANGELA,3
+    SUNKERN,2,10
+    LOTAD,3
+    MARILL,3,50
+    SQUIRTLE,2
+#-------------------------------
+008 # Temperate Zone
+25,10,10
+LandMorning
+    HOPPIP,5,10
+    SUNKERN,5,10
+    ROSELIA,2,10
+    SUNKERN,2,10
+    SENTRET,4,10
+    GROWLITHE,3
+    ODDISH,3,10
+    TAILLOW,3,10
+    SUNKERN,2,10
+    PHANPY,3,10
+    FARFETCHD,3,5
+    CYNDAQUIL,2,10
+LandDay
+    TAILLOW,3,10
+    RATTATA,5,10
+    PIDGEY,5,10
+    ZIGZAGOON,2,10
+    SENTRET,4,10
+    HOPPIP,3,10
+    ODDISH,3,10
+    TANGELA,3
+    SUNKERN,2
+    LOTAD,3
+    MARILL,3,5
+    SQUIRTLE,2
+LandNight
+    MINUN,3,5
+    PLUSLE,3,5
+    EKANS,2,5
+    SANDSHREW,2
+    MAREEP,2
+    JIGGLYPUFF,2
+    ODDISH,3
+    POOCHYENA,5
+    DROWZEE,6
+    PHANPY,3
+    FARFETCHD,3,5
+    HYPNO,10
+#-------------------------------
+009 # Temperate Zone
+25,10,10
+LandMorning
+    HOPPIP,5
+    SUNKERN,5
+    ROSELIA,2
+    SUNKERN,2
+    SENTRET,4
+    PONYTA,3
+    ODDISH,3
+    TAILLOW,3
+    VENONAT,2
+    PHANPY,3
+    FARFETCHD,3,5
+    CYNDAQUIL,2
+LandDay
+    TAILLOW,3
+    RATTATA,5
+    NATU,5
+    ZIGZAGOON,2
+    SENTRET,4
+    HOPPIP,3
+    ODDISH,3
+    TANGELA,3
+    SUNKERN,2
+    LOTAD,3
+    MARILL,3,5
+    TORCHIC,2
+LandNight
+    MINUN,3,5
+    PLUSLE,3,5
+    EKANS,2,5
+    SANDSHREW,2
+    MAREEP,2
+    JIGGLYPUFF,2
+    ODDISH,3
+    POOCHYENA,5
+    DROWZEE,6
+    PHANPY,3
+    FARFETCHD,3,5
+    HYPNO,10
+#-------------------------------
+013 # Temperate Zone
+25,10,10
+LandMorning
+    HOPPIP,5
+    SUNKERN,5
+    ROSELIA,2
+    VENONAT,2
+    SENTRET,4
+    PONYTA,3
+    ODDISH,3
+    TAILLOW,3
+    SUNKERN,2
+    PHANPY,3
+    FARFETCHD,3,5
+    CYNDAQUIL,2
+LandDay
+    TAILLOW,3
+    RATTATA,5
+    NATU,5
+    ZIGZAGOON,2
+    SENTRET,4
+    HOPPIP,3
+    ODDISH,3
+    TANGELA,3
+    SUNKERN,2
+    LOTAD,3
+    MARILL,3,5
+    TORCHIC,2
+LandNight
+    MINUN,3,6
+    PLUSLE,3,6
+    EKANS,2,5
+    SANDSHREW,2
+    MAREEP,2
+    JIGGLYPUFF,2
+    ODDISH,3
+    POOCHYENA,5
+    DROWZEE,6
+    PHANPY,3
+    FARFETCHD,3,5
+    HYPNO,10
+#-------------------------------
+016 # Mountain Zone
+25,10,10
+RockSmash
+    HIPPOWDON,17,38
+    SHUCKLE,23,34
+    DIGLETT,17,30
+    ROCKRUFF,16,26
+    ACCELGOR,25,56
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    SNORLAX,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+017 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+019 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+024 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    TRANQUILL,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+028 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+029 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+030 # Mountain Zone
+25,10,10
+LandMorning
+    GEODUDE,5
+    MANKEY,5
+    SLUGMA,2
+    CUBONE,2
+    MANKEY,4
+    MACHOP,3
+    MAGMAR,5
+    ARON,3
+    SHUCKLE,2,4
+    PHANPY,3
+    AERODACTYL,3,5
+    CHARMANDER,2,5
+LandDay
+    GEODUDE,5
+    MACHOP,5
+    CUBONE,5
+    SANDSHREW,2
+    SENTRET,4
+    TEDDIURSA,2,5
+    MAKUHITA,3
+    NUMEL,3
+    MAGMAR,2,10
+    PHANPY,3
+    ABSOL,3,5
+    CHARMANDER,2,5
+LandNight
+    GEODUDE,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    CLEFAIRY,5
+    MEDITITE,2
+    ABSOL,2
+    MACHOP,3
+    CLEFAIRY,5
+    LARVITAR,6
+    AERODACTYL,3
+    SNORLAX,3,5
+    CHARMANDER,10
+#-------------------------------
+031 # Mountain Interior
+25,5,5
+Cave
+    ZUBAT,3,5
+    SPOINK,4
+    GLIGAR,2,5
+    MAWILE,5
+    MAKUHITA,2
+    GOLBAT,2
+    MACHOP,3
+    SABLEYE,5
+    NOSEPASS,6
+    DIGLETT,3
+    WHISMUR,3,5
+    DUNSPARCE,10
+#-------------------------------
+033 # Swamp Zone
+25,10,10
+Land
+    HERDIER,27
+    CROAGUNK,34
+    RUFFLET,34
+    MINCCINO,29
+    SWADLOON,27
+    GURDURR,30
+    DRILBUR,29
+    STUNKY,30
+    SEVIPER,30
+    SWALOT,34
+    GABITE,29
+    QUILLADIN,30
+#-------------------------------
+034 # Swamp Zone
+25,10,10
+Land
+    HERDIER,27
+    CROAGUNK,34
+    RUFFLET,34
+    MINCCINO,29
+    SWADLOON,27
+    GURDURR,30
+    DRILBUR,29
+    STUNKY,30
+    SEVIPER,30
+    SWALOT,34
+    GABITE,29
+    QUILLADIN,30
+#-------------------------------
+035 # Swamp Zone
+25,10,10
+Land
+    HERDIER,27
+    CROAGUNK,34
+    RUFFLET,34
+    MINCCINO,29
+    SWADLOON,27
+    GURDURR,30
+    DRILBUR,29
+    STUNKY,30
+    SEVIPER,30
+    SWALOT,34
+    GABITE,29
+    QUILLADIN,30
+#-------------------------------
+036 # Deep Swamp
+25,10,10
+Land
+    PUMPKABOO,27
+    CROAGUNK,34
+    RUFFLET,34
+    MINCCINO,29
+    SWADLOON,27
+    GURDURR,30
+    VENOMOTH,29
+    STUNKY,30
+    SEVIPER,30
+    SWALOT,34
+    GABITE,29
+    QUILLADIN,30
+#-------------------------------
+037 # Water Temple
+25,10,10
+Water
+    MAGIKARP,25,35
+    MAGIKARP,25,35
+    MAGIKARP,25,35
+    MAGIKARP,25,35
+    MAGIKARP,25,35
+#-------------------------------
+042 # Southern Ocean
+25,10,10
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+044 # Temperate-Snowy Zone
+25,10,10
+Land
+    VULPIX,15
+    SANDSHREW,15
+    VULPIX,15
+    SANDSHREW,15
+    MIMIKYU,17
+    KOMALA,16
+    ORICORIO,18
+    BEWEAR,19
+    AXEW,18
+    GOLETT,20
+    VANILLITE,21
+    PRINPLUP,24
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+045 # Temperate Zone
+25,10,10
+LandMorning
+    HOPPIP,5
+    SUNKERN,5
+    ROSELIA,2
+    SUNKERN,2
+    SENTRET,4
+    PONYTA,3
+    ODDISH,3
+    TAILLOW,3
+    SUNKERN,2
+    PHANPY,3
+    FARFETCHD,3,5
+    CYNDAQUIL,2
+LandDay
+    TAILLOW,3
+    RATTATA,5
+    NATU,5
+    ZIGZAGOON,2
+    SENTRET,4
+    HOPPIP,3
+    ODDISH,3
+    TANGELA,3
+    SUNKERN,2
+    LOTAD,3
+    MARILL,3,5
+    TORCHIC,2
+LandNight
+    MINUN,3,5
+    PLUSLE,3,5
+    EKANS,2,5
+    SANDSHREW,2
+    MAREEP,2
+    JIGGLYPUFF,2
+    ODDISH,3
+    POOCHYENA,5
+    DROWZEE,6
+    PHANPY,3
+    FARFETCHD,3,5
+    HYPNO,10
+#-------------------------------
+047 # Temperate Zone
+25,10,10
+Land
+    SPEAROW,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    TANGELA,7,13
+    SUNKERN,7,10
+    LOTAD,6,10
+    POOCHYENA,7,12
+    SQUIRTLE,5,24
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    POPPLIO,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+053 # Southern Beach
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    WAILMER,30,33
+    OSHAWOTT,27,35
+    SHARPEDO,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWHIRL,20,35
+    MAGIKARP,5,14
+    KINGLER,28,36
+#-------------------------------
+057 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWHIRL,20,35
+    MAGIKARP,5,14
+    KINGLER,28,36
+#-------------------------------
+058 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+059 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+060 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+061 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+062 # Temperate Ocean
+25,10,10
+Land
+    DODRIO,28,37
+    LICKITUNG,24,34
+    PINSIR,29,37
+    SHUCKLE,26,37
+    KIRLIA,20,29
+    LILLIGANT,29,37
+    PACHIRISU,30,40
+    TANGROWTH,31,37
+    DRAMPA,29,34
+    MELMETAL,30,37
+    AXEW,29,37
+    GROTLE,24,37
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    BUIZEL,21,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
+#-------------------------------
+064 # Temperate Zone Top
+25,10,10
+LandMorning
+    HOPPIP,2,8
+    SUNKERN,5,10
+    ROSELIA,2,8
+    SUNKERN,2,7
+    SENTRET,4,8
+    GROWLITHE,3,8
+    ODDISH,3,9
+    TAILLOW,3,11
+    SUNKERN,2,10
+    PHANPY,3,18
+    FARFETCHD,3,7
+    CYNDAQUIL,2,22
+LandDay
+    NIDORANmA,5,7
+    NIDORANfE,5,7
+    PIDGEY,5,7
+    SANDSHREW,2,9
+    SENTRET,4,9
+    VULPIX,2,12
+    ODDISH,3,10
+    TAILLOW,3,12
+    SCYTHER,7,12
+    PHANPY,5,12
+    FARFETCHD,3,10
+    TORCHIC,2,12
+LandNight
+    MINUN,3,10
+    PLUSLE,3,10
+    EKANS,2,11
+    SANDSHREW,2,10
+    MAREEP,2,9
+    JIGGLYPUFF,2,10
+    ODDISH,3,12
+    POOCHYENA,11
+    DROWZEE,7,11
+    PHANPY,5,19
+    FARFETCHD,5,15
+    HYPNO,7,20
+#-------------------------------
+065 # Temperate Zone Bottom
+25,10,10
+LandMorning
+    HOPPIP,2,8
+    SUNKERN,5,10
+    ROSELIA,2,8
+    SUNKERN,2,7
+    SENTRET,4,8
+    GROWLITHE,3,8
+    ODDISH,3,9
+    TAILLOW,3,11
+    SUNKERN,2,10
+    PHANPY,3,18
+    FARFETCHD,3,7
+    CYNDAQUIL,2,22
+LandDay
+    NIDORANmA,5,7
+    NIDORANfE,5,7
+    PIDGEY,5,7
+    SANDSHREW,2,9
+    SENTRET,4,9
+    VULPIX,2,12
+    ODDISH,3,10
+    TAILLOW,3,12
+    SCYTHER,7,12
+    PHANPY,5,12
+    FARFETCHD,3,10
+    TORCHIC,2,12
+LandNight
+    MINUN,3,10
+    PLUSLE,3,10
+    EKANS,2,11
+    SANDSHREW,2,10
+    MAREEP,2,9
+    JIGGLYPUFF,2,10
+    ODDISH,3,12
+    POOCHYENA,11
+    DROWZEE,7,11
+    PHANPY,5,19
+    FARFETCHD,5,15
+    HYPNO,7,20
+#-------------------------------
+068 # Temperate-Snowy Zone
+25,10,10
+Land
+    VULPIX,15
+    SANDSHREW,15
+    VULPIX,15
+    SANDSHREW,15
+    MIMIKYU,17
+    KOMALA,16
+    ORICORIO,18
+    BEWEAR,19
+    AXEW,18
+    GOLETT,20
+    VANILLITE,21
+    PRINPLUP,24
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+071 # Ice Cave
+25,10,10
+Cave
+    NOIBAT,3,5
+    SWINUB,4
+    PILOSWINE,2,5
+    SANDYGAST,5
+    VANILLITE,2
+    NOIVERN,2
+    MACHOP,3
+    SABLEYE,5
+    GLACEON,6
+    GLALIE,3
+    SNORUNT,3,5
+    SMOOCHUM,10
+#-------------------------------
+072 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+073 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+074 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+075 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+077 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+078 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+079 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+080 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+082 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+083 # Winter Zone
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+084 # Winter Zone 1
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+085 # Winter Zone 2
+25,10,10
+Land
+    SWINUB,5,10
+    RATTATA,5,15
+    PIDGEY,5,11
+    ZIGZAGOON,6,10
+    SENTRET,5,11
+    HOPPIP,5,11
+    ODDISH,6,12
+    FROSLASS,7,13
+    DELIBIRD,7,10
+    PILOSWINE,6,10
+    SNEASEL,7,12
+    WEAVILE,5,24
+Water
+    SPHEAL,30,33
+    SEALEO,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    LAPRAS,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    SPHEAL,5,15
+    MAGIKARP,3,8
+    DEWGONG,7,13
+#-------------------------------
+098 # Ice Temple
+25,25,10
+Cave
+    NOIBAT,3,5
+    SWINUB,4
+    PILOSWINE,2,5
+    SANDYGAST,5
+    VANILLITE,2
+    NOIVERN,2
+    SWINUB,3
+    JYNX,5
+    GLACEON,6
+    GLALIE,3
+    SNORUNT,3,5
+    SMOOCHUM,10
+#-------------------------------
+099 # Ice Temple
+25,25,10
+Cave
+    NOIBAT,3,5
+    SWINUB,4
+    PILOSWINE,2,5
+    SANDYGAST,5
+    VANILLITE,2
+    NOIVERN,2
+    SWINUB,3
+    JYNX,5
+    GLACEON,6
+    GLALIE,3
+    SNORUNT,3,5
+    SMOOCHUM,10
+#-------------------------------
+101 # S.S Glittering Wreck
+25,10,10
+Cave
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    STARYU,34
+    MUDKIP,5
+    GYARADOS,5
+    HORSEA,30,33
+    KINGLER,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    TOTODILE,5,15
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+102 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+103 # Red and Blue's Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+110 # Deep Swamp
+25,10,10
+Cave
+    HOUNDOOM,5
+    WEAVILE,5
+    DRAPION,5
+    SKUNTANK,5
+    ABSOL,5
+    SHIFTRY,5
+    MIGHTYENA,5
+    LIEPARD,5
+    HONCHKROW,5
+    DEINO,5
+    TYRANITAR,5
+    UMBREON,5
+#-------------------------------
+111 # Humid Zone
+25,10,10
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+114 # Southern Ocean U
+25,10,10
+Cave
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    STARYU,34
+    MUDKIP,5
+    GYARADOS,5
+    HORSEA,30,33
+    KINGLER,27,35
+    CLOYSTER,26,36
+    DEWGONG,34,35
+    TOTODILE,5,15
+Water
+    BASCULIN,30,33
+    FRILLISH,27,35
+    WISHIWASHI,26,36
+    MAREANIE,34,35
+    OSHAWOTT,34
+#-------------------------------
+115 # Your Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+116 # William's Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+117 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+118 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+119 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+120 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+121 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+122 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+123 # Abandoned Cabin
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+124 # S.S. Glittering
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+125 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+126 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+127 # S.S Glittering Wreck
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+128 # Kitchen
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+129 # Captain's Quarters
+25,10,10
+Cave
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+    GASTLY,5
+    HAUNTER,5
+    GENGAR,5
+    DRIFBLIM,5
+    LAMPENT,5
+    HONEDGE,5
+    TREVENANT,5
+Water
+    MISDREAVUS,5
+    SHUPPET,5
+    BANETTE,5
+    DUSCLOPS,5
+    YAMASK,5
+#-------------------------------
+130 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+131 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+132 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+133 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+134 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+135 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+136 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+137 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+138 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+139 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+140 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+141 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+142 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+143 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+144 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+145 # Humid Zone
+25,10,10
+Cave
+    CACNEA,5
+    SANDILE,5
+    SCRAGGY,5
+    CACTURNE,5
+    CRUSTLE,5
+    SCRAFTY,5
+    SIGILYPH,5
+    YAMASK,5
+    KROKOROK,5
+    KROOKODILE,5
+    RHYDON,5
+    TAUROS,5
+Water
+    FORRETRESS,5
+    DUCKLETT,5
+    DEWPIDER,5
+    SKRELP,5
+    FROAKIE,5
+#-------------------------------
+156 # Humid Zone
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+157 # Humid Area R
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+158 # Humid Area B
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+159 # Humid Area BR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+160 # Humid Area RR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+161 # Humid Area BRR
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
