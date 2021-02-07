@@ -85,3 +85,5 @@
 82,POKEMONTRAINER_Blue,Pokémon Trainer,60,,,,Male,,
 83,GARYOAK3,Battling Prodigy,100,BattleGary,,,Male,50,
 84,RED3,Battling Prodigy,100,BattleGary,,,Male,50,
+85,NIGILMIN,Brainwashed Xatu,100,BattleGary,,,Male,50,
+85,NIGIL,Shadow Pokemon,100,BattleGary,,,Male,50,

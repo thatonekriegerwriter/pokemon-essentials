@@ -399,3 +399,23 @@ Pokemon = ESPEON,34
     Ability = 0
     Item = ELECTRICGEM
     IV = 31,31,31,31,31,31
+#-------------------------------
+[NIGIL,Nihilego]
+LoseText = "..."
+Pokemon = NIHILEGO,50
+    Shadow = yes
+    IV = 31,31,31,31,31,31
+#-------------------------------
+[NIGILMIN,Xatu]
+LoseText = "..."
+Pokemon = XATU,50
+    IV = 31,31,31,31,31,31
+Pokemon = XATU,50
+    IV = 31,31,31,31,31,31
+Pokemon = XATU,50
+    IV = 31,31,31,31,31,31
+Pokemon = XATU,50
+    IV = 31,31,31,31,31,31
+Pokemon = XATU,50
+    Shadow = yes
+    IV = 31,31,31,31,31,31

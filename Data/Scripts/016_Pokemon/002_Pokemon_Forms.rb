@@ -703,6 +703,16 @@ MultipleForms.register(:SPIRITOMB,{
   }
 })
 
+MultipleForms.register(:ELECTIVIRE,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [206]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
 MultipleForms.register(:LUCARIO,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [111]   # Map IDs for Origin Forme
