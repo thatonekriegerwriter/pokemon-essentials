@@ -419,3 +419,30 @@ Pokemon = XATU,50
 Pokemon = XATU,50
     Shadow = yes
     IV = 31,31,31,31,31,31
+#-------------------------------
+[PIRATEGRUNT,Grunt]
+LoseText = "..."
+Pokemon = ZANGOOSE,40
+    Item = LEFTOVERS
+Pokemon = VIGOROTH,40
+    Item = LEFTOVERS
+Pokemon = GIGALITH,40
+    Item = LEFTOVERS
+#-------------------------------
+[PIRATEGRUNTB,Grunt]
+LoseText = "..."
+Pokemon = CACTURNE,40
+    Item = LEFTOVERS
+Pokemon = ZANGOOSE,40
+    Item = LEFTOVERS
+Pokemon = ARMALDO,40
+    Item = LEFTOVERS
+#-------------------------------
+[LASS,Natasha]
+LoseText = "..."
+Pokemon = CLEFABLE,40
+    Item = LEFTOVERS
+Pokemon = PERSIAN,40
+    Item = LEFTOVERS
+Pokemon = CHANSEY,40
+    Item = LEFTOVERS
