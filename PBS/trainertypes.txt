@@ -88,4 +88,4 @@
 85,NIGILMIN,Brainwashed Xatu,100,BattleGary,,,Male,50,
 86,NIGIL,Shadow Pokemon,100,BattleGary,,,Male,50,
 87,PIRATEGRUNT,Pirate,100,BattleGary,,,Male,50,
-87,PIRATEGRUNTB,Pirate,100,BattleGary,,,Male,50,
+88,PIRATEGRUNTB,Pirate,100,BattleGary,,,Male,50,

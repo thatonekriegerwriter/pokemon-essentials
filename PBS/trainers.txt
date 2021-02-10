@@ -157,15 +157,15 @@ Pokemon = POLIWAG,5
     IV = 31,31,31,31,31,31
 #-------------------------------
 [POKEZORUA,Zorua Team]
-Pokemon = ZORUA,4
+Pokemon = ZORUA,15
     Gender = male
     Ability = 0
-Pokemon = ZORUA,5
+Pokemon = ZORUA,20
     Gender = female
     Ability = 0
 #-------------------------------
 [POKEZORUA,Zorua Team Leader]
-Pokemon = ZORUA,5
+Pokemon = ZORUA,25
     Gender = male
     Shadow = yes
     Ability = 0

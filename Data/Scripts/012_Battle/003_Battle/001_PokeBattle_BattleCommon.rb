@@ -95,6 +95,10 @@ module PokeBattle_BattleCommon
     else
       pbDisplayBrief(_INTL("{1} threw a {2}!",pbPlayer.name,itemName))
     end
+	if $game_switches[99]
+	  pbDisplay(_INTL("The Wild Pokemon dodged the Ball!"))
+      return
+	end
     # Animation of opposing trainer blocking Poké Balls (unless it's a Snag Ball
     # at a Shadow Pokémon)
     if trainerBattle? && !(pbIsSnagBall?(ball) && battler.shadowPokemon?)

@@ -2605,6 +2605,12 @@ LandNight
 #-------------------------------
 209 # Northern Area
 25,10,10
+Water
+    WOOPER,5
+    CORPHISH,5
+    QUAGSIRE,5
+    BULBASAUR,5
+    SWAMPERT,5
 LandMorning
     STARAVIA,5
     TAUROS,5
@@ -2644,12 +2650,6 @@ LandNight
     RIOLU,5
     DRAGONAIR,5
     TORTERRA,5
-Water
-    WOOPER,5
-    CORPHISH,5
-    QUAGSIRE,5
-    BULBASAUR,5
-    SWAMPERT,5
 #-------------------------------
 210 # Northern Area
 25,10,10
