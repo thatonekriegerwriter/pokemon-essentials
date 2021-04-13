@@ -243,6 +243,19 @@ Color = Gray
 Pokedex = It fires rocks charged with electricity. Even if the rock isn't fired that accurately, just grazing an opponent will cause numbness and fainting.
 WildItemCommon = CELLBATTERY
 #-------------------------------
+[GEODUDE,2]
+FormName = Island
+Type1 = ROCK
+Type2 = FAIRY
+Abilities = MAGNETPULL,STURDY
+HiddenAbility = GALVANIZE
+Moves = 1,TACKLE,1,DEFENSECURL,4,CHARGE,6,ROCKPOLISH,10,ROLLOUT,12,SPARK,16,ROCKTHROW,18,SMACKDOWN,22,THUNDERPUNCH,24,SELFDESTRUCT,28,STEALTHROCK,30,ROCKBLAST,34,DISCHARGE,36,EXPLOSION,40,DOUBLEEDGE,42,STONEEDGE
+EggMoves = AUTOTOMIZE,BLOCK,COUNTER,CURSE,ENDURE,FLAIL,MAGNETRISE,ROCKCLIMB,SCREECH,WIDEGUARD
+Weight = 20.3
+Color = Gray
+Pokedex = This Geodude has been radiated with raw energy.
+WildItemUncommon = CELLBATTERY
+#-------------------------------
 [SLOWBRO,1]
 FormName = Mega Slowbro
 MegaStone = SLOWBRONITE
@@ -1660,7 +1673,7 @@ HiddenAbility = INTIMIDATE
 Moves = 1,CRUNCH,1,TWISTER,1,DRAGONDANCE,1,MUDSPORT,1,HARDEN,1,BIND,4,CURSE,7,ROCKTHROW,10,ROCKTOMB,13,DRAGONRAGE,16,STEALTHROCK,19,AUTOTOMIZE,20,GYROBALL,22,SMACKDOWN,23,DUALCHOP,25,DRAGONBREATH,28,SLAM,31,DRACOMETEOR,34,ROCKSLIDE,37,CRUNCH,40,IRONTAIL,43,DIG,46,STONEEDGE,49,DOUBLEEDGE,52,SANDSTORM
 Pokedex =  This Steelix is ages old, powered by its anger and age.
 #-------------------------------
-[MAGMORTAR,1]
+[MAGMORTAR,2]
 PokedexForm = 1
 FormName = Burning Fae
 Type1 = FIRE
@@ -1671,7 +1684,7 @@ HiddenAbility = VITALSPIRIT
 Moves = 1,DISARMINGVOICE,1,SMOG,1,LEER,1,EMBER,1,SMOKESCREEN,5,EMBER,8,MOONLIGHT,11,SMOKESCREEN,12,DAZZLINGGLEAM,15,FIRESPIN,19,CLEARSMOG,22,FLAMEBURST,26,CONFUSERAY,29,FIREPUNCH,36,PLAYROUGH,40,LAVAPLUME,42,SUNNYDAY,49,FLAMETHROWER,55,FIREBLAST,62,HYPERBEAM
 Pokedex = This Magmortar has become full of fairy energy, and has become a fairy type.
 #-------------------------------
-[MAGIKARP,1]
+[MAGIKARP,2]
 FormName = DarkFish
 Type1 = WATER
 Type2 = DARK
@@ -1683,7 +1696,7 @@ EggMoves = SWAGGER,CONFUSERAY,DISABLE,HYPNOSIS,HAZE,MIRRORCOAT,SNATCH,HOWL,SUCKE
 Pokedex = These Magikarp live in the Water Temple, due to the Temples energy, they somehow evolve into Milotic.
 Evolutions = MILOTIC,Item,LINKSTONE
 #-------------------------------
-[MILOTIC,1]
+[MILOTIC,2]
 FormName = DarkFish
 Type1 = WATER
 Type2 = DARK
@@ -1704,7 +1717,7 @@ HiddenAbility = LIGHTMETAL
 Moves = 0,HAMMERARM,1,HAMMERARM,1,ICESHARD,1,METALCLAW,1,MAGNETRISE,1,TAKEDOWN,23,PURSUIT,26,BULLETPUNCH,29,POWDERSNOW,32,BLIZZARD,35,SCARYFACE,38,ICEBURN,41,AGILITY,44,METEORMASH,52,IRONDEFENSE,60,HYPERBEAM
 Pokedex = This Metagross has iced over due to years of being inside this cave.
 #-------------------------------
-[MAMOSWINE,1]
+[MAMOSWINE,2]
 FormName = Island
 Type1 = ICE
 Type2 = GROUND
@@ -1713,7 +1726,7 @@ Abilities = TRUANT
 Moves = 1,FURYATTACK,1,SCARYFACE,1,ANCIENTPOWER,1,PECK,1,ODORSLEUTH,1,MUDSPORT,1,POWDERSNOW,5,MUDSPORT,8,POWDERSNOW,11,MUDSLAP,14,ENDURE,18,MUDBOMB,21,HAIL,24,ICEFANG,28,TAKEDOWN,33,DOUBLEHIT,34,SKILLSWAP,37,REST,38,MIST,39,ICESHARD,41,THRASH,46,EARTHQUAKE,52,BLIZZARD,58,SCARYFACE
 Pokedex = Its impressive tusks are made of ice. The population thinned when it turned warm after the ice age.
 #-------------------------------
-[SPIRITOMB,1]
+[SPIRITOMB,2]
 FormName = Island
 Type1 = GHOST
 Type2 = ROCK
@@ -1735,7 +1748,7 @@ Moves = 0,AURASPHERE,1,AURASPHERE,3,LASERFOCUS,6,FORESIGHT,6,POISONSTING,7,QUICK
 EggMoves = CAPTIVATE,DESTINYBOND,DISABLE,FOULPLAY,GRUDGE,IMPRISON,NIGHTMARE,PAINSPLIT,SHADOWSNEAK,SMOKESCREEN
 Pokedex = This Lucario protects the Forest and Mischevious Pokemon inside. It is extremely loyal.
 #-------------------------------
-[ELECTIVIRE,1]
+[ELECTIVIRE,2]
 FormName = Island
 Type1 = ELECTRIC
 Type2 = GRASS

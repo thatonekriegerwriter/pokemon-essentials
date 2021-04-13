@@ -33,7 +33,7 @@ MAP_VIEW_MODE      = 1
 # * The odds of a newly generated Pokémon being shiny (out of 65536).
 # * The odds of a wild Pokémon/bred egg having Pokérus (out of 65536).
 #===============================================================================
-MAXIMUM_LEVEL        = 100
+MAXIMUM_LEVEL        = 255
 EGG_LEVEL            = 1
 SHINY_POKEMON_CHANCE = 8
 POKERUS_CHANCE       = 3
@@ -86,7 +86,7 @@ NO_SIGNPOSTS = []
 # * The maximum number of Game Corner coins the player can have.
 # * The maximum length, in characters, that the player's name can be.
 #===============================================================================
-INITIAL_MONEY        = 999_999
+INITIAL_MONEY        = 1000
 MAX_MONEY            = 999_999
 MAX_COINS            = 99_999
 MAX_PLAYER_NAME_SIZE = 10

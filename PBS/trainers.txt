@@ -429,6 +429,33 @@ Pokemon = VIGOROTH,40
 Pokemon = GIGALITH,40
     Item = LEFTOVERS
 #-------------------------------
+[PIRATEGRUNT,Grunt,1]
+LoseText = "..."
+Pokemon = ZANGOOSE,40
+    Item = LEFTOVERS
+Pokemon = VIGOROTH,40
+    Item = LEFTOVERS
+Pokemon = GIGALITH,40
+    Item = LEFTOVERS
+#-------------------------------
+[PIRATEGRUNT,Grunt,2]
+LoseText = "..."
+Pokemon = ZANGOOSE,40
+    Item = LEFTOVERS
+Pokemon = VIGOROTH,40
+    Item = LEFTOVERS
+Pokemon = GIGALITH,40
+    Item = LEFTOVERS
+#--------------------subboss-----------
+[PIRATEGRUNT,Grunt,2]
+LoseText = "..."
+Pokemon = KROOKODILE,40
+    Item = LEFTOVERS
+Pokemon = PANGORO,40
+    Item = LEFTOVERS
+Pokemon = KABUTOPS,40
+    Item = LEFTOVERS
+#-------------------------------
 [PIRATEGRUNTB,Grunt]
 LoseText = "..."
 Pokemon = CACTURNE,40
@@ -438,6 +465,63 @@ Pokemon = ZANGOOSE,40
 Pokemon = ARMALDO,40
     Item = LEFTOVERS
 #-------------------------------
+[PIRATEBOSS,???]
+LoseText = "..."
+Pokemon = CACTURNE,54
+    Gender = male
+    Moves = SPIKES,DARKPLUSE,SUCKERPUNCH,ENERGYBALL
+    Ability = 1
+    Item = LIFEORB
+    Nature = MILD
+    IV = 31,31,31,31,31,31
+    EV = 0,0,0,252,252,4
+    Ball = 2
+Pokemon = BISHARP,53
+    Gender = male
+    Moves = SWORDSDANCE,KNOCKOFF,IRONHEAD,SUCKERPUNCH
+    Ability = 0
+    Item = DREADPLATE
+    Nature = ADAMANT
+    IV = 31,31,31,31,31,31
+    EV = 0,252,0,252,0,4
+    Ball = 2
+Pokemon = TYRANTRUM,53
+    Gender = male
+    Moves = HEADSMASH,DARKPLUSE,SUCKERPUNCH,ENERGYBALL
+    Ability = 0
+    Item = HARDSTONE
+    Nature = JOLLY
+    IV = 31,31,31,31,31,31
+    EV = 4,252,0,252,0,0
+    Ball = 2
+Pokemon = COALOSSAL,56
+    Gender = male
+    Moves = SPIKES,FIREBLAST,HEAVYSLAM,RAPIDSPIN
+    Ability = 0
+    Item = LEFTOVERS
+    Nature = SASSY
+    IV = 31,31,31,31,31,31
+    EV = 252,0,4,0,0,252
+    Ball = 3
+Pokemon = BASTIODON,54
+    Gender = male
+    Moves = STEALTHROCK,METALBURST,ROAR,TOXIC
+    Ability = 1
+    Item = LEFTOVERS
+    Nature = CAREFUL
+    IV = 31,31,31,31,31,31
+    EV = 252,0,4,0,0,252
+    Ball = 2
+Pokemon = TYRANITAR,50
+    Gender = male
+    Moves = DRAGONDANCE,STONEEDGE,EARTHQUAKE,FIREPUNCH
+    Ability = 0
+    Item = LEFTOVERS
+    Nature = JOLLY
+    IV = 31,31,31,31,31,31
+    EV = 0,252,0,252,0,4
+    Ball = 2
+#-------------------------------
 [LASS,Natasha]
 LoseText = "..."
 Pokemon = CLEFABLE,40
@@ -446,3 +530,12 @@ Pokemon = PERSIAN,40
     Item = LEFTOVERS
 Pokemon = CHANSEY,40
     Item = LEFTOVERS
+#-------------------------------
+[SUPERNERD,Conway]
+LoseText = "..."
+Pokemon = SLOWKING,40
+    Gender = male
+    Moves = SAFEGUARD,PROTECT,PSYCHIC,WATERPULSE
+Pokemon = SHUCKLE,40
+    Gender = male
+    Moves = WITHDRAW,POWERTRICK,SLUDGEBOMB,GYROBALL

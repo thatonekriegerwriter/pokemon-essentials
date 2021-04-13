@@ -61,3 +61,4 @@ loop do
     break
   end
 end
+$DiscordRPC.shutdown

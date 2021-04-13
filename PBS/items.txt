@@ -649,7 +649,7 @@
 #-------------------------------
 1700,RUSTEDPICKAXE,Rusted Pickaxe,Rusted Pickaxes,8,0,"A rusted pickaxe you got off the boat. It could mine lightly, but nothing big.",0,0,6,
 1701,PICKAXE,Pickaxe,Pickaxes,8,0,"A Pickaxe you made with your own two hands. Feel proud.",0,0,6,
-1711,WATERBOTTLE,Water Bottle,Water Bottles,8,0,"A Water Bottle, you can fill it with water at Fresh Water Sources.",0,0,6,
+1711,WATERBOTTLE,Bottle,Bottles,8,0,"A Bottle, you can fill it with water at Fresh Water Sources.",1,0,0,
 1702,IRON2,Fine Iron,Bars of Fine Iron,8,0,"Iron mined from the Mountain Area.",0,0,0,
 1801,LVLDETECTOR,Level Detector,Level Detectors,8,0,"A device that can detect the level of a wild Pokémon. It is made by Silph Co.",2,0,6,
 1802,POISONDART,Poison Dart,Poison Darts,7,1000,"A handcrafted dart gun that poisons a Pokémon in battle.",0,4,0,
@@ -698,3 +698,6 @@
 1844,BCOAT,Boss's Coat,Boss's Coat,8,20,"It was your Boss's.",0,0,6,
 1845,LUCKIEREGG,Luckier Egg,Luckier Eggs,1,10000,"An item to be held by a Pokémon. It is an egg filled with happiness that earns extra Exp. Points in battle.",0,0,0,
 1846,DETECTSTONE,Shadow Stone,Shadow Stones,8,0,"A stone that glows when you are near a Shadow Pokemon.",0,0,6,
+1847,PHONEBOOK,Phone Book,Phone Book,8,0,"A Phone Book from work that has a list of phone numbers.",0,0,6,
+1848,MEGASTONE,Mega Stone,Mega Stones,8,0,"A Weird Looking rock full of energy.",0,0,6,
+1849,EGGHATCHER,Egg Hatcher,Egg Hatchers,8,0,"An Egg Hatcher in which to keep up to 6 eggs until they hatch.",2,0,6

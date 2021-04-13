@@ -226,7 +226,7 @@ Outdoor = true
 ShowArea = true
 #-------------------------------
 [051]
-# Intro
+# INTRO
 #-------------------------------
 [059]
 # Temperate Ocean
@@ -300,7 +300,7 @@ Outdoor = true
 Outdoor = true
 #-------------------------------
 [096]
-# MAP096
+# Xatu Home
 #-------------------------------
 [106]
 # Temperate Area

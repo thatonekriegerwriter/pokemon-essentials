@@ -2483,7 +2483,7 @@ Cave
 #-------------------------------
 205 # West Shore
 25,10,10
-Cave
+LandDay
     SEWADDLE,5
     WURMPLE,5
     YANMA,5

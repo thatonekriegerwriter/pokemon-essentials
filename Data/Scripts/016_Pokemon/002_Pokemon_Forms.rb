@@ -637,7 +637,7 @@ MultipleForms.register(:MAMOSWINE,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [68]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
@@ -657,7 +657,7 @@ MultipleForms.register(:MAGMORTAR,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [32]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
@@ -667,7 +667,7 @@ MultipleForms.register(:MAGIKARP,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [37]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
@@ -677,7 +677,7 @@ MultipleForms.register(:MILOTIC,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [37]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
@@ -697,7 +697,7 @@ MultipleForms.register(:SPIRITOMB,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [125]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
@@ -707,7 +707,7 @@ MultipleForms.register(:ELECTIVIRE,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [206]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 1
+      next 2
     end
     next 0
   }
