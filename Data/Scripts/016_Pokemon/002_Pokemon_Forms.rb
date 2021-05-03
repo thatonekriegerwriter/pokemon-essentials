@@ -725,7 +725,7 @@ MultipleForms.register(:LUCARIO,{
 
 MultipleForms.register(:VULPIX,{
   "getFormOnCreation" => proc { |pkmn|
-    maps = [44,68]   # Map IDs for Origin Forme
+    maps = [44,68,245]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end
