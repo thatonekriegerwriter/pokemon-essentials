@@ -2464,6 +2464,13 @@ Water
     GIBLE,5
     AXEW,5
     GOOMY,5
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    DRATINI,5,15
+    DRATINI,3,8
+    DRATINI,7,13
 #-------------------------------
 204 # Forest Zone
 25,10,10
@@ -2692,3 +2699,407 @@ LandNight
     RIOLU,5
     DRAGONAIR,5
     TORTERRA,5
+#-------------------------------
+248 # Temperate Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+249 # Temperate Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+250 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+251 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+252 # Temperate Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+253 # Ocean Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+254 # Ocean Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+255 # Temperate Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+256 # Mountain Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+257 # Mountain Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+258 # Mountain Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+259 # Mountain Skies
+25,10,10
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandMorning
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandDay
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandNight
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+260 # Temperate Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+261 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+262 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+263 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+264 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+265 # Shore Skies
+25,10,10
+Cave
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+#-------------------------------
+266 # Mountain Skies
+25,10,10
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandMorning
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandDay
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+LandNight
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
