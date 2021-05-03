@@ -13,7 +13,7 @@ HOST = r"0.0.0.0"
 PORT = 52879
 PBS_DIR = r"C:\Users\Owner\Documents\GitHub\pokemon-essentials\Server Software\PBS"
 
-EBDX_INSTALLED = True
+EBDX_INSTALLED = False
 
 class Server:
     def __init__(self, host, port, pbs_dir):
