@@ -2483,6 +2483,12 @@ Cave
 #-------------------------------
 205 # West Shore
 25,10,10
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    POIPOLE,26,36
+    SEISMITOAD,34,35
+    POPPLIO,5,15
 LandDay
     SEWADDLE,5
     WURMPLE,5
@@ -2496,12 +2502,6 @@ LandDay
     TROPIUS,5
     TREECKO,5
     CHIKORITA,5
-Water
-    INKAY,30,33
-    WARTORTLE,27,35
-    POIPOLE,26,36
-    SEISMITOAD,34,35
-    POPPLIO,5,15
 #-------------------------------
 206 # Forest Zone
 25,10,10

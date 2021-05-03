@@ -312,3 +312,6 @@ Outdoor = true
 [137]
 # Humid Zone
 Outdoor = true
+#-------------------------------
+[259]
+# Mountain Skies
