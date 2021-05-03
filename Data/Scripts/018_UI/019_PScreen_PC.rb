@@ -159,7 +159,7 @@ class StorageSystemPC
   end
 
   def access
-    pbMessage(_INTL("\\se[PC access]The Pokémon Storage System was opened."))
+    pbMessage(_INTL("\\se[PC access]You cracked open your crate."))
     command = 0
     loop do
       command = pbShowCommandsWithHelp(nil,

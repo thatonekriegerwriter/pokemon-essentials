@@ -55,9 +55,9 @@ def pbPokemonFollow(x)
   $PokemonTemp.dependentEvents.come_back(true)
   if ALWAYS_ANIMATE
     $PokemonTemp.dependentEvents.update_stepping
-  elsif $PokemonTemp.dependentEvents.refresh_sprite(false) == -1
+  elsif $PokemonTemp.dependentEvents.refresh_sprite(false,true) == -1
     $PokemonTemp.dependentEvents.stop_stepping
-  elsif !$PokemonTemp.dependentEvents.refresh_sprite(false)
+  elsif !$PokemonTemp.dependentEvents.refresh_sprite(false,true)
     $PokemonTemp.dependentEvents.stop_stepping
   end
 end
@@ -85,16 +85,7 @@ end
 # Script Command for removing every dependent event except Following Pokemon
 #-------------------------------------------------------------------------------
 def pbRemoveDependenciesExceptFollower
-  events = $PokemonGlobal.dependentEvents
-  for i in 0...events.length
-    if events[i] && events[i][8] != "FollowerPkmn"
-      events[i] = nil
-      @realEvents[i] = nil
-      @lastUpdate += 1
-    end
-    events.compact!
-    $PokemonTemp.dependentEvents.realEvents.compact!
-  end
+  $PokemonTemp.dependentEvents.removeAllButFollower
 end
 
 #-------------------------------------------------------------------------------
@@ -164,6 +155,19 @@ class DependentEvents
     $PokemonGlobal.timeTaken += 1
     $Trainer.firstAblePokemon.happiness += 1 if ($PokemonGlobal.timeTaken % 5000) == 0
     $PokemonGlobal.followerHoldItem = true if ($PokemonGlobal.timeTaken > 15000)
+  end
+
+  def removeAllButFollower
+    events=$PokemonGlobal.dependentEvents
+    for i in 0...events.length
+      if events[i] && events[i][8] != "FollowerPkmn" # Arbitrary name given to dependent event
+        events[i]=nil
+        @realEvents[i]=nil
+        @lastUpdate+=1
+      end
+      events.compact!
+      @realEvents.compact!
+    end
   end
 
 # Updates the sprite sprite with an animation
@@ -298,7 +302,7 @@ class DependentEvents
     return if !$PokemonGlobal.followerToggled
     firstPkmn = $Trainer.firstAblePokemon
     return if !firstPkmn
-    remove_sprite(false)
+    remove_sprite(anim)
     ret = refresh_sprite(anim)
     change_sprite([firstPkmn.species, firstPkmn.female?,
           firstPkmn.shiny?, firstPkmn.form,
@@ -340,7 +344,7 @@ def pbSurf
     surfbgm = pbGetMetadata(0,MetadataSurfBGM)
     pbCueBGM(surfbgm,0.5) if surfbgm
     pbStartSurfing
-    $PokemonTemp.dependentEvents.come_back($PokemonTemp.dependentEvents.refresh_sprite(false,true))
+    $PokemonTemp.dependentEvents.come_back(true) if !$PokemonTemp.dependentEvents.refresh_sprite(false,true)
     return true
   end
   return false
@@ -349,10 +353,9 @@ end
 # Update after surfing
 alias follow_pbEndSurf pbEndSurf
 def pbEndSurf(xOffset,yOffset)
+  isHidden = $PokemonTemp.dependentEvents.refresh_sprite(false,true)
   ret = follow_pbEndSurf(xOffset,yOffset)
-  if ret
-    $PokemonGlobal.callRefresh = [true,([0,false].include?($PokemonTemp.dependentEvents.refresh_sprite(false,true)))]
-  end
+  $PokemonGlobal.callRefresh = [true,(!isHidden)] if ret
 end
 
 # Update when starting diving to incorporate hiddden move animation
@@ -434,6 +437,25 @@ HiddenMoveHandlers::UseMove.add(:STRENGTH,proc { |move,pokemon|
   $PokemonMap.strengthUsed = true
   next true
 })
+
+# Update when starting Headbutt to incorporate hiddden move animation
+def pbHeadbutt(event=nil)
+  event = $game_player.pbFacingEvent(true)
+  move = getID(PBMoves,:HEADBUTT)
+  movefinder = pbCheckMove(move)
+  if !$DEBUG && !movefinder
+    pbMessage(_INTL("A Pokémon could be in this tree. Maybe a Pokémon could shake it."))
+    return false
+  end
+  if pbConfirmMessage(_INTL("A Pokémon could be in this tree. Would you like to use Headbutt?"))
+    speciesname = (movefinder) ? movefinder.name : $Trainer.name
+    pbMessage(_INTL("{1} used {2}!",speciesname,PBMoves.getName(move)))
+    pbHiddenMoveAnimation(movefinder)
+    pbHeadbuttEffect(event)
+    return true
+  end
+  return false
+end
 
 # Update follower when mounting Bike
 alias follow_pbDismountBike pbDismountBike
@@ -575,10 +597,38 @@ class Game_Map
   def passable?(x, y, d, self_event=nil)
     ret = follow_passable?(x,y,d,self_event)
     if !$game_temp.player_transferring && pbGetDependency("FollowerPkmn") && self_event != $game_player
-      dependent=pbGetDependency("FollowerPkmn")
+      dependent = pbGetDependency("FollowerPkmn")
       return false if self_event != dependent && dependent.x==x && dependent.y==y
     end
     return ret
+  end
+
+  # Returns whether the position x,y is fully passable (there is no blocking
+  # event there, and the tile is fully passable in all directions)
+  def passableStrict?(x, y, d, self_event = nil)
+    return false if !valid?(x, y)
+    for event in events.values
+      next if event == self_event || event.tile_id < 0 || event.through
+      next if event.x != x || event.y != y
+      terrain = @terrain_tags[event.tile_id]
+      next if terrain == PBTerrain::Ice
+      next if terrain == PBTerrain::Ledge
+      next if terrain == PBTerrain::Neutral
+      next if PBTerrain.isWater?(terrain)
+      return false if @passages[event.tile_id] & 0x0f != 0
+      return true if @priorities[event.tile_id] == 0
+    end
+    for i in [2, 1, 0]
+      tile_id = data[x, y, i]
+      terrain = @terrain_tags[tile_id]
+      next if terrain == PBTerrain::Ice
+      next if terrain == PBTerrain::Ledge
+      next if terrain == PBTerrain::Neutral
+      next if PBTerrain.isWater?(terrain)
+      return false if @passages[tile_id] & 0x0f != 0
+      return true if @priorities[tile_id] == 0
+    end
+    return true
   end
 end
 
@@ -1090,7 +1140,7 @@ end
 
 # Update the Passage method for bridge and ice sliding
 def pbTestPass(follower,x,y,direction=nil)
-  ret = $MapFactory.isPassable?(follower.map.map_id,x,y,follower)
+  ret = $MapFactory.isPassableStrict?(follower.map.map_id,x,y,follower)
   if defined?(PBTerrain::StairLeft) && ($MapFactory.getTerrainTag(follower.map.map_id,x,y)==PBTerrain::StairLeft ||$MapFactory.getTerrainTag(follower.map.map_id,x,y)==PBTerrain::StairRight)
     return true
   end
@@ -1149,7 +1199,7 @@ class DependentEvents
             tile[2] -= 1 if $MapFactory.getTerrainTag(tile[0],tile[1],tile[2]-1) == PBTerrain::StairRight && $game_map.terrain_tag($game_player.x,$game_player.y) == PBTerrain::StairRight
           end
         end
-        passable = tile && $MapFactory.isPassable?(tile[0],tile[1],tile[2],follower)
+        passable = tile && $MapFactory.isPassableStrict?(tile[0],tile[1],tile[2],follower)
         if !passable && $PokemonGlobal.bridge>0
           passable = PBTerrain.isBridge?($MapFactory.getTerrainTag(tile[0],tile[1],tile[2]))
         elsif passable && !$PokemonGlobal.surfing && $PokemonGlobal.bridge==0
@@ -1160,7 +1210,7 @@ class DependentEvents
           # If the tile isn't passable and the tile is a ledge,
           # get tile from further behind
           tile=$MapFactory.getFacingTileFromPos(tile[0],tile[1],tile[2],facing)
-          passable= tile && $MapFactory.isPassable?(tile[0],tile[1],tile[2],follower)
+          passable= tile && $MapFactory.isPassableStrict?(tile[0],tile[1],tile[2],follower)
           if passable && !$PokemonGlobal.surfing
             passable=!PBTerrain.isWater?($MapFactory.getTerrainTag(tile[0],tile[1],tile[2]))
           end
@@ -1181,24 +1231,22 @@ class DependentEvents
       follower.through=oldthrough
     else
       tile=$MapFactory.getFacingTile(facings[0],leader)
-      passable= tile && $MapFactory.isPassable?(tile[0],tile[1],tile[2],follower)
+      passable= tile && $MapFactory.isPassableStrict?(tile[0],tile[1],tile[2],follower)
       mapTile=passable ? mapTile : nil
     end
     if mapTile && follower.map.map_id==mapTile[0]
       # Follower is on same map
       newX=mapTile[1]
       newY=mapTile[2]
-      if defined?(leader.on_stair?)
-        if leader.on_stair?
-          newX = leader.x + (leader.direction == 4 ? 1 : leader.direction == 6 ? -1 : 0)
-          if leader.on_middle_of_stair?
-            newY = leader.y + (leader.direction == 8 ? 1 : leader.direction == 2 ? -1 : 0)
+      if defined?(leader.on_stair?) && leader.on_stair?
+        newX = leader.x + (leader.direction == 4 ? 1 : leader.direction == 6 ? -1 : 0)
+        if leader.on_middle_of_stair?
+          newY = leader.y + (leader.direction == 8 ? 1 : leader.direction == 2 ? -1 : 0)
+        else
+          if follower.on_middle_of_stair?
+            newY = follower.stair_start_y - follower.stair_y_position
           else
-            if follower.on_middle_of_stair?
-              newY = follower.stair_start_y - follower.stair_y_position
-            else
-              newY = leader.y + (leader.direction == 8 ? 1 : leader.direction == 2 ? -1 : 0)
-            end
+            newY = leader.y + (leader.direction == 8 ? 1 : leader.direction == 2 ? -1 : 0)
           end
         end
       end
@@ -1241,7 +1289,7 @@ class DependentEvents
       if follower.map.map_id==mapTile[0]
         # Follower is on same map as leader
         follower.moveto(leader.x,leader.y)
-  #      pbTurnTowardEvent(follower,leader) if !follower.move_route_forcing
+        pbTurnTowardEvent(follower,leader) if !follower.move_route_forcing
       else
         # Follower will move to different map
         events=$PokemonGlobal.dependentEvents
@@ -1253,7 +1301,7 @@ class DependentEvents
           newEventData[3]=mapTile[1]
           newEventData[4]=mapTile[2]
           if mapTile[0]==leader.map.map_id
-      #      pbTurnTowardEvent(follower,leader) if !follower.move_route_forcing
+            pbTurnTowardEvent(follower,leader) if !follower.move_route_forcing
           end
         end
       end
@@ -1361,7 +1409,7 @@ Events.onStepTaken += proc { |_sender,_e|
 if defined?(PluginManager)
   PluginManager.register({
     :name => "Following Pokemon EX",
-    :version => "1.2",
+    :version => "1.3.1",
     :credits => ["Golisopod User","Help-14","zingzags","Rayd12smitty","Venom12","mej71","PurpleZaffre","Akizakura16"],
     :link => "https://reliccastle.com/resources/"
   })
