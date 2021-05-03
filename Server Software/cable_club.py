@@ -265,6 +265,7 @@ def make_party_validator(pbs_dir):
             if len(row) >= 2:
                 moves_by_name[row[1]] = int(row[0])
 
+    print(moves_by_name)
     with io.open(os.path.join(pbs_dir, r'items.txt'), 'r', encoding='utf-8-sig') as items_pbs:
         for row in csv.reader(items_pbs):
             if len(row) >= 2:
@@ -391,7 +392,7 @@ def make_party_validator(pbs_dir):
         except Exception as e:
             errors.append(str(e))
         #print(errors)
-        return not errors
+        return errors
 
     return validate_party
 
