@@ -667,7 +667,7 @@ MultipleForms.register(:MAGIKARP,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [37]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }
@@ -677,7 +677,7 @@ MultipleForms.register(:MILOTIC,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [37]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }

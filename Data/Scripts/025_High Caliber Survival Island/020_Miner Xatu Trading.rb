@@ -99,6 +99,7 @@ RECIPEXS=[
 [:TM37,1,[:IRONPLATE,1],nil, true],
 [:SAFETYGOGGLES,1,[:SPLASHPLATE,1],nil, true],
 [:FLYINGGEM,1,[:NOMELBERRY,1],nil, true],
+[:LAXINCENSE,1,[:LEFTOVERS,1],nil, true],
 [:ASSAULTVEST,1,[:SMOKEBALL,1],nil, true]
 ]
 

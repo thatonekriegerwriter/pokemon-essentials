@@ -1684,7 +1684,7 @@ HiddenAbility = VITALSPIRIT
 Moves = 1,DISARMINGVOICE,1,SMOG,1,LEER,1,EMBER,1,SMOKESCREEN,5,EMBER,8,MOONLIGHT,11,SMOKESCREEN,12,DAZZLINGGLEAM,15,FIRESPIN,19,CLEARSMOG,22,FLAMEBURST,26,CONFUSERAY,29,FIREPUNCH,36,PLAYROUGH,40,LAVAPLUME,42,SUNNYDAY,49,FLAMETHROWER,55,FIREBLAST,62,HYPERBEAM
 Pokedex = This Magmortar has become full of fairy energy, and has become a fairy type.
 #-------------------------------
-[MAGIKARP,2]
+[MAGIKARP,1]
 FormName = DarkFish
 Type1 = WATER
 Type2 = DARK
@@ -1696,7 +1696,7 @@ EggMoves = SWAGGER,CONFUSERAY,DISABLE,HYPNOSIS,HAZE,MIRRORCOAT,SNATCH,HOWL,SUCKE
 Pokedex = These Magikarp live in the Water Temple, due to the Temples energy, they somehow evolve into Milotic.
 Evolutions = MILOTIC,Item,LINKSTONE
 #-------------------------------
-[MILOTIC,2]
+[MILOTIC,1]
 FormName = DarkFish
 Type1 = WATER
 Type2 = DARK
