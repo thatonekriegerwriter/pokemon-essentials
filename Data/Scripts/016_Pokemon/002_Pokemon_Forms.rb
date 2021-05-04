@@ -328,8 +328,8 @@ MultipleForms.register(:ROTOM,{
 
 MultipleForms.register(:GIRATINA,{
   "getForm" => proc { |pkmn|
-    maps = [49,50,51,72,73]   # Map IDs for Origin Forme
-    if pkmn.hasItem?(:GRISEOUSORB) || maps.include?($game_map.map_id)
+    maps = [4,49,50,51,72,73]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
       next 1
     end
     next 0
@@ -627,17 +627,11 @@ MultipleForms.register(:MINIOR,{
   }
 })
 
-MultipleForms.register(:MIMIKYU,{
-  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 0 if pkmn.fainted? || endBattle
-  }
-})
-
 MultipleForms.register(:MAMOSWINE,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [68]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }
@@ -657,7 +651,7 @@ MultipleForms.register(:MAGMORTAR,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [32]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }
@@ -695,9 +689,9 @@ MultipleForms.register(:METAGROSS,{
 
 MultipleForms.register(:SPIRITOMB,{
   "getFormOnCreation" => proc { |pkmn|
-    maps = [125]   # Map IDs for Origin Forme
+    maps = [129]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }
@@ -707,7 +701,7 @@ MultipleForms.register(:ELECTIVIRE,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [206]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      next 2
+      next 1
     end
     next 0
   }
@@ -724,8 +718,8 @@ MultipleForms.register(:LUCARIO,{
 })
 
 MultipleForms.register(:VULPIX,{
-  "getFormOnCreation" => proc { |pkmn|
-    maps = [44,68,245]   # Map IDs for Origin Forme
+"getFormOnCreation" => proc { |pkmn|
+    maps = [44]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end
@@ -760,6 +754,12 @@ MultipleForms.register(:SANDSLASH,{
       next 1
     end
     next 0
+  }
+})
+
+MultipleForms.register(:MIMIKYU,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0 if pkmn.fainted? || endBattle
   }
 })
 

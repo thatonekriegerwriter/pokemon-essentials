@@ -384,23 +384,23 @@ ItemHandlers::UseOnPokemon.addIf(proc { |item| pbIsEvolutionStone?(item)},
 
 )
 
+ItemHandlers::UseOnPokemon.add(:POTION,proc { |item,pkmn,scene|
+  next pbHPItem(pkmn,pkmn.totalhp/4,scene)
+})
+
 ItemHandlers::UseOnPokemon.add(:BERRYJUICE,proc { |item,pkmn,scene|
   next pbHPItem(pkmn,20,scene)
 })
 
-ItemHandlers::UseOnPokemon.add(:POTION,proc { |item,pkmn,scene|
-  next pbHPItem(pkmn,60,scene)
-})
-
-ItemHandlers::UseOnPokemon.copy(:POTION,:SWEETHEART)
-ItemHandlers::UseOnPokemon.copy(:POTION,:RAGECANDYBAR) if !NEWEST_BATTLE_MECHANICS
+ItemHandlers::UseOnPokemon.copy(:BERRYJUICE,:SWEETHEART)
+ItemHandlers::UseOnPokemon.copy(:BERRYJUICE,:RAGECANDYBAR) if !NEWEST_BATTLE_MECHANICS
 
 ItemHandlers::UseOnPokemon.add(:SUPERPOTION,proc { |item,pkmn,scene|
-  next pbHPItem(pkmn,100,scene)
+  next pbHPItem(pokemon,battler,pokemon.totalhp/3,scene)
 })
 
 ItemHandlers::UseOnPokemon.add(:HYPERPOTION,proc { |item,pkmn,scene|
-  next pbHPItem(pkmn,200,scene)
+  next pbHPItem(pokemon,battler,pokemon.totalhp/2,scene)
 })
 
 ItemHandlers::UseOnPokemon.add(:MAXPOTION,proc { |item,pkmn,scene|

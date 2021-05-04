@@ -315,3 +315,7 @@ Outdoor = true
 #-------------------------------
 [259]
 # Mountain Skies
+#-------------------------------
+[273]
+# Shore Skies
+Outdoor = true

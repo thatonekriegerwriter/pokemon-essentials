@@ -399,18 +399,21 @@ ItemHandlers::UseInBattle.addIf(proc { |item| pbIsPokeBall?(item) },   # Poké B
 # For items used on Pokémon or on a Pokémon's move
 #===============================================================================
 ItemHandlers::BattleUseOnPokemon.add(:POTION,proc { |item,pokemon,battler,choices,scene|
-  pbBattleHPItem(pokemon,battler,20,scene)
+  pbBattleHPItem(pokemon,battler,pokemon.totalhp/4,scene)
 })
 
-ItemHandlers::BattleUseOnPokemon.copy(:POTION,:BERRYJUICE,:SWEETHEART)
-ItemHandlers::BattleUseOnPokemon.copy(:POTION,:RAGECANDYBAR) if !NEWEST_BATTLE_MECHANICS
+ItemHandlers::BattleUseOnPokemon.add(:BERRYJUICE,proc { |item,pokemon,battler,choices,scene|
+  pbBattleHPItem(pokemon,battler,20,scene)
+})
+ItemHandlers::BattleUseOnPokemon.copy(:BERRYJUICE,:SWEETHEART)
+ItemHandlers::BattleUseOnPokemon.copy(:BERRYJUICE,:RAGECANDYBAR) if !NEWEST_BATTLE_MECHANICS
 
 ItemHandlers::BattleUseOnPokemon.add(:SUPERPOTION,proc { |item,pokemon,battler,choices,scene|
-  pbBattleHPItem(pokemon,battler,50,scene)
+  pbBattleHPItem(pokemon,battler,pokemon.totalhp/3,scene)
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:HYPERPOTION,proc { |item,pokemon,battler,choices,scene|
-  pbBattleHPItem(pokemon,battler,200,scene)
+  pbBattleHPItem(pokemon,battler,pokemon.totalhp/2,scene)
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:MAXPOTION,proc { |item,pokemon,battler,choices,scene|

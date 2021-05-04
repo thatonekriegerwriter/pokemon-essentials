@@ -58,10 +58,10 @@ TIME_SHADING = true
 #===============================================================================
 POISON_IN_FIELD         = true
 POISON_FAINT_IN_FIELD   = true
-FISHING_AUTO_HOOK       = true
+FISHING_AUTO_HOOK       = false
 DIVING_SURFACE_ANYWHERE = true
 NEW_BERRY_PLANTS        = true
-INFINITE_TMS            = true
+INFINITE_TMS            = false
 
 #===============================================================================
 # * The number of steps allowed before a Safari Zone game is over (0=infinite).

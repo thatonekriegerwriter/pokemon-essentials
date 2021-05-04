@@ -80,7 +80,8 @@ RECIPEXS=[
 [:ABILITYCAPSULE,1,[:EVERSTONE,1],nil, true],
 [:EXPSHARE,1,[:LINKSTONE,1],nil, true],
 [:ASSAULTVEST,1,[:EVIOLITE,1],nil, true],
-[:IRON2,1,[:IRONBALL,1],nil, true],
+[:IRON2,2,[:IRONBALL,1],nil, true],
+[:STONE,2,[:HARDSTONE,1],nil, true],
 [:SPELLTAG,1,[:ODDKEYSTONE,1],nil, true],
 [:SWIFTWING,1,[:INSECTPLATE,1],nil, true],
 [:COLBURBERRY,1,[:DREADPLATE,1],nil, true],
@@ -99,7 +100,6 @@ RECIPEXS=[
 [:TM37,1,[:IRONPLATE,1],nil, true],
 [:SAFETYGOGGLES,1,[:SPLASHPLATE,1],nil, true],
 [:FLYINGGEM,1,[:NOMELBERRY,1],nil, true],
-[:LAXINCENSE,1,[:LEFTOVERS,1],nil, true],
 [:ASSAULTVEST,1,[:SMOKEBALL,1],nil, true]
 ]
 
