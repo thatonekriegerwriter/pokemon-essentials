@@ -217,9 +217,9 @@
 215,GREENSCARF,Green Scarf,Green Scarves,1,100,"An item to be held by a Pokémon. It boosts the Smart aspect of the holder in a Contest.",0,0,0,
 216,YELLOWSCARF,Yellow Scarf,Yellow Scarves,1,100,"An item to be held by a Pokémon. It boosts the Tough aspect of the holder in a Contest.",0,0,0,
 #-------------------------------
-217,POTION,Potion,Potions,2,200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by a little bit.",1,1,0,
-218,SUPERPOTION,Super Potion,Super Potions,2,700,"A spray-type medicine for wounds. It restores the HP of one Pokémon by an okay amount.",1,1,0,
-219,HYPERPOTION,Hyper Potion,Hyper Potions,2,1500,"A spray-type medicine for wounds. It restores the HP of one Pokémon by a Fair Bit.",1,1,0,
+217,POTION,Potion,Potions,2,200,"A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",1,1,0,
+218,SUPERPOTION,Super Potion,Super Potions,2,700,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points.",1,1,0,
+219,HYPERPOTION,Hyper Potion,Hyper Potions,2,1500,"A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points.",1,1,0,
 220,MAXPOTION,Max Potion,Max Potions,2,2500,"A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",1,1,0,
 221,FULLRESTORE,Full Restore,Full Restores,2,3000,"A medicine that fully restores the HP and heals any status problems of a single Pokémon.",1,1,0,
 222,SACREDASH,Sacred Ash,Sacred Ashes,2,50000,"It revives all fainted Pokémon. In doing so, it also fully restores their HP.",2,0,0,
@@ -700,4 +700,5 @@
 1846,DETECTSTONE,Shadow Stone,Shadow Stones,8,0,"A stone that glows when you are near a Shadow Pokemon.",0,0,6,
 1847,PHONEBOOK,Phone Book,Phone Book,8,0,"A Phone Book from work that has a list of phone numbers.",0,0,6,
 1848,MEGASTONE,Mega Stone,Mega Stones,8,0,"A Weird Looking rock full of energy.",0,0,6,
-1849,EGGHATCHER,Egg Hatcher,Egg Hatchers,8,0,"An Egg Hatcher in which to keep up to 6 eggs until they hatch.",2,0,6
+1849,EGGHATCHER,Egg Hatcher,Egg Hatchers,8,0,"An Egg Hatcher in which to keep up to 6 eggs until they hatch.",2,0,6,
+1850,BERRYPOTS,Berry Pots,Berry Pots,8,0,"Handy containers for cultivating Berries wherever you go.",2,0,6
