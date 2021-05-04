@@ -211,7 +211,7 @@ ItemHandlers::CanUseInBattle.add(:REVIVE,proc { |item,pokemon,battler,move,first
   next true
 })
 
-ItemHandlers::CanUseInBattle.copy(:REVIVE,:MAXREVIVE,:REVIVALHERB)
+ItemHandlers::CanUseInBattle.copy(:REVIVE,:MAXREVIVE,:REVIVALHERB,:ARGOSTBERRY)
 
 ItemHandlers::CanUseInBattle.add(:ETHER,proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
   if !pokemon.able? || move<0 ||
@@ -528,6 +528,8 @@ ItemHandlers::BattleUseOnPokemon.add(:REVIVE,proc { |item,pokemon,battler,choice
   scene.pbRefresh
   scene.pbDisplay(_INTL("{1} recovered from fainting!",pokemon.name))
 })
+
+ItemHandlers::BattleUseOnPokemon.copy(:REVIVE,:ARGOSTBERRY)
 
 ItemHandlers::BattleUseOnPokemon.add(:MAXREVIVE,proc { |item,pokemon,battler,choices,scene|
   pokemon.healHP

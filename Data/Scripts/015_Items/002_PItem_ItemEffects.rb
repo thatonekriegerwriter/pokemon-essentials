@@ -541,6 +541,8 @@ ItemHandlers::UseOnPokemon.add(:REVIVE,proc { |item,pkmn,scene|
   next true
 })
 
+ItemHandlers::UseOnPokemon.copy(:REVIVE,:ARGOSTBERRY)
+
 ItemHandlers::UseOnPokemon.add(:MAXREVIVE,proc { |item,pkmn,scene|
   if !pkmn.fainted?
     scene.pbDisplay(_INTL("It won't have any effect."))
