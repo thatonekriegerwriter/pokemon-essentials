@@ -98,6 +98,7 @@ RECIPEMART2=[
 [:TM01,1,[:STARPIECE,2],nil, true],
 [:TM96,1,[:STARPIECE,2],nil, true],
 [:TM98,1,[:STARPIECE,2],nil, true],
+[:TM94,1,[:STARPIECE,2],nil, true],
 [:TM12,1,[:STARPIECE,2],nil, true],
 [:TM99,1,[:STARPIECE,2],nil, true]
 ]
