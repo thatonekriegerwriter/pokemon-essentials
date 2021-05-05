@@ -335,6 +335,23 @@ HiddenAbility = PARENTALBOND
 Weight = 100.0
 Pokedex = The explosive energy the child is bathed in causes temporary growth. The mother is beside herself with worry about it.
 #-------------------------------
+[MRMIME,1]
+FormName = Galarian
+Type1 = ICE
+Type2 = PSYCHIC
+BaseStats = 50,65,65,100,90,90
+EffortPoints = 0,0,0,2,0,0
+Abilities = VITALSPIRIT,SCREENCLEANER
+HiddenAbility = ICEBODY
+EggMoves = CONFUSERAY,FAKEOUT,POWERSPLIT,TICKLE
+Height = 1.4
+Weight = 56.8
+Color = White
+Pokedex = It can radiate chilliness from the bottoms of its feet. It'll spend the whole day tap-dancing on a frozen floor.
+BattlerPlayerY = 22
+BattlerEnemyY = 17
+Evolutions = MRRIME,Level,42
+#-------------------------------
 [PINSIR,1]
 FormName = Mega Pinsir
 MegaStone = PINSIRITE
@@ -1040,7 +1057,32 @@ Abilities = ROCKHEAD,ADAPTABILITY
 Pokedex = Even Basculin, which devours everything it can with its huge jaws, is nothing more than food to organisms stronger than itself.
 WildItemUncommon = DEEPSEASCALE
 #-------------------------------
+[DARUMAKA,1]
+FormName = Galarian
+Type1 = ICE
+Moves = 1,POWDERSNOW,1,TACKLE,4,TAUNT,8,BITE,12,AVALANCHE,16,WORKUP,20,ICEFANG,24,HEADBUTT,28,ICEPUNCH,32,UPROAR,36,BELLYDRUM,40,BLIZZARD,44,THRASH,48,SUPERPOWER
+EggMoves = FLAMEWHEEL,FOCUSPUNCH,FREEZEDRY,HAMMERARM,INCINERATE,POWERUPPUNCH,TAKEDOWN,YAWN
+Height = 0.7
+Weight = 40.0
+Color = White
+Pokedex = The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.
+BattlerPlayerY = 31
+Evolutions = DARMANITAN,Item,ICESTONE
+#-------------------------------
 [DARMANITAN,1]
+FormName = Galarian
+Type1 = ICE
+BaseStats = 105,140,55,95,40,55
+Abilities = GORILLATACTICS
+Moves = 0,ICICLECRASH,1,ICICLECRASH,1,POWDERSNOW,1,TACKLE,1,TAUNT,1,BITE,12,AVALANCHE,16,WORKUP,20,ICEFANG,24,HEADBUTT,28,ICEPUNCH,32,UPROAR,38,BELLYDRUM,44,BLIZZARD,50,THRASH,56,SUPERPOWER
+Height = 1.7
+Weight = 120.0
+Color = White
+Pokedex = Though it has a gentle disposition, it's also very strong. It will quickly freeze the snowball on its head before going for a headbutt.
+BattlerPlayerY = 45
+BattlerEnemyY = 33
+#-------------------------------
+[DARMANITAN,2]
 FormName = Zen Mode
 Type1 = FIRE
 Type2 = PSYCHIC
@@ -1048,9 +1090,18 @@ BaseStats = 105,30,105,55,140,105
 EffortPoints = 0,0,0,0,2,0
 Color = Blue
 Pokedex = When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit.
-BattlerPlayerX = 1
+BattlerEnemyY = 33
+#-------------------------------
+[DARMANITAN,3]
+FormName = Galarian Zen Mode
+Type1 = ICE
+Type2 = FIRE
+BaseStats = 105,160,55,135,30,55
+EffortPoints = 0,0,0,0,2,0
+Color = White
+Pokedex = Darmanitan takes this form when enraged. It won't stop spewing flames until its rage has settled, even if its body starts to melt.
+BattlerPlayerY = 27
 BattlerEnemyY = 30
-BattlerShadowSize = 2
 #-------------------------------
 [DEERLING,1]
 FormName = Summer Form
@@ -1993,3 +2044,28 @@ Kind = Unique Horn
 Pokedex = Brave and prideful, this Pokémon dashes airily through the forest, its steps aided by the psychic power stored in the fur on its fetlocks.
 BattlerPlayerY = 12
 BattlerEnemyY = 13
+#-------------------------------
+[AIPOM,1]
+FormName = Stone
+Type1 = GROUND
+Type2 = ROCK
+GenderRate = AlwaysMale
+BaseStats = 50,90,130,30,10,90
+GrowthRate = Fast
+Abilities = IMMORTAL
+Moves = 1,DOUBLEHIT,1,MUDSLAP,4,SANDATTACK,8,ANCIENTPOWER,10,ASTONISH,11,ACCELEROCK,12,DOUBLEHIT,15,TICKLE,17,STOMPINGTANTRUM,18,FURYSWIPES,22,POWERGEM,25,SCREECH,27,SANDSTORM,29,AGILITY,30,PRECIPICEBLADES,32,DOUBLEHIT,34,HEADSMASH,36,FLING,39,NASTYPLOT,43,LASTRESORT,45,SWIFT,48,MAGNITUDE,50,STEALTHROCK,53,LANDSWRATH
+EggMoves = AGILITY,BEATUP,BOUNCE,COUNTER,COVET,DOUBLESLAP,FAKEOUT,PURSUIT,QUICKGUARD,REVENGE,SCREECH,SLAM,SPITE,SWITCHEROO,TAILSLAP,ACCELEROCK,SANDSTORM
+Color = Grey
+Pokedex = Its tail ends with a dexterous, handlike appendage. However, because it uses the tail so much, Aipom's real hands have become rather clumsy.
+BattlerPlayerY = 26
+BattlerEnemyY = 29
+#-------------------------------
+[SLAKING,1]
+FormName = Island
+BaseStats = 50,90,130,10,10,60
+Abilities = HUGEPOWER
+Pokedex = IHordes of Slaking gather around trees when fruits come into season. They wait around patiently for ripened fruits to fall out of the trees.
+BattlerPlayerX = 2
+BattlerPlayerY = 0
+BattlerEnemyX = 0
+BattlerEnemyY = 12

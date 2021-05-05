@@ -1229,6 +1229,12 @@ BattleHandlers::DamageCalcTargetAbility.add(:WATERBUBBLE,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:GORILLATACTICS,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[ATK_MULT] = (mults[ATK_MULT]*1.5).round if move.physicalMove?
+  }
+)
+
 #===============================================================================
 # DamageCalcTargetAbilityNonIgnorable handlers
 #===============================================================================

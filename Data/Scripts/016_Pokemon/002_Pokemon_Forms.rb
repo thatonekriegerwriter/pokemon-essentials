@@ -386,7 +386,8 @@ MultipleForms.register(:BASCULIN,{
 
 MultipleForms.register(:DARMANITAN,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 0
+    next 0 if pkmn.form==2
+    next 1 if pkmn.form==3
   }
 })
 
@@ -719,7 +720,7 @@ MultipleForms.register(:LUCARIO,{
 
 MultipleForms.register(:VULPIX,{
 "getFormOnCreation" => proc { |pkmn|
-    maps = [44,68]   # Map IDs for Origin Forme
+    maps = [44,68,72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end
@@ -728,6 +729,16 @@ MultipleForms.register(:VULPIX,{
 })
 
 MultipleForms.register(:NINETAILS,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [44,68,72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:ZIGZAGOON,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [44,68]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
@@ -739,7 +750,7 @@ MultipleForms.register(:NINETAILS,{
 
 MultipleForms.register(:SANDSHREW,{
   "getFormOnCreation" => proc { |pkmn|
-    maps = [44,68]   # Map IDs for Origin Forme
+    maps = [44,68,72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end
@@ -749,7 +760,37 @@ MultipleForms.register(:SANDSHREW,{
 
 MultipleForms.register(:SANDSLASH,{
   "getFormOnCreation" => proc { |pkmn|
-    maps = [44,68]   # Map IDs for Origin Forme
+    maps = [44,68,72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:MRMIME,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:DARMANITAN,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
+MultipleForms.register(:DARUMAKA,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
       next 1
     end

@@ -36,10 +36,19 @@ Filename = mapRegion1.png
 Point = 13,16,Here,,,,,
 #-------------------------------
 [0]
-Name = Crudely Drawn Map
-Filename = mapRegion2.png
-Point = 6,8,Near Temperate Home,Temperate Base,004,021,012,
-Point = 11,8,Near Mountain Base,Mountain Base,016,022,028,
+Filename = mapRegion3.png
+Name = Abandoned Island
+Point = 7,7,Winter Area,,255,026,015,
+Point = 6,14,Temperate Zone,,255,026,015,
+Point = 6,18,Island,,255,026,015,
+Point = 11,18,Xatu Island,,255,026,015,
+Point = 13,13,Farm,,255,026,015,
+Point = 12,11,Mountains,,255,026,015,
+Point = 16,11,Swamp,,255,026,015,
+Point = 27,11,Reds House,,255,026,015,
+Point = 17,6,Northern Area,,255,026,015,
+Point = 8,19,SS Glittering Wreck,,255,026,015,
+
 #-------------------------------
 [1]
 Filename = mapRegion3.png

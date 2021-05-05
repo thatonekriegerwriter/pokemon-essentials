@@ -233,3 +233,5 @@
 231,SHADOWSHIELD,Shadow Shield,"Resists damage while its HP is full."
 232,PRISMARMOR,Prism Armor,"Reduces damage from super-effective attacks."
 233,NEUROFORCE,Neuroforce,"Powers up moves that are super-effective."
+237,GORILLATACTICS,Gorilla Tactics,"Boosts Attack but only allows the use of one move.",
+1000,IMMORTAL,Immortal,"Restores a little HP when KOing an opponent."
