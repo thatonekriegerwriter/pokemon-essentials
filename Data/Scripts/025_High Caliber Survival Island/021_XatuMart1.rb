@@ -58,22 +58,22 @@ $isUnlocked = []
 ###############################################################################
 
 RECIPEMART1=[
-[:POTION,1,[:STARPIECE,5],nil, true],
-[:SUPERPOTION,1,[:STARPIECE,12],nil, true],
-[:BLACKFLUTE,1,[:STARPIECE,7],nil, true],
-[:EVIOLITE,1,[:STARPIECE,20],nil, true],
-[:SACREDASH,1,[:STARPIECE,75],nil, true],
-[:FULLINCENSE,1,[:STARPIECE,15],nil, true],
-[:LAXINCENSE,1,[:STARPIECE,15],nil, true],
-[:LUCKINCENSE,1,[:STARPIECE,15],nil, true],
-[:PUREINCENSE,1,[:STARPIECE,15],nil, true],
-[:SEAINCENSE,1,[:STARPIECE,15],nil, true],
-[:WAVEINCENSE,1,[:STARPIECE,15],nil, true],
-[:ROSEINCENSE,1,[:STARPIECE,15],nil, true],
-[:ODDINCENSE,1,[:STARPIECE,15],nil, true],
-[:ROCKINCENSE,1,[:STARPIECE,15],nil, true],
-[:WATERBOTTLE,1,[:STARPIECE,3],nil, true],
-[:POKEDOLL,1,[:STARPIECE,4],nil, true],
+[:POTION,1,[:STARPIECE,1],nil, true],
+[:SUPERPOTION,1,[:STARPIECE,3],nil, true],
+[:BLACKFLUTE,1,[:STARPIECE,2],nil, true],
+[:EVIOLITE,1,[:STARPIECE,3],nil, true],
+[:SACREDASH,1,[:STARPIECE,15],nil, true],
+[:FULLINCENSE,1,[:STARPIECE,2],nil, true],
+[:LAXINCENSE,1,[:STARPIECE,2],nil, true],
+[:LUCKINCENSE,1,[:STARPIECE,2],nil, true],
+[:PUREINCENSE,1,[:STARPIECE,2],nil, true],
+[:SEAINCENSE,1,[:STARPIECE,2],nil, true],
+[:WAVEINCENSE,1,[:STARPIECE,2],nil, true],
+[:ROSEINCENSE,1,[:STARPIECE,2],nil, true],
+[:ODDINCENSE,1,[:STARPIECE,2],nil, true],
+[:ROCKINCENSE,1,[:STARPIECE,2],nil, true],
+[:WATERBOTTLE,1,[:STARPIECE,1],nil, true],
+[:POKEDOLL,1,[:STARPIECE,1],nil, true],
 [:SNOWMAIL,1,[:STARPIECE,1],nil, true]
 ]
 
