@@ -157,14 +157,6 @@ MenuHandlers.addEntry(:CONTROLS,_INTL("Controls"),"menuControls",proc{|menu|
     menu.refresh
   }
 },proc{ return true })
-# Achievements
-MenuHandlers.addEntry(:ACHIEVEMENTS,_INTL("Achievements"),"menuAchievements",proc{|menu|
-  scene = PokemonAchievementsScene.new
-  screen = PokemonAchievements.new(scene)
-  pbFadeOutIn(99999) { 
-    screen.pbStartScreen
-  }
-},proc{ return true })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new
