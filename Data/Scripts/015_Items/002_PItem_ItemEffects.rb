@@ -541,7 +541,18 @@ ItemHandlers::UseOnPokemon.add(:REVIVE,proc { |item,pkmn,scene|
   next true
 })
 
-ItemHandlers::UseOnPokemon.copy(:REVIVE,:ARGOSTBERRY)
+ItemHandlers::UseOnPokemon.add(:ARGOSTBERRY,proc { |item,pkmn,scene|
+  if !pkmn.fainted?
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  pkmn.hp = (pkmn.totalhp/99).floor
+  pkmn.hp = 1 if pkmn.hp<=0
+  pkmn.healStatus
+  scene.pbRefresh
+  scene.pbDisplay(_INTL("{1}'s HP was restored.",pkmn.name))
+  next true
+})
 
 ItemHandlers::UseOnPokemon.add(:MAXREVIVE,proc { |item,pkmn,scene|
   if !pkmn.fainted?

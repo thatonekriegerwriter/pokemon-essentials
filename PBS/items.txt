@@ -674,7 +674,7 @@
 1820,PORTABLEPC,Crate,Crate,8,2100,"A Crate that you salvaged from the Shipwreck.",0,0,6,
 1821,EXPALL,Exp. All,Exp. Alls,8,3000,"An item to be held by a Pokémon. The holder gets a share of a battle's Exp. Points without battling.",0,0,6,
 1822,EXPALLOFF,Exp. All,Exp. Alls,8,3000,"An item to be held by a Pokémon. The holder gets a share of a battle's Exp. Points without battling.",0,0,6
-1823,ARGOSTBERRY,Argost Berry,Argost Berries,5,20,"It may be used or held by a Pokémon to recover from fainting.",0,0,5,
+1823,ARGOSTBERRY,Argost Berry,Argost Berries,5,20,"It may be used or held by a Pokémon to recover from fainting.",1,1,5,
 1824,MASTERBALLPL,Master Ball Plans,Master Ball Plans,5,20,"Plans that can be used to recreate the Master Ball.",0,0,5,
 1825,PURPLEAPRICORN,Purple Apricorn,Purple Apricorns,1,20,"A purple Apricorn. It has a powerful scent.",0,0,5,
 1826,ATKCURRY,Spelon Curry,Spelon Curry,1,20,"A Curry that increases your Coolness and Attack as long as you are on the field.",1,3,0,
