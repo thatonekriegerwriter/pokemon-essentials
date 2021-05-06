@@ -157,6 +157,14 @@ MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
     pbUpdateSceneMap
   }
 },proc{ return true })
+MenuHandlers.addEntry(:CONTROLS,_INTL("Controls"),"menuControls",proc{|menu|
+  pbFadeOutIn(99999) { 
+    scene=PokemonControlsScene.new       
+    screen=PokemonControls.new(scene)
+	screen.pbStartScreen
+    menu.refresh
+  }
+},proc{ return $DEBUG })
 # Debug Menu
 MenuHandlers.addEntry(:DEBUG,_INTL("Debug"),"menuDebug",proc{|menu|
   pbFadeOutIn(99999) { 

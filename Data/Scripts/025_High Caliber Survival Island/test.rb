@@ -60,19 +60,19 @@ class CharacterSelect_Scene
     @sprites["minichar_3"].y=230
     
 #---BOTTOM ROW------------
-    @sprites["minichar_4"]=AnimatedSprite.new("Graphics/Characters/fk025",4,32,40,animSpeed,@viewport)
+    @sprites["minichar_4"]=AnimatedSprite.new("Graphics/Characters/fk002-brendan",4,32,40,animSpeed,@viewport)
     @sprites["minichar_4"].x=168
     @sprites["minichar_4"].y=286
     
-    @sprites["minichar_5"]=AnimatedSprite.new("Graphics/Characters/fk026",4,32,40,animSpeed,@viewport)
+    @sprites["minichar_5"]=AnimatedSprite.new("Graphics/Characters/fk003-may",4,32,40,animSpeed,@viewport)
     @sprites["minichar_5"].x=216
     @sprites["minichar_5"].y=286
     
-    @sprites["minichar_6"]=AnimatedSprite.new("Graphics/Characters/fk002-brendan",4,32,44,animSpeed,@viewport)
+    @sprites["minichar_6"]=AnimatedSprite.new("Graphics/Characters/a lu000",4,32,44,animSpeed,@viewport)
     @sprites["minichar_6"].x=264
     @sprites["minichar_6"].y=284
     
-    @sprites["minichar_7"]=AnimatedSprite.new("Graphics/Characters/fk003-may",4,32,42,animSpeed,@viewport)
+    @sprites["minichar_7"]=AnimatedSprite.new("Graphics/Characters/a daw trchar001",4,32,42,animSpeed,@viewport)
     @sprites["minichar_7"].x=312
     @sprites["minichar_7"].y=286
     

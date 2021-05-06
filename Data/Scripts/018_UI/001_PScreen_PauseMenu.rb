@@ -139,6 +139,8 @@ class PokemonPauseMenu
       commands[cmdSave = commands.length]   = _INTL("Save") if $game_system && !$game_system.save_disabled
     end
     commands[cmdOption = commands.length]   = _INTL("Options")
+	#EDIT#
+    commands[cmdControls = commands.length]   =_INTL("Controls")
     commands[cmdDebug = commands.length]    = _INTL("Debug") if $DEBUG
     commands[cmdEndGame = commands.length]  = _INTL("Quit Game")
     loop do
@@ -253,6 +255,12 @@ class PokemonPauseMenu
         pbFadeOutIn {
           pbDebugMenu
           @scene.pbRefresh
+        }
+      elsif cmdControls>=0 && command==cmdControls
+        scene=PokemonControlsScene.new       
+        screen=PokemonControls.new(scene)
+        pbFadeOutIn(99999) {
+        screen.pbStartScreen
         }
       elsif cmdEndGame>=0 && command==cmdEndGame
         @scene.pbHideMenu
