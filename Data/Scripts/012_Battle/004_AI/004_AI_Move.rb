@@ -10,6 +10,9 @@ class PokeBattle_AI
     if !wildBattler
       skill     = @battle.pbGetOwnerFromBattlerIndex(user.index).skill || 0
     end
+    if wildBattler
+      skill     = skill=$game_variables[30]*$game_variables[31]
+    end
     # Get scores and targets for each move
     # NOTE: A move is only added to the choices array if it has a non-zero
     #       score.

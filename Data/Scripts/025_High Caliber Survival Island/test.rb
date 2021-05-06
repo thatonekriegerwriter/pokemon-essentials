@@ -1,4 +1,4 @@
--#Call NeoCI.ChoosePlayerCharacter
+#Call NeoCI.ChoosePlayerCharacter
 #Return the item internal number or 0 if canceled
 module NeoCI
  def self.ChoosePlayerCharacter()
