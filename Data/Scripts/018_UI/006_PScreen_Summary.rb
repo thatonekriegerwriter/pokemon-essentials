@@ -623,20 +623,21 @@ class PokemonSummary_Scene
     # Write various bits of text
     textpos = [
        [_INTL("HP"),292,76,2,base,statshadows[PBStats::HP]],
-       [sprintf("%d/%d",@pokemon.hp,@pokemon.totalhp),462,76,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d/%d | %d/%d",@pokemon.hp,@pokemon.totalhp,@pokemon.ev[0],@pokemon.iv[0]),462,76,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Attack"),248,120,0,base,statshadows[PBStats::ATTACK]],
-       [sprintf("%d",@pokemon.attack),456,120,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d | %d/%d",@pokemon.attack,@pokemon.ev[1],@pokemon.iv[1]),456,120,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Defense"),248,152,0,base,statshadows[PBStats::DEFENSE]],
-       [sprintf("%d",@pokemon.defense),456,152,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d | %d/%d",@pokemon.defense,@pokemon.ev[2],@pokemon.iv[2]),456,152,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Sp. Atk"),248,184,0,base,statshadows[PBStats::SPATK]],
-       [sprintf("%d",@pokemon.spatk),456,184,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d | %d/%d",@pokemon.spatk,@pokemon.ev[3],@pokemon.iv[3]),456,184,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Sp. Def"),248,216,0,base,statshadows[PBStats::SPDEF]],
-       [sprintf("%d",@pokemon.spdef),456,216,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d | %d/%d",@pokemon.spdef,@pokemon.ev[4],@pokemon.iv[4]),456,216,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Speed"),248,248,0,base,statshadows[PBStats::SPEED]],
-       [sprintf("%d",@pokemon.speed),456,248,1,Color.new(64,64,64),Color.new(176,176,176)],
+       [sprintf("%d | %d/%d",@pokemon.speed,@pokemon.ev[5],@pokemon.iv[5]),456,248,1,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Ability"),224,284,0,base,shadow],
        [PBAbilities.getName(@pokemon.ability),362,284,0,Color.new(64,64,64),Color.new(176,176,176)],
     ]
+	
     # Draw all text
     pbDrawTextPositions(overlay,textpos)
     # Draw ability description
@@ -840,6 +841,112 @@ class PokemonSummary_Scene
     pbDrawImagePositions(overlay,imagepos)
   end
 =end
+
+  def drawPageFive
+    overlay = @sprites["overlay"].bitmap
+    @sprites["uparrow"].visible   = false
+    @sprites["downarrow"].visible = false
+    # Write various bits of text
+    textpos = [
+       [_INTL("No. of Ribbons:"),234,332,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [@pokemon.ribbonCount.to_s,450,332,1,Color.new(64,64,64),Color.new(176,176,176)],
+    ]
+    # Draw all text
+    pbDrawTextPositions(overlay,textpos)
+    # Show all ribbons
+    imagepos = []
+    coord = 0
+    if @pokemon.ribbons
+      for i in @ribbonOffset*4...@ribbonOffset*4+12
+        break if !@pokemon.ribbons[i]
+        ribn = @pokemon.ribbons[i]-1
+        imagepos.push(["Graphics/Pictures/ribbons",230+68*(coord%4),78+68*(coord/4).floor,
+                                                   64*(ribn%8),64*(ribn/8).floor,64,64])
+        coord += 1
+        break if coord>=12
+      end
+    end
+    # Draw all images
+    pbDrawImagePositions(overlay,imagepos)
+  end
+=begin
+###---EDIT---###
+  def drawPageFive
+    overlay=@sprites["overlay"].bitmap
+    overlay.clear
+    @sprites["background"].setBitmap("Graphics/Pictures/summary5")
+    imagepos=[]
+    if pbPokerus(pkmn)==1 || pkmn.hp==0 || @pkmn.status>0
+      status=6 if pbPokerus(pkmn)==1
+      status=@pkmn.status-1 if @pkmn.status>0
+      status=5 if pkmn.hp==0
+      imagepos.push(["Graphics/Pictures/statuses",124,100,0,16*status,44,16])
+    end
+    if pkmn.isShiny?
+      imagepos.push([sprintf("Graphics/Pictures/shiny"),2,134,0,0,-1,-1])
+    end
+    if pbPokerus(pkmn)==2
+      imagepos.push([sprintf("Graphics/Pictures/summaryPokerus"),176,100,0,0,-1,-1])
+    end
+    ballused=@pkmn.ballused ? @pkmn.ballused : 0
+    ballimage=sprintf("Graphics/Pictures/summaryball%02d",@pkmn.ballused)
+    imagepos.push([ballimage,14,60,0,0,-1,-1])
+    pbDrawImagePositions(overlay,imagepos)
+    base=Color.new(248,248,248)
+    shadow=Color.new(104,104,104)
+    pbSetSystemFont(overlay)
+    itemname=pkmn.item==0 ? _INTL("None") : PBItems.getName(pkmn.item)
+    pokename=@pkmn.name
+    if @pkmn.name.split('').last=="♂" || @pkmn.name.split('').last=="♀"
+      pokename=@pkmn.name[0..-2]
+    end
+    if @pkmn.happiness==0
+      verdict=_INTL("It simply hates your very essence.")
+    elsif @pkmn.happiness>0&&@pkmn.happiness<=49
+      verdict=_INTL("It's very wary. It has scary viciousness in its eyes.")
+    elsif @pkmn.happiness>=50&&@pkmn.happiness<=74
+      verdict=_INTL("It's not very used to you yet. It may be a little disobedient.")
+    elsif @pkmn.happiness>=75&&@pkmn.happiness<=149
+      verdict=_INTL("It's getting used to you. It will listen to you in battle.")
+    elsif @pkmn.happiness>=150&&@pkmn.happiness<=199
+      verdict=_INTL("It's friendly toward you. It looks sort of happy.")
+    elsif @pkmn.happiness>=200&&@pkmn.happiness<=249
+      verdict=_INTL("It has a trustful look in it's eyes.")
+    elsif @pkmn.happiness>=250
+      verdict=_INTL("It looks really happy! It enjoys being in your care.")
+    end
+    textpos=[
+       [_INTL("HAPPINESS"),26,16,0,base,shadow],
+       [pokename,46,62,0,base,shadow],
+       [_INTL("{1}",pkmn.level),46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("Item"),16,320,0,base,shadow],
+       [itemname,16,352,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("Description:"),234,62,0,base,shadow],
+       [_INTL("{1}/255",pkmn.happiness),400,342,0,Color.new(64,64,64),Color.new(176,176,176)],
+    ]
+    if pkmn.gender==0
+      textpos.push([_INTL("♂"),178,62,0,Color.new(24,112,216),Color.new(136,168,208)])
+    elsif pkmn.gender==1
+      textpos.push([_INTL("♀"),178,62,0,Color.new(248,56,32),Color.new(224,152,144)])
+    end
+    pbDrawTextPositions(overlay,textpos)
+    drawTextEx(overlay,230,110,282,3,verdict,Color.new(64,64,64),Color.new(176,176,176))
+    imagepos=[]
+    coord=0
+    #for i in 0...pkmn.maxRibbon
+    #  if pkmn.getRibbon(i)
+    #    imagepos.push(["Graphics/Pictures/ribbons",236+64*(coord%4),86+80*(coord/4).floor,
+    #       64*(i%8),64*(i/8).floor,64,64])
+    #    coord+=1
+    #    break if coord>=12
+    #  end
+    #end
+    pbDrawImagePositions(overlay,imagepos)
+    drawMarkings(overlay,15,291,72,20,pkmn.markings)
+  end
+###---EDIT END---###
+
+=begin
 # =====================================================================
 # EV/IVs in Summary by Zardae
 # Edited by Thundaga for v18
@@ -907,6 +1014,7 @@ class PokemonSummary_Scene
        [_INTL("Ability"),224,284,0,base,shadow],
        [PBAbilities.getName(@pokemon.ability),362,284,0,Color.new(64,64,64),Color.new(176,176,176)],
     ]
+
     if @pokemon.hasItem?
       textpos.push([PBItems.getName(@pokemon.item),16,352,0,Color.new(64,64,64),Color.new(176,176,176)])
     else
@@ -1046,7 +1154,7 @@ class PokemonSummary_Scene
     end
     @sprites["movesel"].visible=false
   end
-
+=end
   def pbRibbonSelection
     @sprites["ribbonsel"].visible = true
     @sprites["ribbonsel"].index   = 0

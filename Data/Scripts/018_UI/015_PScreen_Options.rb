@@ -465,6 +465,42 @@ class PokemonOption_Scene
            MessageConfig.pbSetTextSpeed(pbSettingToTextSpeed(value))
          }
        ),
+       EnumOption.new(_INTL("Difficulty"),[_INTL("Easy"),_INTL("Normal"),_INTL("Hard")],
+          proc { $game_variables[30] },  # Getter
+          proc {|value|  $game_variables[30]=value }
+       ),
+       EnumOption.new(_INTL("Autosave"),[_INTL("On"),_INTL("Off")],
+        proc {
+        if $game_switches[52]==false
+         return 1
+        elsif $game_switches[52]==true
+         return 0
+        end },
+          proc {|value|
+          if value==0
+            $game_switches[52]=true
+          elsif value==1
+            $game_switches[52]=false
+          end
+          
+           }
+       ),
+       EnumOption.new(_INTL("Survival Mode"),[_INTL("On"),_INTL("Off")],
+        proc {
+        if $game_switches[54]==false
+         return 1
+        elsif $game_switches[54]==true
+         return 0
+        end },
+          proc {|value|
+          if value==0
+            $game_switches[54]=true
+          elsif value==1
+            $game_switches[54]=false
+          end
+          
+           }
+       ),
        EnumOption.new(_INTL("Battle Effects"),[_INTL("On"),_INTL("Off")],
          proc { $PokemonSystem.battlescene },
          proc { |value| $PokemonSystem.battlescene = value }

@@ -1200,3 +1200,28 @@ ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc { |item,pkmn,scene|
   end
   next false
 })
+
+ItemHandlers::UseOnPokemon.add(:ABILITYPATCH,proc { |item,pkmn,scene|
+  abils = pkmn.getAbilityList
+  abil1 = 0; abil2 = 0; abil3 = 0
+  for i in abils
+    abil1 = i[0] if i[1]==0
+    abil2 = i[0] if i[1]==1
+    abil3 = i[0] if i[1]==2
+  end
+    if abil3<=0
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  newabil = (pkmn.abilityIndex+1)%2
+  newabilname = PBAbilities.getName((newabil==0) ? abil1 : abil3)
+  if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
+     pkmn.name,newabilname))
+    pkmn.setAbility(newabil)
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pkmn.name,
+       PBAbilities.getName(pkmn.ability)))
+    next true
+  end
+  next false
+})

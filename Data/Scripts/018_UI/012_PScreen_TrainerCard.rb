@@ -43,6 +43,23 @@ class PokemonTrainerCard_Scene
     hour = totalsec / 60 / 60
     min = totalsec / 60 % 60
     time = (hour>0) ? _INTL("{1}h {2}m",hour,min) : _INTL("{1}m",min)
+    if $Trainer.money > 75
+         trainerhealth = _INTL("Healthy")
+         healthColor=Color.new(55,255,55)
+       else
+         if $Trainer.money > 50
+           trainerhealth = _INTL("Injured")
+           healthColor=Color.new(255,255,55)
+         else
+           if $Trainer.money > 25
+             trainerhealth = _INTL("Wounded")
+             healthColor=Color.new(255,125,55)
+           else
+               trainerhealth = _INTL("Critical")
+               healthColor=Color.new(255,55,55)
+           end
+          end
+        end
     $PokemonGlobal.startTime = pbGetTimeNow if !$PokemonGlobal.startTime
     starttime = _INTL("{1} {2}, {3}",
        pbGetAbbrevMonthName($PokemonGlobal.startTime.mon),
@@ -53,8 +70,8 @@ class PokemonTrainerCard_Scene
        [$Trainer.name,302,64,1,baseColor,shadowColor],
        [_INTL("ID No."),332,64,0,baseColor,shadowColor],
        [sprintf("%05d",$Trainer.publicID($Trainer.id)),468,64,1,baseColor,shadowColor],
-       [_INTL("Money"),34,112,0,baseColor,shadowColor],
-       [_INTL("${1}",$Trainer.money.to_s_formatted),302,112,1,baseColor,shadowColor],
+       [_INTL("Player Health"),34,112,0,baseColor,shadowColor],
+       [_INTL(trainerhealth),302,112,1,healthColor,shadowColor],
        [_INTL("Pokédex"),34,160,0,baseColor,shadowColor],
        [sprintf("%d/%d",$Trainer.pokedexOwned,$Trainer.pokedexSeen),302,160,1,baseColor,shadowColor],
        [_INTL("Time"),34,208,0,baseColor,shadowColor],

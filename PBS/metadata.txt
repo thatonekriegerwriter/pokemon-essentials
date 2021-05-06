@@ -3,8 +3,12 @@
 [000]
 PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,base_surf.png,boy_run,base_dive.png,boy_fish_offset,boy_fish_offset
 PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
-PlayerC = POKEMONTRAINER_Kris,Avatar-Crystal.png,xxx,xxx,Avatar-Crystal2.png,xxx,crystalfishing1.png,xxx
+PlayerC = POKEMONTRAINER_Kris,Avatar-Crystal.png,xxx,xxx,Avatar-Crystal2.png,xxx,crystalfishing1.png,crystalfishing1.png
 PlayerD = POKEMONTRAINER_Hiro,Avatar-Hiro.png,xxx,xxx,Avatar-Hiro2.png,xxx,xxx,xxx
+PlayerE = POKEMONTRAINER_Brendan,fk002-brendan.png,xxx,xxx,xxx,xxx,xxx,xxx
+PlayerF = POKEMONTRAINER_May,fk003-may.png,xxx,xxx,xxx,xxx,xxx,xxx
+PlayerG = POKEMONTRAINER_Lucas,a lu000.png,xxx,xxx,a lu_run.png,xxx,a lu_fish_offset.png,a lu_fish_offset.png
+PlayerH = POKEMONTRAINER_Dawn,a daw trchar001.png,xxx,xxx,a daw _run.png,xxx,a daw _fish_offset.png,a daw _fish_offset.png
 TrainerBattleBGM = 005-Boss01.mid
 BicycleBGM = Airship.mid
 Home = 10,12,11,2

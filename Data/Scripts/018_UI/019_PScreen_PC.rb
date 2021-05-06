@@ -203,13 +203,13 @@ end
 
 
 def pbTrainerPC
-  pbMessage(_INTL("\\se[PC open]{1} opened up the Crate.",$Trainer.name))
+  pbMessage(_INTL("\\se[Voltorb Flip Tile]{1} opened up the Crate.",$Trainer.name))
   pbTrainerPCMenu
-  pbSEPlay("PC close")
+  pbSEPlay("Voltorb Flip Mark")
 end
 
 def pbPokeCenterPC
-  pbMessage(_INTL("\\se[PC open]{1} opened up the Crate.",$Trainer.name))
+  pbMessage(_INTL("\\se[Voltorb Flip Tile]{1} opened up the Crate.",$Trainer.name))
   command = 0
   loop do
     commands = PokemonPCList.getCommandList
@@ -217,7 +217,7 @@ def pbPokeCenterPC
        commands.length,nil,command)
     break if !PokemonPCList.callCommand(command)
   end
-  pbSEPlay("PC close")
+  pbSEPlay("Voltorb Flip Mark")
 end
 
 

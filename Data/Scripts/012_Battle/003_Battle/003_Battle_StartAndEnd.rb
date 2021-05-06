@@ -373,6 +373,9 @@ class PokeBattle_Battle
     tMoney = pbPlayer.money if tMoney>pbPlayer.money
     oldMoney = pbPlayer.money
     pbPlayer.money -= tMoney
+	  ###---EDIT---###
+	$Trainer.money -= 20
+	  ###---EDIT END---###
     moneyLost = oldMoney-pbPlayer.money
     if moneyLost>0
       if trainerBattle?

@@ -86,7 +86,7 @@ NO_SIGNPOSTS = []
 # * The maximum number of Game Corner coins the player can have.
 # * The maximum length, in characters, that the player's name can be.
 #===============================================================================
-INITIAL_MONEY        = 1000
+INITIAL_MONEY        = 3000
 MAX_MONEY            = 999_999
 MAX_COINS            = 99_999
 MAX_PLAYER_NAME_SIZE = 10
@@ -351,11 +351,7 @@ LANGUAGES = [
 #  ["English", "english.dat"],
 #  ["Deutsch", "deutsch.dat"]
 ]
-#===============================================================================
-# * When turned on, the summary screen will have 4 pages and show the IV/EV
-#   stats of a pokemon (When turned on, the IV/EV will always be shown)
-# * The switch which has to be turned on to see the IV/EV stats in the
-#   summary screen
-#===============================================================================
-SHOW_IV_EV_IN_SUMMARY = true
-SHOW_IV_EV_IN_SUMMARY_SWITCH = 69
+DIR_SAVE_GAME = "Save Game"
+# Set name of file for saving:
+# Ex: Game1,Game2,etc
+FILENAME_SAVE_GAME = "Game"

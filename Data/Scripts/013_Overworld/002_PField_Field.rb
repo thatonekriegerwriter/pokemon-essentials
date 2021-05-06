@@ -303,7 +303,9 @@ Events.onStepTakenTransferPossible += proc { |_sender,e|
 
 def pbCheckAllFainted
   if pbAllFainted
-    pbMessage(_INTL("You have no more Pokémon that can fight!\1"))
+    pbMessage(_INTL("\PN panicked and tried to escape, but tripped!\1"))
+    pbMessage(_INTL("The wild {1} charges!",wildpoke.name))
+    pbMessage(_INTL("..."))
     pbMessage(_INTL("You blacked out!"))
     pbBGMFade(1.0)
     pbBGSFade(1.0)

@@ -100,6 +100,10 @@ BallHandlers::ModifyCatchRate.add(:ULTRABALL,proc { |ball,catchRate,battle,battl
   next catchRate*2
 })
 
+BallHandlers::ModifyCatchRate.add(:SUPERBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  next catchRate*2.5
+})
+
 BallHandlers::ModifyCatchRate.add(:SAFARIBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
   next catchRate*1.5
 })
@@ -107,6 +111,12 @@ BallHandlers::ModifyCatchRate.add(:SAFARIBALL,proc { |ball,catchRate,battle,batt
 BallHandlers::ModifyCatchRate.add(:NETBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
   multiplier = (NEWEST_BATTLE_MECHANICS) ? 3.5 : 3
   catchRate *= multiplier if battler.pbHasType?(:BUG) || battler.pbHasType?(:WATER)
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:SHOCKBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  multiplier = (NEWEST_BATTLE_MECHANICS) ? 3.5 : 3
+  catchRate *= multiplier if battler.pbHasType?(:ELECTRIC) 
   next catchRate
 })
 
@@ -140,8 +150,14 @@ BallHandlers::ModifyCatchRate.add(:DUSKBALL,proc { |ball,catchRate,battle,battle
   next catchRate
 })
 
+BallHandlers::ModifyCatchRate.add(:DAWNBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  multiplier = (NEWEST_BATTLE_MECHANICS) ? 3 : 3.5
+  catchRate *= multiplier if battle.time==1
+  next catchRate
+})
+
 BallHandlers::ModifyCatchRate.add(:QUICKBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
-  multiplier = (NEWEST_BATTLE_MECHANICS) ? 4 : 5
+  multiplier = (NEWEST_BATTLE_MECHANICS) ? 3 : 4
   catchRate *= multiplier if battle.turnCount==0
   next catchRate
 })
@@ -161,6 +177,18 @@ BallHandlers::ModifyCatchRate.add(:LEVELBALL,proc { |ball,catchRate,battle,battl
   if maxlevel>=battler.level*4;    catchRate *= 8
   elsif maxlevel>=battler.level*2; catchRate *= 4
   elsif maxlevel>battler.level;    catchRate *= 2
+  end
+  next [catchRate,255].min
+})
+
+BallHandlers::ModifyCatchRate.add(:HIGHBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  maxlevel = 0
+  battle.eachSameSideBattler do |b|
+    maxlevel = b.level if b.level>maxlevel
+  end
+  if maxlevel<=battler.level+8;    catchRate *= 5
+  elsif maxlevel<=battler.level+4; catchRate *= 3
+  elsif maxlevel<battler.level;    catchRate *= 1
   end
   next [catchRate,255].min
 })
@@ -217,8 +245,48 @@ BallHandlers::ModifyCatchRate.add(:SPORTBALL,proc { |ball,catchRate,battle,battl
   next catchRate*1.5
 })
 
+BallHandlers::ModifyCatchRate.add(:YOLOBALL,proc{|ball,battle,battler|
+  battle.scene.pbDamageAnimation(battler,1)
+  battler.damageState.initialHP<battler.totalhp/7 || battler.hp>=battler.totalhp/7
+  catchRate*4
+})
+
 BallHandlers::ModifyCatchRate.add(:DREAMBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
-  catchRate *= 4 if battler.status==PBStatuses::SLEEP
+  catchRate *= 5 if battler.status==PBStatuses::SLEEP
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:TOXICBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 5 if battler.status==PBStatuses::POISON
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:STUNBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 5 if battler.status==PBStatuses::PARALYSIS
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:FREEZEBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 5 if battler.status==PBStatuses::FROZEN
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:BURNBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 5 if battler.status==PBStatuses::BURN
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:STATUSBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 3 if battler.status==PBStatuses::SLEEP
+  catchRate *= 3 if battler.status==PBStatuses::BURN
+  catchRate *= 3 if battler.status==PBStatuses::PARALYSIS
+  catchRate *= 3 if battler.status==PBStatuses::POISON
+  catchRate *= 3 if battler.status==PBStatuses::FROZEN
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:DEBUFFBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  catchRate *= 4 if battler.statStageAtMin?
   next catchRate
 })
 
@@ -231,6 +299,30 @@ BallHandlers::ModifyCatchRate.add(:BEASTBALL,proc { |ball,catchRate,battle,battl
   next catchRate
 })
 
+BallHandlers::ModifyCatchRate.add(:IMMUNEBALL,proc{|ball,catchRate,battle,battler|
+   pbattler=battle.battlers[0]
+   pbattler2=battle.battlers[2] if battle.battlers[2]
+   catchRate*=7/2 if (battler.pbHasType?(:FLYING) && pbattler.pbHasType?(:GROUND)) ||
+   (battler.pbHasType?(:FAIRY) && pbattler.pbHasType?(:DRAGON)) ||
+   (battler.pbHasType?(:DARK) && pbattler.pbHasType?(:PSYCHIC)) ||
+   (battler.pbHasType?(:FLYING) && pbattler.pbHasType?(:GROUND)) ||
+   (battler.pbHasType?(:STEEL) && pbattler.pbHasType?(:POISON)) ||
+   (battler.pbHasType?(:GHOST) && pbattler.pbHasType?(:NORMAL)) ||
+   (battler.pbHasType?(:GHOST) && pbattler.pbHasType?(:FIGHTING)) ||
+   (battler.pbHasType?(:NORMAL) && pbattler.pbHasType?(:GHOST)) ||
+   (battler.pbHasType?(:GROUND) && pbattler.pbHasType?(:ELECTRIC))
+   next catchRate   
+})
+
+#===============================================================================
+# OnFail
+#===============================================================================
+
+BallHandlers::OnFailCatch.add(:BARBEDBALL,proc{|ball,battle,battler|
+  battle.scene.pbDamageAnimation(battler,0)
+  battler.pbReduceHP((battler.totalhp/16).floor)
+  battle.pbDisplayBrief(_INTL("{1} was hurt by the Barbed Ball!",battler.name))
+})
 #===============================================================================
 # OnCatch
 #===============================================================================
@@ -240,4 +332,12 @@ BallHandlers::OnCatch.add(:HEALBALL,proc { |ball,battle,pkmn|
 
 BallHandlers::OnCatch.add(:FRIENDBALL,proc { |ball,battle,pkmn|
   pkmn.happiness = 200
+})
+
+BallHandlers::OnCatch.add(:HIDDENBALL,proc { |ball,battle,pkmn|
+  pkmn.setAbility(2)
+})
+
+BallHandlers::OnCatch.add(:SHADOWBALL,proc { |ball,battle,pkmn|
+  pkmn.makeShadow
 })

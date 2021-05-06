@@ -135,9 +135,17 @@ class PokeBattle_Battle
       rate += @runCommand*30
     end
     if rate>=256 || @battleAI.pbAIRandom(256)<rate
-      pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
-      @decision = 3
+	  ###---EDIT---###
+      runInjury=rand(10)
+      if runInjury > 6
+        pbDisplayPaused(_INTL("{1} got away, but tripped on a rock!",self.pbPlayer.name))
+        $Trainer.money -= 15
+	 ###---EDIT END---###
+      else
+        pbDisplayPaused(_INTL("You got away safely!")) { pbSEPlay("Battle flee") }
+        @decision = 3
       return 1
+	  end
     end
     pbDisplayPaused(_INTL("You couldn't get away!"))
     return -1

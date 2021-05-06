@@ -19,76 +19,113 @@ ItemHandlers::CanUseInBattle.add(:POKEDOLL,proc { |item,pokemon,battler,move,fir
   next true
 })
 #===========EDIT===========#
-ItemHandlers::BattleUseOnBattler.add(:POISONDART,proc{|item,battler,scene|
-  opPonent=battler.pbOpposing1
+ItemHandlers::UseInBattle.add(:POISONDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
   type=PBTypes::STEEL
-  if opPonent.status!=0 || opPonent.type1==type
+  if battler.status!=0 || battler.type1==STEEL
      scene.pbDisplay(_INTL("It won't have any effect."))
      return false
    else
-     opPonent.pbPoison(opPonent)
-     scene.pbDisplay(_INTL("Enemy {1} was poisoned by the {2}!",opPonent.name,itemname))
+     battler.status=PBStatuses::POISON
+     scene.pbDisplay(_INTL("Enemy {1} was poisoned by the {2}!",battler.name,itemname))
      return true
    end
 })
 
-ItemHandlers::BattleUseOnBattler.add(:SLEEPDART,proc{|item,battler,scene|
-  opPonent=battler.pbOpposing1
+ItemHandlers::UseInBattle.add(:SLEEPDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
   ability1=PBAbilities::INSOMNIA
   ability2=PBAbilities::VITALSPIRIT
-  if opPonent.status!=0 || opPonent.ability==ability1 || opPonent.ability==ability2
+  if battler.status!=0 || battler.ability==ability1 || battler.ability==ability2
      scene.pbDisplay(_INTL("It won't have any effect."))
      return false
    else
-     opPonent.pbSleep
-     scene.pbDisplay(_INTL("Enemy {1} was put to sleep by the {2}!",opPonent.name,itemname))
+     battler.status=PBStatuses::SLEEP
+     scene.pbDisplay(_INTL("Enemy {1} was put to sleep by the {2}!",battler.name,itemname))
      return true
    end
 })
 
-ItemHandlers::BattleUseOnBattler.add(:PARALYZDART,proc{|item,battler,scene|
-  opPonent=battler.pbOpposing1
+ItemHandlers::UseInBattle.add(:PARALYZDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
   type=PBTypes::GROUND
-  if opPonent.status!=0 || opPonent.type1==type || opPonent.type2==type
+  if battler.status!=0 || battler.type1==type || battler.type2==type
      scene.pbDisplay(_INTL("It won't have any effect."))
      return false
    else
-     opPonent.pbParalyze(opPonent)
-     scene.pbDisplay(_INTL("Enemy {1} was paralyzed by the {2}!",opPonent.name,itemname))
+     battler.status=PBStatuses::PARALYSIS
+     scene.pbDisplay(_INTL("Enemy {1} was paralyzed by the {2}!",battler.name,itemname))
      return true
    end
 })
 
-ItemHandlers::BattleUseOnBattler.add(:ICEDART,proc{|item,battler,scene|
-  opPonent=battler.pbOpposing1
+ItemHandlers::UseInBattle.add(:ICEDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
   type=PBTypes::ICE
-  if opPonent.status!=0 || opPonent.type1==type
+  if battler.status!=0 || battler.type1==type
      scene.pbDisplay(_INTL("It won't have any effect."))
      return false
    else
-     opPonent.pbFreeze
-     scene.pbDisplay(_INTL("Enemy {1} was frozen solid by the {2}!",opPonent.name,itemname))
+     battler.status=PBStatuses::FROZEN
+     scene.pbDisplay(_INTL("Enemy {1} was frozen solid by the {2}!",battler.name,itemname))
      return true
    end
 })
 
-ItemHandlers::BattleUseOnBattler.add(:FIREDART,proc{|item,battler,scene|
-  opPonent=battler.pbOpposing1
+ItemHandlers::UseInBattle.add(:FIREDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
   type=PBTypes::FIRE
-  if opPonent.status!=0 || opPonent.type1==type || opPonent.type2==type
+  if battler.status!=0 || battler.type1==type
      scene.pbDisplay(_INTL("It won't have any effect."))
      return false
    else
-     opPonent.pbBurn(opPonent)
-     scene.pbDisplay(_INTL("Enemy {1} was burned by the {2}!",opPonent.name,itemname))
+     battler.status=PBStatuses::BURN
+     scene.pbDisplay(_INTL("Enemy {1} was burned by the {2}!",battler.name,itemname))
      return true
    end
 })
+
+ItemHandlers::UseInBattle.add(:MACHETE,proc{|item,battler,scene|
+  itemname=PBItems.getName(item)
+  type=PBTypes::FIRE
+  if battler
+     battler.pbReduceHP(battler.totalhp/7)
+	 scene.pbDisplay(_INTL("You slashed at Enemy {1} with the {2}!",battler.name,itemname))
+     return false
+   else
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return true
+   end
+})
+
+ItemHandlers::UseInBattle.add(:RUSTEDPICKAXE,proc{|item,battler,scene|
+  itemname=PBItems.getName(item)
+  type=PBTypes::GROUND
+  typeb=PBTypes::ROCK
+  if battler.type1==type || battler.type2==typeb 
+     battler.pbReduceHP(battler.totalhp/3)
+	 scene.pbDisplay(_INTL("You axed at Enemy {1} with the {2}!",battler.name,itemname))
+     return false
+   else
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return true
+   end
+})
+
+ItemHandlers::UseInBattle.add(:PICKAXE,proc{|item,battler,scene|
+  itemname=PBItems.getName(item)
+  type=PBTypes::GROUND
+  typeb=PBTypes::ROCK
+  if battler.type1==type || battler.type2==typeb 
+     battler.pbReduceHP(battler.totalhp/5)
+	 scene.pbDisplay(_INTL("You axed at Enemy {1} with the {2}!",battler.name,itemname))
+     return false
+   else
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     return true
+   end
+})
+
 #===========EDIT END===========#
 
 ItemHandlers::CanUseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY)

@@ -90,3 +90,6 @@
 87,PIRATEGRUNT,Pirate,100,BattleGary,,,Male,50,
 88,PIRATEGRUNTB,Pirate,100,BattleGary,,,Male,50,
 89,PIRATEBOSS,Pirate Boss,100,BattleGary,,,Male,50,
+90,MONKEYKING,Monkey King,100,BattleGary,,,Male,50,
+93,POKEMONTRAINER_Lucas,Monkey King,100,BattleGary,,,Male,50,
+94,POKEMONTRAINER_Dawn,Monkey King,100,BattleGary,,,Male,50,

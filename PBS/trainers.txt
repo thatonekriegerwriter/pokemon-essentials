@@ -406,6 +406,29 @@ Pokemon = NIHILEGO,50
     Shadow = yes
     IV = 31,31,31,31,31,31
 #-------------------------------
+[NIGIL,Slaking]
+LoseText = "..."
+Pokemon = SLAKING,50
+    Shadow = yes
+    Form = 1
+    Moves = HAMMERARM,SLACKOFF,COUNTER,FEINTATTACK
+#-------------------------------
+[MONKEYKING,Sun Aipom]
+LoseText = "Aww, man."
+Pokemon = PRIMEAPE,37
+Pokemon = MONFERNO,37
+Pokemon = SIMIPOUR,37
+Pokemon = SIMISAGE,37
+Pokemon = SIMISEAR,37
+Pokemon = AIPOM,37
+    Moves = DOUBLEHIT,ANCIENTPOWER,ACCELEROCK,SANDSTORM
+    Gender = male
+    Form = 1
+    Nature = HASTY
+    Ability = 0
+    Item = EVIOLITE
+    IV = 31,31,31,31,31,31
+#-------------------------------
 [NIGILMIN,Xatu]
 LoseText = "..."
 Pokemon = XATU,50

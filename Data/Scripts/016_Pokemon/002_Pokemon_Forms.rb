@@ -748,6 +748,16 @@ MultipleForms.register(:ZIGZAGOON,{
   }
 })
 
+MultipleForms.register(:AIPOM,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [285]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 1
+    end
+    next 0
+  }
+})
+
 MultipleForms.register(:SANDSHREW,{
   "getFormOnCreation" => proc { |pkmn|
     maps = [44,68,72,73,74,75,77,78,80,81,82,83,84,85,86]   # Map IDs for Origin Forme
