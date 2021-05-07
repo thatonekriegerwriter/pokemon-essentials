@@ -169,8 +169,9 @@ MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
 # Backup Screen
 MenuHandlers.addEntry(:BACKUP,_INTL("Backup"),"menuBack",proc{|menu|
   pbFadeOutIn(99999) { 
-    pbMessage(_INTL("\\se[]{1} backed up the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
+    pbConfirmMessage(_INTL("Would you like to backup your game?"))
     pbHardSave
+    pbMessage(_INTL("\\se[]{1} backed up the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
     menu.refresh
   }
 },proc{ return true })
