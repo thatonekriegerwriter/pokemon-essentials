@@ -465,7 +465,7 @@ class PokemonOption_Scene
            MessageConfig.pbSetTextSpeed(pbSettingToTextSpeed(value))
          }
        ),
-       EnumOption.new(_INTL("Difficulty"),[_INTL("B"), _INTL("VE"), _INTL("E"), _INTL("N"), _INTL("H"), _INTL("VH"), _INTL("W")],
+       EnumOption.new(_INTL("Difficulty"),[_INTL("E"), _INTL("N"), _INTL("H")],
           proc { $game_variables[30] },  # Getter
           proc {|value|  $game_variables[30]=value }
        ),

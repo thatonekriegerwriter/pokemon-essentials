@@ -149,14 +149,14 @@ MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
   end
 },proc{ return pbInSafari? || pbInBugContest? })
 # Controls Screen
-MenuHandlers.addEntry(:CONTROLS,_INTL("Controls"),"menuControls",proc{|menu|
-  pbFadeOutIn(99999) { 
-    scene=PokemonControlsScene.new       
-    screen=PokemonControls.new(scene)
-	screen.pbStartScreen
-    menu.refresh
-  }
-},proc{ return true })
+#.addEntry(:CONTROLS,_INTL("Controls"),"menuControls",proc{|menu|
+#  pbFadeOutIn(99999) { 
+#    scene=PokemonControlsScene.new       
+#    screen=PokemonControls.new(scene)
+#	screen.pbStartScreen
+#    menu.refresh
+#  }
+#},proc{ return true })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new
