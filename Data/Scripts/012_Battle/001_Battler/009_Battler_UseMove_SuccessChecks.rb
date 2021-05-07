@@ -109,8 +109,14 @@ class PokeBattle_Battler
     return true if !@battle.pbOwnedByPlayer?(@index)
     disobedient = false
     # Pokémon may be disobedient; calculate if it is
-    badgeLevel = 10*(@battle.pbPlayer.numbadges+1)
-    badgeLevel = PBExperience.maxLevel if @battle.pbPlayer.numbadges>=8
+#    badgeLevel = 10*(@battle.pbPlayer.numbadges+1)
+#    badgeLevel = PBExperience.maxLevel if @battle.pbPlayer.numbadges>=8
+    if @happiness<75
+      a=(((@happiness*(2+(@happiness/100)))*(@battle.pbRandom(256)+@happiness))/255).floor
+      if a <@happiness
+        disobedient=true#|=a<@happiness
+      end
+    end
     if @pokemon.foreign?(@battle.pbPlayer) && @level>badgeLevel
       a = ((@level+badgeLevel)*@battle.pbRandom(256)/256).floor
       disobedient |= (a>=badgeLevel)

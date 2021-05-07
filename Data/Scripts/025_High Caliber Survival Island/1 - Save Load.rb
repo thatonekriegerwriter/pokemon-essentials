@@ -212,19 +212,10 @@ class PokemonSaveScreen
       @scene.pbStartScreen
       # Save
       if cmd==1
-        cmds = [_INTL("New File Save"),_INTL("Old File Save"),_INTL("Cancel")]
+        cmds = [_INTL("Old File Save"),_INTL("New File Save"),_INTL("Cancel")]
         cmd2 = pbCustomMessageForSave(msg,cmds,3)
         # New file save
         if cmd2==0
-          if pbSave(false,true)
-            pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
-            ret=true
-          else
-            pbMessage(_INTL("\\se[]Save failed.\\wtnp[30]"))
-            ret=false
-          end
-        # Overwrite file save
-        elsif cmd2==1
           if count<=0
             pbMessage(_INTL("No save file was found."))
           else
@@ -234,6 +225,15 @@ class PokemonSaveScreen
               file.endScene
               ret = file.staymenu
             }
+          end
+        # Overwrite file save
+        elsif cmd2==1
+          if pbSave(false,true)
+            pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
+            ret=true
+          else
+            pbMessage(_INTL("\\se[]Save failed.\\wtnp[30]"))
+            ret=false
           end
         end
       # Cancel

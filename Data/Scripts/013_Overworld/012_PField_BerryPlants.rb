@@ -151,6 +151,7 @@ class BerryPlantSprite
       berryData[3]=timenow.to_i   # last updated now
       # Mulch modifiers
       dryingrate=berryvalues[1]
+      growthbonus=berryData[8]
       maxreplants=REPLANTS
       ripestages=4
       if isConst?(berryData[7],PBItems,:GROWTHMULCH)
@@ -161,6 +162,8 @@ class BerryPlantSprite
         dryingrate=(dryingrate*0.5).floor
       elsif isConst?(berryData[7],PBItems,:GOOEYMULCH)
         maxreplants=(maxreplants*1.5).ceil
+      elsif isConst?(berryData[7],PBItems,:PRODUCEMULCH)
+        growthbonus=(berryData[4]*0.75).ceil
       elsif isConst?(berryData[7],PBItems,:STABLEMULCH)
         ripestages=6
       end
@@ -415,6 +418,9 @@ def pbBerryPlant
             berryData[4]=100           # dampness value
             berryData[5]=0             # number of replants
             berryData[6]=0             # yield penalty
+# EDIT
+            berryData[8]=0             # bonus 
+# EDIT END
             $PokemonBag.pbDeleteItem(berry,1)
             pbMessage(_INTL("The {1} was planted in the soft, earthy soil.",
                PBItems.getName(berry)))
@@ -440,6 +446,9 @@ def pbBerryPlant
           berryData[4]=0             # total waterings
           berryData[5]=0             # number of replants
           berryData[6]=nil; berryData[7]=nil; berryData.compact! # for compatibility
+# EDIT
+          berryData[8]=0             # bonus 
+# EDIT END
           $PokemonBag.pbDeleteItem(berry,1)
           pbMessage(_INTL("{1} planted a {2} in the soft loamy soil.",
              $Trainer.name,PBItems.getName(berry)))
@@ -477,7 +486,7 @@ def pbBerryPlant
     berrycount=1
     if berryData.length>6
       # Gen 4 berry yield calculation
-      berrycount=[berryvalues[3]-berryData[6],berryvalues[2]].max
+      berrycount=[berryvalues[3]-berryData[6]+berryData[8],berryvalues[2]].max
     else
       # Gen 3 berry yield calculation
       if berryData[4]>0

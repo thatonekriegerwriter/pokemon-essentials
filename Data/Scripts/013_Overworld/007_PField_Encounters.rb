@@ -345,16 +345,13 @@ class PokemonEncounters
     # increase precision).
     encount = @density[enctype]*16
     encount = encount*0.8 if $PokemonGlobal.bicycle
-#	difficulty=$game_variables[30]
-#    if difficulty>=2
-#      if difficulty>=2
-#        encount=@density[enctype]*24
-#	  else 
- #     encount=@density[enctype]*16
- #     end
- #   end
-	if $game_variables[255]==1
-      encount/=3
+	difficulty=$game_variables[30]
+    if difficulty>=2
+      if difficulty>=2
+        encount=@density[enctype]*24
+	  else 
+      encount=@density[enctype]*16
+      end
     end
     if !NEWEST_BATTLE_MECHANICS
       if $PokemonMap.blackFluteUsed
