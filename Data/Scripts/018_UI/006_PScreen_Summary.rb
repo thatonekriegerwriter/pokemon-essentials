@@ -840,7 +840,7 @@ class PokemonSummary_Scene
     # Draw all images
     pbDrawImagePositions(overlay,imagepos)
   end
-=end
+
 
   def drawPageFive
     overlay = @sprites["overlay"].bitmap
@@ -869,72 +869,79 @@ class PokemonSummary_Scene
     # Draw all images
     pbDrawImagePositions(overlay,imagepos)
   end
-=begin
+=
 ###---EDIT---###
   def drawPageFive
-    overlay=@sprites["overlay"].bitmap
-    overlay.clear
-    @sprites["background"].setBitmap("Graphics/Pictures/summary5")
+   overlay = @sprites["overlay"].bitmap
+   overlay.clear
+    base   = Color.new(248,248,248)
+    shadow = Color.new(104,104,104)
+    @sprites["background"].setBitmap("Graphics/Pictures/Summary/bg_5")
     imagepos=[]
-    if pbPokerus(pkmn)==1 || pkmn.hp==0 || @pkmn.status>0
-      status=6 if pbPokerus(pkmn)==1
-      status=@pkmn.status-1 if @pkmn.status>0
-      status=5 if pkmn.hp==0
+    if @pokemon.pokerusStage==1 || @pokemon.hp==0 || @pokemon.status>0
+      status=6 if @pokemon.pokerusStage==1
+      status=@pokemon.status-1 if @pokemon.status>0
+      status=5 if @pokemon.hp==0
       imagepos.push(["Graphics/Pictures/statuses",124,100,0,16*status,44,16])
     end
-    if pkmn.isShiny?
+    if @pokemon.isShiny?
       imagepos.push([sprintf("Graphics/Pictures/shiny"),2,134,0,0,-1,-1])
     end
-    if pbPokerus(pkmn)==2
+    if @pokemon.pokerusStage==2
       imagepos.push([sprintf("Graphics/Pictures/summaryPokerus"),176,100,0,0,-1,-1])
     end
-    ballused=@pkmn.ballused ? @pkmn.ballused : 0
-    ballimage=sprintf("Graphics/Pictures/summaryball%02d",@pkmn.ballused)
-    imagepos.push([ballimage,14,60,0,0,-1,-1])
+    # Show the Poké Ball containing the Pokémon
+    ballimage = sprintf("Graphics/Pictures/Summary/icon_ball_%02d",@pokemon.ballused)
+    imagepos.push([ballimage,14,60])
     pbDrawImagePositions(overlay,imagepos)
-    base=Color.new(248,248,248)
-    shadow=Color.new(104,104,104)
-    pbSetSystemFont(overlay)
-    itemname=pkmn.item==0 ? _INTL("None") : PBItems.getName(pkmn.item)
-    pokename=@pkmn.name
-    if @pkmn.name.split('').last=="♂" || @pkmn.name.split('').last=="♀"
-      pokename=@pkmn.name[0..-2]
+    statshadows = []
+    for i in 0...5; statshadows[i] = shadow; end
+    if !(@pokemon.isShadow? && @pokemon.heartStage<=3 rescue false)
+      natup = (@pokemon.nature/5).floor
+      natdn = (@pokemon.nature%5).floor
+      statshadows[natup] = Color.new(200,96,72) if natup!=natdn
+      statshadows[natdn] = Color.new(64,120,200) if natup!=natdn
     end
-    if @pkmn.happiness==0
+    itemname=pokemon.item==0 ? _INTL("None") : PBItems.getName(pokemon.item)
+    pokename=@pokemon.name
+    if @pokemon.name.split('').last=="♂" || @pokemon.name.split('').last=="♀"
+      pokename=@pokemon.name[0..-2]
+    end
+    if @pokemon.happiness==0
       verdict=_INTL("It simply hates your very essence.")
-    elsif @pkmn.happiness>0&&@pkmn.happiness<=49
+    elsif @pokemon.happiness>0&&@pokemon.happiness<=49
       verdict=_INTL("It's very wary. It has scary viciousness in its eyes.")
-    elsif @pkmn.happiness>=50&&@pkmn.happiness<=74
+    elsif @pokemon.happiness>=50&&@pokemon.happiness<=74
       verdict=_INTL("It's not very used to you yet. It may be a little disobedient.")
-    elsif @pkmn.happiness>=75&&@pkmn.happiness<=149
+    elsif @pokemon.happiness>=75&&@pokemon.happiness<=149
       verdict=_INTL("It's getting used to you. It will listen to you in battle.")
-    elsif @pkmn.happiness>=150&&@pkmn.happiness<=199
+    elsif @pokemon.happiness>=150&&@pokemon.happiness<=199
       verdict=_INTL("It's friendly toward you. It looks sort of happy.")
-    elsif @pkmn.happiness>=200&&@pkmn.happiness<=249
+    elsif @pokemon.happiness>=200&&@pokemon.happiness<=249
       verdict=_INTL("It has a trustful look in it's eyes.")
-    elsif @pkmn.happiness>=250
+    elsif @pokemon.happiness>=250
       verdict=_INTL("It looks really happy! It enjoys being in your care.")
     end
     textpos=[
        [_INTL("HAPPINESS"),26,16,0,base,shadow],
        [pokename,46,62,0,base,shadow],
-       [_INTL("{1}",pkmn.level),46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("{1}",pokemon.level),46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Item"),16,320,0,base,shadow],
        [itemname,16,352,0,Color.new(64,64,64),Color.new(176,176,176)],
        [_INTL("Description:"),234,62,0,base,shadow],
-       [_INTL("{1}/255",pkmn.happiness),400,342,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("{1}/255",pokemon.happiness),400,342,0,Color.new(64,64,64),Color.new(176,176,176)],
     ]
-    if pkmn.gender==0
+    if pokemon.gender==0
       textpos.push([_INTL("♂"),178,62,0,Color.new(24,112,216),Color.new(136,168,208)])
-    elsif pkmn.gender==1
+    elsif pokemon.gender==1
       textpos.push([_INTL("♀"),178,62,0,Color.new(248,56,32),Color.new(224,152,144)])
     end
     pbDrawTextPositions(overlay,textpos)
     drawTextEx(overlay,230,110,282,3,verdict,Color.new(64,64,64),Color.new(176,176,176))
     imagepos=[]
     coord=0
-    #for i in 0...pkmn.maxRibbon
-    #  if pkmn.getRibbon(i)
+    #for i in 0...pokemon.maxRibbon
+    #  if pokemon.getRibbon(i)
     #    imagepos.push(["Graphics/Pictures/ribbons",236+64*(coord%4),86+80*(coord/4).floor,
     #       64*(i%8),64*(i/8).floor,64,64])
     #    coord+=1
@@ -942,9 +949,99 @@ class PokemonSummary_Scene
     #  end
     #end
     pbDrawImagePositions(overlay,imagepos)
-    drawMarkings(overlay,15,291,72,20,pkmn.markings)
+    drawMarkings(overlay,15,291,72,20,pokemon.markings)
   end
 ###---EDIT END---###
+=end
+# =====================================================================
+# EV/IVs in Summary by Zardae
+# Edited by Thundaga for v18
+# =====================================================================
+  def drawPageFive
+   overlay = @sprites["overlay"].bitmap
+   overlay.clear
+    base   = Color.new(248,248,248)
+    shadow = Color.new(104,104,104)
+    @sprites["background"].setBitmap("Graphics/Pictures/Summary/bg_5")
+    imagepos=[]
+    if @pokemon.pokerusStage==1 || @pokemon.hp==0 || @pokemon.status>0
+      status=6 if @pokemon.pokerusStage==1
+      status=@pokemon.status-1 if @pokemon.status>0
+      status=5 if @pokemon.hp==0
+      imagepos.push(["Graphics/Pictures/statuses",124,100,0,16*status,44,16])
+    end
+    if @pokemon.isShiny?
+      imagepos.push([sprintf("Graphics/Pictures/shiny"),2,134,0,0,-1,-1])
+    end
+    if @pokemon.pokerusStage==2
+      imagepos.push([sprintf("Graphics/Pictures/summaryPokerus"),176,100,0,0,-1,-1])
+    end
+    # Show the Poké Ball containing the Pokémon
+    ballimage = sprintf("Graphics/Pictures/Summary/icon_ball_%02d",@pokemon.ballused)
+    imagepos.push([ballimage,14,60])
+    pbDrawImagePositions(overlay,imagepos)
+    statshadows = []
+    for i in 0...5; statshadows[i] = shadow; end
+    if !(@pokemon.isShadow? && @pokemon.heartStage<=3 rescue false)
+      natup = (@pokemon.nature/5).floor
+      natdn = (@pokemon.nature%5).floor
+      statshadows[natup] = Color.new(200,96,72) if natup!=natdn
+      statshadows[natdn] = Color.new(64,120,200) if natup!=natdn
+    end
+    textColumn=300
+    evColumn=390
+    ivColumn=455
+    abilitydesc=pbGetMessage(MessageTypes::AbilityDescs,@pokemon.ability)
+=begin
+    textpos=[
+       [_INTL("HAPPINESS"),26,16,0,base,shadow],
+       [pokename,46,62,0,base,shadow],
+       [_INTL("{1}",pokemon.level),46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("Item"),16,320,0,base,shadow],
+       [itemname,16,352,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("Description:"),234,62,0,base,shadow],
+       [_INTL("{1}/255",pokemon.happiness),400,342,0,Color.new(64,64,64),Color.new(176,176,176)],
+    ]
+=end
+    if @pokemon.happiness==0
+      verdict=_INTL("It simply hates your very essence.")
+    elsif @pokemon.happiness>0&&@pokemon.happiness<=49
+      verdict=_INTL("It's very wary. It has scary viciousness in its eyes.")
+    elsif @pokemon.happiness>=50&&@pokemon.happiness<=74
+      verdict=_INTL("It's not very used to you yet. It may be a little disobedient.")
+    elsif @pokemon.happiness>=75&&@pokemon.happiness<=149
+      verdict=_INTL("It's getting used to you. It will listen to you in battle.")
+    elsif @pokemon.happiness>=150&&@pokemon.happiness<=199
+      verdict=_INTL("It's friendly toward you. It looks sort of happy.")
+    elsif @pokemon.happiness>=200&&@pokemon.happiness<=249
+      verdict=_INTL("It has a trustful look in it's eyes.")
+    elsif @pokemon.happiness>=250
+      verdict=_INTL("It looks really happy! It enjoys being in your care.")
+    end
+    textpos = [
+       [_INTL("HAPPINESS"),26,16,0,base,shadow],
+       [@pokemon.name,46,62,0,base,shadow],
+       [@pokemon.level.to_s,46,92,0,Color.new(64,64,64),Color.new(176,176,176)],
+       [_INTL("Item"),66,318,0,base,shadow],
+       [_INTL("Happiness:"),textColumn,234,62,base,statshadows[4]],
+       [_INTL("{1}/500",@pokemon.happiness{1}),textColumn,270,79,base,statshadows[2]],
+    ]
+
+    if @pokemon.hasItem?
+      textpos.push([PBItems.getName(@pokemon.item),16,352,0,Color.new(64,64,64),Color.new(176,176,176)])
+    else
+      textpos.push([_INTL("None"),16,352,0,Color.new(192,200,208),Color.new(208,216,224)])
+    end
+    if @pokemon.isMale?
+      textpos.push([_INTL("♂"),178,62,0,Color.new(24,112,216),Color.new(136,168,208)])
+    elsif @pokemon.isFemale?
+      textpos.push([_INTL("♀"),178,62,0,Color.new(248,56,32),Color.new(224,152,144)])
+    end
+    pbDrawTextPositions(overlay,textpos)
+    drawTextEx(overlay,230,110,282,3,verdict,Color.new(64,64,64),Color.new(176,176,176))
+    imagepos=[]
+    coord=0
+  end
 
 =begin
 # =====================================================================
@@ -1029,7 +1126,7 @@ class PokemonSummary_Scene
     drawTextEx(overlay,224,316,282,2,abilitydesc,Color.new(64,64,64),Color.new(176,176,176))
     drawMarkings(overlay,84,292)
   end
-  
+=end  
   def drawSelectedRibbon(ribbonid)
     # Draw all of page five
     drawPage(5)
@@ -1154,7 +1251,7 @@ class PokemonSummary_Scene
     end
     @sprites["movesel"].visible=false
   end
-=end
+
   def pbRibbonSelection
     @sprites["ribbonsel"].visible = true
     @sprites["ribbonsel"].index   = 0

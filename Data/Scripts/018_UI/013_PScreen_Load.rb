@@ -271,7 +271,6 @@ class PokemonLoadScreen
     commands = []
     cmdContinue    = -1
     cmdNewGame     = -1
-    cmdOption      = -1
     cmdLanguage    = -1
     cmdMysteryGift = -1
     cmdDebug       = -1
@@ -320,7 +319,7 @@ class PokemonLoadScreen
     else
       commands[cmdNewGame = commands.length]     = _INTL("New Game")
     end
-    commands[cmdOption = commands.length]        = _INTL("Options")
+#    commands[cmdOption = commands.length]        = _INTL("Options")
     commands[cmdLanguage = commands.length]      = _INTL("Language") if LANGUAGES.length>=2
     commands[cmdDebug = commands.length]         = _INTL("Debug") if $DEBUG
     commands[cmdQuit = commands.length]          = _INTL("Quit Game")
@@ -442,13 +441,13 @@ class PokemonLoadScreen
         pbFadeOutIn {
           trainer = pbDownloadMysteryGift(trainer)
         }
-      elsif cmdOption>=0 && command==cmdOption
-        pbPlayDecisionSE
-        pbFadeOutIn {
-          scene = PokemonOption_Scene.new
-          screen = PokemonOptionScreen.new(scene)
-          screen.pbStartScreen(true)
-        }
+#      elsif cmdOption>=0 && command==cmdOption
+#        pbPlayDecisionSE
+#        pbFadeOutIn {
+#          scene = PokemonOption_Scene.new
+#          screen = PokemonOptionScreen.new(scene)
+#          screen.pbStartScreen(true)
+#        }
       elsif cmdLanguage>=0 && command==cmdLanguage
         pbPlayDecisionSE
         @scene.pbEndScene

@@ -173,3 +173,12 @@ MenuHandlers.addEntry(:DEBUG,_INTL("Debug"),"menuDebug",proc{|menu|
     menu.refresh
   }
 },proc{ return $DEBUG })
+# End Screen
+MenuHandlers.addEntry(:EXIT,_INTL("Exit"),"exitOptions",proc{|menu|
+  pbFadeOutIn(99999) {
+        pbPlayCloseMenuSE
+        @scene.pbEndScene
+        $scene = nil
+        return
+  }
+},proc{ return true })

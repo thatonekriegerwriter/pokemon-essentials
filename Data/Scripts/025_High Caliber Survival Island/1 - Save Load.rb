@@ -326,7 +326,7 @@ class PokemonLoadScreen
     cmdQuit        = -1
     commands[cmdContinue = commands.length]    = _INTL("Load Game") if count>0
     commands[cmdNewGame = commands.length]     = _INTL("New Game")
-    commands[cmdOption = commands.length]        = _INTL("Options")
+#    commands[cmdOption = commands.length]        = _INTL("Options")
     commands[cmdDebug = commands.length]         = _INTL("Debug") if $DEBUG
     commands[cmdQuit = commands.length]          = _INTL("Quit Game")
     trainer = nil; framecount = 0; mapid = 0; showContinue = false
@@ -381,13 +381,13 @@ class PokemonLoadScreen
         $game_map.autoplay
         $game_map.update
         return
-      elsif cmdOption>=0 && command==cmdOption
-        pbPlayDecisionSE
-        pbFadeOutIn {
-          scene = PokemonOption_Scene.new
-          screen = PokemonOptionScreen.new(scene)
-          screen.pbStartScreen(true)
-        }
+#      elsif cmdOption>=0 && command==cmdOption
+#        pbPlayDecisionSE
+#        pbFadeOutIn {
+#          scene = PokemonOption_Scene.new
+#          screen = PokemonOptionScreen.new(scene)
+#          screen.pbStartScreen(true)
+#        }
       elsif cmdDebug>=0 && command==cmdDebug
         pbPlayDecisionSE
         pbFadeOutIn { pbDebugMenu(false) }
