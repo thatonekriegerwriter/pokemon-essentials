@@ -225,7 +225,13 @@ class PokemonEncounters
     end
     # Return the chosen species and level
     encounter = encList[chosenPkmn]
-    level     = encounter[1]+rand(1+encounter[2]-encounter[1])
+    ###---EDIT---### 
+    difficulty=$game_variables[30]
+    level= rand(encounter[2]*difficulty)-rand(encounter[1])+pbBalancedLevel($Trainer.party)
+    if level < 2
+     level = 2 
+   end
+   ###---EDIT END---###
     return [encounter[0],level]
   end
 
@@ -300,14 +306,23 @@ class PokemonEncounters
       end
     end
     # Black Flute and White Flute alter the level of the wild Pokémon
-    if NEWEST_BATTLE_MECHANICS
+    if !NEWEST_BATTLE_MECHANICS
       if $PokemonMap.blackFluteUsed
-        level = [level+1+rand(3),PBExperience.maxLevel].min
+        encount = encount/2
+	  elsif $game_variables[255]==1
+      encount/=3
       elsif $PokemonMap.whiteFluteUsed
-        level = [level-1-rand(3),1].max
+        encount = encount*1.5
       end
     end
     # Return [species, level]
+    ###---EDIT---### 
+    difficulty=$game_variables[30]
+    level= rand(encounter[2]*difficulty)-rand(encounter[1])+pbBalancedLevel($Trainer.party)
+    if level < 2
+     level = 2 
+   end
+   ###---EDIT END---###
     return [encounter[0],level]
   end
 
@@ -335,8 +350,6 @@ class PokemonEncounters
     if !NEWEST_BATTLE_MECHANICS
       if $PokemonMap.blackFluteUsed
         encount = encount/2
-	  elsif $game_variables[255]==1
-      encount/=3
       elsif $PokemonMap.whiteFluteUsed
         encount = encount*1.5
       end

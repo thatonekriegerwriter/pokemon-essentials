@@ -166,6 +166,14 @@ MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
     pbUpdateSceneMap
   }
 },proc{ return true })
+# Backup Screen
+MenuHandlers.addEntry(:BACKUP,_INTL("Backup"),"menuBack",proc{|menu|
+  pbFadeOutIn(99999) { 
+    pbMessage(_INTL("\\se[]{1} backed up the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
+    pbHardSave
+    menu.refresh
+  }
+},proc{ return true })
 # Debug Menu
 MenuHandlers.addEntry(:DEBUG,_INTL("Debug"),"menuDebug",proc{|menu|
   pbFadeOutIn(99999) { 
