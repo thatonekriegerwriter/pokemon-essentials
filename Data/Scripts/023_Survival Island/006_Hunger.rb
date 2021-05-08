@@ -1,24 +1,156 @@
-#Health System
-#Hunger 
+#==============================================================================#
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#
+#==============================================================================#
+#                                                                              #
+#                             Survival Mode                                    #
+#                          By thatonekriegerwriter                             #
+#                 Original Hunger Script by Maurili and Vendily                #
+#Original pbEndGame Code by ferriswheel42 and the Original Survival Island Team#
+#                                                                              #
+#                                                                              #
+#==============================================================================#
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#
+#==============================================================================#
+#Thanks Maurili and Vendily for the Original Hunger Script                     #
+#Thanks to the Original Survival Island Team for other parts of the script.    #
+#It will run just fine like this, but you can also crack open "PField_Visuals" #
+#and around line 634 you will find "def pbStartOver"                           #
+#You can add                                                                   #
+#                                                                              #
+#  if $Trainer.money < 5 || $game_switches[54] == true                         #
+#      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))                      #
+#      pbCancelVehicles                                                        #
+#      pbRemoveDependencies()                                                  #
+#      pbEndGame                                                               #
+#      return                                                                  #
+#  end                                                                         #
+#To make this script activate upon loss.                                       #
+#Player Health in this script is regarded as the Trainer.money, as that is     #
+#what it was in Pokemon Survival Island, I am absolutely positive variables    #
+#can be used instead. I used:                                                  #
+#------------------------------------------------------------------------------#
+# $game_switches[54] for the Survival Mode Switch, and put it in the options   #
+# menu personally.                                                             #
+#------------------------------------------------------------------------------#
+# $game_variables[208] what I used to track sleep.                             #
+#------------------------------------------------------------------------------#
+# $game_variables[247] also related to sleep, due to my Game using FLs Unreal  #
+#Time, I gave the option to sleep X amount of hours using an Input Number menu,#
+#it could be done without FLs perhaps?                                         #
+#Honestly, never not had Unreal Time in my game to know.                       #
+#If it's a problem, tab it out, RAGECANDYBAR,LEMONADE,SODAPOP, and SWEETHEART  #
+#all restore Sleep.                                                            #
+#------------------------------------------------------------------------------#
+# $game_variables[205] is Maurili's hunger.                                    #
+#------------------------------------------------------------------------------#
+# $game_variables[206] is thirst.                                              #
+#------------------------------------------------------------------------------#
+# $game_variables[207] is Maurili's Saturation.                                #
+#------------------------------------------------------------------------------#
+# $game_switch[249] is used to give a one time message about starving,         #
+#then turn itself off to take away health.                                     #
+#------------------------------------------------------------------------------#
+# Again, $Trainer.money is used as money by default.                           #
+#------------------------------------------------------------------------------#
+# I used the Trainer Card to display all this information.                     #
+#------------------------------------------------------------------------------#
+#Beyond that, the Eating and Drinking (pbFillUp) and Medicine (pbMedicine)     #
+#scripts could be attached to anything, I attached them to items called        #
+#"Medicine Bag" and "Food Bag"                                                 #
+#------------------------------------------------------------------------------#
+#The "$Trainer.money -= 20" Money subtraction also occurs in Survival Island   #
+#upon two other events, a Running Away event where you trip, and upon Battle   #
+#Loss. I imagine it could be used in quite                                     #
+#a few places beyond that.                                                     #
+#------------------------------------------------------------------------------#
+#At the bottom is "pbEndGame"                                                  #
+#In the original Survival Island, the original map id, x, y, went to a         #
+#pokemon center that had                                                       #
+#$scene = pbCallTitle                                                          #
+#    while $scene != nil                                                       #
+#      $scene.main                                                             #
+#    end                                                                       #
+#    Graphics.transition(20)                                                   #
+# As it's script. I do not know if it still functions in 18.1, as I have not   #
+#tested it, but End Games function is to well                                  #
+#Cause a game over.                                                            #
+#------------------------------------------------------------------------------#
+#When I learn how to, I will make customizable fill ins.                       #
+#------------------------------------------------------------------------------#
+#Installation:                                                                 #
+#I don't think it particularly has to be anywhere, mine is a good bit          #
+#above main to little issue.                                                   #
+#------------------------------------------------------------------------------#
 Events.onStepTakenTransferPossible+=proc {
-if $game_switches[212]==true #hunger Switch if ON you need to survive
-case $game_variables[246]
-when 0
-$game_variables[245] -= 1 if rand(10) == 0 #take from hunger like normal
-else
-$game_variables[246] -= 1 if rand(10) == 0 #take from saturation
-case $game_variables[245]
-when 0
-$game_variables[245]=100
-pbMessage(_INTL("You are passing out from lack of food and water!"))
-pbFadeOutIn(99999)
-Kernel.pbStartOver(true)
+if $game_switches[54]==true #Survival Mode Switch
+ case $game_variables[208]
+  when 0
+   if $game_switches[249]==true
+    pbMessage(_INTL("You are passing out from lack of sleep!"))
+    $Trainer.money -= 20
+    $game_switches[249]=false
+   else
+    $Trainer.money -= 20
+   end
+  else
+   $game_variables[208] -= 1 if rand(10) == 0 #take from sleep
+end
+
+if $game_switches[54]==true #Survival Mode Switch
+ case $game_variables[207]
+  when 0
+   $game_variables[205] -= 1 if rand(10) == 0 #take from hunger
+   $game_variables[206] -= 1 if rand(10) == 0 #take from drinking
+   $game_variables[207] -= 1 if rand(10) == 0 #take from saturation
+end
+
+if $game_switches[54]==true #Survival Mode Switch
+  case $game_variables[205]
+   when 0
+    if $game_switches[249]==true
+      pbMessage(_INTL("You are passing out from lack of food!"))
+      $Trainer.money -= 20
+      $game_switches[249]=false
+    else
+      $Trainer.money -= 20
+   end
+end
+
+if $game_switches[54]==true #Survival Mode Switch
+  case $game_variables[206]
+   when 0
+    if $game_switches[249]==true
+      pbMessage(_INTL("You are passing out from lack of water!"))
+      $Trainer.money -= 20
+      $game_switches[249]=false
+    else
+      $Trainer.money -= 20
+   end
 end
 end
+end
+end #im honestly unsure why I need this mountain of ends but the script shant run without them.
+end
+
+if $Trainer.money < 5
+  if $game_switches[54] == true
+      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))
+      pbCancelVehicles
+      pbRemoveDependencies()
+      pbEndGame
+      return
+   end
 end
 }
+
+def pbSleepRestore
+ if $game_variables[208]<100
+  $game_variables[208]+=$game_variables[247]
+ end
+end
+
 #Eating Food
-def pbPickAndEatBerry
+def pbFillUp
 berry=0
 pbFadeOutIn(99999){
 scene = PokemonBag_Scene.new
@@ -28,48 +160,126 @@ berry = screen.pbChooseItemScreen
 if berry>0
 $PokemonBag.pbDeleteItem(berry,1)
 Kernel.pbMessage(_INTL("You consume the {1}. ",PBItems.getName(berry)))
+#205 is Hunger, 207 is Saturation, 206 is Thirst, 208 is Sleep
 if isConst?(berry,PBItems,:ORANBERRY)
-$game_variables[245]+=7
-$game_variables[246]+=3
+$game_variables[205]+=7
+$game_variables[207]+=3
+$game_variables[206]+=1
+$Trainer.money += 1
 elsif isConst?(berry,PBItems,:LEPPABERRY)
-$game_variables[245]+=9
-$game_variables[246]+=1
+$game_variables[205]+=9
+$game_variables[207]+=1
+$game_variables[206]+=1
 elsif isConst?(berry,PBItems,:SITRUSBERRY)
-$game_variables[245]+=10
-$game_variables[246]+=7
+$game_variables[205]+=10
+$game_variables[207]+=7
+$game_variables[206]+=1
+$Trainer.money += (0.25*$Trainer.money)
 elsif isConst?(berry,PBItems,:BERRYJUICE)
-$game_variables[245]+=0
-$game_variables[246]+=20
+$game_variables[205]+=8
+$game_variables[207]+=4
+$game_variables[206]+=4
+$Trainer.money += 2
 elsif isConst?(berry,PBItems,:FRESHWATER)
-$game_variables[245]+=0
-$game_variables[246]+=40
+$game_variables[206]+=10
 #You can add more if you want
 elsif isConst?(berry,PBItems,:ATKCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SATKCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPEEDCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPDEFCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:ACCCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:DEFCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:CRITCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 elsif isConst?(berry,PBItems,:GSCURRY)
-$game_variables[245]-=10
-$game_variables[246]+=10
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
+elsif isConst?(berry,PBItems,:RAGECANDYBAR)
+$game_variables[205]+=8
+$game_variables[207]+=3
+$game_variables[208]+=7
+elsif isConst?(berry,PBItems,:SWEETHEART)
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[208]+=6
+elsif isConst?(berry,PBItems,:SODAPOP)
+$game_variables[206]-=11
+$game_variables[208]+=10
+elsif isConst?(berry,PBItems,:LEMONADE)
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
+$game_variables[208]+=3
+elsif isConst?(berry,PBItems,:MOOMOOMILK)
+$game_variables[205]+=5
+$game_variables[207]+=5
+$game_variables[206]-=7
 #full belly
-$game_variables[245]=100 if $game_variables[245]>100
+$game_variables[205]=100 if $game_variables[205]>100
+$game_variables[206]=100 if $game_variables[206]>100
+$game_variables[207]=100 if $game_variables[207]>100
+$game_variables[208]=100 if $game_variables[208]>100
 end
 end
 end 
+
+
+def pbMedicine
+medicine=0
+pbFadeOutIn(99999){
+scene = PokemonBag_Scene.new
+screen = PokemonBagScreen.new(scene,$PokemonBag)
+medicine = screen.pbChooseItemScreen
+}
+if medicine>0
+$PokemonBag.pbDeleteItem(medicine,1)
+Kernel.pbMessage(_INTL("You consume the {1}. ",PBItems.getName(medicine)))
+#205 is Hunger, 207 is Saturation, 206 is Thirst, 208 is Sleep
+if isConst?(medicine,PBItems,:POTION)
+$Trainer.money += 20
+elsif isConst?(medicine,PBItems,:SUPERPOTION)
+$Trainer.money += 40
+elsif isConst?(medicine,PBItems,:HYPERPOTION)
+$Trainer.money += 60
+elsif isConst?(medicine,PBItems,:FULLRESTORE)
+$Trainer.money += 100
+#full belly
+$Trainer.money=100 if $Trainer.money>100
+end
+end
+end 
+
+def pbEndGame
+  if $scene.is_a?(Scene_Map)
+      pbFadeOutIn(99999){
+         $game_temp.player_transferring = true
+         $game_temp.player_new_map_id=292  
+         $game_temp.player_new_x=002
+         $game_temp.player_new_y=007
+         $game_temp.player_new_direction=$PokemonGlobal.pokecenterDirection
+         $scene.transfer_player
+         #$game_map.need_refresh=true # in case player moves to the same map
+      }
+    end
+end

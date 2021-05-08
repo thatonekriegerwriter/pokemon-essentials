@@ -24,7 +24,13 @@ ItemHandlers::UseFromBag.add(:HONEY,proc { |item|
 
 ItemHandlers::UseFromBag.add(:FOODBAG,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbPickAndEatBerry
+    pbFillUp
+    next 1
+})
+
+ItemHandlers::UseFromBag.add(:MEDICINE,proc{|item|
+  Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbFillUp
     next 1
 })
 

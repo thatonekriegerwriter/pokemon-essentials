@@ -631,8 +631,33 @@ def pbRxdataExists?(file)
     return pbRgssExists?(file+".rxdata")
   end
 end
-
+=begin
+  ###---EDIT---###
+def Kernel.pbEndGame
+  if $scene.is_a?(Scene_Map)
+      pbFadeOutIn(99999){
+         $game_temp.player_transferring = true
+         $game_temp.player_new_map_id=292
+         $game_temp.player_new_x=002
+         $game_temp.player_new_y=007
+         $game_temp.player_new_direction=$PokemonGlobal.pokecenterDirection
+         $scene.transfer_player
+         #$game_map.need_refresh=true # in case player moves to the same map
+      }
+    end
+end
+  ###---END EDIT---###
+=end
 def pbStartOver(gameover=false)
+###---EDIT---###
+  if $Trainer.money < 5 || $game_switches[54] == true
+      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))
+      pbCancelVehicles
+      pbRemoveDependencies()
+      pbEndGame
+      return
+  end
+###---EDIT END---###
   if pbInBugContest?
     pbBugContestStartOver
     return

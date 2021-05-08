@@ -49,15 +49,85 @@ class Scene_Credits
 #Start Editing
 CREDIT=<<_END_
 
-Your credits go here.
+Original Credits:
 
-Your credits go here.
+Pokemon Survival Island
 
-Your credits go here.
+Version 11.3
 
-Your credits go here.
+By Chris "ferriswheel42" Feres
 
-Your credits go here.
+Chris "R3ven" Ammerman
+
+Strange Nuzleaf<s>ElitestarEX
+
+With Contributions from
+
+Project Marnian Region
+WesleyFG<s> Crito(Zein)
+
+Mortenkein<s> FL.
+
+Battle Animations by:
+Brother1440
+Jaymonius
+Maruno
+
+Music by:
+ferriswheel42
+Dr. Fruitcake <s> Jace
+GGG3817 <s> David Austin
+
+Stock Images Provided by:
+MacKenzei-stock<s>rml-stock
+ArnaTornwolf<s>nexus35-Stock
+wax-wing<s>Sinned-angel-stock
+croicroga<s>Momotte2stocks
+Visit their galleries on DeviantArt!
+
+==========================================
+
+Pokemon Survival Island
+
+Version 16??? (I think 14 was the last update the original team did
+
+By thatonekriegerwriter
+
+Scripts by
+
+Luka S.J.<s> (Main Menu, LUTS, Title Screen,Easy Mouse System,My Soul)
+FL (Unreal Time)
+Michael (Currents)
+Golisopod User (Follower Mons, Mid Battle Dialogue and Script)
+Help14 (Follower Mons)
+Ulithium_Dragon (Battle-Worn Opponents)
+derFischae (Overworld Encounters)
+Vendily (SOS Battles,Cable Club)
+Maurili (Hunger)
+mej71 (Saves)
+bo4p5687 (Saves, Evolution Mid Battle,GALAR BERRY TREE)
+Zeak6464  (Evolution Mid Battle)
+Name-box by By Theo/MrGela
+Not Important (GALAR BERRY TREE)
+BhagyaJyoti (GALAR BERRY TREE,Amie/Refresh)
+Whomever made the pokemon verification script at the beginning 
+TheKraazyGamer (For his Godtier Crafting Script)
+Kyu (BOTW Gathering)
+PizzaSun (Amie/Refresh)
+rigbycwts (Amie/Refresh)
+mGriffin (Cable Club)
+Khaikaa (Cable Club)
+ThatWelshOne_ (Crafting Menu)
+NettoHikari (Nuzlocke Permadeath v2.2)
+Nuzlocke Permadeath v2.2 (Custom Pokedex)
+NeoCI (Custom Character Script)
+
+and a Big Special thanks to those of you whom
+I didn't credit, if be through inability to locate
+where I got it from, or desire, and for that, I'm sorry.
+
+And yes, I do know many plugins have auto inserting credits.
+I wanted to do it myself. 
 
 {INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE}
 "Pokémon Essentials" was created by:

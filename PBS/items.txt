@@ -702,7 +702,6 @@
 1847,PHONEBOOK,Phone Book,Phone Book,8,0,"A Phone Book from work that has a list of phone numbers.",0,0,6,
 1848,MEGASTONE,Mega Stone,Mega Stones,8,0,"A Weird Looking rock full of energy.",0,0,6,
 1849,EGGHATCHER,Egg Hatcher,Egg Hatchers,8,0,"An Egg Hatcher in which to keep up to 6 eggs until they hatch.",2,0,6,
-1850,BERRYPOTS,Berry Pots,Berry Pots,8,0,"Handy containers for cultivating Berries wherever you go.",2,0,6,
 1851,ABILITYPATCH,Ability Patch,Ability Patches,8,0,"A Patch that changes a Pokémon's Ability to their Hidden Ability.",1,0,0,
 1852,BARBEDBALL,Barbed Ball,Barbed Balls,3,200,"A Poké Ball fitted with barbed wire. If it misses, it damages the enemy slightly",0,4,4,
 1853,DAWNBALL,Dawn Ball,Dawn Balls,3,1000,"A somewhat different Poké Ball that makes it easier to catch wild Pokémon during the Daytime",0,4,4,
@@ -719,3 +718,4 @@
 1864,STUNBALL,Stun Ball,Stun Balls,3,1000,"A Poké Ball that works better if an enemy is paralyzed.",0,4,4,
 1865,TOXICBALL,Toxic Ball,Toxic Balls,3,1000,"A Poké Ball that works better if an enemy is poisoned.",0,4,4,
 1866,SUPERBALL,Super Ball,Super Balls,3,1000,"An supreme-performance Ball that provides a higher Pokémon catch rate than an Ultra Ball.",0,4,4,
+1867,MEDICINE,Medicine Bag,Medicine Bags,8,1000,"The Bag you store medicine in.",2,0,6,
