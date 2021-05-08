@@ -718,4 +718,4 @@
 1864,STUNBALL,Stun Ball,Stun Balls,3,1000,"A Poké Ball that works better if an enemy is paralyzed.",0,4,4,
 1865,TOXICBALL,Toxic Ball,Toxic Balls,3,1000,"A Poké Ball that works better if an enemy is poisoned.",0,4,4,
 1866,SUPERBALL,Super Ball,Super Balls,3,1000,"An supreme-performance Ball that provides a higher Pokémon catch rate than an Ultra Ball.",0,4,4,
-1867,MEDICINE,Medicine Bag,Medicine Bags,8,1000,"The Bag you store medicine in.",2,0,6,
+1868,MEDICINE,Medicine Bag,Medicine Bags,8,1000,"The Bag you store medicine in.",2,0,6,

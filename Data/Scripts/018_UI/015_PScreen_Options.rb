@@ -501,6 +501,28 @@ class PokemonOption_Scene
           
            }
        ),
+       EnumOption.new(_INTL("Nuzlocke Mode"),[_INTL("On"),_INTL("Off")],
+        proc {
+        if $game_switches[57]==false
+         return 1
+        elsif $game_switches[57]==true
+         return 0
+        end },
+          proc {|value|
+          if value==0
+            $game_switches[57]=true
+			  if $game_switches[58]==true
+			   pbMessage(_INTL("Nuzlocke Settings"))  
+               $game_switches[58]=false
+			  else
+			   pbMessage(_INTL("Nuzlocke On"))
+			  end
+          elsif value==1
+            $game_switches[57]=false
+          end
+          
+           }
+       ),
        EnumOption.new(_INTL("Battle Effects"),[_INTL("On"),_INTL("Off")],
          proc { $PokemonSystem.battlescene },
          proc { |value| $PokemonSystem.battlescene = value }
