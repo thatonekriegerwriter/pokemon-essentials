@@ -81,6 +81,9 @@
 #I don't think it particularly has to be anywhere, mine is a good bit          #
 #above main to little issue.                                                   #
 #------------------------------------------------------------------------------#
+#-------Add Delete Save on Death Option                                       -#
+#------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 Events.onStepTakenTransferPossible+=proc {
 if $game_switches[54]==true #Survival Mode Switch
  case $game_variables[208]
