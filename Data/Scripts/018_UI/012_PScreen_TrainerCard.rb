@@ -155,11 +155,11 @@ class PokemonTrainerCard_Scene
        [_INTL("Pokédex"),36,150,0,baseColor,shadowColor],
        [sprintf("%d/%d",$Trainer.pokedexOwned,$Trainer.pokedexSeen),302,150,1,baseColor,shadowColor],
        [_INTL("FOD"),34,190,0,baseColor,shadowColor],
-       [_INTL(trainerhunger),302,190,1,baseColor,shadowColor],
+       [_INTL(trainerhunger),302,190,1,hungerColor,shadowColor],
        [_INTL("H20"),34,220,0,baseColor,shadowColor],
-       [_INTL(trainerthirst),302,220,1,baseColor,shadowColor],
+       [_INTL(trainerthirst),302,220,1,thirstColor,shadowColor],
        [_INTL("SLP"),34,250,0,baseColor,shadowColor],
-       [_INTL(trainersleep),302,250,1,baseColor,shadowColor]
+       [_INTL(trainersleep),302,250,1,sleepColor,shadowColor]
     ]
     pbDrawTextPositions(overlay,textPositions)
     x = 72
