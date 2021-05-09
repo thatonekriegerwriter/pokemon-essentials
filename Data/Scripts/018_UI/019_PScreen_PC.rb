@@ -200,8 +200,6 @@ class StorageSystemPC
   end
 end
 
-
-
 def pbTrainerPC
   pbMessage(_INTL("\\se[Voltorb Flip Tile]{1} opened up the Crate.",$Trainer.name))
   pbTrainerPCMenu

@@ -1,11 +1,14 @@
 #==CONFIGURATION================================================================
 
-# OPTION 1: Dubious Clause (same species encounter doesn't count)
-
-
-# OPTION 2: Connected Maps  [One Route](so you don't get 2 encounters in the same route)
+# OPTION 1: Connected Maps; You get one encounter per map, or map array.ko
 # example: (It's an array of arrays, simple as that, just mimic the example)
 
+# 		SUBOPTION 1: Dupes Clause (same species encounter doesn't count)
+
+# 		SUBOPTION 2: Shiny Catch Clause (you can always catch a shiny mon)
+
+# 		SUBOPTION 3: Static (you can always catch an overworld mon)
+#
 NUZLOCKEMAPS = [
 [4],
 [5],
@@ -287,20 +290,33 @@ NUZLOCKEMAPS = [
 [276],
 [277]
 ]
-# OPTION 3: Permadeath 
+# OPTION 3: Permadeath (Upon the End of Battle, or Death by Poison in field, the Pokemon is promptly deleted)
 # 
-
-# OPTION 4: No Revives
+#
+# OPTION 4: PC Death (Upon the End of Battle, or Death by Poison in field, the Pokemon is automagically put in the PC) 
 # 
-
+#
+# OPTION 5: Player Controlled Death (The Nuzlocke can function just fine without either of those options, you are just controlling if a pokemon is 'dead')
+# 
+#
+# OPTION 6: No Revives (Upon a Pokemon Fainting, Revival Items do not work on it)
+# 
+#
+# OPTION 7: No Center Healing (Pokemon Centers do not Revive the Pokemon upon usage.)
+#
+# $PokemonGlobal.nuzlocke  $PokemonGlobal.nuzlockeMaps  $PokemonGlobal.dubiousclause $PokemonGlobal.nuznorevives
+# $PokemonGlobal.shinycatchclause $PokemonGlobal.permadeath  $PokemonGlobal.nuzsoft $PokemonGlobal.nuznocenters
 #===============================================================================
 
 class PokemonGlobalMetadata
-  attr_accessor :nuzlocke
+  attr_accessor :nuzlocke 
   attr_accessor :nuzlockeMaps
   attr_accessor :dubiousclause
+  attr_accessor :shinycatchclause
   attr_accessor :permadeath
-  attr_accessor :norevives
+  attr_accessor :nuzsoft
+  attr_accessor :nuznorevives
+  attr_accessor :nuznocenters
 
   alias nuzlocke_initialize initialize
   def initialize
@@ -341,6 +357,14 @@ class PokemonGlobalMetadata
 end
 
 class PokeBattle_Battle
+  # Stores fainted Pokemon until end of battle (like a "purgatory")
+  attr_accessor :faintedlist
+  
+  alias permadeath_pbStartBattle pbStartBattle
+  def pbStartBattle
+    @faintedlist = []
+    permadeath_pbStartBattle
+  end
   
   alias nuzlocke_ThrowPokeBall pbThrowPokeBall
   def pbThrowPokeBall(idxPokemon,ball,rareness=nil)
@@ -352,6 +376,14 @@ class PokeBattle_Battle
       end
       if $PokemonGlobal.nuzlockeMapState($game_map.map_id) == 2
         pbDisplay(_INTL("But {1} already caught a pokemon on this area!",self.pbPlayer.name))
+        return
+	  end
+	  if $PokemonGlobal.shinycatchclause && isShiny?
+        nuzlocke_ThrowPokeBall(idxPokemon,ball,rareness=nil)
+        return
+	  end
+	  if ($PokemonGlobal.dubiousclause && !@battlers[1].owned)
+        nuzlocke_ThrowPokeBall(idxPokemon,ball,rareness=nil)
         return
       end
     end
@@ -387,32 +419,86 @@ class PokeBattle_Battle
   end
 end
 
-class PokeBattle_Pokemon
+
+
+
+class PokeBattle_Pokemon  
 
 Events.onEndBattle += proc { |_sender,e|
   decision=e[0]
-if $PokemonGlobal.permadeath==true
-  for pindex in 0...$Trainer.party.length
+ if $PokemonGlobal.permadeath==true  
+     for pindex in 0...$Trainer.party.length
+      pbRemoveFaintedPokemonAt(pindex)
+     if @pokemon.hasItem?
+       # Informs player that fainted's held item was transferred to bag
+       @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
+           pbThis, PBItems.getName(@pokemon.item)))
+        else
+       @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
+	  end
+ if $PokemonGlobal.nuzsoft==true
+   for pindex in 0...$Trainer.party.length
     pbRemoveFaintedPokemonAt(pindex)
-  end
+      for i in @faintedlist
+        storedbox = $PokemonStorage.pbStoreCaught(i)
+      end
+   if @pokemon.hasItem?
+     # Informs player that fainted's held item was transferred to bag
+     @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
+         pbThis, PBItems.getName(@pokemon.item)))
+      else
+     @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
+	end
+   end
  end
 end
 end
-  
+}
+
 Events.onStepTakenTransferPossible+=proc {
 if $PokemonGlobal.permadeath==true
-  for pindex in 0...5
+   for pindex in 0...5
     pbRemoveFaintedPokemonAt(pindex)
+   if @pokemon.hasItem?
+     # Informs player that fainted's held item was transferred to bag
+     @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
+         pbThis, PBItems.getName(@pokemon.item)))
+      else
+     @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
+	end
+if $PokemonGlobal.nuzsoft==true
+   for pindex in 0...$Trainer.party.length
+    pbRemoveFaintedPokemonAt(pindex)
+      for i in @faintedlist
+        storedbox = $PokemonStorage.pbStoreCaught(i)
+      end
+   if @pokemon.hasItem?
+     # Informs player that fainted's held item was transferred to bag
+     @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
+         pbThis, PBItems.getName(@pokemon.item)))
+      else
+     @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
+	end
+   end
+end
+end
+end
+}
+  alias nuzlocke_heal heal
+  def heal
+    return if hp<=0 && $PokemonGlobal.nuznorevives
+    return if egg?
+    healHP
+    healStatus
+    healPP
   end
- end
-end
-end
+end  
 
 alias nuzlocke_pbHealAll pbHealAll
 def pbHealAll
   return if !$Trainer
   for i in $Trainer.party
-    if $PokemonGlobal.nuzlocke
+    if $PokemonGlobal.nuznocenters
       if i.hp > 0
         i.heal
       end

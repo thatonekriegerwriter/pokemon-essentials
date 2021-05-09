@@ -760,58 +760,6 @@ class PokeballPlayerSendOutAnimation < PokeBattle_Animation
   end
 end
 
-def pbStartOver(gameover=false)
-  if pbInBugContest?
-    pbBugContestStartOver
-    return
-  end
-  pbHealAll
-  if $PokemonGlobal.pokecenterMapId && $PokemonGlobal.pokecenterMapId>=0
-    if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back to a Pokémon Center."))
-    else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back to a Pokémon Center, protecting your exhausted Pokémon from any further harm..."))
-    end
-    pbCancelVehicles
-    pbRemoveDependenciesExceptFollower
-    $game_switches[STARTING_OVER_SWITCH] = true
-    $game_temp.player_new_map_id    = $PokemonGlobal.pokecenterMapId
-    $game_temp.player_new_x         = $PokemonGlobal.pokecenterX
-    $game_temp.player_new_y         = $PokemonGlobal.pokecenterY
-    $game_temp.player_new_direction = $PokemonGlobal.pokecenterDirection
-    $scene.transfer_player if $scene.is_a?(Scene_Map)
-    $game_map.refresh
-  else
-    homedata = pbGetMetadata(0,MetadataHome)
-    if homedata && !pbRxdataExists?(sprintf("Data/Map%03d",homedata[0]))
-      if $DEBUG
-        pbMessage(_ISPRINTF("Can't find the map 'Map{1:03d}' in the Data folder. The game will resume at the player's position.",homedata[0]))
-      end
-      pbHealAll
-      return
-    end
-    if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back home."))
-    else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back home, protecting your exhausted Pokémon from any further harm..."))
-    end
-    if homedata
-      pbCancelVehicles
-      pbRemoveDependenciesExceptFollower
-      $game_switches[STARTING_OVER_SWITCH] = true
-      $game_temp.player_new_map_id    = homedata[0]
-      $game_temp.player_new_x         = homedata[1]
-      $game_temp.player_new_y         = homedata[2]
-      $game_temp.player_new_direction = homedata[3]
-      $scene.transfer_player if $scene.is_a?(Scene_Map)
-      $game_map.refresh
-    else
-      pbHealAll
-    end
-  end
-  pbEraseEscapePoint
-end
-
 class Game_Character
   def jump_speed_real
     return (2 ** (3 + 1)) * 0.8 * 40.0 / Graphics.frame_rate   # Walking speed

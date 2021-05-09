@@ -694,7 +694,7 @@ def pbStartOver(gameover=false)
     end
     if homedata
       pbCancelVehicles
-      pbRemoveDependencies
+      pbRemoveDependenciesExceptFollower
       $game_switches[STARTING_OVER_SWITCH] = true
       $game_temp.player_new_map_id    = homedata[0]
       $game_temp.player_new_x         = homedata[1]

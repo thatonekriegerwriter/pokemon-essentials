@@ -114,6 +114,13 @@ MenuHandlers.addEntry(:TRAINER,_INTL("\\pn"),"menuTrainer",proc{|menu|
     screen.pbStartScreen
   }
 },proc{ return true })
+# Crafting Screen
+MenuHandlers.addEntry(:CRAFTING,_INTL("Crafting"),"menuCrafting",proc{|menu|
+  pbFadeOutIn(99999) { 
+    pbCommonEvent(19)
+    menu.refresh
+  }
+},proc{ return true })
 # Save Screen
 MenuHandlers.addEntry(:SAVE,_INTL("Save"),"menuSave",proc{|menu|
   scene = PokemonSave_Scene.new
@@ -148,15 +155,6 @@ MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
     end
   end
 },proc{ return pbInSafari? || pbInBugContest? })
-# Controls Screen
-#.addEntry(:CONTROLS,_INTL("Controls"),"menuControls",proc{|menu|
-#  pbFadeOutIn(99999) { 
-#    scene=PokemonControlsScene.new       
-#    screen=PokemonControls.new(scene)
-#	screen.pbStartScreen
-#    menu.refresh
-#  }
-#},proc{ return true })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new

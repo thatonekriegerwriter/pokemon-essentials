@@ -104,7 +104,8 @@ $VersionStyles = [
   [MessageConfig::FontName],   # Default font style - Power Green/"Pokemon Emerald"
   ["Power Red and Blue"],
   ["Power Red and Green"],
-  ["Power Clear"]
+  ["Power Clear"],
+  ["PKMN RBYGSC"]
 ]
 
 def pbSettingToTextSpeed(speed)
@@ -511,12 +512,6 @@ class PokemonOption_Scene
           proc {|value|
           if value==0
             $game_switches[57]=true
-			  if $game_switches[58]==true
-			   pbMessage(_INTL("Nuzlocke Settings"))  
-               $game_switches[58]=false
-			  else
-			   pbMessage(_INTL("Nuzlocke On"))
-			  end
           elsif value==1
             $game_switches[57]=false
           end
@@ -554,7 +549,7 @@ class PokemonOption_Scene
            MessageConfig.pbSetSystemFrame($TextFrames[value])
          }
        ),
-       EnumOption.new(_INTL("Font Style"),[_INTL("Em"),_INTL("R/S"),_INTL("FRLG"),_INTL("DP")],
+       EnumOption.new(_INTL("Font Style"),[_INTL("Em"),_INTL("R/S"),_INTL("FRLG"),_INTL("DP"),_INTL("GB")],
          proc { $PokemonSystem.font },
          proc { |value|
            $PokemonSystem.font = value

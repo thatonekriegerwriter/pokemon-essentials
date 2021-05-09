@@ -84,6 +84,9 @@
 #-------Add Delete Save on Death Option                                       -#
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
+DELETE_SAVE = false
+DELETE_MULTISAVE = false
+
 Events.onStepTakenTransferPossible+=proc {
 if $game_switches[54]==true #Survival Mode Switch
  case $game_variables[208]
