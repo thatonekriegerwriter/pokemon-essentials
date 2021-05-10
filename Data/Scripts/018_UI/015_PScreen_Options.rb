@@ -496,6 +496,7 @@ class PokemonOption_Scene
           proc {|value|
           if value==0
             $game_switches[54]=true
+            Achievements.incrementProgress("SURVIVOR",1)
           elsif value==1
             $game_switches[54]=false
           end

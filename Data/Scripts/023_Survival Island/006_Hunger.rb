@@ -93,6 +93,7 @@ if $game_switches[54]==true #Survival Mode Switch
   when 0
    if $game_switches[249]==true
     pbMessage(_INTL("You are passing out from lack of sleep!"))
+	Achievements.incrementProgress("INSOMNIA",1)
     $Trainer.money -= 20
     $game_switches[249]=false
    else
@@ -115,6 +116,7 @@ if $game_switches[54]==true #Survival Mode Switch
    when 0
     if $game_switches[249]==true
       pbMessage(_INTL("You are passing out from lack of food!"))
+	  Achievements.incrementProgress("STARVING",1)
       $Trainer.money -= 20
       $game_switches[249]=false
     else
@@ -127,6 +129,7 @@ if $game_switches[54]==true #Survival Mode Switch
    when 0
     if $game_switches[249]==true
       pbMessage(_INTL("You are passing out from lack of water!"))
+	  Achievements.incrementProgress("THIRSTY",1)
       $Trainer.money -= 20
       $game_switches[249]=false
     else
@@ -141,8 +144,9 @@ end
 if $Trainer.money < 5
   if $game_switches[54] == true
       pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))
+	  Achievements.incrementProgress("DEAD",1)
       pbCancelVehicles
-      pbRemoveDependencies()
+      pbRemoveDependenciesExceptFollower
       pbEndGame
       return
    end

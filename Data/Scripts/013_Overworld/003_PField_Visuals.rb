@@ -650,10 +650,11 @@ end
 =end
 def pbStartOver(gameover=false)
 ###---EDIT---###
-  if $Trainer.money < 5 || $game_switches[54] == true
+  if $Trainer.money < 5 && $game_switches[54] == true
+	  Achievements.incrementProgress("DEAD",1)
       pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))
       pbCancelVehicles
-      pbRemoveDependencies()
+      pbRemoveDependenciesExceptFollower()
       pbEndGame
       return
   end
@@ -670,7 +671,7 @@ def pbStartOver(gameover=false)
       pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]\PN crawled back to the nearest shelter, battered and bruised from the battle."))
     end
     pbCancelVehicles
-    pbRemoveDependencies
+    pbRemoveDependenciesExceptFollower
     $game_switches[STARTING_OVER_SWITCH] = true
     $game_temp.player_new_map_id    = $PokemonGlobal.pokecenterMapId
     $game_temp.player_new_x         = $PokemonGlobal.pokecenterX

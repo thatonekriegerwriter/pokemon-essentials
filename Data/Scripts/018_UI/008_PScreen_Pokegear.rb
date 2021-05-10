@@ -124,11 +124,14 @@ class PokemonPokegearScreen
     cmdPhone   = -1
     cmdJukebox = -1
     cmdGuides = -1
+    cmdAchievements = -1
     commands[cmdMap = commands.length]     = ["map",_INTL("Map")]
     if $PokemonGlobal.phoneNumbers && $PokemonGlobal.phoneNumbers.length>0
       commands[cmdPhone = commands.length] = ["phone",_INTL("Phone")]
     end
     commands[cmdJukebox = commands.length] = ["jukebox",_INTL("Jukebox")]
+    commands[cmdGuides = commands.length] = ["guides",_INTL("Guides")]
+    commands[cmdAchievements = commands.length] = ["achievements",_INTL("Achievements")]
     @scene.pbStartScene(commands)
     loop do
       cmd = @scene.pbScene
@@ -146,9 +149,16 @@ class PokemonPokegearScreen
           screen = PokemonJukeboxScreen.new(scene)
           screen.pbStartScreen
         }
-      elsif cmdGuides>=0 && cmd==xmdGuides
+      elsif cmdGuides>=0 && cmd==cmdGuides
         pbFadeOutIn {
-          pbPoketch
+          pbCommonEvent(6)
+        }
+      elsif cmdAchievements>=0 && cmd==cmdAchievements
+        pbFadeOutIn {
+        scene = PokemonAchievements_Scene.new
+        screen = PokemonAchievements.new(scene)
+        screen.pbStartScreen
+        @scene.pbRefresh
         }
       end
     end
