@@ -459,6 +459,7 @@ ItemHandlers::UseOnPokemon.add(:TIMEFLUTE,proc { |item,pokemon,scene|
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false
   end
+  $game_switches[269]=true
   pokemon.heartgauge = 0
   pbReadyToPurify(pokemon)
   next true

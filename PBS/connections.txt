@@ -6,11 +6,11 @@
 72,South,200,82,North,0
 # Winter Zone (73) - Winter Zone (82)
 73,South,150,82,North,0
-# Winter Zone 2 (85) - Winter Zone (82)
+# Winter Zone (85) - Winter Zone (82)
 85,West,100,82,East,0
 # Winter Zone (74) - Winter Zone (82)
 74,South,100,82,North,0
-# Winter Zone 3 (86) - Winter Zone (82)
+# Winter Zone (86) - Winter Zone (82)
 86,West,50,82,East,0
 # Winter Zone (75) - Winter Zone (82)
 75,East,50,82,West,0
@@ -26,19 +26,19 @@
 73,West,50,77,East,0
 # Winter Zone (74) - Winter Zone (77)
 74,South,0,77,North,100
-# Winter Zone 3 (86) - Winter Zone (77)
+# Winter Zone (86) - Winter Zone (77)
 86,South,0,77,North,250
 # Winter Zone (75) - Winter Zone (77)
 75,South,0,77,North,150
 # Winter Zone (78) - Winter Zone (83)
 78,North,150,83,South,0
-# Winter Zone 1 (84) - Winter Zone (83)
+# Winter Zone (84) - Winter Zone (83)
 84,South,0,83,North,0
-# Winter Zone 2 (85) - Winter Zone (83)
+# Winter Zone (85) - Winter Zone (83)
 85,West,50,83,East,0
 # Winter Zone (80) - Winter Zone (83)
 80,North,100,83,South,0
-# Winter Zone 3 (86) - Winter Zone (83)
+# Winter Zone (86) - Winter Zone (83)
 86,West,0,83,East,0
 # Winter Zone (75) - Winter Zone (83)
 75,East,0,83,West,0
@@ -46,11 +46,11 @@
 81,North,50,83,South,0
 # Winter Zone (78) - Winter Zone (72)
 78,West,0,72,East,50
-# Winter Zone 1 (84) - Winter Zone (72)
+# Winter Zone (84) - Winter Zone (72)
 84,South,0,72,North,200
 # Winter Zone (73) - Winter Zone (72)
 73,West,0,72,East,0
-# Winter Zone 2 (85) - Winter Zone (72)
+# Winter Zone (85) - Winter Zone (72)
 85,South,0,72,North,250
 # Winter Zone (80) - Winter Zone (72)
 80,North,0,72,South,100
@@ -62,23 +62,23 @@
 74,West,50,78,East,0
 # Winter Zone (80) - Winter Zone (78)
 80,West,0,78,East,0
-# Winter Zone 3 (86) - Winter Zone (78)
+# Winter Zone (86) - Winter Zone (78)
 86,South,0,78,North,200
 # Winter Zone (75) - Winter Zone (78)
 75,South,0,78,North,100
-# Winter Zone (73) - Winter Zone 1 (84)
+# Winter Zone (73) - Winter Zone (84)
 73,North,150,84,South,0
-# Winter Zone 2 (85) - Winter Zone 1 (84)
+# Winter Zone (85) - Winter Zone (84)
 85,West,0,84,East,0
-# Winter Zone (74) - Winter Zone 1 (84)
+# Winter Zone (74) - Winter Zone (84)
 74,North,100,84,South,0
-# Winter Zone 3 (86) - Winter Zone 1 (84)
+# Winter Zone (86) - Winter Zone (84)
 86,West,0,84,East,50
-# Winter Zone (75) - Winter Zone 1 (84)
+# Winter Zone (75) - Winter Zone (84)
 75,North,50,84,South,0
-# Winter Zone (81) - Winter Zone 1 (84)
+# Winter Zone (81) - Winter Zone (84)
 81,East,0,84,West,100
-# Winter Zone 2 (85) - Winter Zone (73)
+# Winter Zone (85) - Winter Zone (73)
 85,South,0,73,North,200
 # Winter Zone (74) - Winter Zone (73)
 74,West,0,73,East,0
@@ -86,11 +86,11 @@
 80,West,0,73,East,50
 # Winter Zone (81) - Winter Zone (73)
 81,North,0,73,South,100
-# Winter Zone (74) - Winter Zone 2 (85)
+# Winter Zone (74) - Winter Zone (85)
 74,North,150,85,South,0
-# Winter Zone 3 (86) - Winter Zone 2 (85)
+# Winter Zone (86) - Winter Zone (85)
 86,North,0,85,South,0
-# Winter Zone (75) - Winter Zone 2 (85)
+# Winter Zone (75) - Winter Zone (85)
 75,North,100,85,South,0
 # Winter Zone (80) - Winter Zone (74)
 80,North,0,74,South,0
@@ -98,13 +98,13 @@
 75,West,0,74,East,0
 # Winter Zone (81) - Winter Zone (74)
 81,West,0,74,East,50
-# Winter Zone 3 (86) - Winter Zone (80)
+# Winter Zone (86) - Winter Zone (80)
 86,South,0,80,North,150
 # Winter Zone (75) - Winter Zone (80)
 75,West,50,80,East,0
 # Winter Zone (81) - Winter Zone (80)
 81,West,0,80,East,0
-# Winter Zone (81) - Winter Zone 3 (86)
+# Winter Zone (81) - Winter Zone (86)
 81,North,100,86,South,0
 # Winter Zone (81) - Winter Zone (75)
 81,North,0,75,South,0
@@ -970,28 +970,28 @@
 258,West,0,280,East,100
 # Shore Skies (275) - Mountain Skies (280)
 275,North,200,280,South,0
-# Mountain Skies (281) - Mountain Skies (280)
-281,West,50,280,East,0
 # Mountain Skies (259) - Mountain Skies (280)
 259,West,0,280,East,0
+# Mountain Skies (281) - Mountain Skies (280)
+281,West,50,280,East,0
 # Shore Skies (265) - Mountain Skies (280)
 265,North,0,280,South,0
 # Temperate Skies (260) - Mountain Skies (280)
 260,East,0,280,West,150
 # Mountain Skies (266) - Mountain Skies (280)
 266,West,0,280,East,50
-# Shore Skies (261) - Mountain Skies (280)
-261,East,0,280,West,100
 # Shore Skies (272) - Mountain Skies (280)
 272,North,50,280,South,0
+# Shore Skies (261) - Mountain Skies (280)
+261,East,0,280,West,100
 # Mountain Skies (278) - Mountain Skies (280)
 278,North,0,280,South,100
 # Mountain Skies (257) - Mountain Skies (280)
 257,West,0,280,East,150
-# Temperate Skies (252) - Mountain Skies (280)
-252,East,0,280,West,200
 # Shore Skies (274) - Mountain Skies (280)
 274,North,150,280,South,0
+# Temperate Skies (252) - Mountain Skies (280)
+252,East,0,280,West,200
 # Shore Skies (264) - Mountain Skies (258)
 264,North,200,258,South,0
 # Shore Skies (275) - Mountain Skies (258)
@@ -1000,12 +1000,16 @@
 248,North,150,258,South,0
 # Shore Skies (265) - Mountain Skies (258)
 265,East,50,258,West,0
+# Shore Skies (293) - Mountain Skies (258)
+293,East,0,258,West,150
 # Temperate Skies (260) - Mountain Skies (258)
 260,North,100,258,South,0
-# Temperate Skies (255) - Mountain Skies (258)
-255,East,0,258,West,100
 # Mountain Skies (266) - Mountain Skies (258)
 266,South,0,258,North,0
+# Temperate Skies (255) - Mountain Skies (258)
+255,East,0,258,West,100
+# Shore Skies (294) - Mountain Skies (258)
+294,East,0,258,West,200
 # Shore Skies (272) - Mountain Skies (258)
 272,South,100,258,North,0
 # Mountain Skies (278) - Mountain Skies (258)
@@ -1024,22 +1028,24 @@
 264,East,150,253,West,0
 # Ocean Skies (254) - Ocean Skies (253)
 254,North,0,253,South,0
+# Shore Skies (293) - Ocean Skies (253)
+293,South,0,253,North,100
 # Temperate Skies (260) - Ocean Skies (253)
 260,West,150,253,East,0
+# Shore Skies (272) - Ocean Skies (253)
+272,West,250,253,East,0
 # Shore Skies (250) - Ocean Skies (253)
 250,South,0,253,North,0
 # Shore Skies (261) - Ocean Skies (253)
 261,West,200,253,East,0
-# Shore Skies (272) - Ocean Skies (253)
-272,West,250,253,East,0
 # Shore Skies (251) - Ocean Skies (253)
 251,North,50,253,South,0
 # Shore Skies (273) - Ocean Skies (253)
 273,East,200,253,West,0
-# Temperate Skies (252) - Ocean Skies (253)
-252,West,100,253,East,0
 # Shore Skies (274) - Ocean Skies (253)
 274,East,250,253,West,0
+# Temperate Skies (252) - Ocean Skies (253)
+252,West,100,253,East,0
 # Shore Skies (275) - Shore Skies (264)
 275,East,100,264,West,0
 # Temperate Skies (248) - Shore Skies (264)
@@ -1048,7 +1054,7 @@
 254,West,0,264,East,200
 # Temperate Skies (249) - Shore Skies (264)
 249,West,0,264,East,50
-# Shore Skies (277) - Shore Skies (264)
+# Shore Skies? (277) - Shore Skies (264)
 277,East,150,264,West,0
 # Temperate Skies (255) - Shore Skies (264)
 255,North,0,264,South,150
@@ -1056,54 +1062,44 @@
 250,West,0,264,East,100
 # Shore Skies (261) - Shore Skies (264)
 261,South,0,264,North,100
-# Shore Skies (262) - Shore Skies (264)
-262,South,0,264,North,150
 # Shore Skies (273) - Shore Skies (264)
 273,South,0,264,North,0
-# Temperate Skies (252) - Shore Skies (264)
-252,North,0,264,South,100
+# Shore Skies (262) - Shore Skies (264)
+262,South,0,264,North,150
 # Shore Skies (263) - Shore Skies (264)
 263,West,50,264,East,0
+# Temperate Skies (252) - Shore Skies (264)
+252,North,0,264,South,100
 # Mountain Skies (259) - Shore Skies (275)
 259,South,0,275,North,250
-# Shore Skies (277) - Shore Skies (275)
+# Shore Skies? (277) - Shore Skies (275)
 277,South,0,275,North,0
 # Shore Skies (261) - Shore Skies (275)
 261,North,0,275,South,150
 # Shore Skies (251) - Shore Skies (275)
 251,West,0,275,East,300
-# Shore Skies (262) - Shore Skies (275)
-262,North,0,275,South,200
 # Shore Skies (273) - Shore Skies (275)
 273,West,0,275,East,50
+# Shore Skies (262) - Shore Skies (275)
+262,North,0,275,South,200
 # Mountain Skies (279) - Shore Skies (275)
 279,South,0,275,North,300
 # Shore Skies (274) - Shore Skies (275)
 274,West,0,275,East,0
 # Shore Skies (263) - Shore Skies (275)
 263,North,0,275,South,100
-# Mountain Skies (259) - Mountain Skies (281)
-259,North,0,281,South,0
-# Shore Skies (265) - Mountain Skies (281)
-265,East,0,281,West,100
-# Shore Skies (277) - Mountain Skies (281)
-277,North,250,281,South,0
-# Temperate Skies (255) - Mountain Skies (281)
-255,East,0,281,West,250
-# Mountain Skies (278) - Mountain Skies (281)
-278,West,0,281,East,100
-# Mountain Skies (256) - Mountain Skies (281)
-256,East,0,281,West,200
-# Shore Skies (262) - Mountain Skies (281)
-262,East,0,281,West,150
-# Mountain Skies (279) - Mountain Skies (281)
-279,West,0,281,East,50
+# Mountain Skies (281) - Mountain Skies (259)
+281,South,0,259,North,0
 # Shore Skies (265) - Mountain Skies (259)
 265,North,50,259,South,0
-# Temperate Skies (255) - Mountain Skies (259)
-255,East,0,259,West,200
+# Shore Skies (293) - Mountain Skies (259)
+293,East,0,259,West,250
 # Mountain Skies (266) - Mountain Skies (259)
 266,North,0,259,South,0
+# Temperate Skies (255) - Mountain Skies (259)
+255,East,0,259,West,200
+# Shore Skies (294) - Mountain Skies (259)
+294,East,0,259,West,300
 # Shore Skies (272) - Mountain Skies (259)
 272,North,100,259,South,0
 # Mountain Skies (278) - Mountain Skies (259)
@@ -1116,72 +1112,110 @@
 279,West,0,259,East,0
 # Shore Skies (274) - Mountain Skies (259)
 274,North,200,259,South,0
+# Shore Skies (265) - Mountain Skies (281)
+265,East,0,281,West,100
+# Shore Skies (293) - Mountain Skies (281)
+293,East,0,281,West,300
+# Shore Skies? (277) - Mountain Skies (281)
+277,North,250,281,South,0
+# Temperate Skies (255) - Mountain Skies (281)
+255,East,0,281,West,250
+# Shore Skies (294) - Mountain Skies (281)
+294,East,0,281,West,350
+# Mountain Skies (278) - Mountain Skies (281)
+278,West,0,281,East,100
+# Mountain Skies (256) - Mountain Skies (281)
+256,East,0,281,West,200
+# Shore Skies (262) - Mountain Skies (281)
+262,East,0,281,West,150
+# Mountain Skies (279) - Mountain Skies (281)
+279,West,0,281,East,50
 # Temperate Skies (249) - Temperate Skies (248)
 249,North,0,248,South,0
 # Temperate Skies (260) - Temperate Skies (248)
 260,West,0,248,East,0
 # Temperate Skies (255) - Temperate Skies (248)
 255,North,0,248,South,100
-# Shore Skies (261) - Temperate Skies (248)
-261,West,50,248,East,0
 # Shore Skies (272) - Temperate Skies (248)
 272,West,100,248,East,0
+# Shore Skies (261) - Temperate Skies (248)
+261,West,50,248,East,0
 # Shore Skies (251) - Temperate Skies (248)
 251,East,0,248,West,200
-# Shore Skies (262) - Temperate Skies (248)
-262,South,0,248,North,100
 # Shore Skies (273) - Temperate Skies (248)
 273,East,50,248,West,0
-# Temperate Skies (252) - Temperate Skies (248)
-252,West,0,248,East,50
+# Shore Skies (262) - Temperate Skies (248)
+262,South,0,248,North,100
 # Shore Skies (274) - Temperate Skies (248)
 274,East,100,248,West,0
 # Shore Skies (263) - Temperate Skies (248)
 263,South,0,248,North,0
+# Temperate Skies (252) - Temperate Skies (248)
+252,West,0,248,East,50
 # Temperate Skies (260) - Shore Skies (265)
 260,East,0,265,West,100
-# Shore Skies (277) - Shore Skies (265)
+# Shore Skies? (277) - Shore Skies (265)
 277,South,200,265,North,0
 # Mountain Skies (266) - Shore Skies (265)
 266,West,0,265,East,0
-# Shore Skies (261) - Shore Skies (265)
-261,North,50,265,South,0
 # Shore Skies (272) - Shore Skies (265)
 272,East,0,265,West,0
-# Shore Skies (262) - Shore Skies (265)
-262,North,0,265,South,0
+# Shore Skies (261) - Shore Skies (265)
+261,North,50,265,South,0
 # Shore Skies (273) - Shore Skies (265)
 273,North,150,265,South,0
+# Shore Skies (262) - Shore Skies (265)
+262,North,0,265,South,0
 # Mountain Skies (279) - Shore Skies (265)
 279,South,0,265,North,100
 # Mountain Skies (257) - Shore Skies (265)
 257,West,0,265,East,100
-# Temperate Skies (252) - Shore Skies (265)
-252,East,0,265,West,150
 # Shore Skies (263) - Shore Skies (265)
 263,North,100,265,South,0
+# Temperate Skies (252) - Shore Skies (265)
+252,East,0,265,West,150
 # Temperate Skies (260) - Ocean Skies (254)
 260,West,200,254,East,0
-# Shore Skies (261) - Ocean Skies (254)
-261,West,250,254,East,0
+# Shore Skies (294) - Ocean Skies (254)
+294,South,0,254,North,100
 # Shore Skies (272) - Ocean Skies (254)
 272,West,300,254,East,0
+# Shore Skies (261) - Ocean Skies (254)
+261,West,250,254,East,0
 # Shore Skies (251) - Ocean Skies (254)
 251,East,0,254,West,0
 # Shore Skies (273) - Ocean Skies (254)
 273,East,250,254,West,0
-# Temperate Skies (252) - Ocean Skies (254)
-252,West,150,254,East,0
 # Shore Skies (274) - Ocean Skies (254)
 274,East,300,254,West,0
+# Temperate Skies (252) - Ocean Skies (254)
+252,West,150,254,East,0
+# Temperate Skies (249) - Shore Skies (293)
+249,South,100,293,North,0
+# Temperate Skies (260) - Shore Skies (293)
+260,East,100,293,West,0
+# Mountain Skies (266) - Shore Skies (293)
+266,West,200,293,East,0
+# Temperate Skies (255) - Shore Skies (293)
+255,South,0,293,North,0
+# Shore Skies (294) - Shore Skies (293)
+294,North,0,293,South,0
+# Shore Skies (272) - Shore Skies (293)
+272,East,200,293,West,0
+# Shore Skies (261) - Shore Skies (293)
+261,East,150,293,West,0
+# Mountain Skies (257) - Shore Skies (293)
+257,West,100,293,East,0
+# Temperate Skies (252) - Shore Skies (293)
+252,East,50,293,West,0
 # Temperate Skies (260) - Temperate Skies (249)
 260,West,50,249,East,0
+# Shore Skies (272) - Temperate Skies (249)
+272,West,150,249,East,0
 # Shore Skies (250) - Temperate Skies (249)
 250,North,0,249,South,0
 # Shore Skies (261) - Temperate Skies (249)
 261,West,100,249,East,0
-# Shore Skies (272) - Temperate Skies (249)
-272,West,150,249,East,0
 # Mountain Skies (256) - Temperate Skies (249)
 256,South,0,249,North,100
 # Shore Skies (251) - Temperate Skies (249)
@@ -1190,80 +1224,106 @@
 273,East,100,249,West,0
 # Mountain Skies (257) - Temperate Skies (249)
 257,South,0,249,North,150
-# Temperate Skies (252) - Temperate Skies (249)
-252,West,0,249,East,0
 # Shore Skies (274) - Temperate Skies (249)
 274,East,150,249,West,0
+# Temperate Skies (252) - Temperate Skies (249)
+252,West,0,249,East,0
 # Temperate Skies (255) - Temperate Skies (260)
 255,West,0,260,East,50
+# Shore Skies (294) - Temperate Skies (260)
+294,West,0,260,East,150
 # Shore Skies (250) - Temperate Skies (260)
 250,East,0,260,West,100
 # Shore Skies (261) - Temperate Skies (260)
 261,South,0,260,North,0
 # Mountain Skies (256) - Temperate Skies (260)
 256,West,0,260,East,0
-# Shore Skies (262) - Temperate Skies (260)
-262,West,50,260,East,0
 # Shore Skies (273) - Temperate Skies (260)
 273,South,100,260,North,0
-# Temperate Skies (252) - Temperate Skies (260)
-252,North,0,260,South,0
+# Shore Skies (262) - Temperate Skies (260)
+262,West,50,260,East,0
 # Shore Skies (263) - Temperate Skies (260)
 263,East,50,260,West,0
-# Mountain Skies (266) - Shore Skies (277)
+# Temperate Skies (252) - Temperate Skies (260)
+252,North,0,260,South,0
+# Mountain Skies (266) - Shore Skies? (277)
 266,North,0,277,South,250
-# Shore Skies (272) - Shore Skies (277)
+# Shore Skies (272) - Shore Skies? (277)
 272,North,0,277,South,150
-# Mountain Skies (278) - Shore Skies (277)
+# Mountain Skies (278) - Shore Skies? (277)
 278,North,0,277,South,300
-# Shore Skies (251) - Shore Skies (277)
+# Shore Skies (251) - Shore Skies? (277)
 251,West,0,277,East,350
-# Shore Skies (273) - Shore Skies (277)
+# Shore Skies (273) - Shore Skies? (277)
 273,West,0,277,East,100
-# Shore Skies (274) - Shore Skies (277)
+# Shore Skies (274) - Shore Skies? (277)
 274,West,0,277,East,50
-# Mountain Skies (266) - Temperate Skies (255)
-266,West,150,255,East,0
-# Shore Skies (250) - Temperate Skies (255)
-250,North,100,255,South,0
-# Shore Skies (261) - Temperate Skies (255)
-261,East,100,255,West,0
-# Shore Skies (272) - Temperate Skies (255)
-272,East,150,255,West,0
-# Mountain Skies (256) - Temperate Skies (255)
-256,South,0,255,North,0
-# Mountain Skies (257) - Temperate Skies (255)
-257,West,50,255,East,0
-# Temperate Skies (252) - Temperate Skies (255)
-252,East,0,255,West,0
+# Temperate Skies (255) - Mountain Skies (266)
+255,East,0,266,West,150
+# Shore Skies (294) - Mountain Skies (266)
+294,East,0,266,West,250
 # Shore Skies (261) - Mountain Skies (266)
 261,North,100,266,South,0
 # Mountain Skies (278) - Mountain Skies (266)
 278,West,0,266,East,0
 # Mountain Skies (256) - Mountain Skies (266)
 256,East,0,266,West,100
-# Shore Skies (262) - Mountain Skies (266)
-262,North,50,266,South,0
 # Shore Skies (273) - Mountain Skies (266)
 273,North,200,266,South,0
+# Shore Skies (262) - Mountain Skies (266)
+262,North,50,266,South,0
 # Mountain Skies (279) - Mountain Skies (266)
 279,West,50,266,East,0
 # Shore Skies (263) - Mountain Skies (266)
 263,North,150,266,South,0
+# Shore Skies (272) - Temperate Skies (255)
+272,East,150,255,West,0
+# Shore Skies (250) - Temperate Skies (255)
+250,North,100,255,South,0
+# Shore Skies (261) - Temperate Skies (255)
+261,East,100,255,West,0
+# Mountain Skies (256) - Temperate Skies (255)
+256,South,0,255,North,0
+# Mountain Skies (257) - Temperate Skies (255)
+257,West,50,255,East,0
+# Temperate Skies (252) - Temperate Skies (255)
+252,East,0,255,West,0
+# Shore Skies (272) - Shore Skies (294)
+272,East,250,294,West,0
+# Shore Skies (250) - Shore Skies (294)
+250,South,100,294,North,0
+# Shore Skies (261) - Shore Skies (294)
+261,East,200,294,West,0
+# Shore Skies (251) - Shore Skies (294)
+251,North,150,294,South,0
+# Mountain Skies (257) - Shore Skies (294)
+257,West,150,294,East,0
+# Temperate Skies (252) - Shore Skies (294)
+252,East,100,294,West,0
+# Shore Skies (250) - Shore Skies (272)
+250,East,0,272,West,200
+# Shore Skies (261) - Shore Skies (272)
+261,North,0,272,South,0
+# Mountain Skies (256) - Shore Skies (272)
+256,West,0,272,East,100
+# Shore Skies (273) - Shore Skies (272)
+273,North,100,272,South,0
+# Shore Skies (262) - Shore Skies (272)
+262,West,0,272,East,50
+# Mountain Skies (279) - Shore Skies (272)
+279,South,0,272,North,150
+# Shore Skies (263) - Shore Skies (272)
+263,North,50,272,South,0
 # Shore Skies (261) - Shore Skies (250)
 261,West,150,250,East,0
-# Shore Skies (272) - Shore Skies (250)
-272,West,200,250,East,0
 # Shore Skies (251) - Shore Skies (250)
 251,East,0,250,West,100
 # Shore Skies (273) - Shore Skies (250)
 273,East,150,250,West,0
-# Temperate Skies (252) - Shore Skies (250)
-252,West,50,250,East,0
 # Shore Skies (274) - Shore Skies (250)
 274,East,200,250,West,0
-# Shore Skies (272) - Shore Skies (261)
-272,South,0,261,North,0
+# Temperate Skies (252) - Shore Skies (250)
+252,West,50,250,East,0
 # Mountain Skies (278) - Shore Skies (261)
 278,South,0,261,North,150
 # Mountain Skies (256) - Shore Skies (261)
@@ -1276,59 +1336,51 @@
 274,South,100,261,North,0
 # Shore Skies (263) - Shore Skies (261)
 263,East,0,261,West,0
-# Mountain Skies (256) - Shore Skies (272)
-256,West,0,272,East,100
-# Shore Skies (262) - Shore Skies (272)
-262,West,0,272,East,50
-# Shore Skies (273) - Shore Skies (272)
-273,North,100,272,South,0
-# Mountain Skies (279) - Shore Skies (272)
-279,South,0,272,North,150
-# Shore Skies (263) - Shore Skies (272)
-263,North,50,272,South,0
-# Shore Skies (262) - Mountain Skies (278)
-262,North,100,278,South,0
 # Shore Skies (273) - Mountain Skies (278)
 273,North,250,278,South,0
+# Shore Skies (262) - Mountain Skies (278)
+262,North,100,278,South,0
 # Mountain Skies (279) - Mountain Skies (278)
 279,South,0,278,North,0
 # Mountain Skies (257) - Mountain Skies (278)
 257,East,0,278,West,100
 # Shore Skies (263) - Mountain Skies (278)
 263,North,200,278,South,0
-# Shore Skies (262) - Mountain Skies (256)
-262,South,0,256,North,0
 # Shore Skies (273) - Mountain Skies (256)
 273,South,150,256,North,0
+# Shore Skies (262) - Mountain Skies (256)
+262,South,0,256,North,0
 # Mountain Skies (257) - Mountain Skies (256)
 257,West,0,256,East,0
-# Temperate Skies (252) - Mountain Skies (256)
-252,North,50,256,South,0
 # Shore Skies (263) - Mountain Skies (256)
 263,South,100,256,North,0
+# Temperate Skies (252) - Mountain Skies (256)
+252,North,50,256,South,0
 # Shore Skies (263) - Shore Skies (251)
 263,West,250,251,East,0
-# Mountain Skies (257) - Shore Skies (262)
-257,West,0,262,East,50
-# Temperate Skies (252) - Shore Skies (262)
-252,East,0,262,West,100
-# Shore Skies (274) - Shore Skies (262)
-274,South,150,262,North,0
 # Mountain Skies (257) - Shore Skies (273)
 257,North,0,273,South,200
 # Shore Skies (274) - Shore Skies (273)
 274,South,0,273,North,0
 # Shore Skies (263) - Shore Skies (273)
 263,West,0,273,East,0
+# Mountain Skies (257) - Shore Skies (262)
+257,West,0,262,East,50
+# Shore Skies (274) - Shore Skies (262)
+274,South,150,262,North,0
+# Temperate Skies (252) - Shore Skies (262)
+252,East,0,262,West,100
 # Mountain Skies (257) - Mountain Skies (279)
 257,East,0,279,West,150
 # Shore Skies (274) - Mountain Skies (279)
 274,North,250,279,South,0
-# Temperate Skies (252) - Mountain Skies (257)
-252,North,100,257,South,0
 # Shore Skies (263) - Mountain Skies (257)
 263,South,150,257,North,0
-# Shore Skies (263) - Temperate Skies (252)
-263,East,100,252,West,0
+# Temperate Skies (252) - Mountain Skies (257)
+252,North,100,257,South,0
 # Shore Skies (263) - Shore Skies (274)
 263,West,0,274,East,50
+# Temperate Skies (252) - Shore Skies (263)
+252,West,0,263,East,100
+# Temperate Ocean (295) - West Shore (205)
+295,East,0,205,West,0

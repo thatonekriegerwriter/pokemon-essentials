@@ -1872,7 +1872,7 @@ LandNight
     MAMOSWINE,7,12
     GLACEON,5,24
 #-------------------------------
-084 # Winter Zone 1
+084 # Winter Zone
 25,10,10
 Water
     SPHEAL,30,33
@@ -1927,7 +1927,7 @@ LandNight
     MAMOSWINE,7,12
     GLACEON,5,24
 #-------------------------------
-085 # Winter Zone 2
+085 # Winter Zone
 25,10,10
 Water
     SPHEAL,30,33
