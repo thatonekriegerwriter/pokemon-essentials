@@ -33,11 +33,62 @@ ItemHandlers::UseFromBag.add(:MEDICINE,proc{|item|
     pbFillUp
     next 1
 })
-
 ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
-    $game_switches[240]==true
+        if $game_switches[240]==false
+         $game_switches[240]=true
+        elsif $game_switches[240]==true
+         $game_switches[240]=false
+        end
     next 1
+})
+
+ItemHandlers::UseInField.add(:PORTABLEPC,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(30)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:BEDROLL,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(31)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:CRAFTINGBENCH,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(32)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:CAULDRON,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(33)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:FURNACE,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(34)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:MEDICINEPOT,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(35)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:GRINDER,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(36)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:UPGRADEDCRAFTINGBENCH,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(37)
+    next 2
 })
 
 ItemHandlers::UseFromBag.add(:ESCAPEROPE,proc { |item|
