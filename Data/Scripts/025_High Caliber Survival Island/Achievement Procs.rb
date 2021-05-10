@@ -23,15 +23,6 @@ Events.onStepTaken+=proc{|sender,e|
   end
 }
 
-Events.onStartBattle+=proc {|sender,e|
-  poke=e[0]
-  if poke
-    Achievements.incrementProgress("WILD_ENCOUNTERS",1)
-  else
-    Achievements.incrementProgress("TRAINER_BATTLES",1)
-  end
-}
-
 Events.onEndBattle+=proc {|sender,e|
   decision = e[0]
   if decision==4

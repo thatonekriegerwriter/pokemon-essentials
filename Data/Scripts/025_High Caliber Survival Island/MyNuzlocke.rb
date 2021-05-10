@@ -360,11 +360,6 @@ class PokeBattle_Battle
   # Stores fainted Pokemon until end of battle (like a "purgatory")
   attr_accessor :faintedlist
   
-  alias permadeath_pbStartBattle pbStartBattle
-  def pbStartBattle
-    @faintedlist = []
-    permadeath_pbStartBattle
-  end
   
   alias nuzlocke_ThrowPokeBall pbThrowPokeBall
   def pbThrowPokeBall(idxPokemon,ball,rareness=nil)
