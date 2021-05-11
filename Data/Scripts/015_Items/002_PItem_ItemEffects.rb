@@ -44,14 +44,24 @@ ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
 })
 
 ItemHandlers::UseInField.add(:PORTABLEPC,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbCommonEvent(30)
+    maps = [10,20,40,97,92,161]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+      pbCommonEvent(30)
+    else
+      Kernel.pbMessage(_INTL("{It is not safe to place the {2} here.",$Trainer.name,PBItems.getName(item)))
+    end
     next 2
 })
 
 ItemHandlers::UseInField.add(:BEDROLL,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbCommonEvent(31)
+    maps = [10,20,40,97,92,161]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+      pbCommonEvent(31)
+    else
+      Kernel.pbMessage(_INTL("{It is not safe to place the {2} here.",$Trainer.name,PBItems.getName(item)))
+    end
     next 2
 })
 
