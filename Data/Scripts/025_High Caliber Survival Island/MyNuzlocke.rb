@@ -321,7 +321,7 @@ class PokemonGlobalMetadata
   alias nuzlocke_initialize initialize
   def initialize
     @nuzlocke=false
-    @nuzlockeMaps=[]
+    @nuzlockeMaps=[NUZLOCKEMAPS]
     nuzlocke_initialize
   end
   
@@ -329,12 +329,12 @@ class PokemonGlobalMetadata
     if !@nuzlockeMaps
       @nuzlockeMaps=[]
     end
-    return 0 if @nuzlockeMaps.length==0
-    for i in 0...@nuzlockeMaps.length
-      if @nuzlockeMaps[i][0] == mapid
-        state = @nuzlockeMaps[i][1]
+    return 0 if NUZLOCKEMAPS.length==0
+    for i in 0...NUZLOCKEMAPS.length
+      if NUZLOCKEMAPS[i][0] == mapid
+        state = NUZLOCKEMAPS[i][1]
         echo("(")
-        echo(@nuzlockeMaps)
+        echo(NUZLOCKEMAPS)
         echo("->")
         echo(state)
         echo(")\n")
@@ -346,9 +346,9 @@ class PokemonGlobalMetadata
   
   
     def checkDuplicates(mapid)
-    return false if !@nuzlockeMaps
-    for i in 0...@nuzlockeMaps.length
-      if @nuzlockeMaps[i][0] == mapid
+    return false if !NUZLOCKEMAPS
+    for i in 0...NUZLOCKEMAPS.length
+      if NUZLOCKEMAPS[i][0] == mapid
         return true
       end
     end
@@ -373,7 +373,7 @@ class PokeBattle_Battle
         pbDisplay(_INTL("But {1} already caught a pokemon on this area!",self.pbPlayer.name))
         return
 	  end
-	  if $PokemonGlobal.shinycatchclause && isShiny?
+	  if $PokemonGlobal.shinycatchclause && @battlers[1].shiny?
         nuzlocke_ThrowPokeBall(idxPokemon,ball,rareness=nil)
         return
 	  end
@@ -424,26 +424,12 @@ Events.onEndBattle += proc { |_sender,e|
  if $PokemonGlobal.permadeath==true  
      for pindex in 0...$Trainer.party.length
       pbRemoveFaintedPokemonAt(pindex)
-     if @pokemon.hasItem?
-       # Informs player that fainted's held item was transferred to bag
-       @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
-           pbThis, PBItems.getName(@pokemon.item)))
-        else
-       @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
-	  end
  if $PokemonGlobal.nuzsoft==true
    for pindex in 0...$Trainer.party.length
     pbRemoveFaintedPokemonAt(pindex)
       for i in @faintedlist
         storedbox = $PokemonStorage.pbStoreCaught(i)
       end
-   if @pokemon.hasItem?
-     # Informs player that fainted's held item was transferred to bag
-     @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
-         pbThis, PBItems.getName(@pokemon.item)))
-      else
-     @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
-	end
    end
  end
 end
@@ -454,26 +440,21 @@ Events.onStepTakenTransferPossible+=proc {
 if $PokemonGlobal.permadeath==true
    for pindex in 0...5
     pbRemoveFaintedPokemonAt(pindex)
-   if @pokemon.hasItem?
+=begin
+    if @pokemon.hasItem?
      # Informs player that fainted's held item was transferred to bag
      @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
          pbThis, PBItems.getName(@pokemon.item)))
-      else
+     else
      @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
 	end
+=end
 if $PokemonGlobal.nuzsoft==true
    for pindex in 0...$Trainer.party.length
     pbRemoveFaintedPokemonAt(pindex)
       for i in @faintedlist
         storedbox = $PokemonStorage.pbStoreCaught(i)
       end
-   if @pokemon.hasItem?
-     # Informs player that fainted's held item was transferred to bag
-     @battle.pbDisplayPaused(_INTL("{1} is dead! You picked up its {2}.",
-         pbThis, PBItems.getName(@pokemon.item)))
-      else
-     @battle.pbDisplayPaused(_INTL("{1} is dead!",pbThis))
-	end
    end
 end
 end
@@ -499,6 +480,19 @@ def pbHealAll
       end
     else
     i.heal
+    end
+  end
+end
+
+def pbRemoveFaintedPokemonAt(index)
+  return false if index<0 || !$Trainer || index>=$Trainer.party.length
+  for i in 0...$Trainer.party.length
+    if i==index && $Trainer.party[i].hp==0
+      #Kernel.pbMessage(_INTL("{1} was left behind.",$Trainer.party[i].name))
+      $Trainer.party.delete_at(index)
+      return true
+    else
+      return false
     end
   end
 end

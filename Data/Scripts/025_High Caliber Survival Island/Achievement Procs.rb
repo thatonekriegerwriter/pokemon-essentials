@@ -33,20 +33,6 @@ Events.onEndBattle+=proc {|sender,e|
   end
 }
 
-class PokeBattle_Battler
-  alias achieve_pbFaint pbFaint
-  def pbFaint(*args)
-    achieve_pbFaint(*args)
-    Achievements.incrementProgress("FAINTED_POKEMON",1) if @battle.pbOwnedByPlayer?(self.index)
-  end
-  
-  alias achieve_pbUseMove pbUseMove
-  def pbUseMove(*args)
-    achieve_pbUseMove(*args)
-    Achievements.incrementProgress("MOVES_USED",1) if @battle.pbOwnedByPlayer?(self.index) 
-  end
-end
-
 class PokeBattle_Battle
   alias achieve_pbMegaEvolve pbMegaEvolve
   def pbMegaEvolve(index)

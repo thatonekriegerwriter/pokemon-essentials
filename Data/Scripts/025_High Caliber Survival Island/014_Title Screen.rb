@@ -31,7 +31,7 @@ end
 # Configuration constant used to style the Title Screen
 # Add multiple modifiers to add visual effects to the Title Screen
 # Non additive modifiers do not stack i.e. you can only use one of each type
-MTS_MODIFIERS = ["background4", "intro:6", "effect4", "effect5", "effect7", "overlay:static002", "bgm:title_SI"
+MTS_MODIFIERS = ["background:SI", "intro:3", "effect4", "effect5", "effect7", "logo:shine", "overlay:scrolling001", "bgm:title_SI"
 #-------------------------------------------------------------------------------
 #                                  PRESETS
 #-------------------------------------------------------------------------------

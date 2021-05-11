@@ -40,7 +40,7 @@ class CharacterSelect_Scene
     @sprites["background"]=IconSprite.new(0,0,@viewport)
     @sprites["background"].setBitmap(sprintf("Graphics/Pictures/charselect#{lastplayerCharacter}"))
     @sprites["character"]=IconSprite.new(194,48,@viewport)
-    @sprites["character"].setBitmap(sprintf("Graphics/Characters/trainer00#{lastplayerCharacter-1}"))
+    @sprites["character"].setBitmap(sprintf("Graphics/Pictures/charskin#{lastplayerCharacter-1}"))
     
 #---TOP ROW---------------
     @sprites["minichar_0"]=AnimatedSprite.new("Graphics/Characters/boy_walk",4,32,40,animSpeed,@viewport)
@@ -68,12 +68,12 @@ class CharacterSelect_Scene
     @sprites["minichar_5"].x=216
     @sprites["minichar_5"].y=286
     
-    @sprites["minichar_6"]=AnimatedSprite.new("Graphics/Characters/fk002-brendan",4,32,44,animSpeed,@viewport)
-    @sprites["minichar_6"].x=264
-    @sprites["minichar_6"].y=284
+    @sprites["minichar_6"]=AnimatedSprite.new("Graphics/Characters/fk025",4,32,40,animSpeed,@viewport)
+    @sprites["minichar_6"].x=168
+    @sprites["minichar_6"].y=286
     
-    @sprites["minichar_7"]=AnimatedSprite.new("Graphics/Characters/fk003-may",4,32,42,animSpeed,@viewport)
-    @sprites["minichar_7"].x=312
+    @sprites["minichar_7"]=AnimatedSprite.new("Graphics/Characters/fk026",4,32,40,animSpeed,@viewport)
+    @sprites["minichar_7"].x=216
     @sprites["minichar_7"].y=286
     
     pbDeactivateWindows(@sprites)

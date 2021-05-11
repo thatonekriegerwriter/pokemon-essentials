@@ -512,7 +512,8 @@ class PokemonOption_Scene
         end },
           proc {|value|
           if value==0
-            $game_switches[57]=true
+		    $game_switches[57]=true
+			pbMessage(_INTL("Reenter a base in order to customize the Nuzlocke!"))
           elsif value==1
             $game_switches[57]=false
           end
