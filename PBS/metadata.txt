@@ -108,7 +108,7 @@ Outdoor = false
 ShowArea = true
 #-------------------------------
 [015]
-# Cave
+# Temperate Zone
 BattleBack = Cave
 #-------------------------------
 [016]

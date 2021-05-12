@@ -126,6 +126,24 @@ ItemHandlers::UseInBattle.add(:PICKAXE,proc{|item,battler,scene|
    end
 })
 
+ItemHandlers::UseInBattle.add(:SNATCHER,proc{|item,battler,scene|
+    return if battler.damageState.unaffected || battler.damageState.substitute
+    return if battler.item==0
+    return if battler.unlosableItem?(target.item)
+    return if battler.hasActiveAbility?(:STICKYHOLD) && !@battle.moldBreaker
+    itemName = battler.itemName
+    # Permanently steal the item from wild Pokémon
+    if @battle.wildBattle? && battler.opposes?
+      battler.initialItem==battler.item
+      battler.pbRemoveItem
+    else
+      target.pbRemoveItem(false)
+    end
+    @battle.pbDisplay(_INTL("You stole {2}'s {3}!",user.pbThis,target.pbThis(true),itemName))
+    $PokemonBag.pbStoreItem(:itemname,1)
+  end
+})
+
 #===========EDIT END===========#
 
 ItemHandlers::CanUseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY)

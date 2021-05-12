@@ -151,6 +151,10 @@ class BerryPlantSprite
       berryData[3]=timenow.to_i   # last updated now
       # Mulch modifiers
       dryingrate=berryvalues[1]
+#EDIT
+      minyield=berryvalues[2]
+      maxyield=berryvalues[3]
+      dryingrate=berryvalues[1]
       maxreplants=REPLANTS
       ripestages=4
       if isConst?(berryData[7],PBItems,:GROWTHMULCH)
@@ -163,7 +167,12 @@ class BerryPlantSprite
         maxreplants=(maxreplants*1.5).ceil
       elsif isConst?(berryData[7],PBItems,:STABLEMULCH)
         ripestages=6
+      elsif isConst?(berryData[7],PBItems,:PRODUCEMULCH)
+        minyield=berryvalues[2]+rand(4)
+      elsif isConst?(berryData[7],PBItems,:POTENTIALMULCH)
+        maxyield=berryvalues[3]+rand(4)
       end
+#EDIT END
       # Cycle through all replants since last check
       loop do
         secondsalive=berryData[2]

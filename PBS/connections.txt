@@ -862,116 +862,118 @@
 295,East,0,205,West,0
 # Mountain Zone (16) - Temperate Ocean (60)
 16,East,149,60,West,0
-# Mountain Zone (28) - Temperate Ocean (60)
-28,West,149,60,East,0
 # Temperate Ocean (61) - Temperate Ocean (60)
 61,North,0,60,South,0
-# Mountain Zone (29) - Temperate Ocean (60)
-29,West,199,60,East,0
+# Mountain Zone (28) - Temperate Ocean (60)
+28,West,149,60,East,0
 # Temperate Ocean (62) - Temperate Ocean (60)
 62,West,42,60,East,0
-# Temperate Zone (13) - Temperate Ocean (60)
-13,East,49,60,West,0
+# Mountain Zone (29) - Temperate Ocean (60)
+29,West,199,60,East,0
 # Swamp Zone (35) - Temperate Ocean (60)
 35,West,99,60,East,0
+# Temperate Zone (13) - Temperate Ocean (60)
+13,East,49,60,West,0
 # Mountain Zone (30) - Temperate Ocean (60)
 30,East,199,60,West,0
-# S.S Glittering Wreck (102) - Temperate Ocean (60)
-102,East,0,60,West,101
 # Temperate Ocean (58) - Temperate Ocean (60)
 58,East,0,60,West,51
-# Southern Beach (53) - Temperate Ocean (60)
-53,South,0,60,North,0
+# S.S Glittering Wreck (102) - Temperate Ocean (60)
+102,East,0,60,West,101
 # Temperate Zone (9) - Temperate Ocean (60)
 9,East,99,60,West,0
+# Southern Beach (53) - Temperate Ocean (60)
+53,South,0,60,North,0
 # Temperate Ocean (59) - Temperate Ocean (60)
 59,East,0,60,West,1
 # Temperate-Snowy Zone (44) - Mountain Zone (16)
 44,East,0,16,West,0
-# Mountain Zone (17) - Mountain Zone (16)
-17,West,0,16,East,0
 # Temperate Ocean (61) - Mountain Zone (16)
 61,West,0,16,East,199
+# Mountain Zone (17) - Mountain Zone (16)
+17,West,0,16,East,0
 # Swamp Zone (34) - Mountain Zone (16)
 34,North,0,16,South,150
 # Temperate Zone (7) - Mountain Zone (16)
 7,East,0,16,West,100
 # Mountain Zone (29) - Mountain Zone (16)
 29,South,0,16,North,100
-# Temperate Ocean (57) - Mountain Zone (16)
-57,East,0,16,West,200
-# Swamp Zone (35) - Mountain Zone (16)
-35,North,0,16,South,100
 # Temperate-Snowy Zone (68) - Mountain Zone (16)
 68,East,50,16,West,0
 # Mountain Zone (24) - Mountain Zone (16)
 24,West,100,16,East,0
-# Mountain Zone (19) - Mountain Zone (16)
-19,West,50,16,East,0
-# Mountain Zone (30) - Mountain Zone (16)
-30,South,0,16,North,0
+# Swamp Zone (35) - Mountain Zone (16)
+35,North,0,16,South,100
+# Temperate Ocean (57) - Mountain Zone (16)
+57,East,0,16,West,200
 # Temperate Zone (8) - Mountain Zone (16)
 8,North,50,16,South,0
-# Southern Beach (53) - Mountain Zone (16)
-53,West,0,16,East,99
+# Mountain Zone (30) - Mountain Zone (16)
+30,South,0,16,North,0
+# Mountain Zone (19) - Mountain Zone (16)
+19,West,50,16,East,0
+# MAP064 (64) - Mountain Zone (16)
+64,East,0,16,West,172
 # Southern Ocean (42) - Mountain Zone (16)
 42,East,0,16,West,250
 # Temperate Zone (9) - Mountain Zone (16)
 9,North,0,16,South,0
-# MAP064 (64) - Mountain Zone (16)
-64,East,0,16,West,172
-# Temperate Ocean (38) - Temperate Zone (5)
-38,East,0,5,West,22
-# Temperate-Snowy Zone (44) - Temperate Zone (5)
-44,West,150,5,East,0
-# Temperate Zone (243) - Temperate Zone (5)
-243,East,0,5,West,0
-# Temperate Ocean (1) - Temperate Zone (5)
-1,North,0,5,South,0
-# Temperate Zone (7) - Temperate Zone (5)
-7,West,50,5,East,0
-# Temperate Ocean (57) - Temperate Zone (5)
-57,West,0,5,East,50
-# Temperate Zone (13) - Temperate Zone (5)
-13,South,0,5,North,100
-# Temperate-Snowy Zone (68) - Temperate Zone (5)
-68,West,200,5,East,0
-# Temperate Zone (8) - Temperate Zone (5)
-8,West,100,5,East,0
-# Temperate Ocean (58) - Temperate Zone (5)
-58,North,0,5,South,100
-# Southern Ocean (42) - Temperate Zone (5)
-42,West,0,5,East,100
-# MAP064 (64) - Temperate Zone (5)
-64,West,0,5,East,22
-# Red and Blue's Cabin (103) - Temperate Zone (5)
-103,West,0,5,East,150
-# Temperate Zone (4) - Temperate Zone (5)
-4,South,0,5,North,0
+# Southern Beach (53) - Mountain Zone (16)
+53,West,0,16,East,99
+# Temperate Zone (5) - Temperate Ocean (38)
+5,West,22,38,East,0
 # Temperate Ocean (39) - Temperate Ocean (38)
 39,West,0,38,East,78
 # Temperate Ocean (1) - Temperate Ocean (38)
 1,West,0,38,East,28
 # Temperate Zone (4) - Temperate Ocean (38)
 4,West,72,38,East,0
+# Temperate-Snowy Zone (44) - Temperate Zone (5)
+44,West,150,5,East,0
+# Temperate Ocean (1) - Temperate Zone (5)
+1,North,0,5,South,0
+# Temperate Zone (243) - Temperate Zone (5)
+243,East,0,5,West,0
+# Temperate Zone (7) - Temperate Zone (5)
+7,West,50,5,East,0
+# Temperate-Snowy Zone (68) - Temperate Zone (5)
+68,West,200,5,East,0
+# Temperate Zone (13) - Temperate Zone (5)
+13,South,0,5,North,100
+# Temperate Ocean (57) - Temperate Zone (5)
+57,West,0,5,East,50
+# Temperate Zone (8) - Temperate Zone (5)
+8,West,100,5,East,0
+# Temperate Ocean (300) - Temperate Zone (5)
+300,East,50,5,West,0
+# Temperate Ocean (58) - Temperate Zone (5)
+58,North,0,5,South,100
+# MAP064 (64) - Temperate Zone (5)
+64,West,0,5,East,22
+# Southern Ocean (42) - Temperate Zone (5)
+42,West,0,5,East,100
+# Red and Blue's Cabin (103) - Temperate Zone (5)
+103,West,0,5,East,150
+# Temperate Zone (4) - Temperate Zone (5)
+4,South,0,5,North,0
 # Mountain Zone (28) - Swamp Zone (33)
 28,East,0,33,West,0
 # Swamp Zone (34) - Swamp Zone (33)
 34,North,0,33,South,0
-# Mountain Zone (29) - Swamp Zone (33)
-29,East,50,33,West,0
 # Temperate Ocean (62) - Swamp Zone (33)
 62,East,0,33,West,107
-# Swamp Zone (35) - Swamp Zone (33)
-35,North,50,33,South,0
+# Mountain Zone (29) - Swamp Zone (33)
+29,East,50,33,West,0
 # Temperate-Snowy Zone (68) - Swamp Zone (33)
 68,South,200,33,North,0
-# Mountain Zone (19) - Swamp Zone (33)
-19,South,100,33,North,0
-# Mountain Zone (30) - Swamp Zone (33)
-30,South,150,33,North,0
+# Swamp Zone (35) - Swamp Zone (33)
+35,North,50,33,South,0
 # Temperate Zone (8) - Swamp Zone (33)
 8,North,200,33,South,0
+# Mountain Zone (30) - Swamp Zone (33)
+30,South,150,33,North,0
+# Mountain Zone (19) - Swamp Zone (33)
+19,South,100,33,North,0
 # Temperate Zone (9) - Swamp Zone (33)
 9,North,150,33,South,0
 # Swamp Zone (109) - Swamp Zone (33)
@@ -984,182 +986,196 @@
 34,North,0,44,South,200
 # Mountain Zone (29) - Temperate-Snowy Zone (44)
 29,South,0,44,North,150
-# S.S Glittering Wreck (101) - Temperate-Snowy Zone (44)
-101,West,0,44,East,300
-# Temperate Zone (13) - Temperate-Snowy Zone (44)
-13,West,0,44,East,100
-# Swamp Zone (35) - Temperate-Snowy Zone (44)
-35,North,0,44,South,150
 # Temperate-Snowy Zone (68) - Temperate-Snowy Zone (44)
 68,South,0,44,North,0
-# Mountain Zone (19) - Temperate-Snowy Zone (44)
-19,South,0,44,North,100
-# Mountain Zone (30) - Temperate-Snowy Zone (44)
-30,West,50,44,East,0
+# Swamp Zone (35) - Temperate-Snowy Zone (44)
+35,North,0,44,South,150
+# Temperate Zone (13) - Temperate-Snowy Zone (44)
+13,West,0,44,East,100
+# S.S Glittering Wreck (101) - Temperate-Snowy Zone (44)
+101,West,0,44,East,300
 # Temperate Zone (8) - Temperate-Snowy Zone (44)
 8,North,0,44,South,0
-# S.S Glittering Wreck (102) - Temperate-Snowy Zone (44)
-102,West,0,44,East,250
+# Mountain Zone (30) - Temperate-Snowy Zone (44)
+30,West,50,44,East,0
+# Mountain Zone (19) - Temperate-Snowy Zone (44)
+19,South,0,44,North,100
 # Temperate Ocean (58) - Temperate-Snowy Zone (44)
 58,West,0,44,East,200
+# S.S Glittering Wreck (102) - Temperate-Snowy Zone (44)
+102,West,0,44,East,250
 # Temperate Zone (9) - Temperate-Snowy Zone (44)
 9,West,0,44,East,50
 # Temperate Ocean (59) - Temperate-Snowy Zone (44)
 59,West,0,44,East,150
 # Temperate Zone (4) - Temperate-Snowy Zone (44)
 4,East,0,44,West,100
-# Mountain Zone (28) - Mountain Zone (17)
-28,West,0,17,East,0
-# Swamp Zone (34) - Mountain Zone (17)
-34,North,0,17,South,100
-# Mountain Zone (29) - Mountain Zone (17)
-29,West,50,17,East,0
-# Temperate Ocean (62) - Mountain Zone (17)
-62,West,0,17,East,107
-# Temperate Zone (13) - Mountain Zone (17)
-13,East,0,17,West,100
-# Swamp Zone (35) - Mountain Zone (17)
-35,West,0,17,East,50
-# Temperate-Snowy Zone (68) - Mountain Zone (17)
-68,South,100,17,North,0
-# Mountain Zone (19) - Mountain Zone (17)
-19,South,0,17,North,0
-# Mountain Zone (30) - Mountain Zone (17)
-30,East,50,17,West,0
-# Temperate Zone (8) - Mountain Zone (17)
-8,North,100,17,South,0
-# S.S Glittering Wreck (102) - Mountain Zone (17)
-102,East,0,17,West,250
-# Temperate Ocean (58) - Mountain Zone (17)
-58,East,0,17,West,200
-# Temperate Zone (9) - Mountain Zone (17)
-9,North,50,17,South,0
-# Temperate Ocean (59) - Mountain Zone (17)
-59,East,0,17,West,150
-# Temperate Ocean (61) - Mountain Zone (28)
-61,East,0,28,West,199
-# Swamp Zone (34) - Mountain Zone (28)
-34,West,0,28,East,50
-# Mountain Zone (29) - Mountain Zone (28)
-29,South,0,28,North,0
-# Swamp Zone (35) - Mountain Zone (28)
-35,North,0,28,South,0
-# Temperate-Snowy Zone (68) - Mountain Zone (28)
-68,South,150,28,North,0
-# Mountain Zone (24) - Mountain Zone (28)
-24,East,100,28,West,0
-# Mountain Zone (19) - Mountain Zone (28)
-19,East,50,28,West,0
-# Mountain Zone (30) - Mountain Zone (28)
-30,South,100,28,North,0
-# Temperate Zone (8) - Mountain Zone (28)
-8,North,150,28,South,0
-# Southern Beach (53) - Mountain Zone (28)
-53,East,0,28,West,99
-# Temperate Zone (9) - Mountain Zone (28)
-9,North,100,28,South,0
-# Temperate Ocean (61) - Temperate Ocean (39)
-61,South,0,39,North,150
-# Temperate Zone (243) - Temperate Ocean (39)
-243,East,100,39,West,0
-# Temperate Ocean (1) - Temperate Ocean (39)
-1,South,0,39,North,0
-# Temperate Zone (7) - Temperate Ocean (39)
-7,West,150,39,East,0
-# S.S Glittering Wreck (101) - Temperate Ocean (39)
-101,North,0,39,South,100
-# Temperate Ocean (57) - Temperate Ocean (39)
-57,West,50,39,East,0
-# Temperate-Snowy Zone (68) - Temperate Ocean (39)
-68,West,300,39,East,0
-# Temperate Zone (8) - Temperate Ocean (39)
-8,West,200,39,East,0
-# Temperate Ocean (58) - Temperate Ocean (39)
-58,South,0,39,North,100
-# Southern Ocean (42) - Temperate Ocean (39)
-42,West,0,39,East,0
-# MAP064 (64) - Temperate Ocean (39)
-64,West,78,39,East,0
-# Red and Blue's Cabin (103) - Temperate Ocean (39)
-103,West,0,39,East,50
-# Mountain Zone (29) - Temperate Ocean (61)
-29,West,249,61,East,0
+# Mountain Zone (28) - Temperate Ocean (61)
+28,West,199,61,East,0
+# Temperate Ocean (39) - Temperate Ocean (61)
+39,North,150,61,South,0
 # Temperate Ocean (62) - Temperate Ocean (61)
 62,West,92,61,East,0
-# Temperate Zone (13) - Temperate Ocean (61)
-13,East,99,61,West,0
+# Mountain Zone (29) - Temperate Ocean (61)
+29,West,249,61,East,0
 # Swamp Zone (35) - Temperate Ocean (61)
 35,West,149,61,East,0
+# Temperate Zone (13) - Temperate Ocean (61)
+13,East,99,61,West,0
 # Mountain Zone (30) - Temperate Ocean (61)
 30,East,249,61,West,0
-# S.S Glittering Wreck (102) - Temperate Ocean (61)
-102,North,50,61,South,0
 # Temperate Ocean (58) - Temperate Ocean (61)
 58,East,0,61,West,1
+# S.S Glittering Wreck (102) - Temperate Ocean (61)
+102,North,50,61,South,0
 # Southern Ocean (42) - Temperate Ocean (61)
 42,North,100,61,South,0
 # Temperate Zone (9) - Temperate Ocean (61)
 9,East,149,61,West,0
 # Temperate Ocean (59) - Temperate Ocean (61)
 59,East,49,61,West,0
-# Temperate Ocean (1) - Temperate Zone (243)
-1,West,0,243,East,50
-# Temperate Zone (7) - Temperate Zone (243)
-7,South,0,243,North,100
-# Temperate Ocean (57) - Temperate Zone (243)
-57,North,0,243,South,100
-# Temperate Zone (13) - Temperate Zone (243)
-13,South,0,243,North,150
-# Temperate Ocean (58) - Temperate Zone (243)
-58,North,0,243,South,150
-# Temperate Zone (4) - Temperate Zone (243)
-4,West,50,243,East,0
+# Mountain Zone (28) - Mountain Zone (17)
+28,West,0,17,East,0
+# Swamp Zone (34) - Mountain Zone (17)
+34,North,0,17,South,100
+# Temperate Ocean (62) - Mountain Zone (17)
+62,West,0,17,East,107
+# Mountain Zone (29) - Mountain Zone (17)
+29,West,50,17,East,0
+# Temperate-Snowy Zone (68) - Mountain Zone (17)
+68,South,100,17,North,0
+# Swamp Zone (35) - Mountain Zone (17)
+35,West,0,17,East,50
+# Temperate Zone (13) - Mountain Zone (17)
+13,East,0,17,West,100
+# Temperate Zone (8) - Mountain Zone (17)
+8,North,100,17,South,0
+# Mountain Zone (30) - Mountain Zone (17)
+30,East,50,17,West,0
+# Mountain Zone (19) - Mountain Zone (17)
+19,South,0,17,North,0
+# Temperate Ocean (58) - Mountain Zone (17)
+58,East,0,17,West,200
+# S.S Glittering Wreck (102) - Mountain Zone (17)
+102,East,0,17,West,250
+# Temperate Zone (9) - Mountain Zone (17)
+9,North,50,17,South,0
+# Temperate Ocean (59) - Mountain Zone (17)
+59,East,0,17,West,150
+# Swamp Zone (34) - Mountain Zone (28)
+34,West,0,28,East,50
+# Mountain Zone (29) - Mountain Zone (28)
+29,South,0,28,North,0
+# Temperate-Snowy Zone (68) - Mountain Zone (28)
+68,South,150,28,North,0
+# Mountain Zone (24) - Mountain Zone (28)
+24,East,100,28,West,0
+# Swamp Zone (35) - Mountain Zone (28)
+35,North,0,28,South,0
+# Temperate Zone (8) - Mountain Zone (28)
+8,North,150,28,South,0
+# Mountain Zone (30) - Mountain Zone (28)
+30,South,100,28,North,0
+# Mountain Zone (19) - Mountain Zone (28)
+19,East,50,28,West,0
+# Temperate Zone (9) - Mountain Zone (28)
+9,North,100,28,South,0
+# Southern Beach (53) - Mountain Zone (28)
+53,East,0,28,West,99
+# Temperate Ocean (1) - Temperate Ocean (39)
+1,South,0,39,North,0
+# Temperate Zone (243) - Temperate Ocean (39)
+243,East,100,39,West,0
+# Temperate Zone (7) - Temperate Ocean (39)
+7,West,150,39,East,0
+# Temperate-Snowy Zone (68) - Temperate Ocean (39)
+68,West,300,39,East,0
+# Temperate Ocean (57) - Temperate Ocean (39)
+57,West,50,39,East,0
+# S.S Glittering Wreck (101) - Temperate Ocean (39)
+101,North,0,39,South,100
+# Temperate Zone (8) - Temperate Ocean (39)
+8,West,200,39,East,0
+# Temperate Ocean (300) - Temperate Ocean (39)
+300,East,150,39,West,0
+# Temperate Ocean (58) - Temperate Ocean (39)
+58,South,0,39,North,100
+# MAP064 (64) - Temperate Ocean (39)
+64,West,78,39,East,0
+# Southern Ocean (42) - Temperate Ocean (39)
+42,West,0,39,East,0
+# Red and Blue's Cabin (103) - Temperate Ocean (39)
+103,West,0,39,East,50
+# Temperate Zone (243) - Temperate Ocean (1)
+243,East,50,1,West,0
 # Temperate Zone (7) - Temperate Ocean (1)
 7,West,100,1,East,0
-# Temperate Ocean (57) - Temperate Ocean (1)
-57,West,0,1,East,0
 # Temperate-Snowy Zone (68) - Temperate Ocean (1)
 68,West,250,1,East,0
+# Temperate Ocean (57) - Temperate Ocean (1)
+57,West,0,1,East,0
 # Temperate Zone (8) - Temperate Ocean (1)
 8,West,150,1,East,0
+# Temperate Ocean (300) - Temperate Ocean (1)
+300,East,100,1,West,0
 # S.S Glittering Wreck (102) - Temperate Ocean (1)
 102,North,0,1,South,100
-# Southern Ocean (42) - Temperate Ocean (1)
-42,West,0,1,East,50
 # MAP064 (64) - Temperate Ocean (1)
 64,West,28,1,East,0
+# Southern Ocean (42) - Temperate Ocean (1)
+42,West,0,1,East,50
 # Red and Blue's Cabin (103) - Temperate Ocean (1)
 103,West,0,1,East,100
 # Temperate Ocean (59) - Temperate Ocean (1)
 59,South,0,1,North,100
+# Temperate Zone (7) - Temperate Zone (243)
+7,South,0,243,North,100
+# Temperate Zone (13) - Temperate Zone (243)
+13,South,0,243,North,150
+# Temperate Ocean (57) - Temperate Zone (243)
+57,North,0,243,South,100
+# Temperate Ocean (300) - Temperate Zone (243)
+300,South,0,243,North,0
+# Temperate Ocean (58) - Temperate Zone (243)
+58,North,0,243,South,150
+# Temperate Zone (4) - Temperate Zone (243)
+4,West,50,243,East,0
+# Temperate Ocean (62) - Swamp Zone (34)
+62,East,0,34,West,57
 # Temperate Zone (7) - Swamp Zone (34)
 7,North,200,34,South,0
 # Mountain Zone (29) - Swamp Zone (34)
 29,East,100,34,West,0
-# Temperate Ocean (62) - Swamp Zone (34)
-62,East,0,34,West,57
-# Temperate Zone (13) - Swamp Zone (34)
-13,North,150,34,South,0
 # Swamp Zone (35) - Swamp Zone (34)
 35,East,0,34,West,0
+# Temperate Zone (13) - Swamp Zone (34)
+13,North,150,34,South,0
+# Temperate Ocean (300) - Swamp Zone (34)
+300,North,300,34,South,0
 # Temperate Zone (4) - Swamp Zone (34)
 4,North,250,34,South,0
 # Swamp Zone (109) - Swamp Zone (34)
 109,West,50,34,East,0
-# S.S Glittering Wreck (101) - Temperate Zone (7)
-101,West,0,7,East,200
-# Temperate Zone (13) - Temperate Zone (7)
-13,West,0,7,East,0
+# Mountain Zone (24) - Temperate Ocean (62)
+24,East,207,62,West,0
+# Mountain Zone (19) - Temperate Ocean (62)
+19,East,157,62,West,0
+# Southern Beach (53) - Temperate Ocean (62)
+53,East,8,62,West,0
 # Swamp Zone (35) - Temperate Zone (7)
 35,South,0,7,North,150
-# Mountain Zone (30) - Temperate Zone (7)
-30,West,150,7,East,0
+# Temperate Zone (13) - Temperate Zone (7)
+13,West,0,7,East,0
+# S.S Glittering Wreck (101) - Temperate Zone (7)
+101,West,0,7,East,200
 # Temperate Zone (8) - Temperate Zone (7)
 8,South,0,7,North,0
-# S.S Glittering Wreck (102) - Temperate Zone (7)
-102,West,0,7,East,150
+# Mountain Zone (30) - Temperate Zone (7)
+30,West,150,7,East,0
 # Temperate Ocean (58) - Temperate Zone (7)
 58,West,0,7,East,100
+# S.S Glittering Wreck (102) - Temperate Zone (7)
+102,West,0,7,East,150
 # Temperate Zone (9) - Temperate Zone (7)
 9,West,50,7,East,0
 # Temperate Ocean (59) - Temperate Zone (7)
@@ -1174,80 +1190,18 @@
 53,East,0,29,West,149
 # Swamp Zone (109) - Mountain Zone (29)
 109,North,0,29,South,100
-# Mountain Zone (24) - Temperate Ocean (62)
-24,East,207,62,West,0
-# Mountain Zone (19) - Temperate Ocean (62)
-19,East,157,62,West,0
-# Southern Beach (53) - Temperate Ocean (62)
-53,East,8,62,West,0
-# Temperate Ocean (57) - S.S Glittering Wreck (101)
-57,East,100,101,West,0
-# Temperate-Snowy Zone (68) - S.S Glittering Wreck (101)
-68,East,350,101,West,0
-# Temperate Zone (8) - S.S Glittering Wreck (101)
-8,East,250,101,West,0
-# S.S Glittering Wreck (102) - S.S Glittering Wreck (101)
-102,South,0,101,North,0
-# Southern Ocean (42) - S.S Glittering Wreck (101)
-42,East,50,101,West,0
-# MAP064 (64) - S.S Glittering Wreck (101)
-64,East,128,101,West,0
-# Temperate Zone (13) - Temperate Ocean (57)
-13,West,100,57,East,0
-# Mountain Zone (30) - Temperate Ocean (57)
-30,West,250,57,East,0
-# S.S Glittering Wreck (102) - Temperate Ocean (57)
-102,West,0,57,East,50
-# Temperate Ocean (58) - Temperate Ocean (57)
-58,West,0,57,East,0
-# Southern Ocean (42) - Temperate Ocean (57)
-42,North,0,57,South,0
-# Temperate Zone (9) - Temperate Ocean (57)
-9,West,150,57,East,0
-# MAP064 (64) - Temperate Ocean (57)
-64,South,0,57,North,0
-# Temperate Ocean (59) - Temperate Ocean (57)
-59,West,50,57,East,0
-# Temperate Zone (4) - Temperate Ocean (57)
-4,East,100,57,West,0
-# Swamp Zone (35) - Temperate Zone (13)
-35,South,0,13,North,100
-# Temperate-Snowy Zone (68) - Temperate Zone (13)
-68,East,150,13,West,0
-# Mountain Zone (24) - Temperate Zone (13)
-24,West,200,13,East,0
-# Mountain Zone (19) - Temperate Zone (13)
-19,West,150,13,East,0
-# Temperate Zone (8) - Temperate Zone (13)
-8,East,50,13,West,0
-# Southern Beach (53) - Temperate Zone (13)
-53,West,1,13,East,0
-# Southern Ocean (42) - Temperate Zone (13)
-42,East,0,13,West,150
-# Temperate Zone (9) - Temperate Zone (13)
-9,South,0,13,North,0
-# MAP064 (64) - Temperate Zone (13)
-64,East,0,13,West,72
-# Temperate Ocean (59) - Temperate Zone (13)
-59,North,0,13,South,0
-# Mountain Zone (24) - Swamp Zone (35)
-24,East,150,35,West,0
-# Mountain Zone (19) - Swamp Zone (35)
-19,East,100,35,West,0
-# Southern Beach (53) - Swamp Zone (35)
-53,East,0,35,West,49
-# Temperate Zone (4) - Swamp Zone (35)
-4,North,200,35,South,0
-# Swamp Zone (109) - Swamp Zone (35)
-109,South,0,35,North,100
 # Mountain Zone (24) - Temperate-Snowy Zone (68)
 24,South,0,68,North,100
+# Temperate Zone (13) - Temperate-Snowy Zone (68)
+13,West,0,68,East,150
+# S.S Glittering Wreck (101) - Temperate-Snowy Zone (68)
+101,West,0,68,East,350
 # Mountain Zone (30) - Temperate-Snowy Zone (68)
 30,West,0,68,East,0
-# S.S Glittering Wreck (102) - Temperate-Snowy Zone (68)
-102,West,0,68,East,300
 # Temperate Ocean (58) - Temperate-Snowy Zone (68)
 58,West,0,68,East,250
+# S.S Glittering Wreck (102) - Temperate-Snowy Zone (68)
+102,West,0,68,East,300
 # Temperate Zone (9) - Temperate-Snowy Zone (68)
 9,West,0,68,East,100
 # Temperate Ocean (59) - Temperate-Snowy Zone (68)
@@ -1256,44 +1210,84 @@
 4,East,0,68,West,150
 # Swamp Zone (109) - Temperate-Snowy Zone (68)
 109,North,0,68,South,250
-# Mountain Zone (19) - Mountain Zone (24)
-19,North,0,24,South,0
+# Swamp Zone (35) - Mountain Zone (24)
+35,West,0,24,East,150
+# Temperate Zone (13) - Mountain Zone (24)
+13,East,0,24,West,200
 # Mountain Zone (30) - Mountain Zone (24)
 30,North,50,24,South,0
-# S.S Glittering Wreck (102) - Mountain Zone (24)
-102,East,0,24,West,350
+# Mountain Zone (19) - Mountain Zone (24)
+19,North,0,24,South,0
 # Temperate Ocean (58) - Mountain Zone (24)
 58,East,0,24,West,300
+# S.S Glittering Wreck (102) - Mountain Zone (24)
+102,East,0,24,West,350
 # Temperate Zone (9) - Mountain Zone (24)
 9,East,0,24,West,150
 # Temperate Ocean (59) - Mountain Zone (24)
 59,East,0,24,West,250
-# Mountain Zone (30) - Mountain Zone (19)
-30,East,0,19,West,0
-# S.S Glittering Wreck (102) - Mountain Zone (19)
-102,East,0,19,West,300
-# Temperate Ocean (58) - Mountain Zone (19)
-58,East,0,19,West,250
-# Temperate Zone (9) - Mountain Zone (19)
-9,East,0,19,West,100
-# Temperate Ocean (59) - Mountain Zone (19)
-59,East,0,19,West,200
-# Swamp Zone (109) - Mountain Zone (19)
-109,North,0,19,South,150
-# Temperate Zone (8) - Mountain Zone (30)
-8,East,0,30,West,100
-# Southern Beach (53) - Mountain Zone (30)
-53,West,0,30,East,149
-# Southern Ocean (42) - Mountain Zone (30)
-42,East,0,30,West,300
-# MAP064 (64) - Mountain Zone (30)
-64,East,0,30,West,222
-# Swamp Zone (109) - Mountain Zone (30)
-109,North,0,30,South,200
-# S.S Glittering Wreck (102) - Temperate Zone (8)
-102,West,0,8,East,200
+# Temperate Zone (13) - Swamp Zone (35)
+13,North,100,35,South,0
+# Mountain Zone (19) - Swamp Zone (35)
+19,East,100,35,West,0
+# Temperate Ocean (300) - Swamp Zone (35)
+300,North,250,35,South,0
+# Southern Beach (53) - Swamp Zone (35)
+53,East,0,35,West,49
+# Temperate Zone (4) - Swamp Zone (35)
+4,North,200,35,South,0
+# Swamp Zone (109) - Swamp Zone (35)
+109,South,0,35,North,100
+# Temperate Ocean (57) - Temperate Zone (13)
+57,East,0,13,West,100
+# Temperate Zone (8) - Temperate Zone (13)
+8,East,50,13,West,0
+# Mountain Zone (19) - Temperate Zone (13)
+19,West,150,13,East,0
+# MAP064 (64) - Temperate Zone (13)
+64,East,0,13,West,72
+# Southern Ocean (42) - Temperate Zone (13)
+42,East,0,13,West,150
+# Temperate Zone (9) - Temperate Zone (13)
+9,South,0,13,North,0
+# Southern Beach (53) - Temperate Zone (13)
+53,West,1,13,East,0
+# Temperate Ocean (59) - Temperate Zone (13)
+59,North,0,13,South,0
+# S.S Glittering Wreck (101) - Temperate Ocean (57)
+101,West,0,57,East,100
+# Mountain Zone (30) - Temperate Ocean (57)
+30,West,250,57,East,0
+# Temperate Ocean (58) - Temperate Ocean (57)
+58,West,0,57,East,0
+# S.S Glittering Wreck (102) - Temperate Ocean (57)
+102,West,0,57,East,50
+# MAP064 (64) - Temperate Ocean (57)
+64,South,0,57,North,0
+# Southern Ocean (42) - Temperate Ocean (57)
+42,North,0,57,South,0
+# Temperate Zone (9) - Temperate Ocean (57)
+9,West,150,57,East,0
+# Temperate Ocean (59) - Temperate Ocean (57)
+59,West,50,57,East,0
+# Temperate Zone (4) - Temperate Ocean (57)
+4,East,100,57,West,0
+# Temperate Zone (8) - S.S Glittering Wreck (101)
+8,East,250,101,West,0
+# S.S Glittering Wreck (102) - S.S Glittering Wreck (101)
+102,South,0,101,North,0
+# MAP064 (64) - S.S Glittering Wreck (101)
+64,East,128,101,West,0
+# Southern Ocean (42) - S.S Glittering Wreck (101)
+42,East,50,101,West,0
+# Mountain Zone (30) - Temperate Zone (8)
+30,West,100,8,East,0
+# Temperate Ocean (300) - Temperate Zone (8)
+300,North,100,8,South,0
 # Temperate Ocean (58) - Temperate Zone (8)
 58,West,0,8,East,150
+# S.S Glittering Wreck (102) - Temperate Zone (8)
+102,West,0,8,East,200
 # Temperate Zone (9) - Temperate Zone (8)
 9,West,0,8,East,0
 # Temperate Ocean (59) - Temperate Zone (8)
@@ -1302,28 +1296,56 @@
 4,North,50,8,South,0
 # Swamp Zone (109) - Temperate Zone (8)
 109,South,0,8,North,250
-# Temperate Ocean (58) - S.S Glittering Wreck (102)
-58,South,0,102,North,0
-# Southern Beach (53) - S.S Glittering Wreck (102)
-53,West,151,102,East,0
-# Southern Ocean (42) - S.S Glittering Wreck (102)
-42,East,0,102,West,0
-# MAP064 (64) - S.S Glittering Wreck (102)
-64,East,78,102,West,0
-# Red and Blue's Cabin (103) - S.S Glittering Wreck (102)
-103,North,50,102,South,0
-# Southern Beach (53) - Temperate Ocean (58)
-53,West,101,58,East,0
-# Southern Ocean (42) - Temperate Ocean (58)
-42,North,50,58,South,0
+# Mountain Zone (19) - Mountain Zone (30)
+19,West,0,30,East,0
+# MAP064 (64) - Mountain Zone (30)
+64,East,0,30,West,222
+# Southern Ocean (42) - Mountain Zone (30)
+42,East,0,30,West,300
+# Southern Beach (53) - Mountain Zone (30)
+53,West,0,30,East,149
+# Swamp Zone (109) - Mountain Zone (30)
+109,North,0,30,South,200
+# Temperate Ocean (58) - Mountain Zone (19)
+58,East,0,19,West,250
+# S.S Glittering Wreck (102) - Mountain Zone (19)
+102,East,0,19,West,300
+# Temperate Zone (9) - Mountain Zone (19)
+9,East,0,19,West,100
+# Temperate Ocean (59) - Mountain Zone (19)
+59,East,0,19,West,200
+# Swamp Zone (109) - Mountain Zone (19)
+109,North,0,19,South,150
+# Temperate Zone (9) - Temperate Ocean (300)
+9,South,0,300,North,150
+# Temperate Ocean (59) - Temperate Ocean (300)
+59,North,0,300,South,150
+# Temperate Zone (4) - Temperate Ocean (300)
+4,West,0,300,East,0
+# S.S Glittering Wreck (102) - Temperate Ocean (58)
+102,North,0,58,South,0
 # MAP064 (64) - Temperate Ocean (58)
 64,East,28,58,West,0
+# Southern Ocean (42) - Temperate Ocean (58)
+42,North,50,58,South,0
+# Southern Beach (53) - Temperate Ocean (58)
+53,West,101,58,East,0
 # Temperate Ocean (59) - Temperate Ocean (58)
 59,South,0,58,North,0
-# Temperate Zone (9) - Southern Beach (53)
-9,East,49,53,West,0
-# Temperate Ocean (59) - Southern Beach (53)
-59,East,0,53,West,51
+# MAP064 (64) - S.S Glittering Wreck (102)
+64,East,78,102,West,0
+# Southern Ocean (42) - S.S Glittering Wreck (102)
+42,East,0,102,West,0
+# Southern Beach (53) - S.S Glittering Wreck (102)
+53,West,151,102,East,0
+# Red and Blue's Cabin (103) - S.S Glittering Wreck (102)
+103,North,50,102,South,0
+# Temperate Zone (9) - MAP064 (64)
+9,West,122,64,East,0
+# Temperate Ocean (59) - MAP064 (64)
+59,West,22,64,East,0
+# Temperate Zone (4) - MAP064 (64)
+4,East,72,64,West,0
 # Temperate Zone (9) - Southern Ocean (42)
 9,West,200,42,East,0
 # Red and Blue's Cabin (103) - Southern Ocean (42)
@@ -1332,16 +1354,14 @@
 59,West,100,42,East,0
 # Temperate Zone (4) - Southern Ocean (42)
 4,East,150,42,West,0
-# MAP064 (64) - Temperate Zone (9)
-64,East,0,9,West,122
+# Southern Beach (53) - Temperate Zone (9)
+53,West,0,9,East,49
 # Temperate Zone (4) - Temperate Zone (9)
 4,North,100,9,South,0
 # Swamp Zone (109) - Temperate Zone (9)
 109,South,0,9,North,200
-# Temperate Ocean (59) - MAP064 (64)
-59,West,22,64,East,0
-# Temperate Zone (4) - MAP064 (64)
-4,East,72,64,West,0
+# Temperate Ocean (59) - Southern Beach (53)
+59,East,0,53,West,51
 # Temperate Zone (4) - Red and Blue's Cabin (103)
 4,East,200,103,West,0
 # Temperate Zone (4) - Temperate Ocean (59)
