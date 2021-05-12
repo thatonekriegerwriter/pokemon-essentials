@@ -734,5 +734,5 @@
 1880,BONEDUST,Bone Dust,Bone Dust,1,0,"Ground down Bone.",0,0,0,
 1881,COPPERDUST,Copper Dust,Copper Dust,1,0,"Ground down Copper.",0,0,0,
 1882,SILVERDUST,Silver Dust,Silver Dust,1,0,"Ground down Silver.",0,0,0,
-1883,SNATCHER,Snatcher,Snatcher,1,0,"A Machine designed to steal an item from a Pokemon.",0,0,0,
+1885,SNATCHER,Snatcher,Snatcher,1,0,"A Machine designed to steal an item from a Pokemon.",0,0,0,
 #1884

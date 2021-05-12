@@ -100,14 +100,14 @@ if $game_switches[54]==true #Survival Mode Switch
     $Trainer.money -= 20
    end
   else
-   $game_variables[208] -= 1 if rand(10) == 0 #take from sleep
+   $game_variables[208] -= 1 if rand(3) == 0 #take from sleep
 end
 
 if $game_switches[54]==true #Survival Mode Switch
  case $game_variables[207]
   when 0
-   $game_variables[205] -= 1 if rand(10) == 0 #take from hunger
-   $game_variables[206] -= 1 if rand(10) == 0 #take from drinking
+   $game_variables[205] -= 1 if rand(5) == 0 #take from hunger
+   $game_variables[206] -= 1 if rand(5) == 0 #take from drinking
    $game_variables[207] -= 1 if rand(10) == 0 #take from saturation
 end
 
