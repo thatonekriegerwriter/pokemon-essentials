@@ -240,7 +240,7 @@ DiveMap = 66
 Outdoor = true
 #-------------------------------
 [064]
-# Temperate Zone Top
+# MAP064
 BattleBack = Forest
 Weather = Rain,20
 Outdoor = true
@@ -307,6 +307,9 @@ Outdoor = true
 #-------------------------------
 [096]
 # Xatu Home
+#-------------------------------
+[103]
+# Red and Blue's Cabin
 #-------------------------------
 [106]
 # Temperate Area

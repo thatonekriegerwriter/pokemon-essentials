@@ -61,10 +61,12 @@ Chris "R3ven" Ammerman
 
 Strange Nuzleaf<s>ElitestarEX
 
-With Contributions from
+With Tile Contributions from
 
 Project Marnian Region
 WesleyFG<s> Crito(Zein)
+Mllessentials
+
 
 Mortenkein<s> FL.
 
