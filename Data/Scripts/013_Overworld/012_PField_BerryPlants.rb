@@ -150,7 +150,6 @@ class BerryPlantSprite
       return berryData if timeDiff<=0
       berryData[3]=timenow.to_i   # last updated now
       # Mulch modifiers
-      dryingrate=berryvalues[1]
 #EDIT
       minyield=berryvalues[2]
       maxyield=berryvalues[3]
@@ -359,6 +358,7 @@ def pbBerryPlant
             if pbIsMulch?(ret)
               berryData[7]=ret
               pbMessage(_INTL("The {1} was scattered on the soil.\1",PBItems.getName(ret)))
+			  $PokemonBag.pbDeleteItem(:ret,1)
               if pbConfirmMessage(_INTL("Want to plant a Berry?"))
                 pbFadeOutIn {
                   scene = PokemonBag_Scene.new
