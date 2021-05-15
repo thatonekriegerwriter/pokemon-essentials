@@ -30,7 +30,7 @@ ItemHandlers::UseFromBag.add(:FOODBAG,proc{|item|
 
 ItemHandlers::UseFromBag.add(:MEDICINE,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbFillUp
+    pbMedicine
     next 1
 })
 ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
@@ -877,7 +877,7 @@ ItemHandlers::UseOnPokemon.add(:SWIFTWING,proc { |item,pkmn,scene|
 })
 #edit#
 
-ItemHandlers::UseOnPokemon.add(:GSCurry,proc { |item,pkmn,scene|
+ItemHandlers::UseOnPokemon.add(:GSCURRY,proc { |item,pkmn,scene|
   if pbRaiseEffortValues(pkmn,PBStats::HP,1,false)==0
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false

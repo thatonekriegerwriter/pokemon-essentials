@@ -18,6 +18,7 @@ ItemHandlers::CanUseInBattle.add(:POKEDOLL,proc { |item,pokemon,battler,move,fir
   end
   next true
 })
+ItemHandlers::CanUseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY,:BAIT)
 #===========EDIT===========#
 ItemHandlers::UseInBattle.add(:POISONDART,proc{|item,battler,scene|
   itemname=PBItems.getName(item)
@@ -129,7 +130,7 @@ ItemHandlers::UseInBattle.add(:PICKAXE,proc{|item,battler,scene|
 ItemHandlers::UseInBattle.add(:SNATCHER,proc{|item,battler,scene|
     return if battler.damageState.unaffected || battler.damageState.substitute
     return if battler.item==0
-    return if battler.unlosableItem?(target.item)
+    return if battler.unlosableItem?(battler.item)
     return if battler.hasActiveAbility?(:STICKYHOLD) && !@battle.moldBreaker
     itemName = battler.itemName
     # Permanently steal the item from wild Pokémon
@@ -137,17 +138,15 @@ ItemHandlers::UseInBattle.add(:SNATCHER,proc{|item,battler,scene|
       battler.initialItem==battler.item
       battler.pbRemoveItem
     else
-      target.pbRemoveItem(false)
+      battler.pbRemoveItem(false)
     end
-    @battle.pbDisplay(_INTL("You stole {2}'s {3}!",user.pbThis,target.pbThis(true),itemName))
+    @battle.pbDisplay(_INTL("You stole {2}'s {3}!",user.pbThis,battler.pbThis(true),itemName))
     $PokemonBag.pbStoreItem(:itemname,1)
   end
   end
 })
 =end
 #===========EDIT END===========#
-
-ItemHandlers::CanUseInBattle.copy(:POKEDOLL,:FLUFFYTAIL,:POKETOY)
 
 ItemHandlers::CanUseInBattle.addIf(proc { |item| pbIsPokeBall?(item) },   # Poké Balls
   proc { |item,pokemon,battler,move,firstAction,battle,scene,showMessages|
