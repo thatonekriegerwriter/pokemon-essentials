@@ -71,15 +71,20 @@ ItemHandlers::UseInField.add(:CRAFTINGBENCH,proc{|item|
     next 2
 })
 
-ItemHandlers::UseInField.add(:CAULDRON,proc{|item|
+ItemHandlers::UseInField.add(:APRICORNCRAFTING,proc{|item|
   Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(33)
+    next 2
+})
+ItemHandlers::UseInField.add(:CAULDRON,proc{|item|
+  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    pbCommonEvent(34)
     next 2
 })
 
 ItemHandlers::UseInField.add(:FURNACE,proc{|item|
   Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbCommonEvent(34)
+    pbCommonEvent(37)
     next 2
 })
 
@@ -91,13 +96,13 @@ ItemHandlers::UseInField.add(:MEDICINEPOT,proc{|item|
 
 ItemHandlers::UseInField.add(:GRINDER,proc{|item|
   Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbCommonEvent(36)
+    pbCommonEvent(38)
     next 2
 })
 
 ItemHandlers::UseInField.add(:UPGRADEDCRAFTINGBENCH,proc{|item|
   Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbCommonEvent(37)
+    pbCommonEvent(36)
     next 2
 })
 

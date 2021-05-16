@@ -858,8 +858,6 @@
 263,West,0,274,East,50
 # Temperate Skies (252) - Shore Skies (263)
 252,West,0,263,East,100
-# Temperate Ocean (295) - West Shore (205)
-295,East,0,205,West,0
 # Mountain Zone (16) - Temperate Ocean (60)
 16,East,149,60,West,0
 # Mountain Zone (28) - Temperate Ocean (60)
@@ -1406,3 +1404,47 @@
 65,East,0,59,West,28
 # Temperate Zone Bottom (65) - Temperate Zone (4)
 65,West,0,4,East,78
+# Temperate Ocean (308) - Temperate Ocean (302)
+308,West,50,302,East,0
+# Temperate Ocean (309) - Temperate Ocean (302)
+309,East,50,302,West,0
+# West Shore (205) - Temperate Ocean (302)
+205,North,0,302,South,100
+# Temperate Ocean (310) - Temperate Ocean (302)
+310,South,0,302,North,0
+# Temperate Ocean (295) - Temperate Ocean (302)
+295,West,0,302,East,50
+# Temperate Ocean (307) - Temperate Ocean (302)
+307,East,0,302,West,0
+# Temperate Ocean (296) - Temperate Ocean (302)
+296,West,0,302,East,0
+# West Shore (205) - Temperate Ocean (308)
+205,West,0,308,East,100
+# Temperate Ocean (310) - Temperate Ocean (308)
+310,East,0,308,West,0
+# Temperate Ocean (307) - Temperate Ocean (308)
+307,North,100,308,South,0
+# Temperate Ocean (296) - Temperate Ocean (308)
+296,North,0,308,South,0
+# Temperate Ocean (310) - Temperate Ocean (309)
+310,West,0,309,East,0
+# Temperate Ocean (307) - Temperate Ocean (309)
+307,North,0,309,South,0
+# Temperate Ocean (296) - Temperate Ocean (309)
+296,North,0,309,South,100
+# Temperate Ocean (295) - West Shore (205)
+295,East,0,205,West,0
+# Temperate Ocean (307) - West Shore (205)
+307,South,150,205,North,0
+# Temperate Ocean (296) - West Shore (205)
+296,East,50,205,West,0
+# Temperate Ocean (295) - Temperate Ocean (310)
+295,West,0,310,East,100
+# Temperate Ocean (307) - Temperate Ocean (310)
+307,North,50,310,South,0
+# Temperate Ocean (296) - Temperate Ocean (310)
+296,West,0,310,East,50
+# Temperate Ocean (307) - Temperate Ocean (295)
+307,South,100,295,North,0
+# Temperate Ocean (296) - Temperate Ocean (295)
+296,South,0,295,North,0
