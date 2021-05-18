@@ -116,6 +116,7 @@ class PokeBattle_Battler
       if siobcheck <@pokemon.happiness
         disobedient=true#|=a<@pokemon.happiness
       end
+	  return pbDisobey(choice,badgeLevel)
     end
     if @pokemon.foreign?(@battle.pbPlayer) && @level>badgeLevel
       a = ((@level+badgeLevel)*@battle.pbRandom(256)/256).floor
@@ -164,6 +165,11 @@ class PokeBattle_Battler
     r -= c
     if r<c && @status!=PBStatuses::SLEEP
       pbConfusionDamage(_INTL("{1} won't obey! It hurt itself in its confusion!",pbThis))
+      return false
+    end
+    if rand(20)==0 && $game_switches[54]==true
+      @battle.pbDisplay(_INTL("{1} won't obey! It attacked you!",pbThis))
+	  $Trainer.money -= 20
       return false
     end
     # Show refusal message and do nothing

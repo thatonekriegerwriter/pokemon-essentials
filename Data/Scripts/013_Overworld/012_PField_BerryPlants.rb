@@ -170,6 +170,21 @@ class BerryPlantSprite
         minyield=berryvalues[2]+rand(4)
       elsif isConst?(berryData[7],PBItems,:POTENTIALMULCH)
         maxyield=berryvalues[3]+rand(4)
+#EDIT
+      elsif isConst?(berryData[7],PBItems,:DAMPMULCH2)
+        timeperstage=(timeperstage*1.50).to_i
+        dryingrate=(dryingrate*0.75).floor
+      elsif isConst?(berryData[7],PBItems,:GOOEYMULCH2)
+        maxreplants=(maxreplants*1.75).ceil
+      elsif isConst?(berryData[7],PBItems,:STABLEMULCH2)
+        ripestages=8
+      elsif isConst?(berryData[7],PBItems,:PRODUCEMULCH2)
+        minyield=berryvalues[2]+rand(6)
+      elsif isConst?(berryData[7],PBItems,:POTENTIALMULCH2)
+        maxyield=berryvalues[3]+rand(6)
+      elsif isConst?(berryData[7],PBItems,:GROWTHMULCH2)
+        timeperstage=(timeperstage*0.50).to_i
+        dryingrate=(dryingrate*1.5).ceil
       end
 #EDIT END
       # Cycle through all replants since last check

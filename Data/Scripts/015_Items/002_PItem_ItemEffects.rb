@@ -46,62 +46,62 @@ ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
 ItemHandlers::UseInField.add(:PORTABLEPC,proc{|item|
     maps = [10,20,40,97,92,161]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-      pbCommonEvent(30)
+		 Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+		 pbCommonEvent(30)
     else
-      Kernel.pbMessage(_INTL("{It is not safe to place the {2} here.",$Trainer.name,PBItems.getName(item)))
-    end
+     Kernel.pbMessage(_INTL("This wouldn't be a safe place to put this.",$Trainer.name,PBItems.getName(item)))
+	end
     next 2
 })
 
 ItemHandlers::UseInField.add(:BEDROLL,proc{|item|
     maps = [10,20,40,97,92,161]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)
-      Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
-      pbCommonEvent(31)
+		 Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+		 pbCommonEvent(31)
     else
-      Kernel.pbMessage(_INTL("{It is not safe to place the {2} here.",$Trainer.name,PBItems.getName(item)))
-    end
+     Kernel.pbMessage(_INTL("This wouldn't be a safe place to put this.",$Trainer.name,PBItems.getName(item)))
+	end
     next 2
 })
 
-ItemHandlers::UseInField.add(:CRAFTINGBENCH,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+ItemHandlers::UseInField.add(:CRAFTINGBENCH,proc{|item|  
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(32)
     next 2
 })
 
 ItemHandlers::UseInField.add(:APRICORNCRAFTING,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(33)
     next 2
 })
 ItemHandlers::UseInField.add(:CAULDRON,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(34)
     next 2
 })
 
 ItemHandlers::UseInField.add(:FURNACE,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(37)
     next 2
 })
 
 ItemHandlers::UseInField.add(:MEDICINEPOT,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(35)
     next 2
 })
 
 ItemHandlers::UseInField.add(:GRINDER,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(38)
     next 2
 })
 
 ItemHandlers::UseInField.add(:UPGRADEDCRAFTINGBENCH,proc{|item|
-  Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
+    Kernel.pbMessage(_INTL("{1} placed the {2}.",$Trainer.name,PBItems.getName(item)))
     pbCommonEvent(36)
     next 2
 })

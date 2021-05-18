@@ -58,12 +58,21 @@
 56,RELICBAND,Relic Band,Relic Bands,1,0,"A bracelet made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",0,0,0,
 57,RELICSTATUE,Relic Statue,Relic Statues,1,0,"A stone figure made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",0,0,0,
 58,RELICCROWN,Relic Crown,Relic Crowns,1,0,"A crown made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",0,0,0,
+#-------------------------------
 1867,PRODUCEMULCH,Produce Mulch,Produce Mulch,1,200,"A fertilizer to be used to grow Berries. Increases Minimum Yield by a small amount.",0,0,11,
 1884,POTENTIALMULCH,Potential Mulch,Potential Mulch,1,200,"A fertilizer to be used to grow Berries. Increases Potential Yield by a small amount.",0,0,11,
 59,GROWTHMULCH,Growth Mulch,Growth Mulch,1,200,"A fertilizer to be used to grow Berries. Makes growth time of a Berry plant 75% of usual.",0,0,11,
 60,DAMPMULCH,Damp Mulch,Damp Mulch,1,200,"A fertilizer to be used to grow Berries. Causes growth time of a Berry plant to be 150% of usual.",0,0,11,
 61,STABLEMULCH,Stable Mulch,Stable Mulch,1,200,"A fertilizer to be used to grow Berries. Makes Berries stay on plant for 150% of usual time before dropping off. ",0,0,11,
 62,GOOEYMULCH,Gooey Mulch,Gooey Mulch,1,200,"A fertilizer to be used to grow Berries. Makes Berry plants regrow from dead plants 150% of usual number of times. ",0,0,11,
+#-------------------------------
+1896,PRODUCEMULCH2,Produce Mulch (I),Produce Mulch (I),1,200,"A fertilizer to be used to grow Berries. Increases Minimum Yield by a small amount.",0,0,11,
+1897,POTENTIALMULCH2,Potential Mulch (I),Potential Mulch (I),1,200,"A fertilizer to be used to grow Berries. Increases Potential Yield by a small amount.",0,0,11,
+1898,GROWTHMULCH2,Growth Mulch (I),Growth Mulch (I),1,200,"A fertilizer to be used to grow Berries. Makes growth time of a Berry plant 75% of usual.",0,0,11,
+1899,DAMPMULCH2,Damp Mulch (I),Damp Mulch (I),1,200,"A fertilizer to be used to grow Berries. Causes growth time of a Berry plant to be 150% of usual.",0,0,11,
+1900,STABLEMULCH2,Stable Mulch (I),Stable Mulch (I),1,200,"A fertilizer to be used to grow Berries. Makes Berries stay on plant for 150% of usual time before dropping off. ",0,0,11,
+1901,GOOEYMULCH2,Gooey Mulch (I),Gooey Mulch (I),1,200,"A fertilizer to be used to grow Berries. Makes Berry plants regrow from dead plants 150% of usual number of times. ",0,0,11,
+#-------------------------------
 63,SHOALSALT,Shoal Salt,Shoal Salts,1,20,"Pure salt that can be discovered deep inside the Shoal Cave. A maniac will buy it for a high price.",0,0,0,
 64,SHOALSHELL,Shoal Shell,Shoal Shells,1,20,"A pretty seashell that can be found deep inside the Shoal Cave. A maniac will buy it for a high price.",0,0,0,
 65,ODDKEYSTONE,Odd Keystone,Odd Keystones,1,2100,"A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.",0,0,0,

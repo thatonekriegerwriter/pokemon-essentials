@@ -65,7 +65,7 @@ class PokemonTrainerCard_Scene
      end
     end
 
-    if $game_variables[205] == 100
+    if $game_variables[205] >= 100
          trainerhunger = _INTL("Full")
          hungerColor=Color.new(55,255,55)
        else
@@ -91,7 +91,7 @@ class PokemonTrainerCard_Scene
        end   
 
 
-    if $game_variables[206] == 100
+    if $game_variables[206] >= 100
          trainerthirst = _INTL("Quenched")
          thirstColor=Color.new(55,255,55)
        else
@@ -116,7 +116,7 @@ class PokemonTrainerCard_Scene
          end
        end   
 
-    if $game_variables[208] == 100
+    if $game_variables[208] >= 100
           trainersleep = _INTL("Rested")
           sleepColor=Color.new(55,255,55)
        else

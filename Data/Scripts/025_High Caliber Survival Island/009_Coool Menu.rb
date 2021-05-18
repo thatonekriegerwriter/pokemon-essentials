@@ -81,6 +81,13 @@ MenuHandlers.addEntry(:POKEMON,_INTL("Pokémon"),"menuPokemon",proc{|menu|
     menu.close = true
   end
 },proc{ return $Trainer.party.length > 0 })
+# Crafting Screen
+MenuHandlers.addEntry(:CRAFTING,_INTL("Crafting"),"menuCrafting",proc{|menu|
+  pbFadeOutIn(99999) { 
+    pbCommonEvent(19)
+    menu.refresh
+  }
+},proc{ return true })
 # Bag Screen
 MenuHandlers.addEntry(:BAG,_INTL("Bag"),"menuBag",proc{|menu|
   item = 0
@@ -98,29 +105,6 @@ MenuHandlers.addEntry(:BAG,_INTL("Bag"),"menuBag",proc{|menu|
     menu.close = true
   end
 },proc{ return true })
-# PokeGear
-MenuHandlers.addEntry(:POKEGEAR,_INTL("Pokégear"),"menuPokegear",proc{|menu|
-  scene = PokemonPokegear_Scene.new
-  screen = PokemonPokegearScreen.new(scene)
-  pbFadeOutIn(99999) { 
-    screen.pbStartScreen
-  }
-},proc{ return $Trainer.pokegear })
-# Trainer Card
-MenuHandlers.addEntry(:TRAINER,_INTL("\\pn"),"menuTrainer",proc{|menu|
-  scene = PokemonTrainerCard_Scene.new
-  screen = PokemonTrainerCardScreen.new(scene)
-  pbFadeOutIn(99999) { 
-    screen.pbStartScreen
-  }
-},proc{ return true })
-# Crafting Screen
-MenuHandlers.addEntry(:CRAFTING,_INTL("Crafting"),"menuCrafting",proc{|menu|
-  pbFadeOutIn(99999) { 
-    pbCommonEvent(19)
-    menu.refresh
-  }
-},proc{ return true })
 # Save Screen
 MenuHandlers.addEntry(:SAVE,_INTL("Save"),"menuSave",proc{|menu|
   scene = PokemonSave_Scene.new
@@ -135,6 +119,14 @@ MenuHandlers.addEntry(:SAVE,_INTL("Save"),"menuSave",proc{|menu|
     menu.close = false
   end
 },proc{ return !$game_system || !$game_system.save_disabled && !(pbInSafari? || pbInBugContest?)})
+# Trainer Card
+MenuHandlers.addEntry(:TRAINER,_INTL("\\pn"),"menuTrainer",proc{|menu|
+  scene = PokemonTrainerCard_Scene.new
+  screen = PokemonTrainerCardScreen.new(scene)
+  pbFadeOutIn(99999) { 
+    screen.pbStartScreen
+  }
+},proc{ return true })
 # Quit Safari-Zone
 MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
   if pbInSafari?
@@ -155,6 +147,14 @@ MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
     end
   end
 },proc{ return pbInSafari? || pbInBugContest? })
+# PokeGear
+MenuHandlers.addEntry(:POKEGEAR,_INTL("Pokégear"),"menuPokegear",proc{|menu|
+  scene = PokemonPokegear_Scene.new
+  screen = PokemonPokegearScreen.new(scene)
+  pbFadeOutIn(99999) { 
+    screen.pbStartScreen
+  }
+},proc{ return $Trainer.pokegear })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new
@@ -164,6 +164,13 @@ MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
     pbUpdateSceneMap
   }
 },proc{ return true })
+# Debug Menu
+MenuHandlers.addEntry(:DEBUG,_INTL("Debug"),"menuDebug",proc{|menu|
+  pbFadeOutIn(99999) { 
+    pbDebugMenu
+    menu.refresh
+  }
+},proc{ return $DEBUG })
 # Backup Screen
 MenuHandlers.addEntry(:BACKUP,_INTL("Backup"),"menuBack",proc{|menu|
   pbFadeOutIn(99999) { 
@@ -172,13 +179,6 @@ MenuHandlers.addEntry(:BACKUP,_INTL("Backup"),"menuBack",proc{|menu|
     menu.refresh
   }
 },proc{ return true })
-# Debug Menu
-MenuHandlers.addEntry(:DEBUG,_INTL("Debug"),"menuDebug",proc{|menu|
-  pbFadeOutIn(99999) { 
-    pbDebugMenu
-    menu.refresh
-  }
-},proc{ return $DEBUG })
 # End Screen
 MenuHandlers.addEntry(:EXIT,_INTL("Exit"),"exitOptions",proc{|menu|
   pbFadeOutIn(99999) {
