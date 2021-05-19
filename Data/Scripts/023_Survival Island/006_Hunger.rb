@@ -84,9 +84,6 @@
 #-------Add Delete Save on Death Option                                       -#
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
-DELETE_SAVE = false
-DELETE_MULTISAVE = false
-
 Events.onStepTakenTransferPossible+=proc {
 
 if $game_variables[205]>100
@@ -103,6 +100,10 @@ end
  
 if $game_variables[208]>100
  $game_variables[208]=100 
+end
+
+if $Trainer.money>100
+ $Trainer.money=100 
 end
 
 if $game_switches[54]==true #Survival Mode Switch
@@ -189,21 +190,21 @@ $PokemonBag.pbDeleteItem(berry,1)
 Kernel.pbMessage(_INTL("You consume the {1}. ",PBItems.getName(berry)))
 #205 is Hunger, 207 is Saturation, 206 is Thirst, 208 is Sleep
 if isConst?(berry,PBItems,:ORANBERRY)
-$game_variables[205]+=7
+$game_variables[205]+=4
 $game_variables[207]+=3
 $game_variables[206]+=1
 $Trainer.money += 1
 elsif isConst?(berry,PBItems,:LEPPABERRY)
-$game_variables[205]+=9
+$game_variables[205]+=5
 $game_variables[207]+=1
 $game_variables[206]+=1
 elsif isConst?(berry,PBItems,:SITRUSBERRY)
-$game_variables[205]+=10
+$game_variables[205]+=5
 $game_variables[207]+=7
 $game_variables[206]+=1
 $Trainer.money += (0.25*$Trainer.money)
 elsif isConst?(berry,PBItems,:BERRYJUICE)
-$game_variables[205]+=8
+$game_variables[205]+=6
 $game_variables[207]+=4
 $game_variables[206]+=4
 $Trainer.money += 2
@@ -211,57 +212,105 @@ elsif isConst?(berry,PBItems,:FRESHWATER)
 $game_variables[206]+=10
 #You can add more if you want
 elsif isConst?(berry,PBItems,:ATKCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SATKCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPEEDCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPDEFCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:ACCCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:DEFCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:CRITCURRY)
-$game_variables[205]+=5
+$game_variables[205]+=8
 $game_variables[207]+=5
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:GSCURRY)
-$game_variables[205]+=5
-$game_variables[207]+=5
-$game_variables[206]-=7
-elsif isConst?(berry,PBItems,:RAGECANDYBAR)
-$game_variables[205]+=8
+$game_variables[205]+=8#205 is Hunger
+$game_variables[207]+=5#207 is Saturation
+$game_variables[206]-=7#206 is Thirst
+elsif isConst?(berry,PBItems,:RAGECANDYBAR) #chocolate
+$game_variables[205]+=10
 $game_variables[207]+=3
 $game_variables[208]+=7
-elsif isConst?(berry,PBItems,:SWEETHEART)
-$game_variables[205]+=5
-$game_variables[207]+=5
-$game_variables[208]+=6
+elsif isConst?(berry,PBItems,:SWEETHEART) #chocolate
+$game_variables[205]+=10#205 is Hunger
+$game_variables[207]+=5#207 is Saturation
+$game_variables[208]+=6#208 is Sleep
 elsif isConst?(berry,PBItems,:SODAPOP)
-$game_variables[206]-=11
-$game_variables[208]+=10
+$game_variables[206]-=11#206 is Thirst
+$game_variables[208]+=10#208 is Sleep
 elsif isConst?(berry,PBItems,:LEMONADE)
-$game_variables[205]+=5
-$game_variables[207]+=5
-$game_variables[206]-=7
-$game_variables[208]+=3
+$game_variables[207]+=5#207 is Saturation
+$game_variables[206]+=7#206 is Thirst
+$game_variables[208]+=3#208 is Sleep
+elsif isConst?(berry,PBItems,:HONEY)
+$game_variables[207]+=10#207 is Saturation
+$game_variables[206]+=2#206 is Thirst
+$game_variables[205]+=6#205 is Hunger
 elsif isConst?(berry,PBItems,:MOOMOOMILK)
-$game_variables[205]+=5
 $game_variables[207]+=5
-$game_variables[206]-=7
+$game_variables[206]+=7
+elsif isConst?(berry,PBItems,:CSLOWPOKETAIL)
+$game_variables[207]+=10#207 is Saturation
+$game_variables[205]+=10#205 is Hunger
+elsif isConst?(berry,PBItems,:BAKEDPOTATO)
+$game_variables[207]+=7#207 is Saturation
+$game_variables[206]+=4#206 is Thirst
+$game_variables[205]+=7#205 is Hunger
+elsif isConst?(berry,PBItems,:APPLE)
+$game_variables[207]+=7#207 is Saturation
+$game_variables[206]+=3#206 is Thirst
+$game_variables[205]+=3#205 is Hunger
+elsif isConst?(berry,PBItems,:CHOCOLATE)
+$game_variables[207]+=3#207 is Saturation
+$game_variables[205]+=7#205 is Hunger
+elsif isConst?(berry,PBItems,:LEMON)
+$game_variables[207]+=3#207 is Saturation
+$game_variables[206]+=3#206 is Thirst
+$game_variables[205]+=4#205 is Hunger
+elsif isConst?(berry,PBItems,:HONEY)
+$game_variables[207]+=10#207 is Saturation
+$game_variables[206]+=2#206 is Thirst
+$game_variables[205]+=6#205 is Hunger
+elsif isConst?(berry,PBItems,:OLDGATEAU)
+$game_variables[207]+=6#207 is Saturation
+$game_variables[206]+=2#206 is Thirst
+$game_variables[205]+=6#205 is Hunger
+elsif isConst?(berry,PBItems,:LAVACOOKIE)
+$game_variables[207]+=5#207 is Saturation
+$game_variables[206]-=3#206 is Thirst
+$game_variables[205]+=6#205 is Hunger
+elsif isConst?(berry,PBItems,:CASTELIACONE)
+$game_variables[206]+=7#206 is Thirst
+$game_variables[205]+=7#205 is Hunger
+elsif isConst?(berry,PBItems,:LUMIOSEGALETTE)
+$game_variables[207]+=5#207 is Saturation
+$game_variables[205]+=6#205 is Hunger
+elsif isConst?(berry,PBItems,:SHALOURSABLE)
+$game_variables[207]+=8#207 is Saturation
+$game_variables[205]+=8#205 is Hunger
+elsif isConst?(berry,PBItems,:BIGMALASADA)
+$game_variables[207]+=8#207 is Saturation
+$game_variables[205]+=8#205 is Hunger
+elsif isConst?(berry,PBItems,:ONION)
+$game_variables[207]+=5#207 is Saturation
+$game_variables[206]+=3#206 is Thirst
+$game_variables[205]+=3#205 is Hunger
 #full belly
 end
 end
@@ -288,7 +337,6 @@ $Trainer.money += 60
 elsif isConst?(medicine,PBItems,:FULLRESTORE)
 $Trainer.money += 100
 #full belly
-$Trainer.money=100 if $Trainer.money>100
 end
 end
 end 

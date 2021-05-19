@@ -89,9 +89,10 @@ class PokemonBag
 
   def pbQuantity(item)
     item = getID(PBItems,item)
-    if !item || item<1
-      raise ArgumentError.new(_INTL("Item number {1} is invalid.",item))
-    end
+#edit
+#    if !item || item<1
+#      raise ArgumentError.new(_INTL("Item number {1} is invalid.",item))
+#    end
     pocket = pbGetPocket(item)
     maxsize = maxPocketSize(pocket)
     maxsize = @pockets[pocket].length if maxsize<0

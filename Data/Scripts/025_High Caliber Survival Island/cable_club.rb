@@ -11,7 +11,7 @@ end
 
 module CableClub
   HOST = "localhost"
-  PORT = 52879
+  PORT = 25565
 end
 
 # TODO: Automatically timeout.

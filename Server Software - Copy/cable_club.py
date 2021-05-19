@@ -10,7 +10,7 @@ import socket
 import traceback
 
 HOST = r"0.0.0.0"
-PORT = 52879
+PORT = 25565
 PBS_DIR = r"C:\Users\Owner\Documents\GitHub\pokemon-essentials\PBS"
 
 EBDX_INSTALLED = False
