@@ -10,7 +10,7 @@ import socket
 import traceback
 
 HOST = r"0.0.0.0"
-PORT = 25565
+PORT = 52879
 PBS_DIR = r"C:\Users\Owner\Documents\GitHub\pokemon-essentials\PBS"
 
 EBDX_INSTALLED = False
@@ -31,7 +31,7 @@ class Server:
     def run(self):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as self.socket:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            self.socket.bind((HOST, PORT))
+            self.socket.bind((self.host, self.port))
             self.socket.listen()
 
             while True:
@@ -265,7 +265,6 @@ def make_party_validator(pbs_dir):
             if len(row) >= 2:
                 moves_by_name[row[1]] = int(row[0])
 
-    print(moves_by_name)
     with io.open(os.path.join(pbs_dir, r'items.txt'), 'r', encoding='utf-8-sig') as items_pbs:
         for row in csv.reader(items_pbs):
             if len(row) >= 2:
@@ -330,7 +329,99 @@ def make_party_validator(pbs_dir):
 
     def validate_party(record):
         errors = []
-        print(errors)
+        try:
+            for _ in range(record.int()):
+                species = record.int()
+                species_ = pokemon_by_number.get(species)
+                if species_ is None: errors.append("invalid species")
+                level = record.int()
+                if not (1 <= level <= 100): errors.append("invalid level")
+                personal_id = record.int()
+                trainer_id = record.int()
+                if trainer_id & ~0xFFFFFFFF: errors.append("invalid trainerID")
+                ot = record.str()
+                if not (len(ot) <= 10): errors.append("invalid ot")
+                ot_gender = record.int()
+                if ot_gender not in {0, 1}: errors.append("invalid otgender")
+                exp = record.int()
+                # TODO: validate exp.
+                form = record.int()
+                if form not in species_.forms: errors.append("invalid form")
+                item = record.int()
+                if item and item not in item_ids: errors.append("invalid item")
+                for _ in range(record.int()):
+                    move = record.int()
+                    if move and move not in species_.moves: errors.append("invalid move")
+                    ppup = record.int()
+                    if not (0 <= ppup <= 3): errors.append("invalid ppup")
+                ability = record.int()
+                if not (ability in species_.abilities): errors.append("invalid ability")
+                gender = record.int()
+                if gender not in species_.genders: errors.append("invalid gender")
+                nature = record.int()
+                if not (0 <= nature <= 24): errors.append("invalid nature")
+                for _ in range(6):
+                    iv = record.int()
+                    if not (0 <= iv <= 31): errors.append("invalid IV")
+                    ev = record.int()
+                    if not (0 <= ev <= 255): errors.append("invalid EV")
+                happiness = record.int()
+                if not (0 <= happiness <= 255): errors.append("invalid happiness")
+                name = record.str()
+                if not (len(name) <= 10): errors.append("invalid name")
+                ballused = record.int()
+                eggsteps = record.int()
+                # TODO: validate ball. nb: depends on Essentials version...
+                # XXX: do these all have to be nil?
+                abilityflag = record.int_or_none()
+                #if abilityflag is not None: errors.append("abilityflag")
+                genderflag = record.int_or_none()
+                #if genderflag is not None: errors.append("genderflag")
+                natureflag = record.int_or_none()
+                #if natureflag is not None: errors.append("natureflag")
+                shinyflag = record.bool_or_none()
+                # mail
+                if record.bool():
+                    m_item = record.int()
+                    m_msg = record.str()
+                    m_sender = record.str()
+                    m_species1 = record.int_or_none()
+                    if m_species1:
+                        #[species,gender,shininess,form,shadowness,is egg]
+                        m_gender1 = record.int()
+                        m_shiny1 = record.bool()
+                        m_form1 = record.int()
+                        m_shadow1 = record.bool()
+                        m_egg1 = record.bool()
+                    
+                    m_species2 = record.int_or_none()
+                    if m_species2:
+                        #[species,gender,shininess,form,shadowness,is egg]
+                        m_gender2 = record.int()
+                        m_shiny2 = record.bool()
+                        m_form2 = record.int()
+                        m_shadow2 = record.bool()
+                        m_egg2 = record.bool()
+                    
+                    m_species3 = record.int_or_none()
+                    if m_species3:
+                        #[species,gender,shininess,form,shadowness,is egg]
+                        m_gender3 = record.int()
+                        m_shiny3 = record.bool()
+                        m_form3 = record.int()
+                        m_shadow3 = record.bool()
+                        m_egg3 = record.bool()
+                if EBDX_INSTALLED:
+                    shiny = record.bool()
+                    superhue = record.str()
+                    if shiny and (superhue == ""): errors.append("uninitialized supershiny")
+                    supervarient = record.bool_or_none()
+            rest = record.raw_all()
+            if rest:
+                errors.append(f"remaining data: {', '.join(rest)}")
+        except Exception as e:
+            errors.append(str(e))
+        #print(errors)
         return not errors
 
     return validate_party
@@ -341,4 +432,4 @@ if __name__ == "__main__":
     parser.add_argument("--port", default=PORT)
     parser.add_argument("--pbs_dir", default=PBS_DIR)
     args = parser.parse_args()
-    Server(args.host, args.port, args.pbs_dir).run()
+    Server(args.host, int(args.port), args.pbs_dir).run()

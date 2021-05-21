@@ -147,14 +147,14 @@ MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
     end
   end
 },proc{ return pbInSafari? || pbInBugContest? })
-# PokeGear
-MenuHandlers.addEntry(:POKEGEAR,_INTL("Pokégear"),"menuPokegear",proc{|menu|
-  scene = PokemonPokegear_Scene.new
-  screen = PokemonPokegearScreen.new(scene)
+# Achievements
+MenuHandlers.addEntry(:ACHIEVEMENTS,_INTL("Achievements"),"menuAchievements",proc{|menu|
+  scene = PokemonAchievementsScene.new
+  screen = PokemonAchievements.new(scene)
   pbFadeOutIn(99999) { 
     screen.pbStartScreen
   }
-},proc{ return $Trainer.pokegear })
+},proc{ return true })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new

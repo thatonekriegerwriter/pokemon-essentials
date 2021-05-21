@@ -5,14 +5,13 @@
 #                             Survival Mode                                    #
 #                          By thatonekriegerwriter                             #
 #                 Original Hunger Script by Maurili and Vendily                #
-#Original pbEndGame Code by ferriswheel42 and the Original Survival Island Team#
+#                                                                              #
 #                                                                              #
 #                                                                              #
 #==============================================================================#
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\#
 #==============================================================================#
 #Thanks Maurili and Vendily for the Original Hunger Script                     #
-#Thanks to the Original Survival Island Team for other parts of the script.    #
 #It will run just fine like this, but you can also crack open "PField_Visuals" #
 #and around line 634 you will find "def pbStartOver"                           #
 #You can add                                                                   #
@@ -47,10 +46,13 @@
 #------------------------------------------------------------------------------#
 # $game_variables[207] is Maurili's Saturation.                                #
 #------------------------------------------------------------------------------#
+# $game_variables[247] is the variable I used to restore sleep.                #
+#------------------------------------------------------------------------------#
 # $game_switch[249] is used to give a one time message about starving,         #
 #then turn itself off to take away health.                                     #
+# This has to be placed at the start of your game.                             #
 #------------------------------------------------------------------------------#
-# Again, $Trainer.money is used as money by default.                           #
+# Again, $Trainer.money is used as health by default.                          #
 #------------------------------------------------------------------------------#
 # I used the Trainer Card to display all this information.                     #
 #------------------------------------------------------------------------------#
@@ -58,14 +60,9 @@
 #scripts could be attached to anything, I attached them to items called        #
 #"Medicine Bag" and "Food Bag"                                                 #
 #------------------------------------------------------------------------------#
-#The "$Trainer.money -= 20" Money subtraction also occurs in Survival Island   #
-#upon two other events, a Running Away event where you trip, and upon Battle   #
-#Loss. I imagine it could be used in quite                                     #
-#a few places beyond that.                                                     #
-#------------------------------------------------------------------------------#
 #At the bottom is "pbEndGame"                                                  #
-#In the original Survival Island, the original map id, x, y, went to a         #
-#pokemon center that had                                                       #
+#     This should lead to a map with an autorun event that has:                #
+#                                                                              #
 #$scene = pbCallTitle                                                          #
 #    while $scene != nil                                                       #
 #      $scene.main                                                             #
@@ -81,7 +78,7 @@
 #I don't think it particularly has to be anywhere, mine is a good bit          #
 #above main to little issue.                                                   #
 #------------------------------------------------------------------------------#
-#-------Add Delete Save on Death Option                                       -#
+#                                                                              #
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 Events.onStepTakenTransferPossible+=proc {
@@ -159,12 +156,12 @@ end
 end #im honestly unsure why I need this mountain of ends but the script shant run without them.
 end
 
-if $Trainer.money < 5
+if $Trainer.money < 1
   if $game_switches[54] == true
       pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]Game Over"))
 	  Achievements.incrementProgress("DEAD",1)
       pbCancelVehicles
-      pbRemoveDependenciesExceptFollower
+      pbRemoveDependencies
       pbEndGame
       return
    end
@@ -283,10 +280,6 @@ elsif isConst?(berry,PBItems,:LEMON)
 $game_variables[207]+=3#207 is Saturation
 $game_variables[206]+=3#206 is Thirst
 $game_variables[205]+=4#205 is Hunger
-elsif isConst?(berry,PBItems,:HONEY)
-$game_variables[207]+=10#207 is Saturation
-$game_variables[206]+=2#206 is Thirst
-$game_variables[205]+=6#205 is Hunger
 elsif isConst?(berry,PBItems,:OLDGATEAU)
 $game_variables[207]+=6#207 is Saturation
 $game_variables[206]+=2#206 is Thirst

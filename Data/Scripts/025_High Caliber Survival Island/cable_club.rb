@@ -11,7 +11,7 @@ end
 
 module CableClub
   HOST = "localhost"
-  PORT = 25565
+  PORT = 52879
 end
 
 # TODO: Automatically timeout.
@@ -19,7 +19,7 @@ end
 # Returns false if an error occurred.
 def pbCableClub
   if $Trainer.party.length == 0
-    Kernel.pbMessage(_INTL("I'm sorry, you must have a Pokémon to use Dream Connect."))
+    Kernel.pbMessage(_INTL("I'm sorry, you must have a Pokémon to enter the Dream Connect."))
     return
   end
   msgwindow = Kernel.pbCreateMessageWindow()
@@ -47,13 +47,13 @@ def pbCableClub
   rescue Connection::Disconnected => e
     case e.message
     when "disconnected"
-      Kernel.pbMessageDisplay(msgwindow, _INTL("Thank you for using Dream Connect. We hope to see you again soon."))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("Thank you for using the Dream Connect. We hope to see you again soon."))
       return true
     when "invalid party"
-      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, your party contains Pokémon not allowed in Dream Connect."))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, your party contains Pokémon not allowed in the Dream Connect."))
       return false
     when "peer disconnected"
-      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the other trainer has woken up."))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the other trainer has disconnected."))
       return true
     else
       Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Dream Connect server has malfunctioned!"))
@@ -324,7 +324,7 @@ module CableClub
               partner_party.each{|pkmn| pkmn.heal}
               pkmn = partner_party[partner_chosen]
               abort=$Trainer.ablePokemonCount==1 && $Trainer.party[chosen]==$Trainer.ablePokemonParty[0] && pkmn.isEgg?
-              able_party=partner_party.find_all { |p| p && !p.isEgg? && !p.fainted? }
+              able_party=partner_party.find_all { |p| p && !p.isEgg? && !p.isFainted? }
               abort|=able_party.length==1 && pkmn==able_party[0] && $Trainer.party[chosen].isEgg?
               unless abort
                 partner_party[partner_chosen] = $Trainer.party[chosen]
@@ -610,6 +610,45 @@ module CableClub
     writer.nil_or(:int, pkmn.genderflag)
     writer.nil_or(:int, pkmn.natureflag)
     writer.nil_or(:bool, pkmn.shinyflag)
+    writer.bool(!!pkmn.mail)
+    if pkmn.mail
+      writer.int(pkmn.mail.item)
+      writer.str(pkmn.mail.message)
+      writer.str(pkmn.mail.sender)
+      if pkmn.mail.poke1
+        #[species,gender,shininess,form,shadowness,is egg]
+        writer.int(pkmn.mail.poke1[0])
+        writer.int(pkmn.mail.poke1[1])
+        writer.bool(pkmn.mail.poke1[2])
+        writer.int(pkmn.mail.poke1[3])
+        writer.bool(pkmn.mail.poke1[4])
+        writer.bool(pkmn.mail.poke1[5])
+      else
+        writer.nil_or(:int,nil)
+      end
+      if pkmn.mail.poke2
+        #[species,gender,shininess,form,shadowness,is egg]
+        writer.int(pkmn.mail.poke2[0])
+        writer.int(pkmn.mail.poke2[1])
+        writer.bool(pkmn.mail.poke2[2])
+        writer.int(pkmn.mail.poke2[3])
+        writer.bool(pkmn.mail.poke2[4])
+        writer.bool(pkmn.mail.poke2[5])
+      else
+        writer.nil_or(:int,nil)
+      end
+      if pkmn.mail.poke3
+        #[species,gender,shininess,form,shadowness,is egg]
+        writer.int(pkmn.mail.poke3[0])
+        writer.int(pkmn.mail.poke3[1])
+        writer.bool(pkmn.mail.poke3[2])
+        writer.int(pkmn.mail.poke3[3])
+        writer.bool(pkmn.mail.poke3[4])
+        writer.bool(pkmn.mail.poke3[5])
+      else
+        writer.nil_or(:int,nil)
+      end
+    end
     if defined?(EliteBattle) # EBDX compat
       # this looks so dumb I know, but the variable can be nil, false, or an int.
       writer.bool(pkmn.shiny?)
@@ -665,6 +704,48 @@ module CableClub
     pkmn.genderflag = record.nil_or(:int)
     pkmn.natureflag = record.nil_or(:int)
     pkmn.shinyflag = record.nil_or(:bool)
+    if record.bool() # mail
+      m_item = record.int()
+      m_msg = record.str()
+      m_sender = record.str()
+      m_poke1 = []
+      if m_species1 = record.nil_or(:int)
+        #[species,gender,shininess,form,shadowness,is egg]
+        m_poke1[0] = m_species1
+        m_poke1[1] = record.int()
+        m_poke1[2] = record.bool()
+        m_poke1[3] = record.int()
+        m_poke1[4] = record.bool()
+        m_poke1[5] = record.bool()
+      else
+        m_poke1 = nil
+      end
+      m_poke2 = []
+      if m_species2 = record.nil_or(:int)
+        #[species,gender,shininess,form,shadowness,is egg]
+        m_poke2[0] = m_species2
+        m_poke2[1] = record.int()
+        m_poke2[2] = record.bool()
+        m_poke2[3] = record.int()
+        m_poke2[4] = record.bool()
+        m_poke2[5] = record.bool()
+      else
+        m_poke2 = nil
+      end
+      m_poke3 = []
+      if m_species3 = record.nil_or(:int)
+        #[species,gender,shininess,form,shadowness,is egg]
+        m_poke3[0] = m_species3
+        m_poke3[1] = record.int()
+        m_poke3[2] = record.bool()
+        m_poke3[3] = record.int()
+        m_poke3[4] = record.bool()
+        m_poke3[5] = record.bool()
+      else
+        m_poke3 = nil
+      end
+      pkmn.mail = PokemonMail.new(m_item,m_msg,m_sender,m_poke1,m_poke2,m_poke3)
+    end
     if defined?(EliteBattle) # EBDX compat
       # this looks so dumb I know, but the variable can be nil, false, or an int.
       record.bool # shiny call.
@@ -696,14 +777,17 @@ class PokeBattle_CableClub < PokeBattle_Battle
     super(scene, $Trainer.party, opponent_party, player, opponent)
     @battleAI  = PokeBattle_CableClub_AI.new(self) if defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
   end
-
+  
   # Added optional args to not make v18 break.
   def pbSwitchInBetween(index, lax=false, cancancel=false)
     if pbOwnedByPlayer?(index)
       choice = super(index, lax, cancancel)
-      @connection.send do |writer|
-        writer.sym(:switch)
-        writer.int(choice)
+      # bug fix for the unknown type :switch. cause: going into the pokemon menu then backing out and attacking, which sends the switch symbol regardless.
+      if !cancancel # forced switches do not allow canceling, and both sides would expect a response.
+        @connection.send do |writer|
+          writer.sym(:switch)
+          writer.int(choice)
+        end
       end
       return choice
     else
@@ -728,7 +812,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
           @scene.pbFrameUpdate(cw)
           Graphics.update
           Input.update
-          raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessage("Would you like to disconnect?")
+          raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
           @connection.update do |record|
             case (type = record.sym)
             when :forfeit
@@ -782,7 +866,92 @@ class PokeBattle_CableClub < PokeBattle_Battle
       return true if last_index==idxBattler
       return super(idxBattler)
     end
+    
+    # avoid unnecessary checks and check in same order
+    def pbEORSwitch(favorDraws=false)
+      return if @decision>0 && !favorDraws
+      return if @decision==5 && favorDraws
+      pbJudge
+      return if @decision>0
+      # Check through each fainted battler to see if that spot can be filled.
+      switched = []
+      loop do
+        switched.clear
+        # check in same order
+        battlers = []
+        order = CableClub::pokemon_order(@client_id)
+        for i in 0..3
+          battlers[i] = battlers[order[i]]
+        end
+        battlers.each do |b|
+          next if !b || !b.fainted?
+          idxBattler = b.index
+          next if !pbCanChooseNonActive?(idxBattler)
+          if !pbOwnedByPlayer?(idxBattler)   # Opponent/ally is switching in
+            next if wildBattle? && opposes?(idxBattler)   # Wild Pokémon can't switch
+            idxPartyNew = pbSwitchInBetween(idxBattler)
+            opponent = pbGetOwnerFromBattlerIndex(idxBattler)
+            pbRecallAndReplace(idxBattler,idxPartyNew)
+            switched.push(idxBattler)
+          else
+            idxPlayerPartyNew = pbGetReplacementPokemonIndex(idxBattler)   # Owner chooses
+            pbRecallAndReplace(idxBattler,idxPlayerPartyNew)
+            switched.push(idxBattler)
+          end
+        end
+        break if switched.length==0
+        pbPriority(true).each do |b|
+          b.pbEffectsOnSwitchIn(true) if switched.include?(b.index)
+        end
+      end
+    end
+    
   else
+    def pbSwitch(favorDraws=false)
+      if !favorDraws
+        return if @decision>0
+      else
+        return if @decision==5
+      end
+      pbJudge()
+      return if @decision>0
+      switched=[]
+      for index in CableClub::pokemon_order(@client_id)
+        next if !@doublebattle && pbIsDoubleBattler?(index)
+        next if @battlers[index] && !@battlers[index].isFainted?
+        next if !pbCanChooseNonActive?(index)
+        if !pbOwnedByPlayer?(index)
+          if !pbIsOpposing?(index) || (@opponent && pbIsOpposing?(index))
+            newenemy=pbSwitchInBetween(index,false,false)
+            newenemyname=newenemy
+            if newenemy>=0 && isConst?(pbParty(index)[newenemy].ability,PBAbilities,:ILLUSION)
+              newenemyname=pbGetLastPokeInTeam(index)
+            end
+            opponent=pbGetOwner(index)
+            pbRecallAndReplace(index,newenemy,newenemyname,false,false)
+            switched.push(index)
+          end
+        else
+          newpoke=pbSwitchInBetween(index,true,false)
+          newpokename=newpoke
+          if isConst?(@party1[newpoke].ability,PBAbilities,:ILLUSION)
+            newpokename=pbGetLastPokeInTeam(index)
+          end
+          pbRecallAndReplace(index,newpoke,newpokename)
+          switched.push(index)
+        end
+      end
+      if switched.length>0
+        priority=pbPriority
+        for i in priority
+          i.pbAbilitiesOnSwitchIn(true) if switched.include?(i.index)
+        end
+      end
+    end
+    
+=begin
+doesn't seem to work in tests, so commented it out.
+seems to work when commented. for some reason...
     def pbPriority(*args)
       begin
         battlers = @battlers.dup
@@ -795,6 +964,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
         @battlers = battlers
       end
     end
+=end
     
     # This is horrific. Basically, we need to force Essentials to look for
     # the RHS foe's move in all circumstances, otherwise we won't transmit
@@ -803,11 +973,17 @@ class PokeBattle_CableClub < PokeBattle_Battle
       super(index) || (index == 3 && Kernel.caller(1) =~ /pbCanShowCommands/)
     end
     
-     def pbDefaultChooseEnemyCommand(index)
+    def pbDefaultChooseEnemyCommand(index)
       our_indices = @doublebattle ? [0, 2] : [0]
       their_indices = @doublebattle ? [1, 3] : [1]
       # Sends our choices after they have all been locked in.
       if index == their_indices.last
+        @connection.send do |writer|
+          cur_seed=srand
+          srand(cur_seed)
+          writer.sym(:seed)
+          writer.int(cur_seed)
+        end
         target_order = CableClub::pokemon_target_order(@client_id)
         for our_index in our_indices
           @connection.send do |writer|
@@ -842,7 +1018,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
             @scene.pbFrameUpdate(cw)
             Graphics.update
             Input.update
-            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessage("Would you like to disconnect?")
+            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
             @connection.update do |record|
               case (type = record.sym)
               when :forfeit
@@ -850,6 +1026,10 @@ class PokeBattle_CableClub < PokeBattle_Battle
                 pbDisplay(_INTL("{1} forfeited the match!", @opponent.fullname))
                 @decision = 1
                 pbAbort
+                
+              when :seed
+                seed=record.int()
+                srand(seed) if @client_id==1
 
               when :choice
                 their_index = their_indices.shift
@@ -923,7 +1103,7 @@ if defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
             @battle.scene.pbFrameUpdate(cw)
             Graphics.update
             Input.update
-            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessage("Would you like to disconnect?")
+            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
             @battle.connection.update do |record|
               case (type = record.sym)
               when :forfeit
