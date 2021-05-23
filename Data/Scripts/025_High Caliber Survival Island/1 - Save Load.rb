@@ -165,10 +165,10 @@ class PokemonSaveScreen
     count = countFileSave
     # Start
     msg = _INTL("What do you want to do?")
-    cmds = [_INTL("Delete"),_INTL("Save"),_INTL("Cancel")]
+    cmds = [_INTL("Save"),_INTL("Delete"),_INTL("Cancel")]
     cmd = pbCustomMessageForSave(msg,cmds,3)
     # Delete file save
-    if cmd==0
+    if cmd==1
       if count<=0
         pbMessage(_INTL("No save file was found."))
       else
@@ -211,7 +211,7 @@ class PokemonSaveScreen
     else
       @scene.pbStartScreen
       # Save
-      if cmd==1
+      if cmd==0
         cmds = [_INTL("Old File Save"),_INTL("New File Save"),_INTL("Cancel")]
         cmd2 = pbCustomMessageForSave(msg,cmds,3)
         # New file save

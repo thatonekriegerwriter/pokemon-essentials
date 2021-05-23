@@ -20,9 +20,9 @@
 SCREEN_WIDTH       = 512
 SCREEN_HEIGHT      = 384
 SCREEN_ZOOM        = 2.0
-BORDER_FULLY_SHOWS = false
-BORDER_WIDTH       = 200
-BORDER_HEIGHT      = 0
+BORDER_FULLY_SHOWS = true
+BORDER_WIDTH       = 78
+BORDER_HEIGHT      = 78
 MAP_VIEW_MODE      = 1
 # To forbid the player from changing the screen size themselves, quote out or
 # delete the relevant bit of code in the PScreen_Options script section.
@@ -250,16 +250,12 @@ DEXES_WITH_OFFSETS  = []
 #      - Roaming areas specifically for this Pokémon (optional).
 #===============================================================================
 RoamingAreas = {
-  5  => [   21, 28, 31, 39, 41, 44, 47, 66, 69],
-  21 => [5,     28, 31, 39, 41, 44, 47, 66, 69],
-  28 => [5, 21,     31, 39, 41, 44, 47, 66, 69],
-  31 => [5, 21, 28,     39, 41, 44, 47, 66, 69],
-  39 => [5, 21, 28, 31,     41, 44, 47, 66, 69],
-  41 => [5, 21, 28, 31, 39,     44, 47, 66, 69],
-  44 => [5, 21, 28, 31, 39, 41,     47, 66, 69],
-  47 => [5, 21, 28, 31, 39, 41, 44,     66, 69],
-  66 => [5, 21, 28, 31, 39, 41, 44, 47,     69],
-  69 => [5, 21, 28, 31, 39, 41, 44, 47, 66    ]
+  4  => [   5, 7, 8, 9, 13],
+  5 => [   4, 7, 8, 9, 13],
+  7 => [   5, 4, 8, 9, 13],
+  8 => [   5, 7, 4, 9, 13],
+  9 => [   5, 7, 8, 4, 13],
+  13 => [   5, 7, 8, 9, 4]
 }
 RoamingSpecies = [
   [:LATIAS, 30, 53, 0, "Battle roaming"],

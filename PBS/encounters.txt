@@ -3465,11 +3465,11 @@ LandNight
 248 # Temperate Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    DRIFLOON,5
+    FLYGON,5
+    TOGETIC,5
+    ARCHEOPS,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3513,11 +3513,11 @@ LandNight
 249 # Temperate Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    HAWLUCHA,5
+    MANDIBUZZ,5
+    TOGETIC,5
+    ARCHEOPS,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3561,11 +3561,11 @@ LandNight
 250 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    TOUCANNON,5
+    MANDIBUZZ,5
+    MINIOR,5
+    DECIDUEYE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3609,11 +3609,11 @@ LandNight
 251 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    DRIFLOON,5
+    FLYGON,5
+    TOGETIC,5
+    ARCHEOPS,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3657,11 +3657,11 @@ LandNight
 252 # Temperate Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    TOUCANNON,5
+    MANDIBUZZ,5
+    ORICORIO,5
+    DECIDUEYE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3705,11 +3705,11 @@ LandNight
 253 # Ocean Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    TALONFLAME,5
+    MANDIBUZZ,5
+    MINIOR,5
+    DECIDUEYE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3753,11 +3753,11 @@ LandNight
 254 # Ocean Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    BRAVIARY,5
+    UNFEZANT,5
+    GLISCOR,5
+    MINIOR,5
+    DECIDUEYE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3801,11 +3801,11 @@ LandNight
 255 # Temperate Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    CHATOT,5
+    HONCHKROW,5
+    GLISCOR,5
+    MINIOR,5
+    DECIDUEYE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3849,11 +3849,11 @@ LandNight
 256 # Mountain Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    CHATOT,5
+    HONCHKROW,5
+    ALTARIA,5
+    MINIOR,5
+    DRAMPA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3897,11 +3897,11 @@ LandNight
 257 # Mountain Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    TOUCANNON,5
+    HONCHKROW,5
+    ALTARIA,5
+    MINIOR,5
+    SALAMENCE,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3945,11 +3945,11 @@ LandNight
 258 # Mountain Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    ALTARIA,5
+    MINIOR,5
+    DRAMPA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -3990,14 +3990,14 @@ LandNight
     BULBASAUR,5
     BULBASAUR,5
 #-------------------------------
-259 # Mountain Skies
+259 # Mountain Skies (Monkey 1)
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    ALTARIA,5
+    MINIOR,5
+    DRAMPA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4041,11 +4041,11 @@ LandNight
 260 # Temperate Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    ALTARIA,5
+    MINIOR,5
+    DRAMPA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4089,11 +4089,11 @@ LandNight
 261 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    GOLBAT,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4137,11 +4137,11 @@ LandNight
 262 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    GOLBAT,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4185,11 +4185,11 @@ LandNight
 263 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    STARAVIA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4233,11 +4233,11 @@ LandNight
 264 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    STARAVIA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4281,11 +4281,11 @@ LandNight
 265 # Shore Skies
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    STARAVIA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5
@@ -4326,14 +4326,14 @@ LandNight
     BULBASAUR,5
     BULBASAUR,5
 #-------------------------------
-266 # Mountain Skies
+266 # Mountain Skies (Monk Lower)
 25,10,10
 Water
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    JUMPLUFF,5
+    MASQUERAIN,5
+    GLISCOR,5
+    DODRIO,5
+    STARAVIA,5
 LandMorning
     BULBASAUR,5
     BULBASAUR,5

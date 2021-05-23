@@ -170,7 +170,7 @@ end
 
 def pbSleepRestore
  if $game_variables[208]<100
-  $game_variables[208]=$game_variables[208]+$game_variables[247]*3
+  $game_variables[208]=$game_variables[208]+($game_variables[247]*6)
  end
 end
 

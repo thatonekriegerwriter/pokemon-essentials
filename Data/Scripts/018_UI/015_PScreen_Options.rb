@@ -66,6 +66,7 @@ $SpeechFrames = [
   "speech hgss 18",
   "speech hgss 19",
   "speech hgss 20",
+  "speech ur",
   "speech pl 18"
 ]
 
@@ -97,6 +98,7 @@ $TextFrames = [
   "Graphics/Windowskins/choice 25",
   "Graphics/Windowskins/choice 26",
   "Graphics/Windowskins/choice 27",
+  "Graphics/Windowskins/choice ur",
   "Graphics/Windowskins/choice 28"
 ]
 
@@ -105,7 +107,7 @@ $VersionStyles = [
   ["Power Red and Blue"],
   ["Power Red and Green"],
   ["Power Clear"],
-  ["PKMN RBYGSC"]
+  ["Press Start 2P"]
 ]
 
 def pbSettingToTextSpeed(speed)
