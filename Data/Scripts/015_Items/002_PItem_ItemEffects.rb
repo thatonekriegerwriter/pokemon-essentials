@@ -43,6 +43,34 @@ ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
     next 1
 })
 
+ItemHandlers::UseInField.add(:MAP,proc{|item|  
+    pbShowMap(1)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:PHONE,proc{|item|  
+    pbFadeOutIn {
+     PokemonPhoneScene.new.start
+    }
+    next 2
+})
+
+ItemHandlers::UseInField.add(:PLAYER,proc{|item|  
+      pbFadeOutIn {
+        scene = PokemonJukebox_Scene.new
+        screen = PokemonJukeboxScreen.new(scene)
+        screen.pbStartScreen
+      }
+    next 2
+})
+
+ItemHandlers::UseInField.add(:CRAFTBOOK,proc{|item|  
+      pbFadeOutIn {
+        pbCommonEvent(6)
+      }
+    next 2
+})
+
 ItemHandlers::UseInField.add(:PORTABLEPC,proc{|item|
     maps = [10,20,40,97,92,161]   # Map IDs for Origin Forme
     if maps.include?($game_map.map_id)

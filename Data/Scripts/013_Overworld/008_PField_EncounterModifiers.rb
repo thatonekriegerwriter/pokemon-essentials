@@ -6,16 +6,23 @@
 ################################################################################
 
 # Make all wild Pokémon shiny while a certain Switch is ON (see Settings).
-Events.onWildPokemonCreate+=proc {|sender,e|
-   pokemon=e[0]
-   if $game_switches[73]
-     pokemon.form=2
-   end
-}
+#Events.onWildPokemonCreate+=proc {|sender,e|
+#   pokemon=e[0]
+#   if $game_switches[73]
+#     pokemon.form=2
+#   end
+#}
 Events.onWildPokemonCreate += proc { |_sender, e|
   pokemon = e[0]
   if $game_switches[SHINY_WILD_POKEMON_SWITCH]
     pokemon.makeShiny
+  end
+}
+
+Events.onWildPokemonCreate += proc { |_sender, e|
+  pokemon = e[0]
+  if $game_switches[500]
+    pokemon.makeShadow
   end
 }
 
@@ -25,9 +32,11 @@ Events.onWildPokemonCreate += proc { |_sender, e|
 # and other such details.  Of course, you don't HAVE to use this code.
 #Events.onWildPokemonCreate += proc { |_sender, e|
 #  pokemon = e[0]
+#  difficulty=$game_variables[30]
+#  encounter = encList[chosenPkmn]
 #  if $game_switches[140]==true
 #    max_level = PBExperience.maxLevel
-#    new_level = pbBalancedLevel($Trainer.party) - 2 + rand(6)   # For variety
+#    new_level = pbBalancedLevel($Trainer.party) + rand(6)   # For variety 
 #    new_level = 1 if new_level < 1
 #    new_level = max_level if new_level > max_level
 #    pokemon.level = new_level

@@ -45,7 +45,7 @@ class PokemonTrainerCard_Scene
     time = (hour>0) ? _INTL("{1}h {2}m",hour,min) : _INTL("{1}m",min)
 	
 	
-    if $Trainer.money >= 75
+    if $Trainer.money >= 80
          trainerhealth = _INTL("Healthy")
          healthColor=Color.new(55,255,55)
      else
@@ -65,7 +65,7 @@ class PokemonTrainerCard_Scene
      end
     end
 
-    if $game_variables[205] >= 100
+    if $game_variables[205] >= 80
          trainerhunger = _INTL("Full")
          hungerColor=Color.new(55,255,55)
        else
@@ -91,7 +91,7 @@ class PokemonTrainerCard_Scene
        end   
 
 
-    if $game_variables[206] >= 100
+    if $game_variables[206] >= 80
          trainerthirst = _INTL("Quenched")
          thirstColor=Color.new(55,255,55)
        else
@@ -116,7 +116,7 @@ class PokemonTrainerCard_Scene
          end
        end   
 
-    if $game_variables[208] >= 100
+    if $game_variables[208] >= 80
           trainersleep = _INTL("Rested")
           sleepColor=Color.new(55,255,55)
        else
@@ -152,14 +152,18 @@ class PokemonTrainerCard_Scene
        [sprintf("%05d",$Trainer.publicID($Trainer.id)),468,64,1,baseColor,shadowColor],
        [_INTL("Health"),40,108,0,baseColor,shadowColor],
        [_INTL(trainerhealth),302,108,1,healthColor,shadowColor],
+       [_INTL("{1}%",$Trainer.money.to_s_formatted),190,108,1,healthColor,shadowColor],
        [_INTL("Pokédex"),36,150,0,baseColor,shadowColor],
        [sprintf("%d/%d",$Trainer.pokedexOwned,$Trainer.pokedexSeen),302,150,1,baseColor,shadowColor],
        [_INTL("FOD"),34,190,0,baseColor,shadowColor],
        [_INTL(trainerhunger),302,190,1,hungerColor,shadowColor],
+       [_INTL("{1}%",$game_variables[205].to_s_formatted),190,190,1,hungerColor,shadowColor],
        [_INTL("H20"),34,220,0,baseColor,shadowColor],
        [_INTL(trainerthirst),302,220,1,thirstColor,shadowColor],
+       [_INTL("{1}%",$game_variables[206].to_s_formatted),190,220,1,thirstColor,shadowColor],
        [_INTL("SLP"),34,250,0,baseColor,shadowColor],
-       [_INTL(trainersleep),302,250,1,sleepColor,shadowColor]
+       [_INTL(trainersleep),302,250,1,sleepColor,shadowColor],
+       [_INTL("{1}%",$game_variables[208].to_s_formatted),190,250,1,sleepColor,shadowColor]
     ]
     pbDrawTextPositions(overlay,textPositions)
     x = 72

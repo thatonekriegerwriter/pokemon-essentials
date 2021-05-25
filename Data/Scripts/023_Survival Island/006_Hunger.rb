@@ -85,6 +85,7 @@ Events.onStepTakenTransferPossible+=proc {
 
 if $game_variables[205]>100
   $game_variables[205]=100 
+  $game_switches[250]=true
 end
 
 if $game_variables[206]>100
@@ -93,10 +94,12 @@ end
 
 if $game_variables[207]>100
  $game_variables[207]=100 
+ $game_switches[273]=true
 end
  
 if $game_variables[208]>100
  $game_variables[208]=100 
+ $game_switches[249]=true
 end
 
 if $Trainer.money>100
@@ -109,46 +112,47 @@ if $game_switches[54]==true #Survival Mode Switch
    if $game_switches[249]==true
     pbMessage(_INTL("You are passing out from lack of sleep!"))
 	Achievements.incrementProgress("INSOMNIA",1)
-    $Trainer.money -= 20
+    $Trainer.money -= 5
     $game_switches[249]=false
    else
-    $Trainer.money -= 20
+    $Trainer.money -= 5
    end
   else
-   $game_variables[208] -= 1 if rand(20) == 0 #take from sleep
+   $game_variables[208] -= 1 if rand(50) == 5 #take from sleep
 end
 
 if $game_switches[54]==true #Survival Mode Switch
  case $game_variables[207]
   when 0
-   $game_variables[205] -= 1 if rand(10) == 0 #take from hunger
-   $game_variables[206] -= 1 if rand(10) == 0 #take from drinking
-   $game_variables[207] -= 1 if rand(10) == 0 #take from saturation
+   $game_variables[205] -= 1 if rand(10) == 5 #take from hunger
+   $game_variables[206] -= 1 if rand(10) == 5 #take from drinking
+  else
+   $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
 end
 
 if $game_switches[54]==true #Survival Mode Switch
   case $game_variables[205]
    when 0
-    if $game_switches[249]==true
+    if $game_switches[250]==true
       pbMessage(_INTL("You are passing out from lack of food!"))
 	  Achievements.incrementProgress("STARVING",1)
-      $Trainer.money -= 20
-      $game_switches[249]=false
+      $Trainer.money -= 5
+      $game_switches[250]=false
     else
-      $Trainer.money -= 20
+      $Trainer.money -= 5
    end
 end
 
 if $game_switches[54]==true #Survival Mode Switch
   case $game_variables[206]
    when 0
-    if $game_switches[249]==true
+    if $game_switches[273]==true
       pbMessage(_INTL("You are passing out from lack of water!"))
 	  Achievements.incrementProgress("THIRSTY",1)
-      $Trainer.money -= 20
-      $game_switches[249]=false
+      $Trainer.money -= 5
+      $game_switches[273]=false
     else
-      $Trainer.money -= 20
+      $Trainer.money -= 5
    end
 end
 end

@@ -385,7 +385,7 @@ def pbBattleOnStepTaken(repel=false)
   return if !$PokemonEncounters.isEncounterPossibleHere?
   $PokemonTemp.encounterType = encounterType
   encounter = $PokemonEncounters.pbGenerateEncounter(encounterType)
-  encounter = EncounterModifier.trigger(encounter)
+#  encounter = EncounterModifier.trigger(encounter)
   if $PokemonEncounters.pbCanEncounter?(encounter,repel)
     if !$PokemonTemp.forceSingleBattle && !pbInSafari? && ($PokemonGlobal.partner ||
        ($Trainer.ablePokemonCount>1 && PBTerrain.isDoubleWildBattle?(pbGetTerrainTag) && rand(100)<30))
