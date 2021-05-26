@@ -13,6 +13,8 @@ module EncounterTypes
   LandNight    = 11
   BugContest   = 12
   BerryTree    = 13
+  Bait         = 14
+  CaveDeep     = 15
   Names = [
      "Land",
      "Cave",
@@ -27,7 +29,9 @@ module EncounterTypes
      "LandDay",
      "LandNight",
      "BugContest",
-     "BerryTree"
+     "BerryTree",
+     "Bait",
+     "CaveDeep"
   ]
   EnctypeChances = [
      [20,20,10,10,10,10,5,5,4,4,1,1],
@@ -43,10 +47,12 @@ module EncounterTypes
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1],
+     [20,20,10,10,10,10,5,5,4,4,1,1],
+     [20,20,10,10,10,10,5,5,4,4,1,1],
      [20,20,10,10,10,10,5,5,4,4,1,1]
   ]
-  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0]
-  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0]
+  EnctypeDensities   = [25,10,10,0,0,0,0,0,0,25,25,25,25,0,0,25]
+  EnctypeCompileDens = [ 1, 2, 3,0,0,0,0,0,0, 1, 1, 1, 1,0,0,1]
 end
 
 
@@ -110,7 +116,8 @@ class PokemonEncounters
   # Applies only to encounters triggered by moving around.
   def isCave?
     return false if @density==nil
-    return @enctypes[EncounterTypes::Cave] ? true : false
+    return (@enctypes[EncounterTypes::Cave] ||
+            @enctypes[EncounterTypes::CaveDeep]) ? true : false
   end
 
   # Returns whether grass-like encounters have been defined for the current map.

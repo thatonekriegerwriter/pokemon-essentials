@@ -102,6 +102,24 @@ if $game_variables[208]>100
  $game_switches[249]=true
 end
 
+if $game_variables[205]<0
+  $game_variables[205]=0 
+end
+
+if $game_variables[206]<0
+  $game_variables[206]=0 
+end
+
+if $game_variables[207]<0
+ $game_variables[207]=0 
+ $game_switches[273]=true
+end
+ 
+if $game_variables[208]<0
+ $game_variables[208]=0 
+ $game_switches[249]=true
+end
+
 if $Trainer.money>100
  $Trainer.money=100 
 end
@@ -118,7 +136,7 @@ if $game_switches[54]==true #Survival Mode Switch
     $Trainer.money -= 5
    end
   else
-   $game_variables[208] -= 1 if rand(50) == 5 #take from sleep
+   $game_variables[208] -= 1 if rand(20) == 5 #take from sleep
 end
 
 if $game_switches[54]==true #Survival Mode Switch
@@ -210,35 +228,36 @@ $game_variables[207]+=4
 $game_variables[206]+=4
 $Trainer.money += 2
 elsif isConst?(berry,PBItems,:FRESHWATER)
-$game_variables[206]+=10
+$game_variables[206]+=20
+$game_variables[207]+=10#207 is Saturation
 #You can add more if you want
 elsif isConst?(berry,PBItems,:ATKCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SATKCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPEEDCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:SPDEFCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:ACCCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=12
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:DEFCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:CRITCURRY)
 $game_variables[205]+=8
-$game_variables[207]+=5
+$game_variables[207]+=15
 $game_variables[206]-=7
 elsif isConst?(berry,PBItems,:GSCURRY)
 $game_variables[205]+=8#205 is Hunger
@@ -254,31 +273,32 @@ $game_variables[207]+=5#207 is Saturation
 $game_variables[208]+=6#208 is Sleep
 elsif isConst?(berry,PBItems,:SODAPOP)
 $game_variables[206]-=11#206 is Thirst
+$game_variables[207]+=11#207 is Saturation
 $game_variables[208]+=10#208 is Sleep
 elsif isConst?(berry,PBItems,:LEMONADE)
-$game_variables[207]+=5#207 is Saturation
+$game_variables[207]+=11#207 is Saturation
 $game_variables[206]+=7#206 is Thirst
 $game_variables[208]+=3#208 is Sleep
 elsif isConst?(berry,PBItems,:HONEY)
-$game_variables[207]+=10#207 is Saturation
+$game_variables[207]+=20#207 is Saturation
 $game_variables[206]+=2#206 is Thirst
 $game_variables[205]+=6#205 is Hunger
 elsif isConst?(berry,PBItems,:MOOMOOMILK)
-$game_variables[207]+=5
+$game_variables[207]+=10
 $game_variables[206]+=7
 elsif isConst?(berry,PBItems,:CSLOWPOKETAIL)
 $game_variables[207]+=10#207 is Saturation
 $game_variables[205]+=10#205 is Hunger
 elsif isConst?(berry,PBItems,:BAKEDPOTATO)
-$game_variables[207]+=7#207 is Saturation
+$game_variables[207]+=10#207 is Saturation
 $game_variables[206]+=4#206 is Thirst
 $game_variables[205]+=7#205 is Hunger
 elsif isConst?(berry,PBItems,:APPLE)
-$game_variables[207]+=7#207 is Saturation
+$game_variables[207]+=10#207 is Saturation
 $game_variables[206]+=3#206 is Thirst
 $game_variables[205]+=3#205 is Hunger
 elsif isConst?(berry,PBItems,:CHOCOLATE)
-$game_variables[207]+=3#207 is Saturation
+$game_variables[207]+=5#207 is Saturation
 $game_variables[205]+=7#205 is Hunger
 elsif isConst?(berry,PBItems,:LEMON)
 $game_variables[207]+=3#207 is Saturation
@@ -308,6 +328,26 @@ elsif isConst?(berry,PBItems,:ONION)
 $game_variables[207]+=5#207 is Saturation
 $game_variables[206]+=3#206 is Thirst
 $game_variables[205]+=3#205 is Hunger
+elsif isConst?(berry,PBItems,:COOKEDORAN)
+$game_variables[207]+=6#207 is Saturation
+$game_variables[206]+=6#206 is Thirst
+$game_variables[205]+=6#205 is Hunger
+elsif isConst?(berry,PBItems,:CARROT)
+$game_variables[207]+=6#207 is Saturation
+$game_variables[206]+=3#206 is Thirst
+$game_variables[205]+=3#205 is Hunger
+elsif isConst?(berry,PBItems,:BREAD)
+$game_variables[207]+=10#207 is Saturation
+$game_variables[206]+=7#206 is Thirst
+$game_variables[205]+=11#205 is Hunger
+elsif isConst?(berry,PBItems,:TEA)
+$game_variables[207]+=8#207 is Saturation
+$game_variables[206]+=8#206 is Thirst
+$game_variables[205]+=2#205 is Hunger
+elsif isConst?(berry,PBItems,:CARROTCAKE)
+$game_variables[207]+=10#207 is Saturation
+$game_variables[206]+=10#206 is Thirst
+$game_variables[205]+=8#205 is Hunger
 #full belly
 end
 end

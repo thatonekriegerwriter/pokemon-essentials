@@ -22,16 +22,22 @@ ItemHandlers::UseFromBag.add(:HONEY,proc { |item|
   next 4
 })
 
-ItemHandlers::UseFromBag.add(:FOODBAG,proc{|item|
+ItemHandlers::UseFromBag.add(:BAIT,proc { |item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbFillUp
-    next 1
+  pbEncounter(EncounterTypes::Bait)
+  next 3
 })
 
-ItemHandlers::UseFromBag.add(:MEDICINE,proc{|item|
+ItemHandlers::UseInField.add(:FOODBAG,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
-    pbMedicine
-    next 1
+  pbCommonEvent(27)
+    next 2
+})
+
+ItemHandlers::UseInField.add(:MEDICINE,proc{|item|
+  Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
+  pbCommonEvent(28)
+    next 2
 })
 ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))

@@ -31,6 +31,19 @@ GoodRod
 #-------------------------------
 004 # Temperate Zone
 25,10,10
+Water
+    INKAY,30,33
+    WARTORTLE,27,35
+    SEISMITOAD,34,35
+    VAPOREON,26,36
+    POPPLIO,5,15
+OldRod
+    MAGIKARP,6
+    FEEBAS,7
+GoodRod
+    POLIWAG,5,15
+    MAGIKARP,3,8
+    PSYDUCK,7,13
 LandMorning
     HOPPIP,2,8
     SUNKERN,5,10
@@ -70,19 +83,19 @@ LandNight
     PHANPY,5,19
     FARFETCHD,5,15
     HYPNO,7,20
-Water
-    INKAY,30,33
-    WARTORTLE,27,35
-    SEISMITOAD,34,35
-    VAPOREON,26,36
-    POPPLIO,5,15
-OldRod
-    MAGIKARP,6
-    FEEBAS,7
-GoodRod
-    POLIWAG,5,15
-    MAGIKARP,3,8
-    PSYDUCK,7,13
+Bait
+    ODDISH,5
+    BLITZLE,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    OBSTAGOON,5
 #-------------------------------
 005 # Temperate Zone
 25,10,10
@@ -138,6 +151,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     SQUIRTLE,2
+Bait
+    ODDISH,5
+    BLITZLE,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    OBSTAGOON,5
 #-------------------------------
 006 # Temperate Zone
 25,10,10
@@ -180,6 +206,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    ODDISH,5
+    BLITZLE,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    OBSTAGOON,5
 #-------------------------------
 007 # Temperate Zone
 25,10,10
@@ -222,6 +261,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    SPEAROW,5
+    BLITZLE,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    DITTO,5
 #-------------------------------
 008 # Temperate Zone
 25,10,10
@@ -264,6 +316,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    MUNNA,5
+    MAWILE,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    DITTO,5
 #-------------------------------
 009 # Temperate Zone
 25,10,10
@@ -306,6 +371,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    WOOBAT,5
+    BLITZLE,5
+    PINECO,5
+    PIKACHU,5
+    LICKITUNG,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    KABUTO,5
 #-------------------------------
 013 # Temperate Zone
 25,10,10
@@ -348,6 +426,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    ODDISH,5
+    STANTLER,5
+    ELECTRIKE,5
+    PIKACHU,5
+    EEVEE,5
+    HYPNO,5
+    TORCHIC,5
+    TREVENANT,5
+    SMEARGLE,5
+    YAMPER,5
+    RAICHU,5
+    UNOWN,5
 #-------------------------------
 016 # Mountain Zone
 25,10,10
@@ -396,6 +487,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    MAGBY,5
+    LARVITAR,5
+    SUDOWOODO,5
+    PIKACHU,5
+    AERODACTYL,5
+    HYPNO,5
+    ROCKRUFF,5
+    GLOOM,5
+    PARASECT,5
+    YAMPER,5
+    RAICHU,5
+    DITTO,5
 #-------------------------------
 017 # Mountain Zone
 25,10,10
@@ -438,6 +542,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    EKANS,5
+    LARVITAR,5
+    ARBOK,5
+    VENOMOTH,5
+    PRIMEAPE,5
+    WEEPINGBELL,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 019 # Mountain Zone
 25,10,10
@@ -480,6 +597,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    CHINGLING,5
+    LARVITAR,5
+    ARBOK,5
+    PERSIAN,5
+    PRIMEAPE,5
+    WEEPINGBELL,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 024 # Mountain Zone
 25,10,10
@@ -522,6 +652,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    CHINGLING,5
+    LARVITAR,5
+    ARBOK,5
+    PERSIAN,5
+    PRIMEAPE,5
+    WEEPINGBELL,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 028 # Mountain Zone
 25,10,10
@@ -564,6 +707,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    CHINGLING,5
+    LARVITAR,5
+    ARBOK,5
+    PERSIAN,5
+    PRIMEAPE,5
+    WEEPINGBELL,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 029 # Mountain Zone
 25,10,10
@@ -606,6 +762,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    CHINGLING,5
+    LARVITAR,5
+    ARBOK,5
+    PERSIAN,5
+    PRIMEAPE,5
+    WEEPINGBELL,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 030 # Mountain Zone
 25,10,10
@@ -648,6 +817,19 @@ LandNight
     AERODACTYL,3
     SNORLAX,3,5
     CHARMANDER,10
+Bait
+    CHINGLING,5
+    LARVITAR,5
+    ARBOK,5
+    PERSIAN,5
+    MUK,5
+    KANGASKHAN,5
+    ROCKRUFF,5
+    GRAVELER,5
+    ELECTRODE,5
+    KADABRA,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 031 # Mountain Interior
 25,5,5
@@ -664,6 +846,19 @@ Cave
     DIGLETT,3
     WHISMUR,3,5
     DUNSPARCE,10
+CaveDeep
+    EKANS,5
+    SANDSHREW,5
+    GRAVELER,5
+    BRONZOR,5
+    ABSOL,5
+    MAGNEMITE,5
+    MAGNEMITE,5
+    KOFFING,5
+    TORKOAL,5
+    GOLBAT,5
+    GENGAR,5
+    CHANSEY,5
 #-------------------------------
 033 # Swamp Zone
 25,10,10
@@ -706,6 +901,19 @@ LandNight
     SWALOT,3
     TANGROWTH,3,5
     SWAMPERT,10
+Bait
+    HERACROSS,5
+    SWALOT,5
+    ARBOK,5
+    MUDKIP,5
+    MUK,5
+    ESPEON,5
+    UMBREON,5
+    QUILLADIN,5
+    ELECTRODE,5
+    SWADLOON,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 034 # Swamp Zone
 25,10,10
@@ -730,7 +938,7 @@ LandDay
     SWADLOON,27
     GURDURR,30
     DRILBUR,29
-    STUNKY,30
+    BULBASAUR,30
     SEVIPER,30
     GULPIN,34
     GABITE,29
@@ -748,6 +956,19 @@ LandNight
     SWALOT,3
     TANGROWTH,3,5
     SWAMPERT,10
+Bait
+    TYROGUE,5
+    SWALOT,5
+    ARBOK,5
+    MILTANK,5
+    MUK,5
+    DUSTOX,5
+    BRELOOM,5
+    COMBUSKEN,5
+    LINOONE,5
+    SWADLOON,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 035 # Swamp Zone
 25,10,10
@@ -772,7 +993,7 @@ LandDay
     SWADLOON,27
     GURDURR,30
     DRILBUR,29
-    STUNKY,30
+    BULBASAUR,30
     SEVIPER,30
     GULPIN,34
     GABITE,29
@@ -790,6 +1011,19 @@ LandNight
     SWALOT,3
     TANGROWTH,3,5
     SWAMPERT,10
+Bait
+    VOLBEAT,5
+    ILLUMISE,5
+    ARBOK,5
+    MILTANK,5
+    MUK,5
+    DUSTOX,5
+    BRELOOM,5
+    COMBUSKEN,5
+    LINOONE,5
+    SWADLOON,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 036 # Deep Swamp
 25,10,10
@@ -879,6 +1113,19 @@ LandNight
     RHYHORN,3
     ESPURR,3,5
     SWAMPERT,10
+Bait
+    CHERUBI,5
+    WHIMSICOTT,5
+    DARUMAKA,5
+    MILTANK,5
+    MUK,5
+    FLOATZEL,5
+    COMBEE,5
+    ROSERADE,5
+    LINOONE,5
+    LUDICOLO,5
+    GOGOAT,5
+    POPPLIO,5
 #-------------------------------
 045 # Temperate Zone
 25,10,10
@@ -921,6 +1168,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     HYPNO,10
+Bait
+    WOOBAT,5
+    BLITZLE,5
+    PINECO,5
+    PIKACHU,5
+    LICKITUNG,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    KABUTO,5
 #-------------------------------
 047 # Temperate Zone
 25,10,10
@@ -976,6 +1236,19 @@ LandNight
     PHANPY,3
     FARFETCHD,3,5
     SQUIRTLE,2
+Bait
+    WOOBAT,5
+    BLITZLE,5
+    PINECO,5
+    PIKACHU,5
+    LICKITUNG,5
+    HYPNO,5
+    TORCHIC,5
+    RALTS,5
+    FALINKS,5
+    YAMPER,5
+    RAICHU,5
+    KABUTO,5
 #-------------------------------
 053 # Southern Beach
 25,10,10
@@ -1005,6 +1278,19 @@ GoodRod
     POLIWHIRL,20,35
     MAGIKARP,5,14
     KINGLER,28,36
+Bait
+    KRABBY,5
+    CORPHISH,5
+    LUVDISK,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    OSHAWOTT,5
+    VAPOREON,5
 #-------------------------------
 057 # Temperate Ocean
 25,10,10
@@ -1318,6 +1604,19 @@ LandNight
     RHYHORN,3
     ESPURR,3,5
     SWAMPERT,10
+Bait
+    CHERUBI,5
+    WHIMSICOTT,5
+    DARUMAKA,5
+    MILTANK,5
+    MUK,5
+    FLOATZEL,5
+    COMBEE,5
+    ROSERADE,5
+    LINOONE,5
+    LUDICOLO,5
+    GOGOAT,5
+    POPPLIO,5
 #-------------------------------
 071 # Ice Cave
 25,10,10
@@ -1389,6 +1688,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 073 # Winter Zone
 25,10,10
@@ -1444,6 +1756,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 074 # Winter Zone
 25,10,10
@@ -1499,6 +1824,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 075 # Winter Zone
 25,10,10
@@ -1554,6 +1892,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 077 # Winter Zone
 25,10,10
@@ -1609,6 +1960,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 078 # Winter Zone
 25,10,10
@@ -1664,6 +2028,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 079 # Winter Zone
 25,10,10
@@ -1719,6 +2096,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 080 # Winter Zone
 25,10,10
@@ -1774,6 +2164,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 082 # Winter Zone
 25,10,10
@@ -1829,6 +2232,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    SNOM,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 083 # Winter Zone
 25,10,10
@@ -1884,6 +2300,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    SNOM,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 084 # Winter Zone
 25,10,10
@@ -1939,6 +2368,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 085 # Winter Zone
 25,10,10
@@ -1994,6 +2436,19 @@ LandNight
     SANDSLASH,6,10
     MAMOSWINE,7,12
     GLACEON,5,24
+Bait
+    BELLSPROUT,5
+    BELLOSSOM,5
+    WEAVILE,5
+    STARYU,5
+    LICKITUNG,5
+    HYPNO,5
+    WAILMER,5
+    EELEKTRIK,5
+    WISHIWASHI,5
+    CLAUNCHER,5
+    SNIVY,5
+    CARNIVINE,5
 #-------------------------------
 098 # Ice Temple
 25,25,10
@@ -2116,7 +2571,7 @@ LandDay
     SWADLOON,27
     GURDURR,30
     DRILBUR,29
-    STUNKY,30
+    BULBASAUR,30
     FALINKS,30
     GULPIN,34
     GABITE,29
@@ -2134,6 +2589,19 @@ LandNight
     SWALOT,3
     TANGROWTH,3,5
     SWAMPERT,10
+Bait
+    VOLBEAT,5
+    ILLUMISE,5
+    ARBOK,5
+    MILTANK,5
+    MUK,5
+    DUSTOX,5
+    BRELOOM,5
+    COMBUSKEN,5
+    LINOONE,5
+    SWADLOON,5
+    POLIWHIRL,5
+    SLOWPOKE,5
 #-------------------------------
 110 # Deep Swamp
 25,10,10
@@ -3157,6 +3625,64 @@ GoodRod
     TYMPOLE,3,8
     WISHIWASHI,7,13
 #-------------------------------
+163 # Deep Caves
+25,10,10
+Cave
+    ONIX,5
+    PARAS,5
+    CROBAT,5
+    DUGTRIO,5
+    RHYDON,5
+    CLAYDOL,5
+    EXCADRILL,5
+    LAIRON,5
+    TORKOAL,5
+    CLEFAIRY,5
+    MACHAMP,5
+    TORTERRA,5
+CaveDeep
+    LOUDRED,5
+    WOBBUFFET,5
+    ONIX,5
+    CROBAT,5
+    MAROWAK,5
+    MAGCARGO,5
+    DUGTRIO,5
+    DIGLETT,5
+    PUPITAR,5
+    SHELGON,5
+    TORKOAL,5
+    HARIYAMA,5
+#-------------------------------
+197 # Deep Caves
+25,10,10
+Cave
+    ONIX,5
+    PARAS,5
+    CROBAT,5
+    DUGTRIO,5
+    RHYDON,5
+    CLAYDOL,5
+    EXCADRILL,5
+    LAIRON,5
+    TORKOAL,5
+    CLEFAIRY,5
+    MACHAMP,5
+    TORTERRA,5
+CaveDeep
+    LOUDRED,5
+    WOBBUFFET,5
+    ONIX,5
+    CROBAT,5
+    MAROWAK,5
+    MAGCARGO,5
+    DUGTRIO,5
+    DIGLETT,5
+    PUPITAR,5
+    SHELGON,5
+    TORKOAL,5
+    HARIYAMA,5
+#-------------------------------
 200 # Forest Zone
 25,10,10
 Cave
@@ -3172,6 +3698,19 @@ Cave
     TROPIUS,5
     TREECKO,5
     CHIKORITA,5
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 201 # Forest Zone
 25,10,10
@@ -3188,6 +3727,19 @@ Cave
     BEEDRILL,5
     TREECKO,5
     CHIKORITA,5
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 202 # Forest Zone
 25,10,10
@@ -3204,6 +3756,19 @@ Cave
     TROPIUS,5
     TREECKO,5
     CHIKORITA,5
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 203 # Forest Zone
 25,10,10
@@ -3233,6 +3798,19 @@ GoodRod
     DRATINI,5,15
     DRATINI,3,8
     DRATINI,7,13
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 204 # Forest Zone
 25,10,10
@@ -3249,6 +3827,19 @@ Cave
     BUTTERFREE,5
     TREECKO,5
     CHIKORITA,5
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 205 # West Shore
 25,10,10
@@ -3287,6 +3878,19 @@ Cave
     TROPIUS,5
     TREECKO,5
     CHIKORITA,5
+Bait
+    DEINO,5
+    CATERPIE,5
+    PINSIR,5
+    PINECO,5
+    BURMY,5
+    DUSTOX,5
+    WEEDLE,5
+    ANORITH,5
+    GROTLE,5
+    SWADLOON,5
+    LARVESTA,5
+    HYDREIGON,5
 #-------------------------------
 207 # Northern Area 
 25,10,10
@@ -3462,6 +4066,35 @@ LandNight
     DRAGONAIR,5
     TORTERRA,5
 #-------------------------------
+211 # Deep Caves
+25,10,10
+Cave
+    ONIX,5
+    PARAS,5
+    CROBAT,5
+    DUGTRIO,5
+    RHYDON,5
+    CLAYDOL,5
+    EXCADRILL,5
+    LAIRON,5
+    TORKOAL,5
+    CAMERUPT,5
+    STEELIX,5
+    TORTERRA,5
+CaveDeep
+    LOUDRED,5
+    WOBBUFFET,5
+    ONIX,5
+    CROBAT,5
+    MAROWAK,5
+    MAGCARGO,5
+    DUGTRIO,5
+    VIBRAVA,5
+    PUPITAR,5
+    SHELGON,5
+    TORKOAL,5
+    GABITE,5
+#-------------------------------
 248 # Temperate Skies
 25,10,10
 Water
@@ -3470,45 +4103,6 @@ Water
     FLYGON,5
     TOGETIC,5
     ARCHEOPS,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 249 # Temperate Skies
 25,10,10
@@ -3518,45 +4112,6 @@ Water
     MANDIBUZZ,5
     TOGETIC,5
     ARCHEOPS,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 250 # Shore Skies
 25,10,10
@@ -3566,45 +4121,6 @@ Water
     MANDIBUZZ,5
     MINIOR,5
     DECIDUEYE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 251 # Shore Skies
 25,10,10
@@ -3614,45 +4130,6 @@ Water
     FLYGON,5
     TOGETIC,5
     ARCHEOPS,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 252 # Temperate Skies
 25,10,10
@@ -3662,45 +4139,6 @@ Water
     MANDIBUZZ,5
     ORICORIO,5
     DECIDUEYE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 253 # Ocean Skies
 25,10,10
@@ -3710,45 +4148,6 @@ Water
     MANDIBUZZ,5
     MINIOR,5
     DECIDUEYE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 254 # Ocean Skies
 25,10,10
@@ -3758,45 +4157,6 @@ Water
     GLISCOR,5
     MINIOR,5
     DECIDUEYE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 255 # Temperate Skies
 25,10,10
@@ -3806,45 +4166,6 @@ Water
     GLISCOR,5
     MINIOR,5
     DECIDUEYE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 256 # Mountain Skies
 25,10,10
@@ -3854,45 +4175,6 @@ Water
     ALTARIA,5
     MINIOR,5
     DRAMPA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 257 # Mountain Skies
 25,10,10
@@ -3902,45 +4184,6 @@ Water
     ALTARIA,5
     MINIOR,5
     SALAMENCE,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 258 # Mountain Skies
 25,10,10
@@ -3950,47 +4193,8 @@ Water
     ALTARIA,5
     MINIOR,5
     DRAMPA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
-259 # Mountain Skies (Monkey 1)
+259 # Mountain Skies
 25,10,10
 Water
     JUMPLUFF,5
@@ -3998,45 +4202,6 @@ Water
     ALTARIA,5
     MINIOR,5
     DRAMPA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 260 # Temperate Skies
 25,10,10
@@ -4046,45 +4211,6 @@ Water
     ALTARIA,5
     MINIOR,5
     DRAMPA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 261 # Shore Skies
 25,10,10
@@ -4094,45 +4220,6 @@ Water
     GLISCOR,5
     DODRIO,5
     GOLBAT,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 262 # Shore Skies
 25,10,10
@@ -4142,45 +4229,6 @@ Water
     GLISCOR,5
     DODRIO,5
     GOLBAT,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 263 # Shore Skies
 25,10,10
@@ -4190,45 +4238,6 @@ Water
     GLISCOR,5
     DODRIO,5
     STARAVIA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 264 # Shore Skies
 25,10,10
@@ -4238,45 +4247,6 @@ Water
     GLISCOR,5
     DODRIO,5
     STARAVIA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
 265 # Shore Skies
 25,10,10
@@ -4286,47 +4256,8 @@ Water
     GLISCOR,5
     DODRIO,5
     STARAVIA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
 #-------------------------------
-266 # Mountain Skies (Monk Lower)
+266 # Mountain Skies
 25,10,10
 Water
     JUMPLUFF,5
@@ -4334,42 +4265,19 @@ Water
     GLISCOR,5
     DODRIO,5
     STARAVIA,5
-LandMorning
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandDay
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-LandNight
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+#-------------------------------
+282 # Passage
+25,10,10
+Cave
+    NUMEL,5
+    BELDUM,5
+    ROLYCOLY,5
+    DRILBUR,5
+    TORKOAL,5
+    DONPHAN,5
+    DIGGERSBY,5
+    LUNATONE,5
+    SOLROCK,5
+    DREDNAW,5
+    ARMALDO,5
+    BASTIODON,5

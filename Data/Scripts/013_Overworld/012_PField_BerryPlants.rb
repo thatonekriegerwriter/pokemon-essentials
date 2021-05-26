@@ -359,10 +359,10 @@ def pbBerryPlant
       # Gen 4 planting mechanics
       if !berryData[7] || berryData[7]==0 # No mulch used yet
         cmd=pbMessage(_INTL("It's soft, earthy soil."),[
-                            _INTL("Fertilize"),
                             _INTL("Plant Berry"),
+                            _INTL("Fertilize"),
                             _INTL("Exit")],-1)
-        if cmd==0 # Fertilize
+        if cmd==1 # Fertilize
           ret=0
           pbFadeOutIn {
             scene = PokemonBag_Scene.new
@@ -370,10 +370,10 @@ def pbBerryPlant
             ret = screen.pbChooseItemScreen(Proc.new { |item| pbIsMulch?(item) })
           }
           if ret>0
+		  $PokemonBag.pbDeleteItem(ret,1)
             if pbIsMulch?(ret)
               berryData[7]=ret
               pbMessage(_INTL("The {1} was scattered on the soil.\1",PBItems.getName(ret)))
-			  $PokemonBag.pbDeleteItem(:ret,1)
               if pbConfirmMessage(_INTL("Want to plant a Berry?"))
                 pbFadeOutIn {
                   scene = PokemonBag_Scene.new
@@ -400,7 +400,7 @@ def pbBerryPlant
             end
             return
           end
-        elsif cmd==1 # Plant Berry
+        elsif cmd==0 # Plant Berry
           pbFadeOutIn {
             scene = PokemonBag_Scene.new
             screen = PokemonBagScreen.new(scene,$PokemonBag)
