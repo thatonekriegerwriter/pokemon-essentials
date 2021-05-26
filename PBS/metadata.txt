@@ -110,6 +110,7 @@ ShowArea = true
 [015]
 # Temperate Zone
 BattleBack = Cave
+Outdoor = true
 #-------------------------------
 [016]
 # Mountain Zone
@@ -168,6 +169,9 @@ ShowArea = true
 [025]
 # Transition Room
 #-------------------------------
+[026]
+# Test Map
+#-------------------------------
 [027]
 # Temperate Zone
 BattleBack = Forest
@@ -193,6 +197,7 @@ ShowArea = true
 [031]
 # Mountain Interior
 BattleBack = Cave
+Outdoor = false
 #-------------------------------
 [033]
 # Swamp Zone
@@ -201,12 +206,32 @@ Bicycle = true
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[034]
+# Swamp Zone
+Outdoor = true
+#-------------------------------
+[035]
+# Swamp Zone
+Outdoor = true
+#-------------------------------
 [036]
 # Deep Swamp
 BattleBack = Swamp
 Weather = Rain,100
 DarkMap = false
+Outdoor = true
 ShowArea = true
+#-------------------------------
+[038]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[039]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[040]
+# Swamp Base
 #-------------------------------
 [042]
 # Southern Ocean
@@ -231,12 +256,52 @@ BattleBack = Forest
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[047]
+# Temperate Zone
+Outdoor = true
+#-------------------------------
+[049]
+# Temperate Zone
+Outdoor = true
+#-------------------------------
 [051]
 # INTRO
+#-------------------------------
+[053]
+# Southern Beach
+Outdoor = true
+#-------------------------------
+[054]
+# Empty Home
+Outdoor = true
+#-------------------------------
+[055]
+#  Home
+Outdoor = true
+#-------------------------------
+[057]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[058]
+# Temperate Ocean
+Outdoor = true
 #-------------------------------
 [059]
 # Temperate Ocean
 DiveMap = 66
+Outdoor = true
+#-------------------------------
+[060]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[061]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[062]
+# Temperate Ocean
 Outdoor = true
 #-------------------------------
 [064]
@@ -258,15 +323,18 @@ Outdoor = true
 #-------------------------------
 [072]
 # Winter Zone
-Outdoor = true
+Weather = Blizzard,20
+Outdoor = false
 ShowArea = true
 #-------------------------------
 [073]
 # Winter Zone
+Weather = Snow,20
 Outdoor = true
 #-------------------------------
 [074]
 # Winter Zone
+Weather = Blizzard,20
 Outdoor = true
 #-------------------------------
 [075]
@@ -305,11 +373,60 @@ Outdoor = true
 # Winter Zone
 Outdoor = true
 #-------------------------------
+[086]
+# Winter Zone
+Outdoor = true
+#-------------------------------
 [096]
 # Xatu Home
 #-------------------------------
+[104]
+# Southern Ocean
+#-------------------------------
+[105]
+# Swamp Zone
+#-------------------------------
 [106]
 # Temperate Area
+#-------------------------------
+[109]
+# Swamp Zone
+Outdoor = true
+#-------------------------------
+[110]
+# Deep Swamp
+Outdoor = false
+#-------------------------------
+[111]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[113]
+# Humid Area
+#-------------------------------
+[130]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[131]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[132]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[133]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[134]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[135]
+# Humid Zone
+Outdoor = true
 #-------------------------------
 [136]
 # Humid Zone
@@ -319,9 +436,354 @@ Outdoor = true
 # Humid Zone
 Outdoor = true
 #-------------------------------
+[138]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[139]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[140]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[141]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[142]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[143]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[144]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[145]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[146]
+# Temperate Zone
+Outdoor = true
+#-------------------------------
+[147]
+# MAP147
+#-------------------------------
+[155]
+# MAP155
+Outdoor = false
+#-------------------------------
+[156]
+# Humid Zone
+Outdoor = true
+#-------------------------------
+[157]
+# Humid Area R
+Outdoor = true
+#-------------------------------
+[158]
+# Humid Area B
+Outdoor = true
+#-------------------------------
+[159]
+# Humid Area BR
+Outdoor = true
+#-------------------------------
+[160]
+# Humid Area RR
+Outdoor = true
+#-------------------------------
+[161]
+# Humid Area BRR
+Outdoor = true
+#-------------------------------
+[198]
+# Forest Area
+#-------------------------------
+[199]
+# Northern Area
+#-------------------------------
+[200]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[201]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[202]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[203]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[204]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[205]
+# West Shore
+Outdoor = true
+#-------------------------------
+[206]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[207]
+# Northern Area 
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[208]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[209]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[210]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[218]
+# Temperate-Snowy Zone
+Outdoor = true
+#-------------------------------
+[243]
+# Temperate Zone
+Outdoor = true
+#-------------------------------
+[244]
+# Forest Zone
+Outdoor = true
+#-------------------------------
+[248]
+# Temperate Skies
+Outdoor = true
+#-------------------------------
+[249]
+# Temperate Skies
+Outdoor = true
+#-------------------------------
+[250]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[251]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[252]
+# Temperate Skies
+Outdoor = true
+#-------------------------------
+[253]
+# Ocean Skies
+Outdoor = true
+#-------------------------------
+[254]
+# Ocean Skies
+Outdoor = true
+#-------------------------------
+[255]
+# Temperate Skies
+Outdoor = true
+#-------------------------------
+[256]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[257]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[258]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
 [259]
 # Mountain Skies
+Outdoor = true
+#-------------------------------
+[260]
+# Temperate Skies
+Outdoor = true
+#-------------------------------
+[261]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[262]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[263]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[264]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[265]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[266]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[271]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[272]
+# Shore Skies
+Outdoor = true
 #-------------------------------
 [273]
 # Shore Skies
+Outdoor = true
+#-------------------------------
+[274]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[275]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[276]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[278]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[279]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[280]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[281]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[283]
+# Mountain Skies
+Outdoor = true
+#-------------------------------
+[290]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[291]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[293]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[294]
+# Shore Skies
+Outdoor = true
+#-------------------------------
+[295]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[296]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[299]
+# Temperate Zone Top
+Outdoor = true
+#-------------------------------
+[300]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[302]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[307]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[308]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[309]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[310]
+# Temperate Ocean
+Outdoor = true
+#-------------------------------
+[311]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[312]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[313]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[314]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[315]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[316]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[317]
+# Northern Area
+Weather = Sun,30
+Outdoor = true
+#-------------------------------
+[318]
+# Western Temperate
+Outdoor = true
+#-------------------------------
+[319]
+# Western Temperate
+Outdoor = true
+#-------------------------------
+[320]
+# Western Temperate
 Outdoor = true
