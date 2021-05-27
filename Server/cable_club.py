@@ -14,6 +14,7 @@ PORT = 52879
 PBS_DIR = r"C:\Users\Owner\Documents\GitHub\pokemon-essentials\PBS"
 
 EBDX_INSTALLED = False
+VERSION_18 = True
 
 class Server:
     def __init__(self, host, port, pbs_dir):
@@ -254,6 +255,7 @@ def make_party_validator(pbs_dir):
     pokemon_by_name = {}
     forms_by_name = {}
     form_moves_by_name = {}
+    form_egg_by_name = {}
 
     with io.open(os.path.join(pbs_dir, r'abilities.txt'), 'r', encoding='utf-8-sig') as abilities_pbs:
         for row in csv.reader(abilities_pbs):
@@ -287,7 +289,15 @@ def make_party_validator(pbs_dir):
                     forms_by_name[name]=[0]
                 forms_by_name[name].append(int(number))
                 if 'Moves' in form:
-                    form_moves_by_name[name] = form['Moves']
+                    if name not in form_moves_by_name:
+                        form_moves_by_name[name] = form['Moves']
+                    else:
+                        form_moves_by_name[name] = ",".join([form_moves_by_name[name],form['Moves']])
+                if 'EggMoves' in form:
+                    if name not in form_egg_by_name:
+                        form_egg_by_name[name] = form['EggMoves']
+                    else:
+                        form_egg_by_name[name] = ",".join([form_egg_by_name[name],form['EggMoves']])
         default_forms = {0}
 
     with io.open(os.path.join(pbs_dir, r'pokemon.txt'), 'r', encoding='utf-8-sig') as pokemon_pbs:
@@ -305,10 +315,13 @@ def make_party_validator(pbs_dir):
                 ability_names.extend(species['HiddenAbility'].split(','))
             abilities = {abilities_by_name[a] for a in ability_names if a}
             # change to support multiform mons in v17/v18
-            moves_=",".join([species['Moves'],form_moves_by_name.get(species['InternalName'],"")])
-            moves = {moves_by_name[m] for m in moves_.split(',')[1::2] if m}
+            moves = {moves_by_name[m] for m in species['Moves'].split(',')[1::2] if m}
             if 'EggMoves' in species:
                 moves |= {moves_by_name[m] for m in species['EggMoves'].split(',') if m}
+            if species['InternalName'] in form_moves_by_name:
+                moves |= {m for m in form_moves_by_name[species['InternalName']].split(',')[1::2] if m}
+            if species['InternalName'] in form_egg_by_name:
+                moves |= {m for m in form_egg_by_name[species['InternalName']].split(',') if m}
             pokemon_by_name[species['InternalName']] = pokemon_by_number[int(number)] = Pokemon(genders, abilities, moves, forms_by_name.get(species['InternalName'], default_forms))
 
     with io.open(os.path.join(pbs_dir, r'tm.txt'), 'r', encoding='utf-8-sig') as tm_pbs:
@@ -331,91 +344,113 @@ def make_party_validator(pbs_dir):
         errors = []
         try:
             for _ in range(record.int()):
-                species = record.int()
-                species_ = pokemon_by_number.get(species)
-                if species_ is None: errors.append("invalid species")
-                level = record.int()
-                if not (1 <= level <= 100): errors.append("invalid level")
-                personal_id = record.int()
-                trainer_id = record.int()
-                if trainer_id & ~0xFFFFFFFF: errors.append("invalid trainerID")
-                ot = record.str()
-                if not (len(ot) <= 10): errors.append("invalid ot")
-                ot_gender = record.int()
-                if ot_gender not in {0, 1}: errors.append("invalid otgender")
-                exp = record.int()
-                # TODO: validate exp.
-                form = record.int()
-                if form not in species_.forms: errors.append("invalid form")
-                item = record.int()
-                if item and item not in item_ids: errors.append("invalid item")
-                for _ in range(record.int()):
-                    move = record.int()
-                    if move and move not in species_.moves: errors.append("invalid move")
-                    ppup = record.int()
-                    if not (0 <= ppup <= 3): errors.append("invalid ppup")
-                ability = record.int()
-                if not (ability in species_.abilities): errors.append("invalid ability")
-                gender = record.int()
-                if gender not in species_.genders: errors.append("invalid gender")
-                nature = record.int()
-                if not (0 <= nature <= 24): errors.append("invalid nature")
-                for _ in range(6):
-                    iv = record.int()
-                    if not (0 <= iv <= 31): errors.append("invalid IV")
-                    ev = record.int()
-                    if not (0 <= ev <= 255): errors.append("invalid EV")
-                happiness = record.int()
-                if not (0 <= happiness <= 255): errors.append("invalid happiness")
-                name = record.str()
-                if not (len(name) <= 10): errors.append("invalid name")
-                ballused = record.int()
-                eggsteps = record.int()
-                # TODO: validate ball. nb: depends on Essentials version...
-                # XXX: do these all have to be nil?
-                abilityflag = record.int_or_none()
-                #if abilityflag is not None: errors.append("abilityflag")
-                genderflag = record.int_or_none()
-                #if genderflag is not None: errors.append("genderflag")
-                natureflag = record.int_or_none()
-                #if natureflag is not None: errors.append("natureflag")
-                shinyflag = record.bool_or_none()
-                # mail
-                if record.bool():
-                    m_item = record.int()
-                    m_msg = record.str()
-                    m_sender = record.str()
-                    m_species1 = record.int_or_none()
-                    if m_species1:
-                        #[species,gender,shininess,form,shadowness,is egg]
-                        m_gender1 = record.int()
-                        m_shiny1 = record.bool()
-                        m_form1 = record.int()
-                        m_shadow1 = record.bool()
-                        m_egg1 = record.bool()
-                    
-                    m_species2 = record.int_or_none()
-                    if m_species2:
-                        #[species,gender,shininess,form,shadowness,is egg]
-                        m_gender2 = record.int()
-                        m_shiny2 = record.bool()
-                        m_form2 = record.int()
-                        m_shadow2 = record.bool()
-                        m_egg2 = record.bool()
-                    
-                    m_species3 = record.int_or_none()
-                    if m_species3:
-                        #[species,gender,shininess,form,shadowness,is egg]
-                        m_gender3 = record.int()
-                        m_shiny3 = record.bool()
-                        m_form3 = record.int()
-                        m_shadow3 = record.bool()
-                        m_egg3 = record.bool()
-                if EBDX_INSTALLED:
-                    shiny = record.bool()
-                    superhue = record.str()
-                    if shiny and (superhue == ""): errors.append("uninitialized supershiny")
-                    supervarient = record.bool_or_none()
+                def validate_pokemon():
+                    species = record.int()
+                    species_ = pokemon_by_number.get(species)
+                    if species_ is None: errors.append("invalid species")
+                    level = record.int()
+                    if not (1 <= level <= 100): errors.append("invalid level")
+                    personal_id = record.int()
+                    trainer_id = record.int()
+                    if trainer_id & ~0xFFFFFFFF: errors.append("invalid trainerID")
+                    ot = record.str()
+                    if not (len(ot) <= 10): errors.append("invalid ot")
+                    ot_gender = record.int()
+                    if ot_gender not in {0, 1}: errors.append("invalid otgender")
+                    language = record.int()
+                    exp = record.int()
+                    # TODO: validate exp.
+                    form = record.int()
+                    if form not in species_.forms: errors.append("invalid form")
+                    item = record.int()
+                    if item and item not in item_ids: errors.append("invalid item")
+                    for _ in range(record.int()):
+                        move = record.int()
+                        if move and move not in species_.moves: errors.append("invalid move")
+                        ppup = record.int()
+                        if not (0 <= ppup <= 3): errors.append("invalid ppup")
+                    for _ in range(record.int()):
+                        move = record.int()
+                        if move and move not in species_.moves: errors.append("invalid first move")
+                    genderflag = record.int_or_none()
+                    if genderflag and genderflag not in species_.genders: errors.append("invalid gender")
+                    shinyflag = record.bool_or_none()
+                    abilityflag = record.int_or_none()
+                    natureflag = record.int_or_none()
+                    if natureflag and not (0 <= natureflag <= 24): errors.append("invalid nature flag")
+                    if VERSION_18:
+                        naturestatflag = record.int_or_none()
+                        if naturestatflag and not (0 <= naturestatflag <= 24): errors.append("invalid nature stat override")
+                    for _ in range(6):
+                        iv = record.int()
+                        if not (0 <= iv <= 31): errors.append("invalid IV")
+                        if VERSION_18: record.bool_or_none() # iv maxed
+                        ev = record.int()
+                        if not (0 <= ev <= 255): errors.append("invalid EV")
+                    happiness = record.int()
+                    if not (0 <= happiness <= 255): errors.append("invalid happiness")
+                    name = record.str()
+                    if not (len(name) <= 10): errors.append("invalid name")
+                    # TODO: validate ball. nb: depends on Essentials version...
+                    ballused = record.int()
+                    eggsteps = record.int()
+                    pokerus = record.int_or_none()
+                    # obtain data
+                    obtain_map = record.int()
+                    obtain_text = record.str()
+                    obtain_level = record.int()
+                    obtain_mode = record.int()
+                    hatched_map = record.int()
+                    # contest stats
+                    cool = record.int()
+                    beauty = record.int()
+                    cute = record.int()
+                    smart = record.int()
+                    tough = record.int()
+                    sheen = record.int()
+                    #ribbons
+                    for _ in range(record.int()):
+                        ribbon = record.int()
+                    # mail
+                    if record.bool():
+                        m_item = record.int()
+                        m_msg = record.str()
+                        m_sender = record.str()
+                        m_species1 = record.int_or_none()
+                        if m_species1:
+                            #[species,gender,shininess,form,shadowness,is egg]
+                            m_gender1 = record.int()
+                            m_shiny1 = record.bool()
+                            m_form1 = record.int()
+                            m_shadow1 = record.bool()
+                            m_egg1 = record.bool()
+                        
+                        m_species2 = record.int_or_none()
+                        if m_species2:
+                            #[species,gender,shininess,form,shadowness,is egg]
+                            m_gender2 = record.int()
+                            m_shiny2 = record.bool()
+                            m_form2 = record.int()
+                            m_shadow2 = record.bool()
+                            m_egg2 = record.bool()
+                        
+                        m_species3 = record.int_or_none()
+                        if m_species3:
+                            #[species,gender,shininess,form,shadowness,is egg]
+                            m_gender3 = record.int()
+                            m_shiny3 = record.bool()
+                            m_form3 = record.int()
+                            m_shadow3 = record.bool()
+                            m_egg3 = record.bool()
+                    # fused
+                    if record.bool():
+                        validate_pokemon()
+                    if EBDX_INSTALLED:
+                        shiny = record.bool()
+                        superhue = record.str()
+                        if shiny and (superhue == ""): errors.append("uninitialized supershiny")
+                        supervarient = record.bool_or_none()
+                validate_pokemon()
             rest = record.raw_all()
             if rest:
                 errors.append(f"remaining data: {', '.join(rest)}")

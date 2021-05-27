@@ -63,6 +63,7 @@ RECIPEMART1=[
 [:BLACKFLUTE,1,[:STARPIECE,2],nil, true],
 [:EVIOLITE,1,[:STARPIECE,3],nil, true],
 [:SACREDASH,1,[:STARPIECE,15],nil, true],
+[:LEFTOVERS,1,[:STARPIECE,3],nil, true],
 [:FULLINCENSE,1,[:STARPIECE,2],nil, true],
 [:LAXINCENSE,1,[:STARPIECE,2],nil, true],
 [:LUCKINCENSE,1,[:STARPIECE,2],nil, true],

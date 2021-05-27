@@ -102,6 +102,7 @@ class PokeBattle_Battler
   #=============================================================================
   # Return true if Pokémon continues attacking (although it may have chosen to
   # use a different move in disobedience), or false if attack stops.
+=begin
   def pbObedienceCheck?(choice)
     return true if usingMultiTurnAttack?
     return true if choice[0]!=:UseMove
@@ -111,13 +112,6 @@ class PokeBattle_Battler
     # Pokémon may be disobedient; calculate if it is
     badgeLevel = 10*(@battle.pbPlayer.numbadges+1)
     badgeLevel = PBExperience.maxLevel if @battle.pbPlayer.numbadges>=8
-    if @pokemon.happiness<75
-      siobcheck=(((@pokemon.happiness*(2+(@pokemon.happiness/100)))*(@battle.pbRandom(256)+@happiness))/255).floor
-      if siobcheck <@pokemon.happiness
-        disobedient=true#|=a<@pokemon.happiness
-      end
-	  return pbDisobey(choice,badgeLevel)
-    end
     if @pokemon.foreign?(@battle.pbPlayer) && @level>badgeLevel
       a = ((@level+badgeLevel)*@battle.pbRandom(256)/256).floor
       disobedient |= (a>=badgeLevel)
@@ -127,7 +121,86 @@ class PokeBattle_Battler
     # Pokémon is disobedient; make it do something else
     return pbDisobey(choice,badgeLevel)
   end
+=end
 
+  def pbObedienceCheck?(choice)
+    if choice[0]!=1
+      return true
+    end
+    if @battle.pbOwnedByPlayer?(@index) && @battle.internalbattle
+      #badgelevel=0
+      #badgelevel=20  if @happiness>=50
+      #badgelevel=30  if @happiness>=75
+      #badgelevel=40  if @happiness>=100
+      #badgelevel=50  if @happiness>=125
+      #badgelevel=60  if @happiness>=150
+      #badgelevel=70  if @happiness>=175
+      #badgelevel=80  if @happiness>=200
+      #badgelevel=100 if @happiness>=225
+      move=choice[2]
+      disobedient=false
+      if @happiness<75
+        a=(((@happiness*(2+(@happiness/100)))*(@battle.pbRandom(256)+@happiness))/255).floor
+        if a <@happiness
+          disobedient=true#|=a<@happiness
+        end
+      end
+      if self.respond_to?("pbHyperModeObedience")
+        disobedient|=!self.pbHyperModeObedience(move)
+      end
+      if disobedient
+        @effects[PBEffects::Rage]=false
+        if self.status==PBStatuses::SLEEP && 
+           (move.function==0x11 || move.function==0xB4) # Snore, Sleep Talk
+          @battle.pbDisplay(_INTL("{1} ignored orders while asleep!",pbThis)) 
+          return false
+        end
+        b=(((@happiness*(2+(@happiness/100)))*@battle.pbRandom(256))/255).floor
+        if b<@happiness
+          #if !@battle.pbCanShowFightMenu?(@index)
+            #return false
+          #end
+          othermoves=[]
+          for i in 0..3
+            next if i==choice[1]
+            othermoves[othermoves.length]=i if @battle.pbCanChooseMove?(@index,i,false)
+          end
+          if othermoves.length>0
+            @battle.pbDisplay(_INTL("{1} ignored orders!",pbThis)) 
+            newchoice=othermoves[@battle.pbRandom(othermoves.length)]
+            choice[1]=newchoice
+            choice[2]=@moves[newchoice]
+            choice[3]=-1
+          end
+          return true
+        elsif self.status==0
+          c=b-@happiness
+          r=@battle.pbRandom(256)
+          if r<c && pbCanSleep?(false,true)
+            pbSleepSelf()
+            @battle.pbDisplay(_INTL("{1} took a nap!",pbThis))
+            return false
+          end
+          r-=c
+          if r<c
+            @battle.pbDisplay(_INTL("It hurt itself to make you angry!"))
+            pbConfusionDamage
+          else
+            message=@battle.pbRandom(4)
+            @battle.pbDisplay(_INTL("{1} ignored orders!",pbThis)) if message==0
+            @battle.pbDisplay(_INTL("{1} turned away!",pbThis)) if message==1
+            @battle.pbDisplay(_INTL("{1} is loafing around!",pbThis)) if message==2
+            @battle.pbDisplay(_INTL("{1} pretended not to notice!",pbThis)) if message==3
+          end
+          return false
+        end
+      end
+      return true
+    else
+      return true
+    end
+  end
+  
   def pbDisobey(choice,badgeLevel)
     move = choice[2]
     PBDebug.log("[Disobedience] #{pbThis} disobeyed")

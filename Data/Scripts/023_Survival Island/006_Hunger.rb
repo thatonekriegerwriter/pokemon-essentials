@@ -278,7 +278,7 @@ $game_variables[208]+=10#208 is Sleep
 elsif isConst?(berry,PBItems,:LEMONADE)
 $game_variables[207]+=11#207 is Saturation
 $game_variables[206]+=7#206 is Thirst
-$game_variables[208]+=3#208 is Sleep
+$game_variables[208]+=7#208 is Sleep
 elsif isConst?(berry,PBItems,:HONEY)
 $game_variables[207]+=20#207 is Saturation
 $game_variables[206]+=2#206 is Thirst

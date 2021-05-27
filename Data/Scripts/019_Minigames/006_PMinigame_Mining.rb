@@ -165,6 +165,7 @@ class MiningGameScene
      [:OVALSTONE,150, 24,17, 3,3,[1,1,1,1,1,1,1,1,1]],
      [:EVERSTONE,150, 21,20, 4,2,[1,1,1,1,1,1,1,1]],
      [:STARPIECE,100, 0,17, 3,3,[0,1,0,1,1,1,0,1,0]],
+     [:STARPIECE,100, 0,17, 3,3,[0,1,0,1,1,1,0,1,0]],
      [:EVIOLITE,25, 0,20, 3,3,[0,1,0,1,1,1,0,1,0]],
      [:LINKSTONE,25, 0,23, 3,3,[1,1,1,1,1,1,1,1,1]],
      [:RAREBONE,50, 3,17, 6,3,[1,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,1]],
@@ -329,7 +330,7 @@ class MiningGameScene
   end
 
   def pbNoDuplicateItems(newitem)
-    return true if newitem==:HEARTSCALE   # Allow multiple Heart Scales
+    return true if newitem==[:HEARTSCALE,:STARPIECE]   # Allow multiple Heart Scales
     fossils=[:DOMEFOSSIL,:HELIXFOSSIL,:OLDAMBER,:ROOTFOSSIL,
              :SKULLFOSSIL,:ARMORFOSSIL,:CLAWFOSSIL]
     plates=[:INSECTPLATE,:DREADPLATE,:DRACOPLATE,:ZAPPLATE,:FISTPLATE,

@@ -658,6 +658,51 @@ def pbCompileMoves
   pbAddScript(code,"PBMoves")
 end
 
+def pbCompileContestMoves
+  records=[]
+  contestmovenames=[]
+  contestmovedescs=[]
+  contestmovedata=[]
+  maxValue=0
+  haveRsAttacks=pbRgssExists?("Data/rsattacks.dat")
+  pbCompilerEachPreppedLine("PBS/contestmoves.txt"){|line,lineno|
+     thisline=line.clone
+     record=[]
+     flags=0
+
+       record=pbGetCsvRecord(line,lineno,[0,"vnseUUUs",
+          nil,nil,nil,["Cool","Beauty","Cute","Smart","Tough"],nil,nil,nil,nil
+       ])
+     
+     maxValue=[maxValue,record[0]].max
+     contestmovedata[record[0]]=[
+        record[3],  # Contest Type
+        record[4],  # Hearts
+        record[5],  # Jam
+        record[6]   # Function Code
+     ].pack("CCCC")
+     contestmovenames[record[0]]=record[2]  # Name
+     contestmovedescs[record[0]]=record[7] # Description
+     records.push(record)
+     }
+  defaultdata=[0,0,0,0].pack("CCCC")
+  File.open("Data/contestmoves.dat","wb"){|file|
+     for i in 0...contestmovedata.length
+       file.write(contestmovedata[i] ? contestmovedata[i] : defaultdata)
+     end
+  }
+  MessageTypes.setMessages(MessageTypes::ContestMoves,contestmovenames)
+  MessageTypes.setMessages(MessageTypes::ContestMoveDescriptions,contestmovedescs)
+  code="class PBContestMoves\r\n"
+  for rec in records
+    code+="#{rec[1]}=#{rec[0]}\r\n"
+  end
+  code+="\r\ndef self.getName(id)\r\nreturn pbGetMessage(MessageTypes::Moves,id)\r\nend"
+  code+="\r\ndef self.getCount\r\nreturn #{records.length}\r\nend"
+  code+="\r\ndef self.maxValue\r\nreturn #{maxValue}\r\nend\r\nend"
+  eval(code)
+  pbAddScript(code,"PBContestMoves")
+end
 #===============================================================================
 # Compile battle animations
 #===============================================================================

@@ -1071,7 +1071,8 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   ### Controls
   textchunks=[]
   controls=[]
-  while text[/(?:\\(w|f|ff|ts|cl|me|se|wt|wtnp|ch)\[([^\]]*)\]|\\(g|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
+#edit
+  while text[/(?:\\(w|f|ff|ts|cl|me|se|wt|wtnp|ch|q)\[([^\]]*)\]|\\(g|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
     textchunks.push($~.pre_match)
     if $~[1]
       controls.push([$~[1].downcase,$~[2],-1])
@@ -1189,6 +1190,9 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
       when "cn"     # Display coins window
         coinwindow.dispose if coinwindow
         coinwindow = pbDisplayCoinsWindow(msgwindow,goldwindow)
+#edit
+      when "q"     # ability to customize the y positions oft any message with //q[yvalue]
+        yval=param.to_i
       when "wu"
         msgwindow.y = 0
         atTop = true
@@ -1235,6 +1239,10 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
       controls[i] = nil
     end
     break if !letterbyletter
+	#edit
+	if yval
+	   msgwindow.y=yval
+	end
     Graphics.update
     Input.update
     facewindow.update if facewindow
@@ -1429,4 +1437,18 @@ def pbMessageWaitForInput(msgwindow,frames,showPause=false)
     yield if block_given?
   end
   msgwindow.stopPause if msgwindow && showPause
+end
+def pbCustomMessage(message,skin=nil,newx=nil,newwidth=nil,&block)
+  ret=0
+  msgwindow=Kernel.pbCreateMessageWindow(nil,skin)
+  msgwindow.x=newx if newx!=nil
+  if newwidth!=nil
+    msgwindow.width=newwidth
+  else
+  msgwindow.width=Graphics.width-msgwindow.x
+end
+  pbMessageDisplay(msgwindow,message,&block)
+  pbDisposeMessageWindow(msgwindow)
+  Input.update
+  return ret
 end

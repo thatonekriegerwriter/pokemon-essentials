@@ -155,6 +155,14 @@ MenuHandlers.addEntry(:ACHIEVEMENTS,_INTL("Achievements"),"menuAchievements",pro
     screen.pbStartScreen
   }
 },proc{ return true })
+# Quest Menü
+MenuHandlers.addEntry(:QUESTS,_INTL("Quests"),"menuQuests",proc{|menu|
+    scene = QuestScene.new
+    screen = QuestScreen.new(scene)
+    pbFadeOutIn(99999) { 
+      screen.pbStartScreen
+  }
+},proc{ return true })
 # Options Screen
 MenuHandlers.addEntry(:OPTIONS,_INTL("Options"),"menuOptions",proc{|menu|
   scene = PokemonOption_Scene.new

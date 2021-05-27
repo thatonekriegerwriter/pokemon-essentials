@@ -1171,6 +1171,9 @@ def pbCompileAllData(mustCompile)
     # Depends on PBSpecies, PBMoves
     yield(_INTL("Compiling shadow move data"))
     pbCompileShadowMoves
+    # Depends on PBContestMoves EDIT
+    yield(_INTL("Compiling contest move data"))
+    pbCompileContestMoves
     yield(_INTL("Compiling messages"))
     pbCompileAnimations
     pbCompileTrainerEvents(mustCompile)
@@ -1211,6 +1214,7 @@ def pbCompiler
        "trainer_types.dat",
        "trainers.dat",
        "types.dat",
+       "contestmoves.dat",
        "Constants.rxdata"
     ]
     textFiles = [
@@ -1230,6 +1234,7 @@ def pbCompiler
        "trainerlists.txt",
        "trainers.txt",
        "trainertypes.txt",
+       "contestmoves.txt",
        "types.txt"
     ]
     latestDataTime = 0

@@ -1,7 +1,7 @@
 begin
 PluginManager.register({
   :name    => "Cable Club",
-  :version => "1.4",
+  :version => "1.5",
   :link    => "https://www.pokecommunity.com/showthread.php?t=449364",
   :credits => ["mGriffin","Khaikaa","Vendily"]
 })
@@ -19,7 +19,7 @@ end
 # Returns false if an error occurred.
 def pbCableClub
   if $Trainer.party.length == 0
-    Kernel.pbMessage(_INTL("I'm sorry, you must have a Pokémon to enter the Dream Connect."))
+    Kernel.pbMessage(_INTL("I'm sorry, you must have a Pokémon to enter the Cable Club."))
     return
   end
   msgwindow = Kernel.pbCreateMessageWindow()
@@ -47,24 +47,24 @@ def pbCableClub
   rescue Connection::Disconnected => e
     case e.message
     when "disconnected"
-      Kernel.pbMessageDisplay(msgwindow, _INTL("Thank you for using the Dream Connect. We hope to see you again soon."))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("Thank you for using the Cable Club. We hope to see you again soon."))
       return true
     when "invalid party"
-      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, your party contains Pokémon not allowed in the Dream Connect."))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, your party contains Pokémon not allowed in the Cable Club."))
       return false
     when "peer disconnected"
       Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the other trainer has disconnected."))
       return true
     else
-      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Dream Connect server has malfunctioned!"))
+      Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Cable Club server has malfunctioned!"))
       return false
     end
   rescue Errno::ECONNREFUSED
-    Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Dream Connect server is down at the moment."))
+    Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Cable Club server is down at the moment."))
     return false
   rescue
     pbPrintException($!)
-    Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Dream Connect has malfunctioned!"))
+    Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, the Cable Club has malfunctioned!"))
     return false
   ensure
     Kernel.pbDisposeMessageWindow(msgwindow)
@@ -101,6 +101,7 @@ module CableClub
       battle_type = nil
       chosen = nil
       partner_chosen = nil
+      partner_confirm = false
 
       loop do
         if state != last_state
@@ -112,7 +113,7 @@ module CableClub
 
         Graphics.update
         Input.update
-        if Input.press?(Input::B)
+        if Input.trigger?(Input::B)
           message = case state
             when :await_server; _INTL("Abort connection?\\^")
             when :await_partner; _INTL("Abort search?\\^")
@@ -220,7 +221,7 @@ module CableClub
                     writer.sym(:ok)
                     writer.int(chosen)
                   end
-                  state = :await_trade_pokemon
+                  state = :await_trade_confirm
                 else
                   connection.send do |writer|
                     writer.sym(:cancel)
@@ -287,7 +288,7 @@ module CableClub
                     writer.sym(:ok)
                     writer.int(chosen)
                   end
-                  state = :await_trade_pokemon
+                  state = :await_trade_confirm
                 else
                   connection.send do |writer|
                     writer.sym(:cancel)
@@ -309,43 +310,31 @@ module CableClub
 
         # Waiting for the partner to select a Pokémon to trade.
         when :await_trade_pokemon
-          if partner_chosen.nil?
-            pbMessageDisplayDots(msgwindow, _INTL("Waiting for {1} to pick a Pokémon", partner_name), frame)
-          else
+          if partner_confirm
             pbMessageDisplayDots(msgwindow, _INTL("Waiting for {1} to resynchronize", partner_name), frame)
+          else
+            pbMessageDisplayDots(msgwindow, _INTL("Waiting for {1} to confirm the trade", partner_name), frame)
           end
 
           connection.update do |record|
             case (type = record.sym)
             when :ok
               partner = PokeBattle_Trainer.new(partner_name, $Trainer.trainertype)
-              partner_chosen = record.int
               pbHealAll
-              partner_party.each{|pkmn| pkmn.heal}
+              partner_party.each {|pkmn| pkmn.heal}
               pkmn = partner_party[partner_chosen]
-              abort=$Trainer.ablePokemonCount==1 && $Trainer.party[chosen]==$Trainer.ablePokemonParty[0] && pkmn.isEgg?
-              able_party=partner_party.find_all { |p| p && !p.isEgg? && !p.isFainted? }
-              abort|=able_party.length==1 && pkmn==able_party[0] && $Trainer.party[chosen].isEgg?
-              unless abort
-                partner_party[partner_chosen] = $Trainer.party[chosen]
-                do_trade(chosen, partner, pkmn)
-                connection.send do |writer|
-                  writer.sym(:update)
-                  write_pkmn(writer, $Trainer.party[chosen])
-                end
-              else
-                Kernel.pbMessageDisplay(msgwindow, _INTL("The trade was unable to be completed."))
-                partner_chosen = nil
-                if client_id == 0
-                  state = :choose_activity
-                else
-                  state = :await_choose_activity
-                end
+              partner_party[partner_chosen] = $Trainer.party[chosen]
+              do_trade(chosen, partner, pkmn)
+              connection.send do |writer|
+                writer.sym(:update)
+                write_pkmn(writer, $Trainer.party[chosen])
               end
+              partner_confirm = true
 
             when :update
               partner_party[partner_chosen] = parse_pkmn(record)
               partner_chosen = nil
+              partner_confirm = false
               if client_id == 0
                 state = :choose_activity
               else
@@ -354,6 +343,8 @@ module CableClub
 
             when :cancel
               Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, {1} doesn't want to trade after all.", partner_name))
+              partner_chosen = nil
+              partner_confirm = false
               if client_id == 0
                 state = :choose_activity
               else
@@ -365,6 +356,83 @@ module CableClub
             end
           end
 
+        when :await_trade_confirm
+          if partner_chosen.nil?
+            pbMessageDisplayDots(msgwindow, _INTL("Waiting for {1} to pick a Pokémon", partner_name), frame)
+          else
+            pbMessageDisplayDots(msgwindow, _INTL("Waiting for {1} to confirm the trade", partner_name), frame)
+          end
+
+          connection.update do |record|
+            case (type = record.sym)
+            when :ok
+              partner_chosen = record.int
+              pbHealAll
+              partner_party.each {|pkmn| pkmn.heal}
+              partner_pkmn = partner_party[partner_chosen]
+              your_pkmn = $Trainer.party[chosen]
+              abort=$Trainer.ablePokemonCount==1 && your_pkmn==$Trainer.ablePokemonParty[0] && partner_pkmn.isEgg?
+              able_party=partner_party.find_all { |p| p && !p.isEgg? && !p.isFainted? }
+              abort|=able_party.length==1 && partner_pkmn==able_party[0] && your_pkmn.isEgg?
+              unless abort
+                partner_speciesname = (partner_pkmn.isEgg?) ? _INTL("Egg") : PBSpecies.getName(getID(PBSpecies,partner_pkmn.species))
+                your_speciesname = (your_pkmn.isEgg?) ? _INTL("Egg") : PBSpecies.getName(getID(PBSpecies,your_pkmn.species))
+                loop do
+                  Kernel.pbMessageDisplay(msgwindow, _INTL("{1} has offered {2} ({3}) for your {4} ({5}).\\^",partner_name,
+                      partner_pkmn.name,partner_speciesname,your_pkmn.name,your_speciesname))
+                  command = Kernel.pbShowCommands(msgwindow, [_INTL("Check {1}'s offer",partner_name), _INTL("Check My Offer"), _INTL("Accept/Deny Trade")], -1)
+                  case command
+                  when 0
+                    check_pokemon(partner_pkmn)
+                  when 1
+                    check_pokemon(your_pkmn)
+                  when 2
+                    Kernel.pbMessageDisplay(msgwindow, _INTL("Confirm the trade of {1} ({2}) for your {3} ({4}).\\^",partner_pkmn.name,partner_speciesname,
+                        your_pkmn.name,your_speciesname))
+                    if Kernel.pbShowCommands(msgwindow, [_INTL("Yes"), _INTL("No")], 2) == 0
+                      connection.send do |writer|
+                        writer.sym(:ok)
+                      end
+                      state = :await_trade_pokemon
+                      break
+                    else
+                      connection.send do |writer|
+                        writer.sym(:cancel)
+                      end
+                      partner_chosen = nil
+                      connection.discard(1)
+                      if client_id == 0
+                        state = :choose_activity
+                      else
+                        state = :await_choose_activity
+                      end
+                      break
+                    end
+                  end
+                end
+              else
+                Kernel.pbMessageDisplay(msgwindow, _INTL("The trade was unable to be completed."))
+                partner_chosen = nil
+                if client_id == 0
+                  state = :choose_activity
+                else
+                  state = :await_choose_activity
+                end
+              end
+              
+            when :cancel
+              Kernel.pbMessageDisplay(msgwindow, _INTL("I'm sorry, {1} doesn't want to trade after all.", partner_name))
+              partner_chosen = nil
+              if client_id == 0
+                state = :choose_activity
+              else
+                state = :await_choose_activity
+              end
+
+            else
+              raise "Unknown message: #{type}"
+            end
+          end  
         else
           raise "Unknown state: #{state}"
         end
@@ -417,7 +485,6 @@ module CableClub
     def self.do_trade(index, you, your_pkmn)
       my_pkmn = $Trainer.party[index]
       your_pkmn.obtainMode = 2 # traded
-      your_pkmn.pbRecordFirstMoves
       $Trainer.seen[your_pkmn.species] = true
       $Trainer.owned[your_pkmn.species] = true
       pbSeenForm(your_pkmn)
@@ -440,6 +507,14 @@ module CableClub
         screen.pbEndScene
       }
       return chosen
+    end
+    
+    def self.check_pokemon(pkmn)
+      pbFadeOutIn(99999) {
+        scene = PokemonSummaryScene.new
+        screen = PokemonSummary.new(scene)
+        screen.pbStartScreen([pkmn],0)
+      }
     end
   elsif defined?(ESSENTIALSVERSION) && ESSENTIALSVERSION =~ /^17/
     def self.do_battle(connection, client_id, seed, battle_type, partner, partner_party)
@@ -482,7 +557,6 @@ module CableClub
     def self.do_trade(index, you, your_pkmn)
       my_pkmn = $Trainer.party[index]
       your_pkmn.obtainMode = 2 # traded
-      your_pkmn.pbRecordFirstMoves
       $Trainer.seen[your_pkmn.species] = true
       $Trainer.owned[your_pkmn.species] = true
       pbSeenForm(your_pkmn)
@@ -506,10 +580,18 @@ module CableClub
       }
       return chosen
     end
+    
+    def self.check_pokemon(pkmn)
+      pbFadeOutIn(99999) {
+        scene = PokemonSummary_Scene.new
+        screen = PokemonSummaryScreen.new(scene)
+        screen.pbStartScreen([pkmn],0)
+      }
+    end
   elsif defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
     def self.do_battle(connection, client_id, seed, battle_type, partner, partner_party)
       pbHealAll # Avoids having to transmit damaged state.
-      partner_party.each{|pkmn| pkmn.heal} # back to back battles desync without it.
+      partner_party.each {|pkmn| pkmn.heal} # back to back battles desync without it.
       scene = pbNewBattleScene
       battle = PokeBattle_CableClub.new(connection, client_id, scene, partner_party, partner)
       battle.endSpeeches = [""]
@@ -547,7 +629,6 @@ module CableClub
     def self.do_trade(index, you, your_pkmn)
       my_pkmn = $Trainer.party[index]
       your_pkmn.obtainMode = 2 # traded
-      your_pkmn.pbRecordFirstMoves
       $Trainer.seen[your_pkmn.species] = true
       $Trainer.owned[your_pkmn.species] = true
       pbSeenForm(your_pkmn)
@@ -571,6 +652,14 @@ module CableClub
       }
       return chosen
     end
+    
+    def self.check_pokemon(pkmn)
+      pbFadeOutIn(99999) {
+        scene = PokemonSummary_Scene.new
+        screen = PokemonSummaryScreen.new(scene)
+        screen.pbStartScreen([pkmn],0)
+      }
+    end
   end
 
   def self.write_party(writer)
@@ -581,12 +670,14 @@ module CableClub
   end
 
   def self.write_pkmn(writer, pkmn)
+    is_v18 = defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
     writer.int(pkmn.species)
     writer.int(pkmn.level)
     writer.int(pkmn.personalID)
     writer.int(pkmn.trainerID)
     writer.str(pkmn.ot)
     writer.int(pkmn.otgender)
+    writer.int(pkmn.language)
     writer.int(pkmn.exp)
     writer.int(pkmn.form)
     writer.int(pkmn.item)
@@ -595,21 +686,41 @@ module CableClub
       writer.int(move.id)
       writer.int(move.ppup)
     end
-    writer.int(pkmn.ability)
-    writer.int(pkmn.gender)
-    writer.int(pkmn.nature)
+    writer.int(pkmn.firstmoves.length)
+    pkmn.firstmoves.each do |move|
+      writer.int(move)
+    end
+    # in hindsight, don't really need to send the calculated values
+    writer.nil_or(:int, pkmn.genderflag)
+    writer.nil_or(:bool, pkmn.shinyflag)
+    writer.nil_or(:int, pkmn.abilityflag)
+    writer.nil_or(:int, pkmn.natureflag)
+    writer.nil_or(:int, pkmn.natureOverride) if is_v18
     for i in 0...6
       writer.int(pkmn.iv[i])
+      writer.nil_or(:bool, pkmn.ivMaxed[i]) if is_v18
       writer.int(pkmn.ev[i])
     end
     writer.int(pkmn.happiness)
     writer.str(pkmn.name)
     writer.int(pkmn.ballused)
     writer.int(pkmn.eggsteps)
-    writer.nil_or(:int, pkmn.abilityflag)
-    writer.nil_or(:int, pkmn.genderflag)
-    writer.nil_or(:int, pkmn.natureflag)
-    writer.nil_or(:bool, pkmn.shinyflag)
+    writer.nil_or(:int,pkmn.pokerus)
+    writer.int(pkmn.obtainMap)
+    writer.nil_or(:str,pkmn.obtainText)
+    writer.int(pkmn.obtainLevel)
+    writer.int(pkmn.obtainMode)
+    writer.int(pkmn.hatchedMap)
+    writer.int(pkmn.cool)
+    writer.int(pkmn.beauty)
+    writer.int(pkmn.cute)
+    writer.int(pkmn.smart)
+    writer.int(pkmn.tough)
+    writer.int(pkmn.sheen)
+    writer.int(pkmn.ribbonCount)
+    pkmn.ribbons.each do |ribbon|
+      writer.int(ribbon)
+    end
     writer.bool(!!pkmn.mail)
     if pkmn.mail
       writer.int(pkmn.mail.item)
@@ -649,6 +760,10 @@ module CableClub
         writer.nil_or(:int,nil)
       end
     end
+    writer.bool(!!pkmn.fused)
+    if pkmn.fused
+      write_pkmn(writer, pkmn.fused)
+    end
     if defined?(EliteBattle) # EBDX compat
       # this looks so dumb I know, but the variable can be nil, false, or an int.
       writer.bool(pkmn.shiny?)
@@ -666,6 +781,7 @@ module CableClub
   end
 
   def self.parse_pkmn(record)
+    is_v18 = defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
     species = record.int
     level = record.int
     pkmn = PokeBattle_Pokemon.new(species, level, $Trainer)
@@ -673,13 +789,12 @@ module CableClub
     pkmn.trainerID = record.int
     pkmn.ot = record.str
     pkmn.otgender = record.int
+    pkmn.language = record.int
     pkmn.exp = record.int
     form = record.int
-    if defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
-      pkmn.forcedForm = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
+    if is_v18
       pkmn.formSimple = form
     else
-      pkmn.forcedForm = true if form != 0
       pkmn.formNoCall = form
     end
     pkmn.setItem(record.int)
@@ -688,22 +803,40 @@ module CableClub
       pkmn.moves[i] = PBMove.new(record.int)
       pkmn.moves[i].ppup = record.int
     end
-    pkmn.moves.compact!
-    pkmn.setAbility(record.int)
-    pkmn.setGender(record.int)
-    pkmn.setNature(record.int)
+    pkmn.firstmoves = []
+    for i in 0...record.int
+      pkmn.firstmoves.push(record.int)
+    end
+    pkmn.genderflag = record.nil_or(:int)
+    pkmn.shinyflag = record.nil_or(:bool)
+    pkmn.abilityflag = record.nil_or(:int)
+    pkmn.natureflag = record.nil_or(:int)
+    pkmn.natureOverride = record.nil_or(:int) if is_v18
     for i in 0...6
       pkmn.iv[i] = record.int
+      pkmn.ivMaxed[i] = record.nil_or(:bool) if is_v18
       pkmn.ev[i] = record.int
     end
     pkmn.happiness = record.int
     pkmn.name = record.str
     pkmn.ballused = record.int
     pkmn.eggsteps = record.int
-    pkmn.abilityflag = record.nil_or(:int)
-    pkmn.genderflag = record.nil_or(:int)
-    pkmn.natureflag = record.nil_or(:int)
-    pkmn.shinyflag = record.nil_or(:bool)
+    pkmn.pokerus = record.nil_or(:int)
+    pkmn.obtainMap = record.int
+    pkmn.obtainText = record.nil_or(:str)
+    pkmn.obtainLevel = record.int
+    pkmn.obtainMode = record.int
+    pkmn.hatchedMap = record.int
+    pkmn.cool = record.int
+    pkmn.beauty = record.int
+    pkmn.cute = record.int
+    pkmn.smart = record.int
+    pkmn.tough = record.int
+    pkmn.sheen = record.int
+    pkmn.clearAllRibbons
+    for i in 0...record.int
+      pkmn.giveRibbon(record.int)
+    end
     if record.bool() # mail
       m_item = record.int()
       m_msg = record.str()
@@ -745,6 +878,9 @@ module CableClub
         m_poke3 = nil
       end
       pkmn.mail = PokemonMail.new(m_item,m_msg,m_sender,m_poke1,m_poke2,m_poke3)
+    end
+    if record.bool()# fused
+      pkmn.fused = parse_pkmn(record)
     end
     if defined?(EliteBattle) # EBDX compat
       # this looks so dumb I know, but the variable can be nil, false, or an int.
@@ -812,7 +948,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
           @scene.pbFrameUpdate(cw)
           Graphics.update
           Input.update
-          raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
+          raise Connection::Disconnected.new("disconnected") if Input.trigger?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
           @connection.update do |record|
             case (type = record.sym)
             when :forfeit
@@ -1018,7 +1154,7 @@ seems to work when commented. for some reason...
             @scene.pbFrameUpdate(cw)
             Graphics.update
             Input.update
-            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
+            raise Connection::Disconnected.new("disconnected") if Input.trigger?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
             @connection.update do |record|
               case (type = record.sym)
               when :forfeit
@@ -1103,7 +1239,7 @@ if defined?(ESSENTIALS_VERSION) && ESSENTIALS_VERSION =~ /^18/
             @battle.scene.pbFrameUpdate(cw)
             Graphics.update
             Input.update
-            raise Connection::Disconnected.new("disconnected") if Input.press?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
+            raise Connection::Disconnected.new("disconnected") if Input.trigger?(Input::B) && Kernel.pbConfirmMessageSerious("Would you like to disconnect?")
             @battle.connection.update do |record|
               case (type = record.sym)
               when :forfeit

@@ -164,6 +164,11 @@ class PokeBattle_Battle
       case foeParty.length
       when 1
         pbDisplayPaused(_INTL("Oh! A wild {1} appeared!",foeParty[0].name))
+        if $PokemonTemp.foreignIndex
+          pbDisplayPaused(_INTL("Huh? {1} appeared!",foeParty[0].name))
+        else
+          pbDisplayPaused(_INTL("Oh! A wild {1} appeared!",foeParty[0].name))
+        end
       when 2
         pbDisplayPaused(_INTL("Oh! A wild {1} and {2} appeared!",foeParty[0].name,
            foeParty[1].name))
@@ -364,6 +369,9 @@ class PokeBattle_Battle
   end
 
   def pbLoseMoney
+   if trainerBattle?
+     pbDisplayPaused(_INTL("You lost the fight."))
+   else
     return if !@internalBattle || !@moneyGain
     return if $game_switches[NO_MONEY_LOSS]
     maxLevel = pbMaxLevelInTeam(0,0)   # Player's Pokémon only, not partner's
@@ -372,14 +380,11 @@ class PokeBattle_Battle
     tMoney = maxLevel*multiplier[idxMultiplier]
     tMoney = pbPlayer.money if tMoney>pbPlayer.money
     oldMoney = pbPlayer.money
-    pbPlayer.money -= tMoney
+    pbPlayer.money -= 20
     moneyLost = oldMoney-pbPlayer.money
     if moneyLost>0
-      if trainerBattle?
-        pbDisplayPaused(_INTL("You gave ${1} to the winner...",moneyLost.to_s_formatted))
-      else
-        pbDisplayPaused(_INTL("You lost {1}% Health.",moneyLost.to_s_formatted))
-      end
+        pbDisplayPaused(_INTL("The Pokemon ran at you, causing damage.",moneyLost.to_s_formatted))
+    end
     end
   end
 

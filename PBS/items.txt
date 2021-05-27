@@ -774,3 +774,6 @@
 1919,TEA,Tea,Tea,2,200,"Tea.",1,1,0,
 1920,WATER,Water,Water,2,200,"Water.",1,1,0,
 1921,CARROTCAKE,Carrot Cake,Carrot Cake,2,200,"Water.",1,1,0,
+1922,POKEBLOCK,Pokeblock,Pokeblock,8,0,"A case for holding Pokeblocks made with a Berry Blender.",2,0,6,
+1923,POKENAV,PokeNav,PokeNav,8,0,"A item for checking Condition's stat.",2,0,6,
+1924,BERRYBLENDER,Berry Blender,Berry Blenders,8,0,"A item for mixing berries.",2,0,6,

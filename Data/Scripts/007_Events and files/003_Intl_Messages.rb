@@ -611,6 +611,9 @@ module MessageTypes
   PhoneMessages     = 22
   TrainerLoseText   = 23
   ScriptTexts       = 24
+  #Contest Edit
+  ContestMoves      = 25
+  ContestMoveDescriptions       = 26
   @@messages         = Messages.new
   @@messagesFallback = Messages.new("Data/messages.dat",true)
 

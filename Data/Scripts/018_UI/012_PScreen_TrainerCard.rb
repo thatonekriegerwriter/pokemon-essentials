@@ -57,7 +57,7 @@ class PokemonTrainerCard_Scene
          trainerhealth = _INTL("Wounded")
          healthColor=Color.new(255,125,55)
      else
-        if $Trainer.money < 25
+        if $Trainer.money >= 25
          trainerhealth = _INTL("Critical")
          healthColor=Color.new(255,55,55)
         end
@@ -78,10 +78,10 @@ class PokemonTrainerCard_Scene
              hungerColor=Color.new(255,125,55)
            else
                if $game_variables[205] >= 25
-                trainerhunger = _INTL("=Starving")
+                trainerhunger = _INTL("Starving")
                 hungerColor=Color.new(255,125,55)
                 else
-                 if $game_variables[205] == 0
+                 if $game_variables[205] >= 0
                    trainerhunger= _INTL("Dying")
                    hungerColor=Color.new(255,55,55)
 			    end
@@ -107,7 +107,7 @@ class PokemonTrainerCard_Scene
                 trainerthirst = _INTL("Dehydrated")
                 thirstColor=Color.new(255,125,55)
                 else
-                 if $game_variables[206] = 0
+                 if $game_variables[206] >= 0
                    trainerthirst= _INTL("Dying")
                    thirstColor=Color.new(255,55,55)
 			    end
@@ -132,7 +132,7 @@ class PokemonTrainerCard_Scene
                  trainersleep = _INTL("Deprived")
                  sleepColor=Color.new(255,125,55)
                 else
-                 if $game_variables[208] = 0
+                 if $game_variables[208] >= 0
                    trainersleep= _INTL("Dying")
                    sleepColor=Color.new(255,55,55)
 			    end
