@@ -149,7 +149,7 @@ MenuHandlers.addEntry(:QUIT,_INTL("\\contest"),"menuQuit",proc{|menu|
 },proc{ return pbInSafari? || pbInBugContest? })
 # Achievements
 MenuHandlers.addEntry(:ACHIEVEMENTS,_INTL("Achievements"),"menuAchievements",proc{|menu|
-  scene = PokemonAchievementsScene.new
+  scene = PokemonAchievements_Scene.new
   screen = PokemonAchievements.new(scene)
   pbFadeOutIn(99999) { 
     screen.pbStartScreen
