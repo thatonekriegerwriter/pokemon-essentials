@@ -202,7 +202,7 @@ berry=0
 pbFadeOutIn(99999){
 scene = PokemonBag_Scene.new
 screen = PokemonBagScreen.new(scene,$PokemonBag)
-berry = screen.pbChooseItemScreen
+berry = screen.pbChooseItemScreen(Proc.new { |item| pbIsFoodWater?(item) || pbIsBerry?(item) })
 }
 if berry>0
 $PokemonBag.pbDeleteItem(berry,1)
@@ -215,9 +215,61 @@ $game_variables[206]+=1
 $Trainer.money += 1
 elsif isConst?(berry,PBItems,:LEPPABERRY)
 $game_variables[205]+=5
-$game_variables[207]+=1
-$game_variables[206]+=1
-elsif isConst?(berry,PBItems,:SITRUSBERRY)
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:CHERIBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:CHESTOBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:PECHABERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:RAWSTBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:ASPEARBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:PERSIMBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:LUMBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:FIGYBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:WIKIBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:MAGOBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:AGUAVBERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:IAPAPABERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:IAPAPABERRY)
+$game_variables[205]+=5
+$game_variables[207]+=2
+$game_variables[206]+=2
+elsif isConst?(berry,PBItems,:RAZZBERRY)
 $game_variables[205]+=5
 $game_variables[207]+=7
 $game_variables[206]+=1
@@ -348,6 +400,35 @@ elsif isConst?(berry,PBItems,:CARROTCAKE)
 $game_variables[207]+=15#207 is Saturation
 $game_variables[206]+=15#206 is Thirst
 $game_variables[205]+=10#205 is Hunger
+
+
+#inedible
+elsif isConst?(berry,PBItems,:TEALEAF)
+$PokemonBag.pbStoreItem(:TEALEAF,1)
+elsif isConst?(berry,PBItems,:COCOABEAN)
+$PokemonBag.pbStoreItem(:COCOABEAN,1)
+elsif isConst?(berry,PBItems,:SUGARCANE)
+$PokemonBag.pbStoreItem(:SUGARCANE,1)
+elsif isConst?(berry,PBItems,:BAIT)
+$PokemonBag.pbStoreItem(:BAIT,1)
+elsif isConst?(berry,PBItems,:TREE)
+$PokemonBag.pbStoreItem(:TREE,1)
+elsif isConst?(berry,PBItems,:REDAPRICORN)
+$PokemonBag.pbStoreItem(:REDAPRICORN,1)
+elsif isConst?(berry,PBItems,:PINKAPRICORN)
+$PokemonBag.pbStoreItem(:PINKAPRICORN,1)
+elsif isConst?(berry,PBItems,:BLUEAPRICORN)
+$PokemonBag.pbStoreItem(:BLACKAPRICORN,1)
+elsif isConst?(berry,PBItems,:WHITEAPRICORN)
+$PokemonBag.pbStoreItem(:WHITEAPRICORN,1)
+elsif isConst?(berry,PBItems,:YELLOWAPRICORN)
+$PokemonBag.pbStoreItem(:YELLOWAPRICORN,1)
+elsif isConst?(berry,PBItems,:BLACKAPRICORN)
+$PokemonBag.pbStoreItem(:BLACKAPRICORN,1)
+elsif isConst?(berry,PBItems,:PURPLEAPRICORN)
+$PokemonBag.pbStoreItem(:PURPLEAPRICORN,1)
+elsif isConst?(berry,PBItems,:POWERHERB)
+$PokemonBag.pbStoreItem(:POWERHERB,1)
 #full belly
 end
 end
@@ -359,7 +440,7 @@ medicine=0
 pbFadeOutIn(99999){
 scene = PokemonBag_Scene.new
 screen = PokemonBagScreen.new(scene,$PokemonBag)
-medicine = screen.pbChooseItemScreen
+medicine = screen.pbChooseItemScreen(Proc.new { |item| pbIsMedicine?(item) })
 }
 if medicine>0
 $PokemonBag.pbDeleteItem(medicine,1)

@@ -131,6 +131,16 @@ def pbIsMegaStone?(item)   # Does NOT include Red Orb/Blue Orb
   return ret && ret==12
 end
 
+def pbIsFoodWater?(item)   # Does NOT include Red Orb/Blue Orb
+  ret = pbGetItemData(item,ITEM_TYPE)
+  return ret && ret==13
+end
+
+def pbIsMedicine?(item)   # Does NOT include Red Orb/Blue Orb
+  ret = pbGetItemData(item,ITEM_TYPE)
+  return ret && ret==14
+end
+
 # Important items can't be sold, given to hold, or tossed.
 def pbIsImportantItem?(item)
   itemData = pbLoadItemsData[getID(PBItems,item)]
@@ -936,6 +946,28 @@ def pbChooseFossil(var=0)
     scene = PokemonBag_Scene.new
     screen = PokemonBagScreen.new(scene,$PokemonBag)
     ret = screen.pbChooseItemScreen(Proc.new { |item| pbIsFossil?(item) })
+  }
+  $game_variables[var] = ret if var>0
+  return ret
+end
+
+def pbChooseFood(var=0)
+  ret = 0
+  pbFadeOutIn {
+    scene = PokemonBag_Scene.new
+    screen = PokemonBagScreen.new(scene,$PokemonBag)
+    ret = screen.pbChooseItemScreen(Proc.new { |item| pbIsFoodWater?(item) || pbIsBerry?(item) })
+  }
+  $game_variables[var] = ret if var>0
+  return ret
+end
+
+def pbChooseMedicine(var=0)
+  ret = 0
+  pbFadeOutIn {
+    scene = PokemonBag_Scene.new
+    screen = PokemonBagScreen.new(scene,$PokemonBag)
+    ret = screen.pbChooseItemScreen(Proc.new { |item| pbIsMedicine?(item) })
   }
   $game_variables[var] = ret if var>0
   return ret
