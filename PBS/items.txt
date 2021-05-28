@@ -742,7 +742,7 @@
 1887,SILVERORE,Silver Ore,Silver Ores,1,0,"Silver mined from the Mountain Area.",0,0,0,
 1888,GOLD2,Gold,Gold Bars,1,0,"Refined Gold from the Furnace.",0,0,0,
 1889,SILVER2,Silver,Silver Bars,1,0,"Refined Silver from the Furnace.",0,0,0,
-1890,COPPER2,Snatcher,Copper Bars,1,0,"Refined Copper from the Furnace.",0,0,0,
+1890,COPPER2,Copper Car,Copper Bars,1,0,"Refined Copper from the Furnace.",0,0,0,
 1891,CLAY2,Hardened Clay,Hardened Clay,1,0,"Refined Clay from the Furnace.",0,0,0,
 1892,DARTCASING,Dart Casing,Dart Casings,1,0,"A Casing for a dart to be created from.",0,0,0,
 1893,FERTILIZERMIX,Fertilizer Mix,Fertilizer Mix,1,0,"A Fertilizer mix made from bones. Can be used to make better fertilizers.",0,0,0,

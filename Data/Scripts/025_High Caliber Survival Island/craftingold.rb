@@ -499,19 +499,19 @@ module CraftsList
     [1833,406,447,1834],
     #RECIPE 9:
     #CHOCOLATE =BOWL,SUGAR,COCOABEANS 
-    [1904,1903,1905],    
-    [1904,1905,1903],
+    [1904,nil,1903,1905],    
+    [1904,nil,1905,1903],
     #RECIPE 10:
     #BREAD =WHEAT,WHEAT,WHEAT 
     [1918,1916,1916,1916],    
     #RECIPE 11:
     #TEA =FRESHWATER,TEALEAF 
-    [1919,237,1917],    
-    [1919,1917,237],  
+    [1919,nil,237,1917],    
+    [1919,nil,1917,237],  
     #RECIPE 12:
     #SWEETHEART =BOWL,SUGAR,COCOABEANS 
-    [236,1904,1905],    
-    [236,1905,1904],
+    [236,nil,1904,1905],    
+    [236,nil,1905,1904],
     #RECIPE 13:
     #CARROTCAKE =BOWL,SUGAR,COCOABEANS 
     [1921,1915,1905,240],    
