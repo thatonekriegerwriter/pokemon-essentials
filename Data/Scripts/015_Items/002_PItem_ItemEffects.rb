@@ -46,6 +46,12 @@ ItemHandlers::UseInField.add(:BERRYBLENDER,proc{|item|
     next 2
 })
 
+ItemHandlers::UseInField.add(:CLOCK,proc{|item|
+  Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
+  pbCommonEvent(29)
+    next 2
+})
+
 ItemHandlers::UseFromBag.add(:LVLDETECTOR,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
         if $game_switches[240]==false

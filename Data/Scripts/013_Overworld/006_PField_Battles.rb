@@ -630,6 +630,9 @@ def pbPickup(pkmn)
      :WHEAT,
      :COCOABEANS,
      :BERRYJUICE,
+     :STONE,
+     :STONE,
+     :ACORN,
      :ULTRABALL
   )
   # Rare items to find (2 items from this list are added to the pool)
