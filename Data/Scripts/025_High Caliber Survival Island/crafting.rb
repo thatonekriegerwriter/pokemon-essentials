@@ -279,13 +279,9 @@ def pbItemCrafter(stock,speech1=nil,speech2=nil)
     end
   end
   stock.compact! # Remove nils
-  if pbConfirmMessage(_INTL("Would you like to craft something?"))
-    pbMessage(speech1 ? speech1 : _INTL("Let's get started!"))
-    pbFadeOutIn {
-      scene = ItemCraft_Scene.new
-      screen = ItemCraft_Screen.new(scene,stock)
-      screen.pbStartScreen
-    }
-  end
-  pbMessage(speech2 ? speech2 : _INTL("Come back soon!"))
+  pbFadeOutIn {
+    scene = ItemCraft_Scene.new
+    screen = ItemCraft_Screen.new(scene,stock)
+    screen.pbStartScreen
+  }
 end
