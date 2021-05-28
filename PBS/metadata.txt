@@ -539,22 +539,22 @@ Outdoor = true
 #-------------------------------
 [207]
 # Northern Area 
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [208]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [209]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [210]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [218]
@@ -743,37 +743,37 @@ Outdoor = true
 #-------------------------------
 [311]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [312]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [313]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [314]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [315]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [316]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [317]
 # Northern Area
-Weather = Sun,30
+Weather = Sunny,30
 Outdoor = true
 #-------------------------------
 [318]
