@@ -345,9 +345,9 @@ $game_variables[207]+=8#207 is Saturation
 $game_variables[206]+=8#206 is Thirst
 $game_variables[205]+=2#205 is Hunger
 elsif isConst?(berry,PBItems,:CARROTCAKE)
-$game_variables[207]+=10#207 is Saturation
-$game_variables[206]+=10#206 is Thirst
-$game_variables[205]+=8#205 is Hunger
+$game_variables[207]+=15#207 is Saturation
+$game_variables[206]+=15#206 is Thirst
+$game_variables[205]+=10#205 is Hunger
 #full belly
 end
 end
