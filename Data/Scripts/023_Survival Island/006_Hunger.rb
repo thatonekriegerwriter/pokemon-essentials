@@ -269,7 +269,7 @@ elsif isConst?(berry,PBItems,:IAPAPABERRY)
 $game_variables[205]+=5
 $game_variables[207]+=2
 $game_variables[206]+=2
-elsif isConst?(berry,PBItems,:RAZZBERRY)
+elsif isConst?(berry,PBItems,:SITRUSBERRY)
 $game_variables[205]+=5
 $game_variables[207]+=7
 $game_variables[206]+=1
