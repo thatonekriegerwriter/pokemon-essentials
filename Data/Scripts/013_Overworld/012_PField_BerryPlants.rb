@@ -522,20 +522,36 @@ def pbBerryPlant
         pbMessage(_INTL("Too bad...\nThe Bag is full..."))
         return
       end
-      $PokemonBag.pbStoreItem(berry,berrycount)
-      if berrycount>1
-        pbMessage(_INTL("You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",berrycount,itemname))
-      else
-        pbMessage(_INTL("You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
-      end
+      $PokemonBag.pbStoreItem(berry,berrycount)  
+	  #edit
       pocket = pbGetPocket(berry)
       pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in the <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
          $Trainer.name,itemname,pocket,PokemonBag.pocketNames()[pocket]))
+      if isConst?(berry,PBItems,:APPLE)
+	    $PokemonBag.pbStoreItem(:ACORN,(rand(7)))
+        pbMessage(_INTL("You also put Trees in the Bag.\1"))
+	  end
       if NEW_BERRY_PLANTS
-        pbMessage(_INTL("The soil returned to its soft and earthy state."))
         berryData=[0,0,0,0,0,0,0,0]
+         message=_INTL("Do you want to replant {1}?",itemname)
+         if pbConfirmMessage(message)
+            $PokemonBag.pbDeleteItem(berry,1)
+          if berry>0
+            timenow=pbGetTimeNow
+            berryData[0]=1             # growth stage (1-5)
+            berryData[1]=berry         # item ID of planted berry
+            berryData[2]=0             # seconds alive
+            berryData[3]=timenow.to_i  # time of last checkup (now)
+            berryData[4]=100           # dampness value
+            berryData[5]=0             # number of replants
+            berryData[6]=0             # yield penalty
+            $PokemonBag.pbDeleteItem(berry,1)
+            pbMessage(_INTL("The {1} was replanted in the soft, earthy soil.",
+               PBItems.getName(berry)))
+            interp.setVariable(berryData)
+		  end
+         end
       else
-        pbMessage(_INTL("The soil returned to its soft and loamy state."))
         berryData=[0,0,false,0,0,0]
       end
       interp.setVariable(berryData)
@@ -559,9 +575,7 @@ def pbBerryPlant
           interp.setVariable(berryData)
           pbMessage(_INTL("{1} watered the plant.\\wtnp[40]",$Trainer.name))
           if NEW_BERRY_PLANTS
-            pbMessage(_INTL("There! All happy!"))
           else
-            pbMessage(_INTL("The plant seemed to be delighted."))
           end
         end
         break
@@ -587,11 +601,6 @@ def pbPickBerry(berry,qty=1)
       return
     end
     $PokemonBag.pbStoreItem(berry,qty)
-    if qty>1
-      pbMessage(_INTL("You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",qty,itemname))
-    else
-      pbMessage(_INTL("You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
-    end
     pocket = pbGetPocket(berry)
     pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in the <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
        $Trainer.name,itemname,pocket,PokemonBag.pocketNames()[pocket]))
