@@ -63,6 +63,9 @@ if $game_variables[291]<=-1
   $game_variables[291]=0 
 end
 
+if $game_variables[290]<=-1
+  $game_variables[290]=0 
+end
 }
 
 def pbChargeUp
