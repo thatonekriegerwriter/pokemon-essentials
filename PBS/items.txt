@@ -660,7 +660,7 @@
 1805,ICEDART,Ice Dart,Ice Darts Darts,7,1000,"A handcrafted dart gun that freezes a Pokémon in battle.",0,4,0,
 1806,FIREDART,Fire Dart,Fire Darts,7,1000,"A handcrafted dart gun that burns a Pokémon in battle.",0,4,0,
 1807,PLACEHOLDER,Paralysis Dart,Paralysis Darts,7,1000,"A handcrafted dart gun that stuns a Pokémon in battle.",0,4,0,
-1808,BAIT,Bait,Baits,7,1000,"A spongy, aromatic fungus that distracts Pokémon. Use it to flee from any battle with a wild Pokémon.",0,4,5,
+1808,BAIT,Bait,Baits,7,1000,"A spongy, aromatic fungus that distracts Pokémon. Use it to flee from any battle with a wild Pokémon.",2,4,5,
 1809,SUPPLIES,Supplies,Supplies,8,0,"A bag of supplies that can be used to climb tall mountains.",0,0,6
 1810,LINKSTONE,Link Stone, Link Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It has a link cable pattern.",1,0,7,
 1811,WOODENPLANKS,Wooden Plank,Wooden Planks,1,2100,"Wooden Planks made out of trees.",0,0,0,
@@ -777,3 +777,4 @@
 1922,POKEBLOCK,Pokeblock,Pokeblock,8,0,"A case for holding Pokeblocks made with a Berry Blender.",2,0,6,
 1923,POKENAV,PokeNav,PokeNav,8,0,"A item for checking Condition's stat.",2,0,6,
 1924,BERRYBLENDER,Berry Blender,Berry Blenders,8,0,"A item for mixing berries.",2,0,6,
+1925,MEAT,Meat,Meat,2,200,"Meat.",1,1,13,

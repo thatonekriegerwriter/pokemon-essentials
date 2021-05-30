@@ -39,11 +39,14 @@ end
 
 OUTBREAK_TIME    = 24
 OUTBREAK_CHANCE  = 40
-OUTBREAK_SWITCH  = 100
+OUTBREAK_SWITCH  = 491
 OUTBREAK_SPECIES = [
-    [5,:DODUO,2,2,[EncounterTypes::Land]],
-    [5,:VOLTORB,28,29,[EncounterTypes::Land,EncounterTypes::LandNight]],
-    [2,:MILOTIC,12,16,[EncounterTypes::Water]]
+    [4,:MONFERNO,28,28,[EncounterTypes::Land]],
+    [13,:MILTANK,28,29,[EncounterTypes::Land,EncounterTypes::LandDay]],
+    [16,:SNORLAX,28,29,[EncounterTypes::Land]],
+    [200,:SCOLIPEDE,28,29,[EncounterTypes::Cave]],
+    [201,:SCOLIPEDE,28,29,[EncounterTypes::Cave]],
+    [5,:SURSKIT,28,29,[EncounterTypes::Water]]
     ]
 class PokemonGlobalMetadata
   attr_accessor :currentOutbreak
