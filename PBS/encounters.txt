@@ -3728,7 +3728,7 @@ Cave
     TREECKO,5
     CHIKORITA,5
 Bait
-    DEINO,5
+    SPINARAK,5
     CATERPIE,5
     PINSIR,5
     PINECO,5
