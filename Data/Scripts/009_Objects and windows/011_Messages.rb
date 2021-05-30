@@ -921,8 +921,8 @@ def pbGetGoldString
 end
 
 def pbDisplayGoldWindow(msgwindow)
-  moneyString=pbGetGoldString()
-  goldwindow=Window_AdvancedTextPokemon.new(_INTL("Money:\n<ar>{1}</ar>",moneyString))
+  moneyString=$game_variables[291] ? $game_variables[291].to_s_formatted : "0"
+  goldwindow=Window_AdvancedTextPokemon.new(_INTL("Power:\n<ar>{1}</ar>",moneyString))
   goldwindow.setSkin("Graphics/Windowskins/goldskin")
   goldwindow.resizeToFit(goldwindow.text,Graphics.width)
   goldwindow.width=160 if goldwindow.width<=160
@@ -934,6 +934,22 @@ def pbDisplayGoldWindow(msgwindow)
   goldwindow.viewport=msgwindow.viewport
   goldwindow.z=msgwindow.z
   return goldwindow
+end
+
+def pbDisplayPowerWindow(msgwindow,goldwindow)
+  powerString=$game_variables[291] ? $game_variables[291].to_s_formatted : "0"
+  powerwindow=Window_AdvancedTextPokemon.new(_INTL("Power:\n<ar>{1}</ar>",powerString))
+  powerwindow.setSkin("Graphics/Windowskins/goldskin")
+  powerwindow.resizeToFit(powerwindow.text,Graphics.width)
+  powerwindow.width=160 if powerwindow.width<=160
+  if msgwindow.y==0
+    powerwindow.y=(goldwindow) ? goldwindow.y-powerwindow.height : Graphics.height-powerwindow.height
+  else
+    powerwindow.y=(goldwindow) ? goldwindow.height : 0
+  end
+  powerwindow.viewport=msgwindow.viewport
+  powerwindow.z=msgwindow.z
+  return powerwindow
 end
 
 def pbDisplayCoinsWindow(msgwindow,goldwindow)
@@ -1009,6 +1025,7 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   commands=nil
   facewindow=nil
   goldwindow=nil
+  powerwindow=nil
   coinwindow=nil
   cmdvariable=0
   cmdIfCancel=0
@@ -1072,7 +1089,7 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   textchunks=[]
   controls=[]
 #edit
-  while text[/(?:\\(w|f|ff|ts|cl|me|se|wt|wtnp|ch|q)\[([^\]]*)\]|\\(g|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
+  while text[/(?:\\(w|f|ff|ts|cl|me|se|wt|wtnp|q|ch|)\[([^\]]*)\]|\\(g|pow|cn|wd|wm|op|cl|wu|\.|\||\!|\^))/i]
     textchunks.push($~.pre_match)
     if $~[1]
       controls.push([$~[1].downcase,$~[2],-1])
@@ -1187,11 +1204,14 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
       when "g"      # Display gold window
         goldwindow.dispose if goldwindow
         goldwindow = pbDisplayGoldWindow(msgwindow)
+      when "pow"      # Display gold window
+        powerwindow.dispose if powerwindow
+        powerwindow = pbDisplayPowerWindow(msgwindow,goldwindow)
       when "cn"     # Display coins window
         coinwindow.dispose if coinwindow
         coinwindow = pbDisplayCoinsWindow(msgwindow,goldwindow)
 #edit
-      when "q"     # ability to customize the y positions oft any message with //q[yvalue]
+      when "q"     # ability to customize the y positions of any message with //q[yvalue]
         yval=param.to_i
       when "wu"
         msgwindow.y = 0
@@ -1278,6 +1298,7 @@ def pbMessageDisplay(msgwindow,message,letterbyletter=true,commandProc=nil)
   msgback.dispose if msgback
   goldwindow.dispose if goldwindow
   coinwindow.dispose if coinwindow
+  powerwindow.dispose if powerwindow
   facewindow.dispose if facewindow
   if haveSpecialClose
     pbSEPlay(pbStringToAudioFile(specialCloseSE))

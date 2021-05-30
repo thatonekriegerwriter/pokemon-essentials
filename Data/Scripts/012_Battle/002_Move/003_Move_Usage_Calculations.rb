@@ -324,13 +324,13 @@ class PokeBattle_Move
     if $game_variables[255]==3 && (isConst?(type,PBTypes,:DARK) || isConst?(type,PBTypes,:GHOST))
       multipliers[BASE_DMG_MULT] *= 1.5
     end
-	    if $game_variables[255]==4 && (isConst?(type,PBTypes,:FIRE) || isConst?(type,PBTypes,:DRAGON))
+    if $game_variables[255]==4 && (isConst?(type,PBTypes,:FIRE) || isConst?(type,PBTypes,:DRAGON))
       multipliers[BASE_DMG_MULT] *= 1.5
     end
-	    if $game_variables[255]==5 && (isConst?(type,PBTypes,:POISON) || isConst?(type,PBTypes,:ICE))
+    if $game_variables[255]==5 && (isConst?(type,PBTypes,:POISON) || isConst?(type,PBTypes,:ICE))
       multipliers[BASE_DMG_MULT] *= 1.5
     end
-	    if $game_variables[255]==6 && (isConst?(type,PBTypes,:FLYING))
+    if $game_variables[255]==6 && (isConst?(type,PBTypes,:FLYING))
       multipliers[BASE_DMG_MULT] *= 1.5
     end
     if $game_variables[255]==7 && (isConst?(type,PBTypes,:FIRE) || isConst?(type,PBTypes,:DRAGON))
@@ -340,6 +340,27 @@ class PokeBattle_Move
       multipliers[BASE_DMG_MULT] *= 1.5
     end
     if $game_variables[255]==9 && (isConst?(type,PBTypes,:PSYCHIC) || isConst?(type,PBTypes,:WATER))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:SEASHOES) && (isConst?(type,PBTypes,:WATER))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:IRONARMOR) && (isConst?(type,PBTypes,:STEEL))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:GHOSTMAIL) && (isConst?(type,PBTypes,:GHOST))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:GHOSTMAIL) && (!isConst?(type,PBTypes,:GHOST))
+      multipliers[BASE_DMG_MULT] /=($game_variables[208])
+    end
+    if $game_variables[256]==(:LJACKET) && (isConst?(type,PBTypes,:DARK))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:SSHIRT) && (isConst?(type,PBTypes,:NORMAL))
+      multipliers[BASE_DMG_MULT] *= 1.5
+    end
+    if $game_variables[256]==(:LCLOAK) && (isConst?(type,PBTypes,:FIRE))
       multipliers[BASE_DMG_MULT] *= 1.5
     end
     if user.effects[PBEffects::Charge]>0 && isConst?(type,PBTypes,:ELECTRIC)

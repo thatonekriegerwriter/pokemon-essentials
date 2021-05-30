@@ -28,6 +28,90 @@ ItemHandlers::UseFromBag.add(:BAIT,proc { |item|
   next 3
 })
 
+ItemHandlers::UseInField.add(:LCLOAK,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:LCLOAK)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:LCLOAK)
+  else
+  $game_variables[256]=(:LCLOAK) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:PROTECTIVEVEST,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:PROTECTIVEVEST)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:PROTECTIVEVEST)
+  else
+  $game_variables[256]=(:PROTECTIVEVEST) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:SEASHOES,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:SEASHOES)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:SEASHOES)
+  else
+  $game_variables[256]=(:SEASHOES) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:LJACKET,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:LJACKET)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:LJACKET)
+  else
+  $game_variables[256]=(:LJACKET) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:SSHIRT,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:SSHIRT)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:SSHIRT)
+  else
+  $game_variables[256]=(:SSHIRT) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:GHOSTMAIL,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:GHOSTMAIL)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:GHOSTMAIL)
+  else
+  $game_variables[256]=(:GHOSTMAIL) 
+  end
+    next 3
+})
+
+ItemHandlers::UseInField.add(:IRONARMOR,proc{|item|
+  Kernel.pbMessage(_INTL("{1} put on the {2}.",$Trainer.name,PBItems.getName(item)))
+  if !$game_variables[256]==(:IRONARMOR)
+    item = $game_variables[256]
+	$PokemonBag.pbStoreItem(item,1)
+	$game_variables[256]=(:IRONARMOR)
+  else
+  $game_variables[256]=(:IRONARMOR) 
+  end
+    next 3
+})
+
 ItemHandlers::UseInField.add(:FOODBAG,proc{|item|
   Kernel.pbMessage(_INTL("{1} used the {2}.",$Trainer.name,PBItems.getName(item)))
   pbCommonEvent(27)

@@ -83,23 +83,50 @@
 #------------------------------------------------------------------------------#
 Events.onStepTakenTransferPossible+=proc {
 
-if $game_variables[205]>100
+if $game_variables[256]==(:SSHIRT) 
+ if $game_variables[205]>150
+  $game_variables[205]=150  #food
+  $game_switches[250]=true
+ end
+else
+ if $game_variables[205]>100
   $game_variables[205]=100 
   $game_switches[250]=true
+ end
 end
 
-if $game_variables[206]>100
-  $game_variables[206]=100 
+if $game_variables[256]==(:SSHIRT) 
+ if $game_variables[206]>150
+  $game_variables[206]=150  #thirst
+  $game_switches[273]=true
+ end
+else
+ if $game_variables[206]>100
+   $game_variables[206]=100 
+   $game_switches[273]=true
+ end
 end
 
-if $game_variables[207]>100
- $game_variables[207]=100 
- $game_switches[273]=true
+if $game_variables[256]==(:SSHIRT) 
+ if $game_variables[207]>75
+  $game_variables[207]=75
+ end
+else
+ if $game_variables[207]>100 #Saturation
+  $game_variables[207]=100 
+ end
 end
  
-if $game_variables[208]>100
- $game_variables[208]=100 
- $game_switches[249]=true
+if $game_variables[256]==(:SSHIRT) 
+ if $game_variables[208]>150
+  $game_variables[208]=150 
+  $game_switches[249]=true
+ end
+else
+ if $game_variables[208]>100
+  $game_variables[208]=100  #sleep
+  $game_switches[249]=true
+ end
 end
 
 if $game_variables[205]<0
@@ -120,6 +147,9 @@ if $game_variables[208]<0
  $game_switches[249]=true
 end
 
+
+
+
 if $Trainer.money>100
  $Trainer.money=100 
 end
@@ -139,13 +169,56 @@ if $game_switches[54]==true #Survival Mode Switch
    $game_variables[208] -= 1 if rand(20) == 5 #take from sleep
 end
 
+
+
 if $game_switches[54]==true #Survival Mode Switch
  case $game_variables[207]
   when 0
-   $game_variables[205] -= 1 if rand(10) == 5 #take from hunger
-   $game_variables[206] -= 1 if rand(10) == 5 #take from drinking
+    $game_variables[205] -= 1 if rand(10) == 5 #take from hunger
+    $game_variables[206] -= 1 if rand(10) == 5 #take from drinking
   else
    $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
+end
+
+
+if $game_switches[54]==true && $game_variables[256]==(:LCLOAK) #Survival Mode Switch
+ case $game_variables[207]
+  when 0
+    $game_variables[205] += 1 if rand(10) == 5 #take from hunger
+    $game_variables[206] += 1 if rand(10) == 5 #take from drinking
+  else
+   $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
+  end
+end
+
+if $game_switches[54]==true && $game_variables[256]==(:SEASHOES) #Survival Mode Switch
+ case $game_variables[207]
+  when 0
+    $game_variables[205] -= 1 if rand(10) == 5 #take from hunger
+    $game_variables[206] += 1 if rand(10) == 5 #take from drinking
+  else
+   $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
+  end
+end
+
+if $game_switches[54]==true && $game_variables[256]==(:LJACKET) #Survival Mode Switch
+ case $game_variables[207]
+  when 0
+    $game_variables[205] += 1 if rand(10) == 5 #take from hunger
+    $game_variables[206] -= 1 if rand(10) == 5 #take from drinking
+  else
+   $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
+  end
+end
+
+if $game_switches[54]==true && $game_variables[256]==(:IRONARMOR) #Survival Mode Switch
+ case $game_variables[207]
+  when 0
+    $game_variables[205] -= 1 if rand(10) == 5 #take from hunger
+    $game_variables[206] -= 1 if rand(10) == 5 #take from drinking
+  else
+   $game_variables[207] -= 1 if rand(10) == 5 #take from saturation
+  end
 end
 
 if $game_switches[54]==true #Survival Mode Switch
